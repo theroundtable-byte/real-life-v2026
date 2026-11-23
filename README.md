@@ -18,7 +18,7 @@ Crypto prices (BTC, ETH, SOL, XRP, DOGE, ADA) refresh in the visitor’s browser
 
 - US headlines: Google News RSS (top stories, nation, technology, entertainment, science, politics, business) and NPR RSS (news, culture, music, science)
 - Trending searches: [Google Trends RSS for the US](https://trends.google.com/trending/rss?geo=US)
-- Stock movers: Yahoo Finance day gainers / losers (falls back to major US index ETFs if the screener is unavailable)
+- Stock movers: CNBC public quotes for major US stocks and indexes (Yahoo Finance day gainers / losers, then index ETFs, as fallbacks)
 - Crypto: CoinGecko, client-side
 
 No API keys. Hosting is GitHub Pages (free).
