@@ -16,11 +16,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,6 +39,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: refresh patch notes $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase
             git push
           fi
 
@@ -53,6 +51,25 @@ jobs:
         with:
           path: site
 
+  # Deploy runs in its own job: deploying in the same job as the upload hits a
+  # known GitHub artifact-metadata race (actions/deploy-pages#451).
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+
+      - name: Retry deploy
+        id: deployment2
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
