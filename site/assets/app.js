@@ -1,5 +1,5 @@
 (function () {
-  const ticker = document.getElementById("crypto-ticker");
+  const cryptoBox = document.getElementById("crypto-ticker");
   const coins = [
     { id: "bitcoin", symbol: "BTC" },
     { id: "ethereum", symbol: "ETH" },
@@ -16,58 +16,83 @@
   }
 
   function renderCrypto(data) {
-    const parts = ['<span class="ticker-label">Crypto (live)</span>'];
+    if (!cryptoBox) return;
+    const parts = [];
     coins.forEach(function (c) {
       const row = data[c.id];
       if (!row || typeof row.usd !== "number") return;
       const ch = row.usd_24h_change || 0;
       const cls = ch >= 0 ? "up" : "down";
       const sign = ch >= 0 ? "+" : "";
-      parts.push(
-        '<span class="coin"><b>' +
-          c.symbol +
-          "</b> $" +
-          money(row.usd) +
-          ' <span class="' +
-          cls +
-          '">' +
-          sign +
-          ch.toFixed(2) +
-          "%</span></span>"
-      );
+      parts.push('<span class="coin ' + cls + '"><b>' + c.symbol + "</b> $" + money(row.usd) + " " + sign + ch.toFixed(2) + "%</span>");
     });
-    ticker.innerHTML = parts.join("");
+    if (parts.length) cryptoBox.innerHTML = parts.join(" ");
   }
 
   async function loadCrypto() {
-    if (!ticker) return;
-    const url = ticker.getAttribute("data-endpoint");
+    if (!cryptoBox) return;
+    const url = cryptoBox.getAttribute("data-endpoint");
     try {
       const res = await fetch(url, { headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error("status " + res.status);
       renderCrypto(await res.json());
     } catch (err) {
-      if (!ticker.querySelector(".coin")) {
-        ticker.innerHTML =
-          '<span class="ticker-label">Crypto (live)</span><span class="ticker-status">Prices unavailable right now. They will retry automatically.</span>';
+      if (!cryptoBox.querySelector(".coin")) {
+        cryptoBox.innerHTML = '<span class="ticker-status">Prices unavailable right now.</span>';
       }
     }
   }
 
-  if (ticker) {
+  if (cryptoBox) {
     loadCrypto();
     setInterval(loadCrypto, 60000);
   }
 
+  function collapseCards(forceOpen) {
+    document.querySelectorAll(".notes[data-collapse]").forEach(function (box) {
+      const limit = parseInt(box.getAttribute("data-collapse") || "5", 10);
+      const notes = box.querySelectorAll(".note");
+      const searching = forceOpen;
+      notes.forEach(function (note, i) {
+        if (searching) {
+          note.classList.remove("is-collapsed");
+        } else {
+          note.classList.toggle("is-collapsed", i >= limit);
+        }
+      });
+      const btn = box.parentElement && box.parentElement.querySelector("[data-more]");
+      if (btn) {
+        const hidden = box.querySelectorAll(".note.is-collapsed").length;
+        btn.hidden = searching || hidden === 0;
+        if (!searching) btn.textContent = "Show " + hidden + " more";
+      }
+    });
+  }
+
+  document.querySelectorAll("[data-more]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const box = btn.parentElement.querySelector(".notes");
+      if (!box) return;
+      const collapsed = box.querySelectorAll(".note.is-collapsed");
+      if (collapsed.length) {
+        collapsed.forEach(function (n) { n.classList.remove("is-collapsed"); });
+        btn.textContent = "Show less";
+      } else {
+        collapseCards(false);
+      }
+    });
+  });
+
   const input = document.getElementById("q");
   const chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
   const notes = Array.prototype.slice.call(document.querySelectorAll(".note"));
-  const sections = Array.prototype.slice.call(document.querySelectorAll(".cat-section"));
+  const sections = Array.prototype.slice.call(document.querySelectorAll(".cat-card"));
   const empty = document.getElementById("empty");
   let active = "all";
 
   function apply() {
     const q = (input && input.value ? input.value : "").trim().toLowerCase();
+    collapseCards(Boolean(q) || active !== "all");
     let visible = 0;
     notes.forEach(function (note) {
       const cat = note.getAttribute("data-category") || "";
@@ -80,19 +105,25 @@
     });
     sections.forEach(function (section) {
       const any = section.querySelector(".note:not([hidden])");
-      section.hidden = !any;
+      const extras = section.querySelector(".anime-extra");
+      const cat = section.getAttribute("data-category") || "";
+      const catOk = active === "all" || cat === active;
+      section.hidden = !catOk || (!any && !(extras && !q));
     });
-    if (empty) empty.hidden = visible !== 0;
+    if (empty) empty.hidden = visible !== 0 || (active !== "all" && !q && document.querySelector('.cat-card:not([hidden]) .anime-extra'));
   }
 
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       active = chip.getAttribute("data-filter") || "all";
-      chips.forEach(function (c) {
-        c.classList.toggle("is-on", c === chip);
-      });
+      chips.forEach(function (c) { c.classList.toggle("is-on", c === chip); });
       apply();
     });
   });
   if (input) input.addEventListener("input", apply);
+
+  const style = document.createElement("style");
+  style.textContent = ".note.is-collapsed { display: none; }";
+  document.head.appendChild(style);
+  collapseCards(false);
 })();
