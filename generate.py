@@ -99,6 +99,16 @@ FILTERS = [
     ("Markets", ["Markets"]),
 ]
 SECTIONS = ["Buffs", "Nerfs", "Hotfixes", "New Content", "Known Bugs", "Limited-Time Events", "Markets"]
+# Terminal badge, CSS hook, compact icon for section headers.
+SECTION_UI = {
+    "Buffs": ("BUFF", "buff", "↑"),
+    "Nerfs": ("NERF", "nerf", "↓"),
+    "Hotfixes": ("HOTFIX", "hotfix", "✚"),
+    "New Content": ("NEW", "new", "+"),
+    "Known Bugs": ("BUG", "bug", "!"),
+    "Limited-Time Events": ("EVENT", "event", "◈"),
+    "Markets": ("MKT", "mkt", "▣"),
+}
 SECTION_FOR_TAG = {
     "BUFFED": "Buffs", "BALANCE": "Buffs", "ROSTER": "Buffs", "META": "Buffs",
     "NERFED": "Nerfs",
@@ -1262,12 +1272,21 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(description)}">
-  <meta name="theme-color" content="#f4f1ea">{updated_meta}
+  <meta name="theme-color" content="#eef4e6">{updated_meta}
   <link rel="icon" href="{esc(prefix)}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{esc(prefix)}assets/style.css">
+  <script>
+    (function () {{
+      try {{
+        var t = localStorage.getItem("rlv2026:theme");
+        if (!t && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) t = "night";
+        if (t === "night") document.documentElement.setAttribute("data-theme", "night");
+      }} catch (e) {{}}
+    }})();
+  </script>
   <script type="application/ld+json">
   {json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "Real Life v2026", "url": SITE_URL + "/", "description": "Satirical patch notes for real life in the United States. Every item is based on a real, linked source.", "inLanguage": "en-US"})}
   </script>
@@ -1275,12 +1294,16 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
 <body>
   <a class="skip" href="#main">Skip to patch notes</a>
   <header class="top">
+    <div class="scanlines" aria-hidden="true"></div>
     <div class="wrap top-row">
       <a class="brand" href="{esc(prefix)}index.html">
         <span class="logo" aria-hidden="true">RL</span>
         <span><strong>Real Life</strong><em>v2026</em></span>
       </a>
       <p class="satire-flag">Satire. Real news, written as patch notes. Every item links to its source — we don’t invent events.</p>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to night mode" title="Day / night">
+        <span class="theme-day">Day</span><span class="theme-sep" aria-hidden="true">/</span><span class="theme-night">Night</span>
+      </button>
     </div>
   </header>
   {body}
@@ -1314,19 +1337,39 @@ def filters_html() -> str:
         "</div>"
     )
 
+def section_badge(name: str) -> str:
+    tag, hook, icon = SECTION_UI.get(name, ("PATCH", "patch", "•"))
+    return (
+        f'<span class="sec-badge sec-{hook}" aria-hidden="true">'
+        f'<span class="sec-ico">{icon}</span>[{html.escape(tag)}]</span>'
+    )
+
 def entry_item(item: dict, tier: str = "featured") -> str:
-    text = html.escape(item.get("text") or item.get("digest") or item.get("line") or item.get("title") or "")
-    url = html.escape(item["url"], quote=True)
+    text_raw = item.get("text") or item.get("digest") or item.get("line") or item.get("title") or ""
+    text = html.escape(text_raw)
+    url = item.get("url") or ""
+    url_esc = html.escape(url, quote=True)
     source = html.escape(item.get("source") or "Source")
     filt = html.escape(item.get("filter") or broad_filter(item.get("category") or ""))
+    section = item.get("section") or note_section(item)
+    tag, hook, _icon = SECTION_UI.get(section, ("PATCH", "patch", "•"))
+    nid = html.escape(str(item.get("id") or ""))
     data = html.escape(" ".join([
-        item.get("text") or "", item.get("title") or "", item.get("source") or "",
+        text_raw, item.get("title") or "", item.get("source") or "",
         item.get("filter") or "", item.get("category") or "",
     ]).lower())
+    tweet = urllib.parse.quote(f"{text_raw} — via Real Life v2026 {url}".strip())
+    share_text = html.escape(text_raw, quote=True)
     return (
-        f'<li class="entry" data-filter="{filt}" data-tier="{html.escape(tier)}" data-text="{data}">'
-        f'<a href="{url}" rel="noopener noreferrer">{text}</a>'
-        f'<span class="meta"><span class="pill">{filt}</span> · {source}</span>'
+        f'<li class="entry" id="n-{nid}" data-id="{nid}" data-filter="{filt}" data-section="{html.escape(section)}" '
+        f'data-tier="{html.escape(tier)}" data-text="{data}">'
+        f'<span class="line-tag sec-{hook}" aria-hidden="true">[{html.escape(tag)}]</span> '
+        f'<a href="{url_esc}" rel="noopener noreferrer">{text}</a>'
+        f'<span class="meta"><span class="pill">{filt}</span> · {source}'
+        f'<span class="share-group">'
+        f'<button type="button" class="share" data-share-text="{share_text}" data-share-url="{url_esc}" aria-label="Copy this patch line">Share</button>'
+        f'<a class="share-x" href="https://twitter.com/intent/tweet?text={tweet}" target="_blank" rel="noopener noreferrer" aria-label="Share this line on X">X</a>'
+        f"</span></span>"
         f"</li>"
     )
 
@@ -1335,11 +1378,11 @@ def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured") 
     for name, items in groups:
         if not items:
             continue
-        slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        hook = SECTION_UI.get(name, ("PATCH", "patch", "•"))[1]
         lis = "".join(entry_item(it, tier) for it in items)
         chunks.append(
-            f'<section class="patch-section" data-section="{html.escape(name)}">'
-            f"<h2>{html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
+            f'<section class="patch-section sec-{hook}" data-section="{html.escape(name)}">'
+            f"<h2>{section_badge(name)} {html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
         )
     return "".join(chunks)
 
@@ -1366,17 +1409,60 @@ def ticker_html(stocks: list[dict], eia: dict | None) -> str:
         parts.append(f'<span class="coin {cls}"><b>{html.escape(str(sym))}</b> {sign}{pct:.2f}%</span>')
     stock_bits = "".join(parts)
     return f"""
-    <div class="ticker-wrap">
+    <div class="ticker-wrap hud">
       <div class="wrap ticker">
+        <span class="hud-corner" aria-hidden="true">⌜</span>
         <span class="ticker-label">Markets</span>
         {stock_bits or '<span class="ticker-status">Market quotes unavailable this run.</span>'}
         <span class="ticker-label">Crypto</span>
         <span id="crypto-ticker" class="crypto" data-endpoint="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano&amp;vs_currencies=usd&amp;include_24hr_change=true">
           <span class="ticker-status">Loading prices…</span>
         </span>
+        <span class="hud-corner" aria-hidden="true">⌝</span>
       </div>
     </div>
     """
+
+def world_state_html(notes: list[dict], stocks: list[dict], eia: dict | None) -> str:
+    ups = downs = 0
+    for s in stocks:
+        pct = s.get("change_pct")
+        if pct is None:
+            continue
+        if pct >= 0:
+            ups += 1
+        else:
+            downs += 1
+    if ups > downs:
+        mkt = f'<span class="ws-item"><b>Markets</b> <span class="up">▲ {ups} up</span> / {downs} down</span>'
+    elif downs > ups:
+        mkt = f'<span class="ws-item"><b>Markets</b> <span class="down">▼ {downs} down</span> / {ups} up</span>'
+    elif ups or downs:
+        mkt = f'<span class="ws-item"><b>Markets</b> mixed · {ups} up / {downs} down</span>'
+    else:
+        mkt = '<span class="ws-item"><b>Markets</b> quotes unavailable</span>'
+    alerts = sum(1 for n in notes if n.get("kind") == "alert")
+    if alerts:
+        weather = f'<span class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</span>'
+    else:
+        weather = '<span class="ws-item"><b>Weather</b> clear</span>'
+    bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
+    bug_bit = f'<span class="ws-item"><b>Known bugs</b> {bugs}</span>'
+    gas = ""
+    if eia and eia.get("regular"):
+        r = eia["regular"]
+        price = r["price"]
+        prev = r.get("prev")
+        cls = "up" if prev and price <= prev else "down" if prev and price > prev else ""
+        arrow = "▼" if cls == "up" else "▲" if cls == "down" else ""
+        gas = f'<span class="ws-item"><b>Gas</b> <span class="{cls}">${price:.2f}/gal {arrow}</span></span>'
+    return (
+        '<aside class="world-state" aria-label="World state">'
+        '<div class="wrap world-row">'
+        '<span class="ws-live"><span class="status-dot" aria-hidden="true"></span> World state · Online</span>'
+        f"{mkt}{weather}{bug_bit}{gas}"
+        "</div></aside>"
+    )
 
 def anime_boards_html(anilist: dict, watch_notes: list[dict], series: list[str]) -> str:
     def col(heading: str, items: list[dict], score: bool) -> str:
@@ -1419,11 +1505,12 @@ def patch_post_html(meta, featured, rest, prefix="", extras="", blurb=""):
     if rest:
         more_btn = f'<button type="button" class="more" id="full-changelog" aria-expanded="false" aria-controls="full-log">Full changelog ({len(rest)} more)</button>'
         more_wrap = f'<div id="full-log" class="full-log" hidden><h2 class="full-h">Full changelog</h2>{rest_html}</div>'
+    label = html.escape(meta["label"])
     return f"""
-    <article class="patch-post" id="latest">
+    <article class="patch-post" id="latest" data-patch-id="{html.escape(meta.get("id") or "")}">
       <header class="patch-head">
         <p class="kicker">Patch notes</p>
-        <h1>{html.escape(meta["label"])}</h1>
+        <h1 class="ver" data-text="{label}">{label}</h1>
         <p class="when">Published {html.escape(meta["display_date"])}</p>
         <p class="intro">A satirical changelog for real life in the United States. Every line is based on a real, linked source. The joke is the framing, not the facts.</p>
         {f'<p class="lede market-note">{html.escape(blurb)}</p>' if blurb else ""}
@@ -1438,6 +1525,7 @@ def patch_post_html(meta, featured, rest, prefix="", extras="", blurb=""):
       {extras}
     </article>
     """
+
 
 def story_tokens(note: dict) -> set[str]:
     raw = f"{note.get('title') or ''} {note.get('text') or ''}"
@@ -1583,6 +1671,7 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
         )
     body = f"""
   {ticker_html(stocks, eia)}
+  {world_state_html(notes, stocks, eia)}
   <main id="main">
     <div class="wrap">
       {weekly}

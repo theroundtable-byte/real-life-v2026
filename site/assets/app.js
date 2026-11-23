@@ -48,6 +48,68 @@
     setInterval(loadCrypto, 60000);
   }
 
+  const DAY_COLOR = "#eef4e6";
+  const NIGHT_COLOR = "#0c1612";
+  const toggle = document.getElementById("theme-toggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "night" ? "night" : "day";
+  }
+
+  function syncToggle(theme) {
+    if (!toggle) return;
+    const night = theme === "night";
+    toggle.setAttribute("aria-label", night ? "Switch to day mode" : "Switch to night mode");
+    toggle.setAttribute("aria-pressed", night ? "true" : "false");
+    if (themeMeta) themeMeta.setAttribute("content", night ? NIGHT_COLOR : DAY_COLOR);
+  }
+
+  function setTheme(theme, persist) {
+    if (theme === "night") document.documentElement.setAttribute("data-theme", "night");
+    else document.documentElement.removeAttribute("data-theme");
+    if (persist) {
+      try { localStorage.setItem("rlv2026:theme", theme); } catch (err) {}
+    }
+    syncToggle(theme);
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("theme") === "night" || params.get("theme") === "day") {
+    setTheme(params.get("theme"), false);
+  } else {
+    syncToggle(currentTheme());
+  }
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      setTheme(currentTheme() === "night" ? "day" : "night", true);
+    });
+  }
+
+  const article = document.getElementById("latest");
+  const patchId = article && article.getAttribute("data-patch-id");
+  const LAST_KEY = "rlv2026:lastPatch";
+  if (article && patchId) {
+    let prev = null;
+    try { prev = localStorage.getItem(LAST_KEY); } catch (err) {}
+    const forceFresh = params.get("fresh") === "1";
+    if ((prev && prev !== patchId) || forceFresh) {
+      article.classList.add("is-fresh");
+      const head = article.querySelector(".patch-head");
+      if (head && !head.querySelector(".fresh-flag")) {
+        const flag = document.createElement("p");
+        flag.className = "fresh-flag";
+        flag.textContent = "New patch since your last visit";
+        head.insertBefore(flag, head.firstChild);
+      }
+    }
+    function remember() {
+      try { localStorage.setItem(LAST_KEY, patchId); } catch (err) {}
+    }
+    if (!prev) remember();
+    window.addEventListener("pagehide", remember);
+  }
+
   const input = document.getElementById("q");
   const chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
   const entries = Array.prototype.slice.call(document.querySelectorAll(".entry"));
@@ -107,4 +169,39 @@
     });
   });
   if (input) input.addEventListener("input", apply);
+
+  function copyShare(text, url, btn) {
+    const payload = (text + " — " + url).trim();
+    const done = function () {
+      if (!btn) return;
+      const old = btn.textContent;
+      btn.textContent = "Copied";
+      btn.classList.add("is-copied");
+      setTimeout(function () {
+        btn.textContent = old;
+        btn.classList.remove("is-copied");
+      }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(payload).then(done).catch(function () {
+        window.prompt("Copy this patch line", payload);
+      });
+    } else {
+      window.prompt("Copy this patch line", payload);
+    }
+  }
+
+  document.querySelectorAll(".share").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const text = btn.getAttribute("data-share-text") || "";
+      const url = btn.getAttribute("data-share-url") || "";
+      if (navigator.share) {
+        navigator.share({ title: "Real Life v2026", text: text, url: url }).catch(function () {
+          copyShare(text, url, btn);
+        });
+        return;
+      }
+      copyShare(text, url, btn);
+    });
+  });
 })();

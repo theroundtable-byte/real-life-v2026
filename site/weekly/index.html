@@ -15,12 +15,21 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Weekly recaps — Real Life v2026">
   <meta name="twitter:description" content="Hand-written weekly patch notes for Real Life v2026.">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="theme-color" content="#eef4e6">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("rlv2026:theme");
+        if (!t && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) t = "night";
+        if (t === "night") document.documentElement.setAttribute("data-theme", "night");
+      } catch (e) {}
+    })();
+  </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "WebSite", "name": "Real Life v2026", "url": "https://theroundtable-byte.github.io/real-life-v2026/", "description": "Satirical patch notes for real life in the United States. Every item is based on a real, linked source.", "inLanguage": "en-US"}
   </script>
@@ -28,12 +37,16 @@
 <body>
   <a class="skip" href="#main">Skip to patch notes</a>
   <header class="top">
+    <div class="scanlines" aria-hidden="true"></div>
     <div class="wrap top-row">
       <a class="brand" href="../index.html">
         <span class="logo" aria-hidden="true">RL</span>
         <span><strong>Real Life</strong><em>v2026</em></span>
       </a>
       <p class="satire-flag">Satire. Real news, written as patch notes. Every item links to its source — we don’t invent events.</p>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to night mode" title="Day / night">
+        <span class="theme-day">Day</span><span class="theme-sep" aria-hidden="true">/</span><span class="theme-night">Night</span>
+      </button>
     </div>
   </header>
   
