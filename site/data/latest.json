@@ -7,8 +7,8 @@
     "month": 11,
     "week": 4,
     "day": 23,
-    "iso": "2026-11-23T18:48:53-05:00",
-    "display_date": "Monday, November 23, 2026, 6:48 PM ET"
+    "iso": "2026-11-23T18:50:04-05:00",
+    "display_date": "Monday, November 23, 2026, 6:50 PM ET"
   },
   "stock_mode": "majors",
   "trends": [
@@ -130,6 +130,21 @@
       "text": "What strike on Russian ship in Libya says about spread of Ukraine war"
     },
     {
+      "id": "0e7a21d83c94",
+      "category": "News",
+      "tag": "PATCH",
+      "line": "Treasury uncovers nearly $15B in possible Iranian shadow banking networks",
+      "digest": "Treasury uncovers nearly $15B in possible Iranian shadow banking networks",
+      "title": "Treasury uncovers nearly $15B in possible Iranian shadow banking networks",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRTRXcVBmN3ZXRWt3alljc2gxRTd3NHpfQkJYMFoyZk81bXV4Ym13REdzRzNjUkR5ODdqcTZJdXdUMDJxV0NSVEQ5d3BGdlUzRmwtWUxOOTg4cG40bS1KQ1FXQUpUaHJNOWhVS0xtTllVdXk3M2pRZjJ2ZlFtVXJiR1FFRF9YUGt2aFFwc3BkUzBnbnZ1VXBnbUc2anpqREV5UDN2bFNJdVAxcWE1SlFXejlPeWc1SHc1SWc?oc=5",
+      "source": "New York Post",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Hotfixes",
+      "text": "Treasury uncovers nearly $15B in possible Iranian shadow banking networks"
+    },
+    {
       "id": "df850802df3a",
       "category": "News",
       "tag": "ADDED",
@@ -143,21 +158,6 @@
       "filter": "News & Politics",
       "section": "New Content",
       "text": "Thanksgiving travel forecast 2026: storms on both coasts"
-    },
-    {
-      "id": "415016aa0ce2",
-      "category": "Music",
-      "tag": "ADDED",
-      "line": "Soundtrack: Iranian authorities flog singer who performed without hijab, lawyers say",
-      "digest": "Soundtrack: Iranian authorities flog singer who performed without hijab, lawyers say",
-      "title": "Iranian authorities flog singer who performed without hijab, lawyers say",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9hRzlreTljb2FzdW4tYWs1TW00Y05KZWU3MFNiblljV18wcWpZSExVOF9fSG5aZlJwQjIzQ0ZLTFhqVWw0Xy1VLXE4bzZISnpyT1FvWEtPMWVHeU0?oc=5",
-      "source": "BBC",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Soundtrack: Iranian authorities flog singer who performed without hijab, lawyers say"
     },
     {
       "id": "d180938baeeb",
@@ -175,49 +175,49 @@
       "text": "World state: Jimmy Gomez will resign in wake of House Ethics report"
     },
     {
-      "id": "45aeb85b37c8",
+      "id": "09aed12faecd",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Court allows Army to go forward with planned detonation of toxic drums in Iowa",
-      "digest": "Court allows Army to go forward with planned detonation of toxic drums in Iowa",
-      "title": "Court allows Army to go forward with planned detonation of toxic drums in Iowa",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPY3pobmI0NHFWeXBlX2otMEN4Ti1HcTNER3hDbkJCMDFwUkVjakdmOEs5SFhTOXRkbW9UT240NVhJcE1obTQ5X2lzcGpaRlljVlpLNmhGNS1TY2xvbUFtWW1JaV9leXVrUEdTNW9fcEtOaXgyZWtLcVBRYW11cmlnSkxBNzZ5eDAyTVltV2dsSlN1ZXZpcl9IS0hLaWZiOHdnNEdCNjhuUkxmOUNyTThHcndzR3dqUzRMa3lvbA?oc=5",
-      "source": "NBC News",
+      "tag": "PATCH",
+      "line": "Trump orders the Army not to detonate bomb-making chemicals in Iowa without court approval",
+      "digest": "Trump orders the Army not to detonate bomb-making chemicals in Iowa without court approval",
+      "title": "Trump orders the Army not to detonate bomb-making chemicals in Iowa without court approval",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYnFzVFZqMjBjY2Y1cll0UUxLU2VQMktTZDQ5QmFpaENUUzBXeHJJRS1nQUtpLUdhYVFVbnUxaGI1d1lWc0lwSUM1MWVNcGY0MlVEY3dDbFRXbGxMX3BvRzMzYnFhcTZFUG1xcTh6bDRlQVNhR1JlVmxxVEJ6S2xCZjZxRDgtcGFZWndwUUJ3RkdGLWFDakE?oc=5",
+      "source": "AP News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Hotfixes",
-      "text": "Court allows Army to go forward with planned detonation of toxic drums in Iowa"
+      "text": "Trump orders the Army not to detonate bomb-making chemicals in Iowa without court approval"
     },
     {
-      "id": "97e480f9523e",
+      "id": "bf2a6110877f",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Trump uses DOJ speech to attack Newsom, a potential 2028 contender",
-      "digest": "Trump uses DOJ speech to attack Newsom, a potential 2028 contender",
-      "title": "Trump uses DOJ speech to attack Newsom, a potential 2028 contender",
+      "tag": "PATCH",
+      "line": "Trump to use DOJ speech to attack Newsom, a potential 2028 contender",
+      "digest": "Trump to use DOJ speech to attack Newsom, a potential 2028 contender",
+      "title": "Trump to use DOJ speech to attack Newsom, a potential 2028 contender",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbmxMNjNxdFBtekJPSmhFMkpxNEhsdVRiQ2d1YkcxZXF1ZF8yS2FOYllfR3lKc2RpcUpfaDhTbkQwN0daY3FLajNPWmFKbHB6MTQwNk9pSU1IRXFuWF80VnotY0paT28xelBiYU9fSWxPQTNIM1k2SmdsTVg3S0x0bUNpMTRlaXRHVWxscmk2NTVFZmozUmUzV3N4MzRmNnhTRVgyXzJnVGZ3ZnRFbXRkbQ?oc=5",
       "source": "The Washington Post",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Hotfixes",
-      "text": "Trump uses DOJ speech to attack Newsom, a potential 2028 contender"
+      "text": "Trump to use DOJ speech to attack Newsom, a potential 2028 contender"
     },
     {
-      "id": "d0a045ef61c8",
+      "id": "2bf98276aae6",
       "category": "News",
       "tag": "ADDED",
-      "line": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "digest": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "title": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUThKclEzNmdSeWQ1MUIzc0hJWnBqSWdXdUtSVkIxMVdYTWIwQjU5UGVIclhJVUl1bVVyLVlCSVFLdWRHckdabDh6RDNsMVNDdUdKdjNFZEJLb3FCVE5Qa1RLVWp1NHVjeUxRWERFT3pJYWpOY3o1emQ3Z1JGbHNQeEhTdmZCeVUzUVpmY3dCeUdzSWZELUZlUjJTck5QaHJyLWVTeF9uV1BsQlBtSEE?oc=5",
-      "source": "AP News",
+      "line": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
+      "digest": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
+      "title": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOY2pNUkN4LXZiQlIySy1sZ01UeXBHQmc1M0hxVWNRcVQycmY1UnRRQlFmdUpycURZbUNhNXY2RzJxREMwRW5Za2lucUt2blJneG5NcHFCSUFUamoyREhfblh4T1hzZXd2SGQ0NS1mTDhfc1hQTEpiS1hRS0VpcEUzSUFBX0NCNWhzcUNueWlFeTNTYnpnal9VbnBVVFJiZzBtSDBnblcyZFdwWWYtOVZ1dHlBQ3RHbHA0MUE?oc=5",
+      "source": "NBC News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "New Content",
-      "text": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches"
+      "text": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel"
     },
     {
       "id": "71b5a9315920",
@@ -235,19 +235,19 @@
       "text": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction"
     },
     {
-      "id": "0a0d4230ac5e",
+      "id": "4c421bdd61e9",
       "category": "News",
-      "tag": "HOTFIX",
-      "line": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "digest": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
-      "source": "The Guardian",
+      "tag": "KNOWN ISSUE",
+      "line": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "digest": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "title": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdndzQTF2WUh5cGs3VFRkeC1MbkRwVmZtZXBoSmNQRmNmMTNIZzF6ZDBlLW9IbExDcTV1anppUHA3RDdfcDdBSGVqRVFxVEFmTFZPMVNiRm80OFp0b1RhQ3BvZjIzZWZEZ2pPMWtTcnJBUnFkY05INWR2WWJHa2MxdDhWM01iQ2RadmtQbGlDNERDTUFlVi1GcGt2dw?oc=5",
+      "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle"
+      "section": "Known Bugs",
+      "text": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week"
     },
     {
       "id": "1ab05a7f3c98",
@@ -370,19 +370,19 @@
       "text": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'"
     },
     {
-      "id": "cee90a70fc8e",
+      "id": "441d31cbf78c",
       "category": "Tech",
-      "tag": "ADDED",
-      "line": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "digest": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "title": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "tag": "UPDATED",
+      "line": "Experimental build: Report: MacBook Neo 2 and Refresh for All iPads Coming in Spring",
+      "digest": "Experimental build: Report: MacBook Neo 2 and Refresh for All iPads Coming in Spring",
+      "title": "Report: MacBook Neo 2 and Refresh for All iPads Coming in Spring",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44WWEwV2xkLVh1VG84QUNrdm8tX3FWTjVZak1wNnJGa0hHbHhPSmUxRkFBeVp0R1JvQmUtYXVSb18tQjItc1RBN25uZmVfZjNjSVZ0QnhfaG56bzdVbWFXQzFUa1lkY3dWLU1EM240WW0?oc=5",
       "source": "Gizmodo",
       "kind": "headline",
       "weird": false,
       "filter": "Tech & Science",
-      "section": "New Content",
-      "text": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring"
+      "section": "Hotfixes",
+      "text": "Experimental build: Report: MacBook Neo 2 and Refresh for All iPads Coming in Spring"
     },
     {
       "id": "a514e7b66767",
@@ -430,21 +430,6 @@
       "text": "\u2018Ted Lasso\u2019 Renewed For Season 5 By Apple TV"
     },
     {
-      "id": "e09110481d88",
-      "category": "Movies & TV",
-      "tag": "DLC",
-      "line": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
-      "digest": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
-      "title": "Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTdSdEVOLTBsRHVNekJ0SjNDOG8zN3hvamEwaEJsZkxscVk4dkhvS253YUFPMHltbzR3X3ZfSGNJTF9MZGpkTVJtN0JSVGN6cEsyQ01Yd183QU9UQUVYLUs3c3JoQzhLZUhmUmdGS2RkdG5FcnFETGt0RWhhSXZfNml1bDJCTGd4UV9kSXk1UnM1V0M4LTB4RngwWFNNNTBvUFNn?oc=5",
-      "source": "Variety",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019"
-    },
-    {
       "id": "99cdc74aa9ba",
       "category": "Culture",
       "tag": "BUFFED",
@@ -458,6 +443,21 @@
       "filter": "Life",
       "section": "Buffs",
       "text": "Meta shift: Miley Cyrus marries drummer Maxx Morando in Palm Springs wedding"
+    },
+    {
+      "id": "e09110481d88",
+      "category": "Movies & TV",
+      "tag": "DLC",
+      "line": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "digest": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "title": "Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTdSdEVOLTBsRHVNekJ0SjNDOG8zN3hvamEwaEJsZkxscVk4dkhvS253YUFPMHltbzR3X3ZfSGNJTF9MZGpkTVJtN0JSVGN6cEsyQ01Yd183QU9UQUVYLUs3c3JoQzhLZUhmUmdGS2RkdG5FcnFETGt0RWhhSXZfNml1bDJCTGd4UV9kSXk1UnM1V0M4LTB4RngwWFNNNTBvUFNn?oc=5",
+      "source": "Variety",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019"
     },
     {
       "id": "9c7a2d59b06a",
@@ -880,34 +880,34 @@
       "text": "Bestiary: NYC pol sets record straight as viral \u2018eyes\u2019 video sparks looney lizard people theories: \u2018Full-blown \u2018Men In Black\u201d"
     },
     {
-      "id": "dab06c00bedd",
+      "id": "71fe542d3770",
       "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "digest": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "title": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQREU3NE56V0YtRTZ6M0d1VVRKdi1fWGRRQTk0SDkza0Y3elNxQVZkTDk3RnNiRGxzVktKdXJfUFhrWWF2Y0FEcGwzZkhKSklZbUdfV2JyVk9aTHNLTG50aDZTODVyYTRDLWxudkJXZVZzY0V6ODZVanJvc3NrRWlidUlCTGtoVXprWG0zbGR5LXl3eEYwZlFMeDJKalpXUVV1OUZNa0FiTExEejFGVFFWdmpqeVl2cDZUS0dMN1BOTXVpSlduTzhLUWZjN3p5a1NaM2fSAdcBQVVfeXFMT2doLUdIM0lZTFZVUEN1V010eWlVMFdqOHlvaURDcWY2dmlmellHSlNxdjBoRUZWRHFnZzJMNUN5U3U3T04zVW9nazhIdE1lYlNVWFNiVXloakM1MFVPOTZzaGJuQlozbEp1ZGhrZEZueG1yMlRGc0dzTEg5S1dsRHk0aVJ4Y2JVaVljWEZtRmxJM0Qyc1JxanBDRlFBZlFQYmtndlRKaVZaUGxiaU9pRmxhbVU2M2VUZ25uOVYwYjhnT3Q4S0h3NGdNUVM0R1QxaUs1V2t3VW8?oc=5",
-      "source": "NewsNation",
-      "kind": "headline",
-      "weird": true,
-      "filter": "News & Politics",
-      "section": "Known Bugs",
-      "text": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death"
-    },
-    {
-      "id": "8aaef90e0726",
-      "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "Pentagon Pete Makes Bizarre Move Against America\u2019s Closest Ally",
-      "digest": "Pentagon Pete Makes Bizarre Move Against America\u2019s Closest Ally",
-      "title": "Pentagon Pete Makes Bizarre Move Against America\u2019s Closest Ally",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcXRqNThQbE1obDRKMnh5TjhXUDcyanhNRVM1MjJhNEd6T0pRNTQ2TlQ5NmlXRFhXbDlWaTlrUTVrYThNVTVBWVFwc2JRcl84dkJxUzR1a1VFaTNSN3NfbGdzZ1psb2JGMVFkRUhOUlhpZmdRblphRTM2TmpLSC1QSzJ2ZXFjQ3BmNUJPYlFjeDNmVFVtZ2sw?oc=5",
+      "tag": "ADDED",
+      "line": "Bestiary: Dem Addresses Bonkers Lizard People Claim After Viral Eye-Roll",
+      "digest": "Bestiary: Dem Addresses Bonkers Lizard People Claim After Viral Eye-Roll",
+      "title": "Dem Addresses Bonkers Lizard People Claim After Viral Eye-Roll",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOR2pLR3VrWDA2dkU3VzJXT3UwRWNlRllsMkJEby1PeS1GdFRzWkFCV3NaeXU1YVhOaE1ZY3l2Vzg0WW9nVDVwZFFwMmNwOTRVT2hxOUd4bEVkbXk4NGJIcTZ2cDY5TlJlVmV6ODlmUGE5SDFRdzBlZHhHTS1iLVFUeGRhMXA1Ym4zUzhKbFJtWmJ5VVM0eHNORmJKVW9ib2pkSXpjUFRobTVDNTVrNXBMTU1NRmRBTU82MVFqWjJB?oc=5",
       "source": "The Daily Beast",
       "kind": "headline",
       "weird": true,
       "filter": "News & Politics",
-      "section": "Known Bugs",
-      "text": "Pentagon Pete Makes Bizarre Move Against America\u2019s Closest Ally"
+      "section": "New Content",
+      "text": "Bestiary: Dem Addresses Bonkers Lizard People Claim After Viral Eye-Roll"
+    },
+    {
+      "id": "0a0d4230ac5e",
+      "category": "News",
+      "tag": "HOTFIX",
+      "line": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "digest": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
+      "source": "The Guardian",
+      "kind": "headline",
+      "weird": true,
+      "filter": "News & Politics",
+      "section": "Hotfixes",
+      "text": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle"
     },
     {
       "id": "ed00f978eae1",
@@ -1030,19 +1030,19 @@
       "text": "Nvidia live updates: Nvidia stock climbs more than 31% as board reinstates Jensen Huang as CEO"
     },
     {
-      "id": "3532a9b355ba",
+      "id": "9f3e1df524af",
       "category": "Markets",
-      "tag": "ROSTER",
-      "line": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "digest": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "title": "Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOeWx0S2VkQ0dLSnh1QVZKcUlpZ0lZVlZHSDNTYzY4bEc5RFFuUmhIMC0yby1iWTBFM08wOWlkOTFaTkFQWVpER0xEQTZmQVBtZ2ZxOUs3MjhYeFdXT0k4TjRqSVljekJHRG1BWVAxbmRCTWR6d0NWcjFVX1NmYjFramJIdlBhUnRiSGozeXZDOVQ?oc=5",
-      "source": "Semafor",
+      "tag": "UPDATED",
+      "line": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+      "digest": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+      "title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UWmFFQUd3NWtmLW9aWW1MZWI4M0VFa3lBWk5remd1ODRiUjk3VVBodk9nbDhjbU96cEdqVHhYYnk3YjZ4Zkc2dlB0ZlhKWW9ORndOcGRsTGl4Sjg?oc=5",
+      "source": "BBC",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist"
+      "text": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal"
     },
     {
       "id": "0b5a5ff141b7",
@@ -1060,34 +1060,34 @@
       "text": "Anthropic options post solid debut, trailing SpaceX record"
     },
     {
-      "id": "03067cc2a8e9",
+      "id": "60c13b6ca6a0",
       "category": "Markets",
-      "tag": "HOTFIX",
-      "line": "Stock Market Today: Dow logs 1,450-point gain, S&P 500 and Nasdaq surge to best day since April 2025 after Nvidia reinstates Jensen Huang; Nvidia shares up 30% \u2014 live updates",
-      "digest": "Stock Market Today: Dow logs 1,450-point gain, S&P 500 and Nasdaq surge to best day since April 2025 after Nvidia reinstates Jensen Huang; Nvidia shares up 30% \u2014 live updates",
-      "title": "Stock Market Today: Dow logs 1,450-point gain, S&P 500 and Nasdaq surge to best day since April 2025 after Nvidia reinstates Jensen Huang; Nvidia shares up 30% \u2014 live updates",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMnlFY2RjMXEwMk83LVpKcEY1QmhtTk03YmRoSUhkS0FUTkhpYnlIR3drVUNnVDJPLXJRR0RHR2VkNGk0R1AyUmpPZEQwUlFqeWUwSUtQME00YkxQcDRIbERLSXZoU2xMcmF4VVRwMkVLaG52d2RpSjR0eFZqMWZwOWVQQ3JkYTFYRkZ1ZldlS3ZVSGRPYXlxQnBGQ1JuT0QxVGJhLXY1MHhSdmMtdFE?oc=5",
-      "source": "MarketWatch",
+      "tag": "UPDATED",
+      "line": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks",
+      "digest": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks",
+      "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQT0N6eHducGhQY2ZyMTlRNjZOZHhoSnp0aGdkVTJsU2t0TnVhTGwtU0RVTVFFbXh1T0E1Z3BIWXJBdXgzbG1hQ2k0Znl2RFJLOUdLUGh2RjJSVHBidkdycXFzRDR3dzlyd0hXcHE3RmNSYnNRaEdQNWIyMHpYZzU0R0VTM0JKcVVpQTVz0gGQAUFVX3lxTE9rVEo0OGV5SWVvM3VzRHUtUEZKUkZVNjlxcWdyTGZKZDVlZ1M5QTNhbWszQ0hxOGhTXzh1MXVycXI0WVBoVHpBUHNhN0h2YXBYVVk2WFBSdFBXUWdPSS1qNUc1dk5obHpjSDNZdUFfamM1bFA3RV9fdm5jM1FoUFlGLVVOQjN4WjR3ZXNUR0M0MQ?oc=5",
+      "source": "CNBC",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Stock Market Today: Dow logs 1,450-point gain, S&P 500 and Nasdaq surge to best day since April 2025 after Nvidia reinstates Jensen Huang; Nvidia shares up 30% \u2014 live updates"
+      "text": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks"
     },
     {
-      "id": "6393b48fc09d",
+      "id": "e22320e22bc3",
       "category": "Markets",
-      "tag": "HOTFIX",
-      "line": "Two Major Cybersecurity Firms to Combine in $44 Billion Deal",
-      "digest": "Two Major Cybersecurity Firms to Combine in $44 Billion Deal",
-      "title": "Two Major Cybersecurity Firms to Combine in $44 Billion Deal",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNU2U0YkM4bXY0M3RNUzhqbHMzemFXQVhwb2dVRmlEdmgtUHR5YWwyNVdHQ3BlVjFTODVOVEhhWmdfVHlkTHoxUnhhWV9haEtGcVp1anJXWW1jYUNfRGUzWkRrRzNEY3IzR1JWZHNuN2ExY1BuOE95aklEUVRIT1Y3bndHUlJTSFhtbVE?oc=5",
-      "source": "The New York Times",
+      "tag": "NERFED",
+      "line": "Wall Street Roars Back as Huang\u2019s Shock Return Propels US Stocks",
+      "digest": "Wall Street Roars Back as Huang\u2019s Shock Return Propels US Stocks",
+      "title": "Wall Street Roars Back as Huang\u2019s Shock Return Propels US Stocks",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNeURSVWpyQXZjLW5UcndZVDJPQnE0NDU2UllUMUI5S29qcFJlWDg1empEbThycVphd2p3dmxJTUJJckZVQXBhaGlmT0JaNkh3SFZHRG5HNHl5ckpheVAzU3JHQldJVGQ2cl9RVWw4Wk96RXNiN0d1dW5iQ1RETTMxRnJVS2tnNFRwOVJkdjhxRHd5ZmJRNkoxaEtUcGNiSmdXRWxtYjRrM2RVcVREUXJneFZMcw?oc=5",
+      "source": "Bloomberg.com",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Two Major Cybersecurity Firms to Combine in $44 Billion Deal"
+      "text": "Wall Street Roars Back as Huang\u2019s Shock Return Propels US Stocks"
     },
     {
       "id": "5385fe74d5e6",
@@ -1600,6 +1600,21 @@
       "text": "Steven Spielberg Sets Adaptation Of \u2018The Heart In Winter\u2019 As Next Film At Focus With Jessie Buckley, Cillian Murphy And Mark Rylance Starring And Paul Thomas Anderson Adapting The Script"
     },
     {
+      "id": "cc3b52d2c663",
+      "category": "Movies & TV",
+      "tag": "PATCH",
+      "line": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "digest": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "title": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNM1EyLVMza0xpLVJacm1ZUEN3cXgwWTlDeFJFYm9LZU14dTVKWUNkT1NKcmllZF9Uc0lfalc2ZXEwS0g0bWZiRW9na25OLVNHQklPeVZ0d1AzWTlHb2pKWGtlajI5LVp1N2dEUzQ3VmxTV2NXSER4UnhTLTVjT2Z6ZFJZa05pOWNNV2c?oc=5",
+      "source": "The New York Times",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Hotfixes",
+      "text": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film"
+    },
+    {
       "id": "95c2ddb2e874",
       "category": "Movies & TV",
       "tag": "DLC",
@@ -1628,21 +1643,6 @@
       "filter": "Entertainment",
       "section": "Hotfixes",
       "text": "Ariana Grande Teases \u2018Eternal Sunshine Tour\u2019 Movie at Peacock"
-    },
-    {
-      "id": "9f43d9a18a7e",
-      "category": "Movies & TV",
-      "tag": "PATCH",
-      "line": "Eagles-Steelers Film Review: The new changes looked so much better than the old offense",
-      "digest": "Eagles-Steelers Film Review: The new changes looked so much better than the old offense",
-      "title": "Eagles-Steelers Film Review: The new changes looked so much better than the old offense",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOajQ4bWc5eDJpUUNwcHNTbmY4eE1FUDlDNFBZa1BDOGdTcS1VTmJ2dWhQNERNRFAwdzJzaHdwRnRoMUMxV0wyQjJORHFDTGdpV0NxNVBUZk8xdlA4ZTZEb1VwaG55TGRlTUdGMkh2WEdQRVBhdmljb2RoOTZlUGswcHBjTlBOSVBSdmRNZDZCMFBidGh6Rm9oR1RZM3RJVnlCVi1kQm43YzRybjZ4UklFQi1sVnJQbkpFbGtxRkVKVGVYT2pTSTNERWI3ZjhFSXZBUTNXWWFkZ3BMXzRWYzh1WWUzOWdyUGl3S2RHdDRXTQ?oc=5",
-      "source": "Bleeding Green Nation",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Hotfixes",
-      "text": "Eagles-Steelers Film Review: The new changes looked so much better than the old offense"
     },
     {
       "id": "64e7fa0e02b2",
@@ -1915,6 +1915,21 @@
       "text": "Upcoming: World Premiere of \u2018Murci\u00e9lago\u2019 Headlines HIDIVE\u2019s Anime Frontier Program"
     },
     {
+      "id": "477196fb8852",
+      "category": "Anime & Manga",
+      "tag": "UPDATED",
+      "line": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
+      "digest": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
+      "title": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE13NWlWSDBZT01vYTlsbTM4OXpGVzlWdjNyUm9GZ1FwYkQ4SjJDVVlGc1g1RTNoSlhtcV9TRkhPcmpDMjVMYWQzdlh1Tjc2T09hTlRkNTRaWFpnYngwTE9GRnd6T2ZOUlE0WU44QUhpd3N1RGJH?oc=5",
+      "source": "Brooklyn Museum",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Hotfixes",
+      "text": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages"
+    },
+    {
       "id": "b542d6cc7c6a",
       "category": "Anime & Manga",
       "tag": "UPDATED",
@@ -1930,34 +1945,19 @@
       "text": "Scotland Loves Anime Report: 'Samurai Ballerina,' 'We Are Aliens' and More!"
     },
     {
-      "id": "2b515a1d65bc",
-      "category": "Anime & Manga",
-      "tag": "ADDED",
-      "line": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
-      "digest": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
-      "title": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTy10Wm9KNkN6eFUtZkNfSkRTRlM3MzBNbTJiOG9Dbjl1dW9waktHbklOemZES3hQWHlFdlRlcF91b1JCQzlDa09TNFIzejNCNWpYaTZXckctUkxsYjI3MG8waTR4bTBQZG9MTkFUdk5NQVdFRlFwamF4UHZneFlhX1FRckNHR3RnRXhoaEktYlRhQ29rYzRKeG5Ec292VEVUZWd4LXNsNnNFS0dnZlR4YkZLMGthN01tMWltMjRyWl9tLUp4ZWIxTmZ3?oc=5",
-      "source": "Cleveland.com",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season"
-    },
-    {
-      "id": "4824d9e07512",
+      "id": "d1238fb873a4",
       "category": "Sports",
-      "tag": "META",
-      "line": "Eagles vs. Steelers: 19 winners, 8 losers, 4 IDKs",
-      "digest": "Eagles vs. Steelers: 19 winners, 8 losers, 4 IDKs",
-      "title": "Eagles vs. Steelers: 19 winners, 8 losers, 4 IDKs",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR19JTk8wemZyMnNfRHVOdDF4WkIyVDJDVFgtVHdpNGFFeGFlTjlDYXZ3VVhfcTNYd1ctMzNWSjQxZ1RWTE8tUUN2MXpBOTNUN1F3YjNsZVliLWQxamRIR05rNFNGMS1HRGczWnlEWTk2V1AwenZLZVhLNVh6OXZyQ1ppa3NtQUtVOXVVakVHY3g0MkpVM3Uxc3lFbzY3NVZSZmd2VUtIXzZQc3BOdk1hVmwwNjJac2Fx?oc=5",
-      "source": "Bleeding Green Nation",
+      "tag": "BUFFED",
+      "line": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
+      "digest": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
+      "title": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdFNRR1VSNTNzNHdQZThQamJqWXc5SVhIUjc2c3d5bE0ySkdqMFhlX1YxbDIyRTgtbmlqSUNBM3RzbnRieVNZUXFBbnZ3U0FaeE5qY2FSbmdPY291UHU2VGRIbjR5MTN5ZXBKVzdvcnJRUHNBTUpQWGF0OWtzUTVUcEVSQS16QkVMdnJiUDU3Z012S09wM1JwOTktSS10WE1qWFRn?oc=5",
+      "source": "San Francisco Chronicle",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
       "section": "Buffs",
-      "text": "Eagles vs. Steelers: 19 winners, 8 losers, 4 IDKs"
+      "text": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019"
     },
     {
       "id": "34797aabeb82",
@@ -1975,19 +1975,19 @@
       "text": "Roster: Mets owner Steve Cohen paid $450 million for Tarik Skubal. His fellow MLB owners want to stop him from doing it again"
     },
     {
-      "id": "e5b95a079a9b",
+      "id": "a8bea4687df0",
       "category": "Sports",
-      "tag": "META",
-      "line": "College Football Playoff projections: Big Ten could get just 1 spot",
-      "digest": "College Football Playoff projections: Big Ten could get just 1 spot",
-      "title": "College Football Playoff projections: Big Ten could get just 1 spot",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdEFsaVhZRW9qMGFEbDdyVy1CaUc1U3BLQk9ub09pQVRmN1psbUJNT0Z2UFc4QTZRM1kzeUx4eGF4TzR3SkwzX1BPZDFTZlV6b3k3ekpfdVJadUxDZ05VYV9NclVJbFptQW02UEJHNHAza3J3RnVOaWh6bVBESWoxTVIySUtLNE9qbzQ5QXlJMmx0bUxTUjY4bWJ4SFBQRUVsZHpBcmZEb2NJSnJTSlN5a3dnWnVwc1pmU00xbzl6ekFiU3dGNkZnYVNqSQ?oc=5",
-      "source": "Yahoo Sports",
+      "tag": "UPDATED",
+      "line": "Updating Eagles' 2027 draft pick after win over Steelers",
+      "digest": "Updating Eagles' 2027 draft pick after win over Steelers",
+      "title": "Updating Eagles' 2027 draft pick after win over Steelers",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSlpXeGcteUlVczZkdnRpYUhtN21wNGYtVXZ3T1JBSW42T0JKVWhtbC11a3pGYjFRam1TRG1nV0RiTm40YktmMkZhY29faE9uOGFLbjBUMmhXMUNVX0pKaFNUZm9SRHMyMk5MY3o1SUJia3RtbDVpWmxGUmROUTdmZk9BNUJENFFuWmo1V0ZMSU9YS25JRW9sM0NlRk5MVThSYXhJZy1ablhOV0hKVC1fMjhPaUxqQUZ2WXpoNWdlT2J0V2vSAcsBQVVfeXFMTng1SWZBY2Y0ZUlvMHg2c0lRR0RIb3VVZVVJMWpxTnB5N2xHeGtyOHBLOTZtYWtXQlduNlFlMTl4bzhTdUYta0ZONDFpNDNIU21kbFJidU8wN3RSY29sR2JKbTBfa2dDaEM4X0tQR3dVQ0Z3bUpPb0dHZmNsMjdMRGZEeGhoYVJOc0NJWXNqVHNjeW4tWGJQMDJDRW5nWXdxRElJRnc0bFhyY2x2dS0xOWJPVmY4WlBhNmoyRGh4YW50dXJ4bUt5bmlsLVk?oc=5",
+      "source": "NBC Sports Philadelphia",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
-      "section": "Buffs",
-      "text": "College Football Playoff projections: Big Ten could get just 1 spot"
+      "section": "Hotfixes",
+      "text": "Updating Eagles' 2027 draft pick after win over Steelers"
     },
     {
       "id": "75042416c691",
@@ -2003,6 +2003,21 @@
       "filter": "Sports",
       "section": "Buffs",
       "text": "Mayor Lucas excuses residents from obligations for KC Current victory march"
+    },
+    {
+      "id": "e03247370f29",
+      "category": "Sports",
+      "tag": "ROSTER",
+      "line": "Roster: Showdown Breakdown: Bengals at Commanders",
+      "digest": "Roster: Showdown Breakdown: Bengals at Commanders",
+      "title": "Showdown Breakdown: Bengals at Commanders",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKRUVUa3ZGZjhFZVJ6SVo5cER0eTE0NkRPeGppZkNTaTF2dUFGWmsxcnFNS2Vnbi0wVEZIRU44OGVWTi1md1ZuWWplS1M3V3FneUlUTTBUNmdJNUQyMEtNbVNXdjJlWEJvcEhHRzg0Y01PUmxHNVJ6bA?oc=5",
+      "source": "Establish The Run",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Buffs",
+      "text": "Roster: Showdown Breakdown: Bengals at Commanders"
     },
     {
       "id": "16988f14c7c7",
@@ -2035,34 +2050,19 @@
       "text": "Trevor Lawrence, Liam Coen share the blame for the Jaguars' loss to the Giants"
     },
     {
-      "id": "d1238fb873a4",
+      "id": "9fa7b577f69b",
       "category": "Sports",
-      "tag": "BUFFED",
-      "line": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
-      "digest": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
-      "title": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdFNRR1VSNTNzNHdQZThQamJqWXc5SVhIUjc2c3d5bE0ySkdqMFhlX1YxbDIyRTgtbmlqSUNBM3RzbnRieVNZUXFBbnZ3U0FaeE5qY2FSbmdPY291UHU2VGRIbjR5MTN5ZXBKVzdvcnJRUHNBTUpQWGF0OWtzUTVUcEVSQS16QkVMdnJiUDU3Z012S09wM1JwOTktSS10WE1qWFRn?oc=5",
-      "source": "San Francisco Chronicle",
+      "tag": "ROSTER",
+      "line": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "digest": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "title": "2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVEZEdk56a2NMYnZ4RnpUb1FmdkdIRlpOZ1ptWUd2OXliLXJPNDhKNFdhR29tY3BENkdTNGhSZzVUNjFNYkJRYjBlWFhyalhEZ3lBblk1dTEtMUhoODFwTTBtS1FYVmRCcUlXRzhUdk5IY0h2VnhjNnNBYVJlTE1tTm5ERDdrVkE4d0k5b0VHMkhOOHh0b0ViX1UxYnhQX1lxWFVKM01nNV9RZGhnaWU4Vg?oc=5",
+      "source": "CBS Sports",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
       "section": "Buffs",
-      "text": "How 49ers\u2019 Brock Purdy dissected Vikings\u2019 vaunted defense: \u2018Best player in the game\u2019"
-    },
-    {
-      "id": "a7f8bbe63957",
-      "category": "Sports",
-      "tag": "NERFED",
-      "line": "5 questions with SB Nation\u2019s Hogs Haven to preview Bengals vs. Commanders",
-      "digest": "5 questions with SB Nation\u2019s Hogs Haven to preview Bengals vs. Commanders",
-      "title": "5 questions with SB Nation\u2019s Hogs Haven to preview Bengals vs. Commanders",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZnVjLUE4MFRHeldoOVI0bnhPcDVlRU1KeXgwM0NUZzUxZFlzalNxTmlvN0Z4RDVKdFNFUlBSY2Zuekc5cEt0aWdKT1ZJNmJtd0g0enhnWG9rR1I3bTN3RmZJNEZFNE82MVRIMFh2NXdENlZ0Ry1Vd0JERy1xTGRVZkxUQzYzRURFM3NZNGJhb0F0VlhXTnRSRllKN19XdDVoM1d3a3NieVNpdFZZMnFDZVRwTlRLeTMwWndVQ2Q0SS1ZMDg?oc=5",
-      "source": "Cincy Jungle",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Nerfs",
-      "text": "5 questions with SB Nation\u2019s Hogs Haven to preview Bengals vs. Commanders"
+      "text": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up"
     },
     {
       "id": "76a698cebfe2",
@@ -2095,6 +2095,21 @@
       "text": "US states sue Musk companies over sexualised images made with AI chatbot Grok"
     },
     {
+      "id": "882515956197",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "digest": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "title": "Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CNkpRRHlsSENSTHZia05oNGQtaGx5SlZ4cG03OHNHZDRtanZrY2xxT2IwOWpDVkVrbVh1bkhtVUYyYldWTzBGakFhdVdPci1HRmt1RXJqSkoxWmtFd3Bz?oc=5",
+      "source": "OnTheSnow.com",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday"
+    },
+    {
       "id": "de31aba8de75",
       "category": "Weather & Disasters",
       "tag": "EVENT",
@@ -2110,34 +2125,19 @@
       "text": "Server event: Thanksgiving travel surge faces flight delays, storm threats across US"
     },
     {
-      "id": "892e59c89eca",
+      "id": "264b98a7b387",
       "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Server event: Wildfire Litigation Surpasses $18 Billion in U.S. Settlements",
-      "digest": "Server event: Wildfire Litigation Surpasses $18 Billion in U.S. Settlements",
-      "title": "Wildfire Litigation Surpasses $18 Billion in U.S. Settlements",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcXB1VzNZTU93YmR4dGxYanJhZ05vaE9tcUM3Ymh2THhGZ0RpUzl4TkVxbUs4ZUUyX3U4MTV4dmpqRVNjMndneF9KTkQwTTN2cjhOVWQ3YXVpbllDR21lY2NaTFptMGZKYml4S1hNazNtME1kc0pQd2djMkVJSUk2SkhqVlZ6LWlEdFdkcVBHVHJLWlhDUjZISg?oc=5",
-      "source": "Program Business",
+      "tag": "ADDED",
+      "line": "The weirdest Thanksgiving weather events in US history",
+      "digest": "The weirdest Thanksgiving weather events in US history",
+      "title": "The weirdest Thanksgiving weather events in US history",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaktra05EcmE5S2NMeDdDT3R2NFNVZGo3UlRSYkxudWxvOGg1anRYRTh6ckJLb3NEMFhCZC1pZUxBZk1YNEtKejRpeWttQXFTazZmUDJ3Z1lCYm5oakNKYzhNNjVocGdSaDZmWXZDRzRobU5MTWs2aE9SeHpoRXNWejlURGhaei13b3lxbkNlS2tIeWVCdWFQVl8wYllKUQ?oc=5",
+      "source": "The Weather Channel",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Limited-Time Events",
-      "text": "Server event: Wildfire Litigation Surpasses $18 Billion in U.S. Settlements"
-    },
-    {
-      "id": "6cad8c5c6af3",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Server event: El Ni\u00f1o flood risks expose US insurance coverage gaps ahead of winter",
-      "digest": "Server event: El Ni\u00f1o flood risks expose US insurance coverage gaps ahead of winter",
-      "title": "El Ni\u00f1o flood risks expose US insurance coverage gaps ahead of winter",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV2tPY3VtWDhvdlI3MlBuUTk2Qnh6OG9oZmoyem8yQm53OVJ4dHVMcWpQa1NhSHgwdzJCNWw5Y0N4MW5sTWJ3elMtQnRMSEN0TW15VnBzZElFYUFscDU1T3NLNXRBa3BoZnExZ2ctU1pvUm9wcWhqUXJQVUhsbmY5ckNQMjZZdFU?oc=5",
-      "source": "Beinsure",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Server event: El Ni\u00f1o flood risks expose US insurance coverage gaps ahead of winter"
+      "text": "The weirdest Thanksgiving weather events in US history"
     },
     {
       "id": "d53acf950d1a",
@@ -2153,36 +2153,6 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Thanksgiving 2026 travel forecast: Best and worst days to fly, more - ABC News - Breaking News, Latest News and Videos"
-    },
-    {
-      "id": "2bf98276aae6",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
-      "digest": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
-      "title": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOY2pNUkN4LXZiQlIySy1sZ01UeXBHQmc1M0hxVWNRcVQycmY1UnRRQlFmdUpycURZbUNhNXY2RzJxREMwRW5Za2lucUt2blJneG5NcHFCSUFUamoyREhfblh4T1hzZXd2SGQ0NS1mTDhfc1hQTEpiS1hRS0VpcEUzSUFBX0NCNWhzcUNueWlFeTNTYnpnal9VbnBVVFJiZzBtSDBnblcyZFdwWWYtOVZ1dHlBQ3RHbHA0MUE?oc=5",
-      "source": "NBC News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel"
-    },
-    {
-      "id": "e24b6310dcc5",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "digest": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "title": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZWEySGVFclMyYXBNX3NfckJNYXhlZlYxMGRlYWZhMU1GeWZFLUZaYUdDZlRXbUI2LXVvYjQzLThCTzFvUUZGM3NraW1aRnYtTWFMenhDeTI2dXp5dldJa3VfTXdmSjFpcXBtSTdCZjhucWhMT0Jyd1BiajJhclJDX2FoVWN3R3liUEtvd0ZmREMxVk84RE1SQlVR?oc=5",
-      "source": "KCRA",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California"
     },
     {
       "id": "57d595bab141",
@@ -2215,6 +2185,21 @@
       "text": "Airline glitches and storms could make Thanksgiving travel messy"
     },
     {
+      "id": "e24b6310dcc5",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
+      "digest": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
+      "title": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZWEySGVFclMyYXBNX3NfckJNYXhlZlYxMGRlYWZhMU1GeWZFLUZaYUdDZlRXbUI2LXVvYjQzLThCTzFvUUZGM3NraW1aRnYtTWFMenhDeTI2dXp5dldJa3VfTXdmSjFpcXBtSTdCZjhucWhMT0Jyd1BiajJhclJDX2FoVWN3R3liUEtvd0ZmREMxVk84RE1SQlVR?oc=5",
+      "source": "KCRA",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California"
+    },
+    {
       "id": "87d9397d70f1",
       "category": "Holidays & Events",
       "tag": "ADDED",
@@ -2228,6 +2213,21 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Will Bad Weather Disrupt Thanksgiving Travel?"
+    },
+    {
+      "id": "69dddde50e66",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Airplane or road trip? Thanksgiving travel ramps up, many families are opting to drive rather than fly",
+      "digest": "Airplane or road trip? Thanksgiving travel ramps up, many families are opting to drive rather than fly",
+      "title": "Airplane or road trip? Thanksgiving travel ramps up, many families are opting to drive rather than fly",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMWQ0eVZxNmpGUDk3a3ZxTXJ2cUhhOFBfb194UFNucUVkWDdhcGRXVkJQWUQyVUR2RkM4TWNKVDhvbWtCSUx6bUNhYjJtdW80ZjlfdGp0bk1ESm5SYUxDYnNILWNDbFdNUlA0VWM5MEotX09QR2JzeFJFVlpERzhBeFJKRktQMWRaWTkzUGpUeHdFSlhUOFBpVzBvejI2NUlVbjc5SU55M1YxUEFaZkM4cjN30gG3AUFVX3lxTE9tbV9ZZ0tpTFl1ME9LX1ozeXN4YmQtMGFfN0VheTJTcWp0TXp2UFV0OGZnU2pTLXdMdG8zQ1IzMlBFUjFZWWFZaFhPSXV1SDlnNEl4Q0RIcUpHTk00T3JyLWdjLW1mSmhLQlFuQWZCTThjM2UxWFY5Rzd6N2NDREF1TXVvRV9ycXVySEdRaWhmYW5aOGIxVi1ENHZ2Ri1qY1FMOE0wWmh2QVNOQldUTlJLYkREVkhaUQ?oc=5",
+      "source": "ABC11 News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Airplane or road trip? Thanksgiving travel ramps up, many families are opting to drive rather than fly"
     },
     {
       "id": "bcda98deac74",
@@ -2846,19 +2846,19 @@
       "id": "3e7d20d6a3be",
       "category": "Markets",
       "tag": "BUFFED",
-      "line": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91",
-      "digest": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91",
-      "title": "Invesco QQQ Trust (QQQ) +6.98%",
+      "line": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03",
+      "digest": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03",
+      "title": "Invesco QQQ Trust (QQQ) +7.00%",
       "url": "https://www.cnbc.com/quotes/QQQ",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "QQQ",
-      "price": 650.91,
+      "price": 651.03,
       "previous_close": 608.45,
-      "change_pct": 6.97838770646724,
+      "change_pct": 6.998109951516135,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91"
+      "text": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03"
     },
     {
       "id": "342be18c33a1",
