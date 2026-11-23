@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://theroundtable-byte.github.io/real-life-v2026/sitemap.xml
