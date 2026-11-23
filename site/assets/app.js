@@ -48,82 +48,63 @@
     setInterval(loadCrypto, 60000);
   }
 
-  function collapseCards(forceOpen) {
-    document.querySelectorAll(".notes[data-collapse]").forEach(function (box) {
-      const limit = parseInt(box.getAttribute("data-collapse") || "5", 10);
-      const notes = box.querySelectorAll(".note");
-      const searching = forceOpen;
-      notes.forEach(function (note, i) {
-        if (searching) {
-          note.classList.remove("is-collapsed");
-        } else {
-          note.classList.toggle("is-collapsed", i >= limit);
-        }
-      });
-      const btn = box.parentElement && box.parentElement.querySelector("[data-more]");
-      if (btn) {
-        const hidden = box.querySelectorAll(".note.is-collapsed").length;
-        btn.hidden = searching || hidden === 0;
-        if (!searching) btn.textContent = "Show " + hidden + " more";
-      }
+  const input = document.getElementById("q");
+  const chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
+  const entries = Array.prototype.slice.call(document.querySelectorAll(".entry"));
+  const sections = Array.prototype.slice.call(document.querySelectorAll(".patch-section"));
+  const empty = document.getElementById("empty");
+  const moreBtn = document.getElementById("full-changelog");
+  const fullLog = document.getElementById("full-log");
+  let active = "all";
+  let userOpened = false;
+
+  function setFullOpen(open) {
+    if (!fullLog || !moreBtn) return;
+    fullLog.hidden = !open;
+    moreBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    const n = moreBtn.getAttribute("data-count") || "";
+    moreBtn.textContent = open ? "Hide full changelog" : (n ? "Full changelog (" + n + " more)" : "Full changelog");
+  }
+
+  if (moreBtn && fullLog) {
+    const rest = fullLog.querySelectorAll(".entry").length;
+    moreBtn.setAttribute("data-count", String(rest));
+    moreBtn.addEventListener("click", function () {
+      const open = fullLog.hidden;
+      userOpened = open;
+      setFullOpen(open);
     });
   }
 
-  document.querySelectorAll("[data-more]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const box = btn.parentElement.querySelector(".notes");
-      if (!box) return;
-      const collapsed = box.querySelectorAll(".note.is-collapsed");
-      if (collapsed.length) {
-        collapsed.forEach(function (n) { n.classList.remove("is-collapsed"); });
-        btn.textContent = "Show less";
-      } else {
-        collapseCards(false);
-      }
-    });
-  });
-
-  const input = document.getElementById("q");
-  const chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
-  const notes = Array.prototype.slice.call(document.querySelectorAll(".note"));
-  const sections = Array.prototype.slice.call(document.querySelectorAll(".cat-card"));
-  const empty = document.getElementById("empty");
-  let active = "all";
-
   function apply() {
     const q = (input && input.value ? input.value : "").trim().toLowerCase();
-    collapseCards(Boolean(q) || active !== "all");
+    const filtering = active !== "all" || Boolean(q);
+    if (filtering) setFullOpen(true);
+    else if (!userOpened) setFullOpen(false);
+
     let visible = 0;
-    notes.forEach(function (note) {
-      const cat = note.getAttribute("data-category") || "";
-      const text = note.getAttribute("data-text") || note.textContent.toLowerCase();
-      const catOk = active === "all" || cat === active;
+    entries.forEach(function (item) {
+      const filt = item.getAttribute("data-filter") || "";
+      const text = item.getAttribute("data-text") || item.textContent.toLowerCase();
+      const filtOk = active === "all" || filt === active;
       const qOk = !q || text.indexOf(q) !== -1;
-      const show = catOk && qOk;
-      note.hidden = !show;
+      const show = filtOk && qOk;
+      item.hidden = !show;
       if (show) visible += 1;
     });
     sections.forEach(function (section) {
-      const any = section.querySelector(".note:not([hidden])");
-      const extras = section.querySelector(".anime-extra");
-      const cat = section.getAttribute("data-category") || "";
-      const catOk = active === "all" || cat === active;
-      section.hidden = !catOk || (!any && !(extras && !q));
+      section.hidden = !section.querySelector(".entry:not([hidden])");
     });
-    if (empty) empty.hidden = visible !== 0 || (active !== "all" && !q && document.querySelector('.cat-card:not([hidden]) .anime-extra'));
+    if (empty) empty.hidden = visible !== 0;
   }
 
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       active = chip.getAttribute("data-filter") || "all";
+      if (active === "all" && input) input.value = "";
       chips.forEach(function (c) { c.classList.toggle("is-on", c === chip); });
       apply();
     });
   });
   if (input) input.addEventListener("input", apply);
-
-  const style = document.createElement("style");
-  style.textContent = ".note.is-collapsed { display: none; }";
-  document.head.appendChild(style);
-  collapseCards(false);
 })();

@@ -10,9 +10,43 @@ This is satire. Every item is based on a real, linked source. The joke is the fr
 
 A GitHub Actions workflow runs at **8:00 AM and 6:00 PM US Eastern** (13:00 and 23:00 UTC), plus manual runs from the Actions tab. During daylight time those UTC clocks fall at 9:00 AM and 7:00 PM Eastern.
 
-Each build is versioned like `v2026.11 · Week 4 · Nov 23 (Evening patch)`. The last 60 patches stay in the archive.
+Each build is versioned like `v2026.11 · Week 4 · Nov 23 · Evening Patch`. The homepage shows one patch-notes post (Buffs, Nerfs, Hotfixes, New Content, Known Bugs, Limited-Time Events, Markets), with older patches listed below like an update history. The last 60 patches stay in the archive.
 
 Crypto prices (BTC, ETH, SOL, XRP, DOGE, ADA) refresh in the visitor’s browser about every minute from [CoinGecko](https://www.coingecko.com/). They do not require a rebuild.
+
+
+## Featured patch notes (hand-written)
+
+Auto-collected headlines stay factual, but they cannot really rewrite a news story as a punchy game-patch line. To feature that voice, add a JSON file at:
+
+`content/patches/YYYY-MM-DD-am.json` or `content/patches/YYYY-MM-DD-pm.json`
+
+Use `am` for the morning patch and `pm` for the evening patch, with the date in America/New_York. If that file is present when the site is generated, its items become the **featured** patch for that update. The automatic feed still fills the **Full changelog**. If the file has fewer than about 18 items, standout auto lines are added so the featured list stays a short, readable set. Duplicate URLs are skipped.
+
+```json
+{
+  "items": [
+    {
+      "section": "Buffs",
+      "tag": "News & Politics",
+      "text": "Human Buff: NYC lawmaker unlocks the Lizard Eye-Roll skill after a viral video.",
+      "url": "https://www.example.com/article",
+      "source": "The Daily Beast"
+    }
+  ]
+}
+```
+
+Fields:
+
+- `section` (required): one of `Buffs`, `Nerfs`, `Hotfixes`, `New Content`, `Known Bugs`, `Limited-Time Events`, `Markets`.
+- `tag` (required): the broad filter pill shown on the line: `News & Politics`, `Tech & Science`, `Entertainment`, `Sports`, `Life`, or `Markets`.
+- `text` (required): the patch line as it should appear, joke first, fact intact. Do not invent events.
+- `url` (required): a real source link for that line.
+- `source` (optional): the publication or agency name.
+- `category` (optional): unused for display; the `tag` is what readers filter on.
+
+Filters on the site are: All, plus those six tags. Life covers weather, holidays, health/recalls, gas and grocery, slang, and culture.
 
 ## Weekly Patch Notes (hand-written)
 

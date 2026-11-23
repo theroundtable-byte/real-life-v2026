@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "section": "Buffs",
+      "tag": "News & Politics",
+      "text": "Human Buff: NYC lawmaker unlocks the Lizard Eye-Roll skill after a viral video.",
+      "url": "https://www.thedailybeast.com/dem-assemblyman-jordan-jg-wright-addresses-bonkers-lizard-people-claim-after-viral-eye-roll",
+      "source": "The Daily Beast"
+    },
+    {
+      "section": "New Content",
+      "tag": "Tech & Science",
+      "text": "Bestiary: Tiny new flying frog species added in the mountains of Sulawesi, Indonesia.",
+      "url": "https://www.ucdavis.edu/news/new-asian-flying-frog-species-identified-indonesia",
+      "source": "UC Davis"
+    },
+    {
+      "section": "New Content",
+      "tag": "Tech & Science",
+      "text": "Bestiary: Young chimpanzees may pick up accents as they grow, much like humans.",
+      "url": "https://scitechdaily.com/scientists-discover-that-young-chimpanzees-may-develop-accents-just-like-humans/",
+      "source": "SciTechDaily"
+    },
+    {
+      "section": "New Content",
+      "tag": "Tech & Science",
+      "text": "Bestiary: The pasture mealybug is promoted from 'new variant' to a species of its own.",
+      "url": "https://entomologytoday.org/2026/11/23/new-species-unraveling-mystery-pasture-mealybug-heliococcus-novovillei/",
+      "source": "Entomology Today"
+    },
+    {
+      "section": "Buffs",
+      "tag": "News & Politics",
+      "text": "Respawn: Jensen Huang is back as Nvidia CEO.",
+      "url": "https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump",
+      "source": "NPR"
+    },
+    {
+      "section": "Limited-Time Events",
+      "tag": "Life",
+      "text": "Thanksgiving is live Thursday, November 26.",
+      "url": "https://www.usa.gov/holidays",
+      "source": "U.S. holiday calendar"
+    },
+    {
+      "section": "Limited-Time Events",
+      "tag": "Life",
+      "text": "Server event: Storms on both coasts could snarl the busiest Thanksgiving travel days.",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOY2pNUkN4LXZiQlIySy1sZ01UeXBHQmc1M0hxVWNRcVQycmY1UnRRQlFmdUpycURZbUNhNXY2RzJxREMwRW5Za2lucUt2blJneG5NcHFCSUFUamoyREhfblh4T1hzZXd2SGQ0NS1mTDhfc1hQTEpiS1hRS0VpcEUzSUFBX0NCNWhzcUNueWlFeTNTYnpnal9VbnBVVFJiZzBtSDBnblcyZFdwWWYtOVZ1dHlBQ3RHbHA0MUE?oc=5",
+      "source": "NBC News"
+    },
+    {
+      "section": "Known Bugs",
+      "tag": "Life",
+      "text": "Recall: Grand Strand Sandwich Company Lunch Box biscuits may be contaminated with Listeria.",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766877",
+      "source": "CDC"
+    },
+    {
+      "section": "Known Bugs",
+      "tag": "Life",
+      "text": "Recall: Brett Anthony Foods frozen cheeseburger products have undeclared allergens.",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766900",
+      "source": "CDC"
+    }
+  ]
+}

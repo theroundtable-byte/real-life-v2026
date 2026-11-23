@@ -26,6 +26,7 @@ WEEKLY_OUT = SITE / "weekly"
 CONTENT = ROOT / "content"
 WEEKLY_DIR = CONTENT / "weekly"
 WATCHLIST_PATH = CONTENT / "watchlist.json"
+PATCH_IN = CONTENT / "patches"
 TZ = ZoneInfo("America/New_York")
 SITE_URL = "https://theroundtable-byte.github.io/real-life-v2026"
 UA = (
@@ -89,11 +90,23 @@ CATEGORIES = [
     "Anime & Manga", "Music", "Culture", "Tech", "Science & Nature",
     "Politics", "Slang", "Markets",
 ]
-CAT_GROUPS = [
-    ("Today", ["News", "Sports", "Weather & Disasters", "Holidays & Events", "Health & Recalls", "Gas & Grocery"]),
-    ("Culture", ["Gaming", "Movies & TV", "Anime & Manga", "Music", "Culture"]),
-    ("Systems", ["Tech", "Science & Nature", "Politics", "Slang", "Markets"]),
+FILTERS = [
+    ("News & Politics", ["News", "Politics"]),
+    ("Tech & Science", ["Tech", "Science & Nature"]),
+    ("Entertainment", ["Gaming", "Movies & TV", "Anime & Manga", "Music"]),
+    ("Sports", ["Sports"]),
+    ("Life", ["Weather & Disasters", "Holidays & Events", "Health & Recalls", "Gas & Grocery", "Slang", "Culture"]),
+    ("Markets", ["Markets"]),
 ]
+SECTIONS = ["Buffs", "Nerfs", "Hotfixes", "New Content", "Known Bugs", "Limited-Time Events", "Markets"]
+SECTION_FOR_TAG = {
+    "BUFFED": "Buffs", "BALANCE": "Buffs", "ROSTER": "Buffs", "META": "Buffs",
+    "NERFED": "Nerfs",
+    "HOTFIX": "Hotfixes", "FIXED": "Hotfixes", "UPDATED": "Hotfixes", "PATCH": "Hotfixes",
+    "ADDED": "New Content", "DLC": "New Content", "WATCHLIST": "New Content",
+    "KNOWN ISSUE": "Known Bugs", "RECALL": "Known Bugs",
+    "EVENT": "Limited-Time Events",
+}
 TAG_LABELS = {
     "BUFFED": "Buffs", "NERFED": "Nerfs", "HOTFIX": "Hotfix",
     "KNOWN ISSUE": "Known bug", "ADDED": "New content", "FIXED": "Fixed",
@@ -102,162 +115,156 @@ TAG_LABELS = {
     "BALANCE": "Balance change", "EVENT": "Server event",
     "RECALL": "Recall", "WATCHLIST": "Watchlist",
 }
+FEATURED_LIMIT = 18
 
-# (tag, card line, digest line). Funny but readable; the real headline stays intact.
+# (tag, line, digest). No redundant "Buffs:" / "New content:" prefix — the section header covers that.
 TEMPLATES = {
     "News": [
-        ("HOTFIX", "Hotfix: {title}", "Hotfix: {title}"),
-        ("UPDATED", "World state updated: {title}", "Patch: {title}"),
-        ("PATCH", "Incident report: {title}", "Patch: {title}"),
-        ("KNOWN ISSUE", "Known bug: {title}", "Known bug: {title}"),
-        ("FIXED", "Stability pass: {title}", "Fixed: {title}"),
-        ("UPDATED", "Server announcement: {title}", "Patch: {title}"),
+        ("HOTFIX", "World state: {title}", "World state: {title}"),
+        ("UPDATED", "World state: {title}", "World state: {title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("KNOWN ISSUE", "{title}", "{title}"),
+        ("FIXED", "{title}", "{title}"),
     ],
     "Tech": [
-        ("ADDED", "New feature: {title}", "New content: {title}"),
-        ("HOTFIX", "Engineering hotfix: {title}", "Hotfix: {title}"),
-        ("BUFFED", "Buffs: {title}", "Buffs: {title}"),
-        ("KNOWN ISSUE", "Known bug: {title}", "Known bug: {title}"),
-        ("PATCH", "Vendor patch: {title}", "Patch: {title}"),
-        ("UPDATED", "Experimental build: {title}", "Patch: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("KNOWN ISSUE", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("UPDATED", "Experimental build: {title}", "Experimental build: {title}"),
     ],
     "Culture": [
-        ("ADDED", "Seasonal event: {title}", "New content: {title}"),
-        ("UPDATED", "Cosmetic update: {title}", "Patch: {title}"),
-        ("ADDED", "Lore update: {title}", "New content: {title}"),
-        ("BUFFED", "Meta shift: {title}", "Buffs: {title}"),
-        ("PATCH", "Codex expanded: {title}", "Patch: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("UPDATED", "Cosmetic: {title}", "Cosmetic: {title}"),
+        ("BUFFED", "Meta shift: {title}", "Meta shift: {title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Music": [
-        ("ADDED", "Audio DLC: {title}", "New content: {title}"),
-        ("ADDED", "Soundtrack update: {title}", "New content: {title}"),
-        ("BUFFED", "Sound mix buffed: {title}", "Buffs: {title}"),
-        ("UPDATED", "Now playing: {title}", "Patch: {title}"),
-        ("PATCH", "Listening queue updated: {title}", "Patch: {title}"),
+        ("ADDED", "Soundtrack: {title}", "Soundtrack: {title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("UPDATED", "Now playing: {title}", "Now playing: {title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Science & Nature": [
-        ("ADDED", "Bestiary update: {title}", "New content: {title}"),
-        ("ADDED", "Path notes: {title}", "New content: {title}"),
-        ("UPDATED", "Physics tweak: {title}", "Patch: {title}"),
-        ("HOTFIX", "Nature hotfix: {title}", "Hotfix: {title}"),
-        ("PATCH", "Field research patch: {title}", "Patch: {title}"),
-        ("ADDED", "New content: {title}", "New content: {title}"),
+        ("ADDED", "Bestiary: {title}", "Bestiary: {title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Slang": [
-        ("ADDED", "Players are now searching for: {title}", "New content: {title} is trending."),
-        ("UPDATED", "Search meta update: {title}", "Meta: {title} is climbing."),
-        ("ADDED", "Vocabulary patch: {title}", "New content: {title}"),
-        ("BUFFED", "Vocabulary buff: {title}", "Buffs: {title}"),
-        ("PATCH", "Trend compiled: {title}", "Patch: {title}"),
+        ("ADDED", "Players are now searching for: {title}", "Players are now searching for: {title}"),
+        ("UPDATED", "{title} is climbing the search meta.", "{title} is climbing the search meta."),
+        ("BUFFED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Politics": [
-        ("BALANCE", "Faction balance update: {title}", "Balance change: {title}"),
-        ("PATCH", "Governance patch: {title}", "Patch: {title}"),
-        ("HOTFIX", "Civic hotfix: {title}", "Hotfix: {title}"),
-        ("KNOWN ISSUE", "Open debate thread: {title}", "Known bug: {title}"),
-        ("UPDATED", "Policy tree changed: {title}", "Patch: {title}"),
-        ("ROSTER", "Roster update: {title}", "Roster update: {title}"),
+        ("BALANCE", "Faction balance: {title}", "Faction balance: {title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("KNOWN ISSUE", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("ROSTER", "Roster: {title}", "Roster: {title}"),
     ],
     "Markets": [
-        ("UPDATED", "Economy rebalance: {title}", "Patch: {title}"),
-        ("BUFFED", "Risk-on patch: {title}", "Buffs: {title}"),
-        ("NERFED", "Risk-off patch: {title}", "Nerfs: {title}"),
-        ("HOTFIX", "Trading-floor hotfix: {title}", "Hotfix: {title}"),
-        ("PATCH", "Market bulletin: {title}", "Patch: {title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("NERFED", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Gaming": [
-        ("ADDED", "DLC drop: {title}", "New content: {title}"),
-        ("BALANCE", "Balance change: {title}", "Balance change: {title}"),
-        ("HOTFIX", "Live-branch hotfix: {title}", "Hotfix: {title}"),
-        ("META", "The meta shifted: {title}", "Meta: {title}"),
-        ("KNOWN ISSUE", "Known bug: {title}", "Known bug: {title}"),
-        ("BUFFED", "Buffs: {title}", "Buffs: {title}"),
-        ("PATCH", "Patch notes: {title}", "Patch: {title}"),
-        ("DLC", "Season pass update: {title}", "DLC: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("BALANCE", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("META", "Meta shift: {title}", "Meta shift: {title}"),
+        ("KNOWN ISSUE", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("DLC", "DLC: {title}", "DLC: {title}"),
     ],
     "Movies & TV": [
-        ("ADDED", "New cutscene queued: {title}", "New content: {title}"),
-        ("DLC", "Season pass update: {title}", "DLC: {title}"),
-        ("UPDATED", "Trailer dropped: {title}", "Patch: {title}"),
-        ("ADDED", "Casting update: {title}", "New content: {title}"),
-        ("PATCH", "Lore team notes: {title}", "Patch: {title}"),
-        ("BUFFED", "Buffs: {title}", "Buffs: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("DLC", "Season pass: {title}", "Season pass: {title}"),
+        ("UPDATED", "Trailer: {title}", "Trailer: {title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
     ],
     "Anime & Manga": [
-        ("ADDED", "New content: {title}", "New content: {title}"),
-        ("DLC", "Upcoming DLC: {title}", "Upcoming DLC: {title}"),
-        ("UPDATED", "Series update: {title}", "Patch: {title}"),
-        ("PATCH", "Episode notes: {title}", "Patch: {title}"),
-        ("BUFFED", "Buffs: {title}", "Buffs: {title}"),
-        ("WATCHLIST", "Watchlist ping: {title}", "Watchlist: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("DLC", "Upcoming: {title}", "Upcoming: {title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("WATCHLIST", "Watchlist: {title}", "Watchlist: {title}"),
     ],
     "Sports": [
-        ("BALANCE", "Balance change: {title}", "Balance change: {title}"),
-        ("ROSTER", "Roster update: {title}", "Roster update: {title}"),
-        ("BUFFED", "Buffs: {title}", "Buffs: {title}"),
-        ("NERFED", "Nerfs: {title}", "Nerfs: {title}"),
-        ("UPDATED", "Standings update: {title}", "Patch: {title}"),
-        ("PATCH", "Game recap: {title}", "Patch: {title}"),
-        ("META", "Playoff meta: {title}", "Meta: {title}"),
+        ("BALANCE", "{title}", "{title}"),
+        ("ROSTER", "Roster: {title}", "Roster: {title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("NERFED", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("META", "{title}", "{title}"),
     ],
     "Weather & Disasters": [
         ("EVENT", "Server event: {title}", "Server event: {title}"),
-        ("HOTFIX", "Weather system hotfix: {title}", "Hotfix: {title}"),
-        ("UPDATED", "World map update: {title}", "Patch: {title}"),
-        ("KNOWN ISSUE", "Travel advisory: {title}", "Known bug: {title}"),
-        ("EVENT", "Overworld event: {title}", "Server event: {title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("KNOWN ISSUE", "Travel advisory: {title}", "Travel advisory: {title}"),
     ],
     "Holidays & Events": [
-        ("ADDED", "Limited-time event: {title}", "Limited-time event: {title}"),
-        ("UPDATED", "Seasonal event: {title}", "Limited-time event: {title}"),
-        ("PATCH", "Event schedule: {title}", "Patch: {title}"),
-        ("HOTFIX", "Travel hotfix: {title}", "Hotfix: {title}"),
-        ("EVENT", "Calendar event: {title}", "Limited-time event: {title}"),
+        ("ADDED", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("EVENT", "{title}", "{title}"),
     ],
     "Health & Recalls": [
-        ("NERFED", "Nerf: {title}", "Nerf: {title}"),
-        ("KNOWN ISSUE", "Known bug: {title}", "Known bug: {title}"),
-        ("RECALL", "Recall notice: {title}", "Recall: {title}"),
-        ("HOTFIX", "Safety hotfix: {title}", "Hotfix: {title}"),
-        ("PATCH", "Official notice: {title}", "Patch: {title}"),
+        ("NERFED", "{title}", "{title}"),
+        ("KNOWN ISSUE", "{title}", "{title}"),
+        ("RECALL", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
     ],
     "Gas & Grocery": [
-        ("NERFED", "Cost-of-living nerf: {title}", "Nerfs: {title}"),
-        ("BUFFED", "Cost-of-living buff: {title}", "Buffs: {title}"),
-        ("UPDATED", "Price check: {title}", "Patch: {title}"),
-        ("PATCH", "Household ledger: {title}", "Patch: {title}"),
-        ("HOTFIX", "Checkout hotfix: {title}", "Hotfix: {title}"),
+        ("NERFED", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("PATCH", "{title}", "{title}"),
+        ("HOTFIX", "{title}", "{title}"),
     ],
 }
 
 KEYWORD_RULES = [
     (re.compile(r"\b(new species|species of|flying frog|fungus)\b", re.I), "ADDED",
-     "Bestiary update: {title}", "New content: {title} — bestiary updated."),
+     "Bestiary: {title}", "Bestiary: {title}"),
     (re.compile(r"\b(snake|slither|serpent)\b", re.I), "BUFFED",
-     "Creature patch: {title}", "Buffs: {title} — sounds like a movement-tech update."),
-    (re.compile(r"\b(frog|whale|bird|lizard|mealybug)\b", re.I), "ADDED",
-     "Bestiary update: {title}", "New content: {title}"),
+     "Movement tech: {title}", "Movement tech: {title}"),
+    (re.compile(r"\b(frog|whale|bird|lizard|mealybug|chimpanzee)\b", re.I), "ADDED",
+     "Bestiary: {title}", "Bestiary: {title}"),
     (re.compile(r"\b(storm|blizzard|hurricane|flood|wildfire|tornado)\b", re.I), "EVENT",
      "Server event: {title}", "Server event: {title}"),
     (re.compile(r"\b(recall|undeclared)\b", re.I), "RECALL",
-     "Recall notice: {title}", "Nerf: {title}"),
+     "{title}", "{title}"),
     (re.compile(r"\b(trade|traded|signs with|agrees with|releasing|released)\b", re.I), "ROSTER",
-     "Roster update: {title}", "Roster update: {title}"),
+     "Roster: {title}", "Roster: {title}"),
     (re.compile(r"\b(upset|blowout|beats|comeback)\b", re.I), "BALANCE",
-     "Balance change: {title}", "Balance change: {title}"),
-    (re.compile(r"\b(black friday|cyber monday|thanksgiving|holiday)\b", re.I), "ADDED",
-     "Limited-time event: {title}", "Limited-time event: {title}"),
+     "{title}", "{title}"),
+    (re.compile(r"\b(black friday|cyber monday|thanksgiving)\b", re.I), "ADDED",
+     "{title}", "{title}"),
     (re.compile(r"\b(gas prices?|grocery prices?|egg prices?)\b", re.I), "UPDATED",
-     "Price check: {title}", "Patch: {title}"),
+     "{title}", "{title}"),
     (re.compile(r"\b(reinstated|returns as|respawn)\b", re.I), "BUFFED",
-     "Respawn: {title}", "Buffs: {title} — that's a respawn."),
+     "Respawn: {title}", "Respawn: {title}"),
     (re.compile(r"\b(ai\b|chatgpt|chatbot|artificial intelligence)\b", re.I), "UPDATED",
-     "Experimental build: {title}", "Patch: {title}"),
+     "{title}", "{title}"),
     (re.compile(r"\b(chapter|volume)\b", re.I), "ADDED",
-     "New content: {title}", "New content: {title}"),
+     "New chapter: {title}", "New chapter: {title}"),
     (re.compile(r"\b(anime announced|anime adaptation|gets an anime)\b", re.I), "DLC",
-     "Upcoming DLC: {title}", "Upcoming DLC: {title}"),
+     "Upcoming anime: {title}", "Upcoming anime: {title}"),
 ]
+
 
 def log(msg: str) -> None:
     print(msg, flush=True)
@@ -274,7 +281,7 @@ def patch_kind(dt: datetime) -> str:
 def patch_meta(dt: datetime) -> dict:
     kind = patch_kind(dt)
     pid = f"{dt:%Y-%m-%d}-{kind.lower()}"
-    label = f"v{dt:%Y}.{dt.month} · Week {week_of_month(dt)} · {dt:%b} {dt.day} ({kind} patch)"
+    label = f"v{dt:%Y}.{dt.month} · Week {week_of_month(dt)} · {dt:%b} {dt.day} · {kind} Patch"
     return {
         "id": pid, "label": label, "kind": kind, "year": dt.year,
         "month": dt.month, "week": week_of_month(dt), "day": dt.day,
@@ -401,14 +408,17 @@ def match_watchlist(title: str, series: list[str]) -> str | None:
     return None
 
 def watchlist_style(title: str, series: str) -> tuple[str, str, str]:
-    t = title.lower()
-    if re.search(r"\b(chapter|volume|issue)\b", t):
-        return "ADDED", f"New content: {series} — {title}", f"New content: {title}"
-    if re.search(r"\b(announce|announced|greenlit|adaptation)\b", t) and "anime" in t:
-        return "DLC", f"Upcoming DLC: {title}", f"Upcoming DLC: {title}"
-    if re.search(r"\b(delay|hiatus|cancelled|canceled)\b", t):
-        return "KNOWN ISSUE", f"Known bug: {title}", f"Known bug: {title}"
-    return "WATCHLIST", f"Watchlist: {title}", f"Watchlist: {title}"
+    low = title.lower()
+    if re.search(r"\b(chapter|volume|issue)\b", low):
+        line = f"{series}: {title}"
+        return "ADDED", line, line
+    if re.search(r"\b(announce|announced|greenlit|adaptation)\b", low) and "anime" in low:
+        line = f"Upcoming anime: {title}"
+        return "DLC", line, line
+    if re.search(r"\b(delay|hiatus|cancelled|canceled)\b", low):
+        return "KNOWN ISSUE", title, title
+    line = f"Watchlist: {title}"
+    return "WATCHLIST", line, line
 
 def recategorize(category: str, title: str) -> str:
     if category != "Health & Recalls" and (ANIME_WORDS.search(title) or match_watchlist(title, load_watchlist())):
@@ -589,8 +599,8 @@ def _stock_note(q: dict, force: str | None = None) -> dict | None:
     verb = "buffed" if direction == "BUFFED" else "nerfed"
     sign = "+" if pct >= 0 else ""
     path = f"${prev:,.2f} → ${price:,.2f}" if prev else f"last ${price:,.2f}"
-    line = f"{name} ({symbol}) {verb} {sign}{pct:.2f}%  ·  {path}"
-    digest = f"{'Buffs' if pct >= 0 else 'Nerfs'}: {symbol} {sign}{pct:.2f}% ({path})"
+    line = f"{name} ({symbol}) {sign}{pct:.2f}%  ·  {path}"
+    digest = line
     return {
         "id": hashlib.sha1(f"stock:{symbol}".encode()).hexdigest()[:12],
         "category": "Markets", "tag": direction, "line": line, "digest": digest,
@@ -852,8 +862,8 @@ def collect_eia() -> tuple[list[dict], dict | None]:
             else:
                 tag, verb = "NERFED", "nerfed"
             title = f"{pretty} averaged ${current:.3f}/gal this week ({sign}{chg:.3f}, {sign}{pct:.1f}%)"
-            line = f"Cost-of-living {verb}: {title}  ·  {path}"
-            digest = f"{'Buffs' if chg < 0 else 'Nerfs'}: {pretty} {path}"
+            line = f"{title}  ·  {path}"
+            digest = line
         else:
             tag = "UPDATED"
             title = f"{pretty} averaged ${current:.3f}/gal this week"
@@ -967,8 +977,8 @@ def holiday_calendar(today: date) -> list[dict]:
         notes.append({
             "id": hashlib.sha1(f"holiday:{day}:{name}".encode()).hexdigest()[:12],
             "category": "Holidays & Events", "tag": "ADDED",
-            "line": f"Limited-time event: {title}",
-            "digest": f"Limited-time event: {title}",
+            "line": title,
+            "digest": title,
             "title": title, "url": "https://www.usa.gov/holidays",
             "source": "U.S. holiday calendar", "kind": "holiday",
         })
@@ -1136,6 +1146,92 @@ def current_handwritten(recaps: list[dict], today: date) -> dict | None:
             return r
     return None
 
+
+def broad_filter(category: str) -> str:
+    for name, cats in FILTERS:
+        if category in cats:
+            return name
+    return "Life"
+
+def note_section(note: dict) -> str:
+    if note.get("section") in SECTIONS:
+        return note["section"]
+    if note.get("kind") in {"stock", "eia"} or note.get("category") == "Markets":
+        return "Markets"
+    if note.get("kind") == "holiday" or note.get("category") == "Holidays & Events":
+        return "Limited-Time Events"
+    if note.get("kind") == "alert" or note.get("tag") == "EVENT" or note.get("category") == "Weather & Disasters":
+        return "Limited-Time Events"
+    if note.get("category") == "Health & Recalls" and note.get("tag") in {"RECALL", "KNOWN ISSUE"}:
+        return "Known Bugs"
+    return SECTION_FOR_TAG.get(note.get("tag") or "", "Hotfixes")
+
+_REDUNDANT = re.compile(
+    r"^(Buffs|Nerfs|Hotfix|New content|Known bug|Recall|Patch|Limited-time event|DLC|Upcoming DLC|Watchlist|Roster update|Balance change|Meta|Cost-of-living (?:buff|nerf)):\s*",
+    re.I,
+)
+
+def annotate(note: dict) -> dict:
+    note["filter"] = note.get("filter") or broad_filter(note.get("category") or "")
+    note["section"] = note_section(note)
+    text = (note.get("text") or note.get("digest") or note.get("line") or note.get("title") or "").strip()
+    text = _REDUNDANT.sub("", text).strip()
+    note["text"] = text
+    return note
+
+def load_written_patch(meta: dict) -> list[dict]:
+    suffix = "am" if meta.get("kind") == "Morning" else "pm"
+    day = f"{meta.get('year')}-{meta.get('month'):02d}-{meta.get('day'):02d}" if meta.get("year") else ""
+    if not day and meta.get("id"):
+        day = meta["id"][:10]
+        suffix = "am" if "morning" in meta["id"] else "pm"
+    path = PATCH_IN / f"{day}-{suffix}.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        log(f"  invalid written patch: {path}")
+        return []
+    items = data.get("items") or []
+    notes = []
+    for raw in items:
+        if not isinstance(raw, dict):
+            continue
+        text = (raw.get("text") or "").strip()
+        url = (raw.get("url") or "").strip()
+        if not text or not url:
+            continue
+        tag = (raw.get("tag") or raw.get("filter") or "News & Politics").strip()
+        section = raw.get("section") or "Hotfixes"
+        if section not in SECTIONS:
+            section = "Hotfixes"
+        filt = tag if tag in {name for name, _ in FILTERS} else "Life"
+        notes.append(annotate({
+            "id": hashlib.sha1(f"written:{text}".encode()).hexdigest()[:12],
+            "category": raw.get("category") or filt,
+            "tag": "ADDED",
+            "line": text,
+            "digest": text,
+            "text": text,
+            "title": text,
+            "url": url,
+            "source": (raw.get("source") or "").strip() or "Source",
+            "kind": "written",
+            "section": section,
+            "filter": filt,
+            "featured": True,
+        }))
+    log(f"  written patch {path.name}: {len(notes)} items")
+    return notes
+
+def organize_sections(notes: list[dict]) -> list[tuple[str, list[dict]]]:
+    buckets = {s: [] for s in SECTIONS}
+    for n in notes:
+        annotate(n)
+        buckets.setdefault(n["section"], []).append(n)
+    return [(s, buckets[s]) for s in SECTIONS if buckets[s]]
+
 def load_archive() -> list[dict]:
     path = DATA / "archive.json"
     if not path.exists():
@@ -1205,55 +1301,47 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
 </html>
 """
 
-def note_article(item: dict, use_digest: bool = False) -> str:
-    cat = html.escape(item["category"])
-    label = html.escape(TAG_LABELS.get(item["tag"], item["tag"].title()))
-    slug = re.sub(r"[^a-z0-9]+", "-", item["tag"].lower()).strip("-")
-    text = html.escape(item["digest"] if use_digest else item["line"])
-    source = html.escape(item["source"])
-    url = html.escape(item["url"], quote=True)
-    related = ""
-    if item.get("related"):
-        rtitle = html.escape(item.get("related_source") or "related story")
-        rurl = html.escape(item["related"], quote=True)
-        related = f' · <a href="{rurl}" rel="noopener noreferrer">Related: {rtitle}</a>'
-    data = html.escape((item.get("line", "") + " " + item.get("title", "") + " " + item["category"]).lower())
-    return (
-        f'<article class="note" data-category="{cat}" data-text="{data}">'
-        f'<div class="note-meta"><span class="tag tag-{slug}">{label}</span>'
-        f'<span class="cat">{cat}</span></div>'
-        f"<h3>{text}</h3>"
-        f'<p class="src">Source: <a href="{url}" rel="noopener noreferrer">{source}</a>{related}</p>'
-        f"</article>"
-    )
-
-def digest_item(item: dict) -> str:
-    label = html.escape(TAG_LABELS.get(item["tag"], item["tag"].title()))
-    slug = re.sub(r"[^a-z0-9]+", "-", item["tag"].lower()).strip("-")
-    line = html.escape(item.get("digest") or item["line"])
-    url = html.escape(item["url"], quote=True)
-    source = html.escape(item["source"])
-    return (
-        f'<li class="digest-item">'
-        f'<span class="tag tag-{slug}">{label}</span>'
-        f'<div><a href="{url}" rel="noopener noreferrer">{line}</a>'
-        f'<p class="src">{source}</p></div></li>'
-    )
 
 def filters_html() -> str:
-    groups = ['<button type="button" class="chip is-on" data-filter="all">All</button>']
-    for group, cats in CAT_GROUPS:
-        groups.append(f'<span class="chip-group"><span class="chip-label">{html.escape(group)}</span>')
-        for cat in cats:
-            groups.append(f'<button type="button" class="chip" data-filter="{html.escape(cat)}">{html.escape(cat)}</button>')
-        groups.append("</span>")
+    chips = ['<button type="button" class="chip is-on" data-filter="all">All</button>']
+    for name, _cats in FILTERS:
+        chips.append(f'<button type="button" class="chip" data-filter="{html.escape(name)}">{html.escape(name)}</button>')
     return (
         '<div class="tools">'
         '<label class="search"><span class="sr">Search patch notes</span>'
-        '<input id="q" type="search" placeholder="Search patch notes…" autocomplete="off"></label>'
-        f'<div class="chips" aria-label="Filter by category">{"".join(groups)}</div>'
+        '<input id="q" type="search" placeholder="Search this patch…" autocomplete="off"></label>'
+        f'<div class="chips" role="group" aria-label="Filter patch notes">{"".join(chips)}</div>'
         "</div>"
     )
+
+def entry_item(item: dict, tier: str = "featured") -> str:
+    text = html.escape(item.get("text") or item.get("digest") or item.get("line") or item.get("title") or "")
+    url = html.escape(item["url"], quote=True)
+    source = html.escape(item.get("source") or "Source")
+    filt = html.escape(item.get("filter") or broad_filter(item.get("category") or ""))
+    data = html.escape(" ".join([
+        item.get("text") or "", item.get("title") or "", item.get("source") or "",
+        item.get("filter") or "", item.get("category") or "",
+    ]).lower())
+    return (
+        f'<li class="entry" data-filter="{filt}" data-tier="{html.escape(tier)}" data-text="{data}">'
+        f'<a href="{url}" rel="noopener noreferrer">{text}</a>'
+        f'<span class="meta"><span class="pill">{filt}</span> · {source}</span>'
+        f"</li>"
+    )
+
+def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured") -> str:
+    chunks = []
+    for name, items in groups:
+        if not items:
+            continue
+        slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        lis = "".join(entry_item(it, tier) for it in items)
+        chunks.append(
+            f'<section class="patch-section" data-section="{html.escape(name)}">'
+            f"<h2>{html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
+        )
+    return "".join(chunks)
 
 def ticker_html(stocks: list[dict], eia: dict | None) -> str:
     parts = []
@@ -1309,50 +1397,154 @@ def anime_boards_html(anilist: dict, watch_notes: list[dict], series: list[str])
 
     follows = ", ".join(html.escape(s) for s in series) or "none yet"
     if watch_notes:
-        cards = "".join(note_article(n) for n in watch_notes)
-        watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}</p><div class="notes">{cards}</div></div>'
+        watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}</p><ul class="log">{"".join(entry_item(n) for n in watch_notes)}</ul></div>'
     else:
         watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}. No new pings in this patch.</p></div>'
     return '<div class="anime-extra">' + watch + '<div class="boards">' + col("Top airing", anilist.get("trending") or [], True) + col("New & upcoming", anilist.get("upcoming") or [], False) + "</div></div>"
 
-def category_cards(notes: list[dict], anilist: dict, series: list[str]) -> str:
-    groups: dict[str, list] = {c: [] for c in CATEGORIES}
-    for n in notes:
-        groups.setdefault(n["category"], []).append(n)
-    watch_notes = [n for n in notes if n.get("watchlist")]
-    sections = []
-    for cat in CATEGORIES:
-        items = groups.get(cat) or []
-        extras = ""
-        if cat == "Anime & Manga":
-            extras = anime_boards_html(anilist, watch_notes, series)
-            if not items and not extras:
-                continue
-        elif not items:
-            continue
-        cards = "".join(note_article(n) for n in items)
-        more = ""
-        if len(items) > 5:
-            more = f'<button type="button" class="more" data-more>Show {len(items) - 5} more</button>'
-        sections.append(
-            f'<section class="cat-card" data-category="{html.escape(cat)}" aria-labelledby="h-{html.escape(cat)}">'
-            f'<h2 id="h-{html.escape(cat)}">{html.escape(cat)} <span>{len(items)}</span></h2>'
-            f"{extras}"
-            f'<div class="notes" data-collapse="5">{cards}</div>{more}'
-            "</section>"
-        )
-    return "".join(sections)
-
 def market_blurb(mode: str) -> str:
     if mode == "movers":
-        return "Top US day gainers and losers, logged as buffs and nerfs. Quotes via Yahoo Finance."
+        return "Top US day gainers and losers via Yahoo Finance. Percents are checked against the previous close."
     if mode == "majors":
-        return "Movers among major US stocks and indexes, via CNBC. Percents are checked against the previous close. This is not a full-market day-gainers list."
+        return "Movers among major US stocks and indexes, via CNBC. Percents are checked against the previous close."
     if mode == "indexes":
-        return "Major US indexes and ETFs are shown this run. A full movers list was not available from the free feed."
-    return "Stock quotes were unavailable this run. Market headlines may still appear below, and crypto stays live in the ticker."
+        return "Major US indexes and ETFs are shown this run. A full movers list was not available."
+    return "Stock quotes were unavailable this run. Crypto still updates live in the ticker."
 
-def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series) -> str:
+def patch_post_html(meta, featured, rest, prefix="", extras="", blurb=""):
+    feat_html = sections_html(organize_sections(featured), "featured")
+    rest_html = sections_html(organize_sections(rest), "more") if rest else ""
+    more_btn = ""
+    more_wrap = ""
+    if rest:
+        more_btn = f'<button type="button" class="more" id="full-changelog" aria-expanded="false" aria-controls="full-log">Full changelog ({len(rest)} more)</button>'
+        more_wrap = f'<div id="full-log" class="full-log" hidden><h2 class="full-h">Full changelog</h2>{rest_html}</div>'
+    return f"""
+    <article class="patch-post" id="latest">
+      <header class="patch-head">
+        <p class="kicker">Patch notes</p>
+        <h1>{html.escape(meta["label"])}</h1>
+        <p class="when">Published {html.escape(meta["display_date"])}</p>
+        <p class="intro">A satirical changelog for real life in the United States. Every line is based on a real, linked source. The joke is the framing, not the facts.</p>
+        {f'<p class="lede market-note">{html.escape(blurb)}</p>' if blurb else ""}
+      </header>
+      {filters_html()}
+      <div id="notes" class="patch-body">
+        {feat_html}
+      </div>
+      {more_btn}
+      {more_wrap}
+      <p class="empty" id="empty" hidden>No notes match that filter. Try All or clear the search.</p>
+      {extras}
+    </article>
+    """
+
+def story_tokens(note: dict) -> set[str]:
+    raw = f"{note.get('title') or ''} {note.get('text') or ''}"
+    raw = _REDUNDANT.sub("", raw)
+    return set(re.findall(r"[a-z0-9]{4,}", raw.lower()))
+
+def is_near_dup(note: dict, pool: list[dict]) -> bool:
+    a = story_tokens(note)
+    if len(a) < 3:
+        return False
+    for other in pool:
+        b = story_tokens(other)
+        if not b:
+            continue
+        inter = len(a & b)
+        if inter >= 3 or (inter and inter / min(len(a), len(b)) >= 0.5):
+            return True
+    return False
+
+def split_featured(auto_notes: list[dict], written: list[dict]) -> tuple[list[dict], list[dict]]:
+    auto = [annotate(n) for n in auto_notes]
+    seen_urls: set[str] = set()
+    featured: list[dict] = []
+    for n in written:
+        featured.append(annotate(n))
+        if n.get("url"):
+            seen_urls.add(n["url"])
+
+    def acceptable(n: dict) -> bool:
+        url = n.get("url") or ""
+        if url and url in seen_urls:
+            return False
+        if any(n["id"] == f["id"] for f in featured):
+            return False
+        if is_near_dup(n, featured):
+            return False
+        return True
+
+    def take(cands: list[dict], limit: int) -> None:
+        for n in cands:
+            if len(featured) >= limit:
+                return
+            if not acceptable(n):
+                continue
+            featured.append(n)
+            if n.get("url"):
+                seen_urls.add(n["url"])
+
+    take(pick_highlights(auto, FEATURED_LIMIT + 12), FEATURED_LIMIT)
+
+    if not any(f.get("section") == "Markets" for f in featured):
+        stocks = sorted(
+            [n for n in auto if n.get("kind") == "stock"],
+            key=lambda n: abs(n.get("change_pct") or 0),
+            reverse=True,
+        )
+        eia = [n for n in auto if n.get("kind") == "eia"]
+        pick = next((n for n in stocks + eia if acceptable(n)), None)
+        if pick:
+            if len(featured) >= FEATURED_LIMIT:
+                # Drop a padded auto line, never a written item or another Markets line.
+                for i in range(len(featured) - 1, -1, -1):
+                    if featured[i].get("kind") != "written" and featured[i].get("section") != "Markets":
+                        dropped = featured.pop(i)
+                        seen_urls.discard(dropped.get("url") or "")
+                        break
+            featured.append(pick)
+            if pick.get("url"):
+                seen_urls.add(pick["url"])
+
+    featured_ids = {n["id"] for n in featured}
+    featured_urls = {n.get("url") for n in featured}
+    rest = [n for n in auto if n["id"] not in featured_ids and n.get("url") not in featured_urls]
+    return featured, rest
+
+
+def history_html(archive: list[dict], current_id: str, prefix: str) -> str:
+    others = [p for p in archive if p.get("id") != current_id][:10]
+    if not others:
+        return ""
+    items = []
+    for p in others:
+        payload = {}
+        path = PATCHES / f"{p['id']}.json"
+        if path.exists():
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                payload = {}
+        notes = [annotate(n) for n in (payload.get("notes") or [])]
+        written = payload.get("written") or []
+        feat, rest = split_featured(notes, [annotate(n) for n in written] if written else [])
+        if not feat and notes:
+            feat, rest = notes[:FEATURED_LIMIT], notes[FEATURED_LIMIT:]
+        body = sections_html(organize_sections(feat or notes[:FEATURED_LIMIT]), "featured")
+        href = f"{html.escape(prefix)}archive/{html.escape(p['id'])}.html"
+        items.append(
+            f'<details class="history-item">'
+            f'<summary><strong>{html.escape(p.get("label") or p["id"])}</strong>'
+            f'<span>{html.escape(p.get("display_date") or "")} · {p.get("count", len(notes))} entries</span></summary>'
+            f'<div class="history-body">{body}<p class="src"><a href="{href}">Open this patch</a></p></div>'
+            f"</details>"
+        )
+    return f'<section class="history" id="history"><h2>Update history</h2>{"".join(items)}<p class="src"><a href="{html.escape(prefix)}archive/index.html">Browse the full archive</a></p></section>'
+
+def extras_html(anilist, notes, series, trends, prefix=""):
+    watch_notes = [n for n in notes if n.get("watchlist")]
     trend_block = ""
     if trends:
         pills = []
@@ -1361,72 +1553,45 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
             href = html.escape(f"https://trends.google.com/trends/explore?geo=US&q={q}", quote=True)
             traffic = f' <small>{html.escape(t["traffic"])}</small>' if t.get("traffic") else ""
             pills.append(f'<a class="trend" href="{href}" rel="noopener noreferrer">{html.escape(t["title"])}{traffic}</a>')
-        trend_block = '<section class="trends"><h2>Trending in the US today</h2>' f'<div class="trend-row">{"".join(pills)}</div></section>'
-    daily = ""
-    if highlights:
-        daily = (
-            '<section class="hotfix" id="daily" aria-labelledby="daily-h">'
-            '<p class="kicker">Today’s build</p>'
-            '<h2 id="daily-h">Daily Patch Notes / Hotfixes</h2>'
-            '<p class="lede">A short digest of the oddest and liveliest items from today’s real headlines. The joke is the framing; the facts are linked.</p>'
-            f'<ol class="digest">{"".join(digest_item(n) for n in highlights)}</ol>'
-            "</section>"
-        )
+        trend_block = f'<div class="trends"><h3>Trending in the US</h3><div class="trend-row">{"".join(pills)}</div></div>'
+    inner = trend_block + anime_boards_html(anilist, watch_notes, series)
+    return f'<details class="extras"><summary>Watchlist, top anime, and trends</summary>{inner}</details>'
+
+def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written=None) -> str:
+    written = written or []
+    stocks = [n for n in notes if n.get("kind") == "stock"]
+    featured, rest = split_featured(notes, written)
+    extras = extras_html(anilist, notes, series, trends)
+    weekly = ""
     if handwritten:
         weekly = (
-            '<section class="weekly handwritten" id="weekly" aria-labelledby="weekly-h">'
+            '<section class="weekly handwritten" id="weekly">'
             '<p class="kicker">Sunday recap</p>'
-            f'<h2 id="weekly-h">{html.escape(handwritten["title"])}</h2>'
+            f'<h2>{html.escape(handwritten["title"])}</h2>'
             f'<div class="prose">{handwritten["html"]}</div>'
             '<p class="src"><a href="weekly/index.html">Past weekly recaps</a></p>'
             "</section>"
         )
     elif weekly_auto:
         weekly = (
-            '<section class="weekly" id="weekly" aria-labelledby="weekly-h">'
+            '<section class="weekly" id="weekly">'
             '<p class="kicker">This week</p>'
-            '<h2 id="weekly-h">Weekly Patch Notes</h2>'
-            '<p class="lede">An automatic rollup of the best items from the last 7 days, until a hand-written Sunday recap is added.</p>'
-            f'<ol class="digest">{"".join(digest_item(n) for n in weekly_auto)}</ol>'
-            '<p class="src"><a href="weekly/index.html">Weekly recap archive</a></p>'
-            "</section>"
+            "<h2>Weekly Patch Notes</h2>"
+            '<p class="lede">An automatic rollup of standout items from the last 7 days, until a hand-written Sunday recap is added.</p>'
+            + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured")
+            + '<p class="src"><a href="weekly/index.html">Weekly recap archive</a></p></section>'
         )
-    else:
-        weekly = (
-            '<section class="weekly" id="weekly"><h2>Weekly Patch Notes</h2>'
-            '<p class="lede">The archive is just getting started. A Sunday recap can be dropped into the repo when it’s ready.</p></section>'
-        )
-    stocks = [n for n in notes if n.get("kind") == "stock"]
-    prev = ""
-    others = [p for p in archive if p.get("id") != meta["id"]][:8]
-    if others:
-        lis = "".join(f'<li><a href="archive/{html.escape(p["id"])}.html">{html.escape(p["label"])}</a></li>' for p in others)
-        prev = f'<section class="prior"><h2>Previous patches</h2><ul>{lis}</ul><p><a href="archive/index.html">Browse the full archive</a></p></section>'
     body = f"""
   {ticker_html(stocks, eia)}
   <main id="main">
     <div class="wrap">
-      <section class="hero">
-        <p class="kicker">Patch notes for America</p>
-        <h1>{html.escape(meta["label"])}</h1>
-        <p class="when">Published {html.escape(meta["display_date"])}</p>
-        <p class="intro">A self-updating changelog for real life in the United States, written like a game update and sourced like a newspaper.</p>
-      </section>
-      {daily}
       {weekly}
-      {trend_block}
-      <section class="catalog" id="catalog">
-        <h2 class="catalog-h">Browse by category</h2>
-        <p class="lede market-note">{html.escape(market_blurb(stock_mode))}</p>
-        {filters_html()}
-        <div id="notes">{category_cards(notes, anilist, series)}</div>
-        <p class="empty" id="empty" hidden>No patch notes match that filter. Try another category or clear the search.</p>
-      </section>
-      {prev}
+      {patch_post_html(meta, featured, rest, prefix="", extras=extras, blurb=market_blurb(stock_mode))}
+      {history_html(archive, meta["id"], "")}
     </div>
   </main>
 """
-    desc = f"Satirical US patch notes for {meta['label']}. Real headlines, trends, markets, and a daily hotfix digest, framed as a video-game changelog."
+    desc = f"Satirical US patch notes for {meta['label']}. Real headlines framed as a game update, with every line linked to its source."
     return render_page(title=f"Real Life {meta['label']} — Patch Notes for America", description=desc, canonical=f"{SITE_URL}/", prefix="", body=body, updated=meta["iso"])
 
 def render_archive_index(archive: list[dict]) -> str:
@@ -1452,24 +1617,18 @@ def render_archive_index(archive: list[dict]) -> str:
 """
     return render_page(title="Archive — Real Life v2026", description="Browse past satirical US patch notes.", canonical=f"{SITE_URL}/archive/", prefix="../", body=body)
 
-def render_archive_patch(meta, notes, highlights, anilist, series, stock_mode) -> str:
-    daily = ""
-    if highlights:
-        daily = f'<section class="hotfix"><h2>Hotfixes from this patch</h2><ol class="digest">{"".join(digest_item(n) for n in highlights)}</ol></section>'
+def render_archive_patch(meta, notes, anilist, series, stock_mode, written=None, trends=None, eia=None) -> str:
+    written = written or []
+    featured, rest = split_featured(notes, written)
+    extras = extras_html(anilist, notes, series, trends or [])
     body = f"""
   <main id="main"><div class="wrap">
-    <section class="hero">
-      <p class="kicker"><a href="../index.html">Latest patch</a> · <a href="index.html">Archive</a></p>
-      <h1>{html.escape(meta["label"])}</h1>
-      <p class="when">Published {html.escape(meta["display_date"])}</p>
-    </section>
-    {daily}
-    {filters_html()}
-    <div id="notes">{category_cards(notes, anilist, series)}</div>
-    <p class="empty" id="empty" hidden>No patch notes match that filter.</p>
+    <p class="crumb"><a href="../index.html">← Latest patch</a> · <a href="index.html">Archive</a></p>
+    {patch_post_html(meta, featured, rest, prefix="../", extras=extras, blurb=market_blurb(stock_mode))}
   </div></main>
 """
-    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived satirical US patch notes for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta["iso"])
+    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived satirical US patch notes for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta.get("iso"))
+
 
 def render_weekly_index(recaps: list[dict]) -> str:
     if not recaps:
@@ -1520,31 +1679,43 @@ def write_robots_and_sitemap(archive: list[dict], recaps: list[dict], now: datet
     chunks.append("</urlset>\n")
     (SITE / "sitemap.xml").write_text("\n".join(chunks), encoding="utf-8")
 
-def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series) -> None:
+def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written) -> None:
     for path in (SITE, DATA, PATCHES, ARCHIVE, WEEKLY_OUT, SITE / "assets"):
         path.mkdir(parents=True, exist_ok=True)
+    notes = [annotate(n) for n in notes]
+    written = [annotate(n) for n in written]
     archive = load_archive()
-    summary = {"id": meta["id"], "label": meta["label"], "kind": meta["kind"], "iso": meta["iso"], "display_date": meta["display_date"], "count": len(notes), "stock_mode": stock_mode}
+    summary = {"id": meta["id"], "label": meta["label"], "kind": meta["kind"], "iso": meta["iso"], "display_date": meta["display_date"], "count": len(notes), "stock_mode": stock_mode, "written": bool(written)}
     archive = [p for p in archive if p.get("id") != meta["id"]]
     archive.insert(0, summary)
     dropped = archive[MAX_ARCHIVE:]
     archive = archive[:MAX_ARCHIVE]
-    for old in dropped:
-        for p in (ARCHIVE / f"{old['id']}.html", PATCHES / f"{old['id']}.json"):
-            if p.exists():
-                p.unlink()
-    payload = {"meta": meta, "stock_mode": stock_mode, "trends": trends, "notes": notes, "highlights": [{"id": h["id"], "digest": h.get("digest"), "title": h.get("title")} for h in highlights], "anilist": anilist, "eia": eia}
+    for oldp in dropped:
+        for path in (ARCHIVE / f"{oldp['id']}.html", PATCHES / f"{oldp['id']}.json"):
+            if path.exists():
+                path.unlink()
+    payload = {
+        "meta": meta,
+        "stock_mode": stock_mode,
+        "trends": trends,
+        "notes": notes,
+        "written": written,
+        "highlights": [{"id": h["id"], "digest": h.get("digest") or h.get("text"), "title": h.get("title"), "text": h.get("text")} for h in highlights],
+        "anilist": anilist,
+        "eia": eia,
+    }
     (DATA / "latest.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     (PATCHES / f"{meta['id']}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     (DATA / "archive.json").write_text(json.dumps(archive, indent=2), encoding="utf-8")
-    (SITE / "index.html").write_text(render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series), encoding="utf-8")
+    (SITE / "index.html").write_text(render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written), encoding="utf-8")
     (ARCHIVE / "index.html").write_text(render_archive_index(archive), encoding="utf-8")
-    (ARCHIVE / f"{meta['id']}.html").write_text(render_archive_patch(meta, notes, highlights, anilist, series, stock_mode), encoding="utf-8")
+    (ARCHIVE / f"{meta['id']}.html").write_text(render_archive_patch(meta, notes, anilist, series, stock_mode, written, trends, eia), encoding="utf-8")
     (WEEKLY_OUT / "index.html").write_text(render_weekly_index(recaps), encoding="utf-8")
     for recap in recaps:
         (WEEKLY_OUT / f"{recap['id']}.html").write_text(render_weekly_page(recap), encoding="utf-8")
     write_robots_and_sitemap(archive, recaps, now_et())
-    log(f"Wrote site for {meta['label']} ({len(notes)} notes, highlights={len(highlights)}, archive={len(archive)})")
+    log(f"Wrote site for {meta['label']} ({len(notes)} notes, featured written={len(written)}, archive={len(archive)})")
+
 
 def main() -> int:
     dt = now_et()
@@ -1562,17 +1733,19 @@ def main() -> int:
     if not notes:
         log("No content collected; aborting so we do not overwrite a good build.")
         return 1
+    notes = [annotate(n) for n in notes]
+    written = load_written_patch(meta)
     highlights = pick_highlights(notes, 10)
     recaps = load_handwritten_weeklies()
     handwritten = current_handwritten(recaps, dt.date())
     weekly_auto = []
     if not handwritten:
-        week_pool = load_week_notes(dt, notes)
+        week_pool = [annotate(n) for n in load_week_notes(dt, notes)]
         exclude = {h["id"] for h in highlights}
         weekly_auto = [n for n in pick_highlights(week_pool, 16) if n["id"] not in exclude][:10]
         if not weekly_auto:
             weekly_auto = pick_highlights(week_pool, 8)
-    write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series)
+    write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written)
     extras = (["trends"] if trends_ok else []) + (["stocks"] if stocks_ok else [])
     if weather_notes:
         extras.append("nws")
@@ -1580,9 +1753,12 @@ def main() -> int:
         extras.append("eia")
     if anilist.get("trending") or anilist.get("upcoming"):
         extras.append("anilist")
+    if written:
+        extras.append(f"written:{len(written)}")
     log("Sources OK: " + ", ".join(ok_feeds + extras))
     log(f"Stock mode: {stock_mode}")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

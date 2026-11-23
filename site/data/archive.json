@@ -1,11 +1,12 @@
 [
   {
     "id": "2026-11-23-evening",
-    "label": "v2026.11 \u00b7 Week 4 \u00b7 Nov 23 (Evening patch)",
+    "label": "v2026.11 \u00b7 Week 4 \u00b7 Nov 23 \u00b7 Evening Patch",
     "kind": "Evening",
-    "iso": "2026-11-23T15:38:46-05:00",
-    "display_date": "Monday, November 23, 2026, 3:38 PM ET",
-    "count": 204,
-    "stock_mode": "majors"
+    "iso": "2026-11-23T16:02:02-05:00",
+    "display_date": "Monday, November 23, 2026, 4:02 PM ET",
+    "count": 212,
+    "stock_mode": "majors",
+    "written": true
   }
 ]
