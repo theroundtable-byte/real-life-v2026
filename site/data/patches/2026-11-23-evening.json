@@ -7,8 +7,8 @@
     "month": 11,
     "week": 4,
     "day": 23,
-    "iso": "2026-11-23T14:41:32-05:00",
-    "display_date": "Monday, November 23, 2026, 2:41 PM ET"
+    "iso": "2026-11-23T14:42:54-05:00",
+    "display_date": "Monday, November 23, 2026, 2:42 PM ET"
   },
   "stock_mode": "unavailable",
   "trends": [
@@ -65,8 +65,8 @@
       "title": "monza vs fiorentina",
       "traffic": "1000+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=monza+vs+fiorentina",
-      "news_url": "https://www.bbc.com/sport/football/live/cm752zy0qdedt",
-      "news_source": "BBC"
+      "news_url": "https://www.goal.com/en-us/news/watch-monza-vs-fiorentina-live-today-tv-channel-and-streaming-details/blt39b04020f7688291",
+      "news_source": "Goal.com"
     },
     {
       "title": "kerry titheradge",
@@ -85,26 +85,6 @@
   ],
   "notes": [
     {
-      "id": "38350f948f9c",
-      "category": "News",
-      "tag": "HOTFIX",
-      "line": "Hotfix applied: Thanksgiving travel forecast 2026: storms on both coasts",
-      "title": "Thanksgiving travel forecast 2026: storms on both coasts",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQmw2TEtLbnNjV0ZOWC11YXYyc2hzU2hHM3JZWDJqcEh4bGFoOE9VRk54S0xxSWdGRTFId0JIb0RmZU9ZOXEyWGw2dGVvRWVuMUtRemVjX2RQZVdiV0hDOENfVWw3TG5uUUpSamRPZkp6R3NGWjkxR1NfanptZkdDRUYwUHljMHZzWm94dU9tTGpzY1JpMlVMLTlRV3JHT2M?oc=5",
-      "source": "The Weather Channel",
-      "kind": "headline"
-    },
-    {
-      "id": "d17e0750f840",
-      "category": "Science & Nature",
-      "tag": "ADDED",
-      "line": "New species / system documented: Failure of Cop31 prompts calls for urgent reform of UN climate summits",
-      "title": "Failure of Cop31 prompts calls for urgent reform of UN climate summits",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQy12LVpnTUFERk5qZVVBOHZ3UUpheWJST1o0UWxVaTdRaTJWVERPNVJhMGY0eE5iQy1tTlVKQVh3Z2JVTjF2ZFRpVlZ2RFQ4ODFzaHNFUTYzUTd0eFpjU3dicUVUUWtwTDhDVnJOZ2hQUk0xTFBVVHIxVldtaUZUbDJYckIzeEZ5VVUzajcyOGV0aTNRX25PZEZjaUFiSXA0OEpKM3VBcw?oc=5",
-      "source": "The Guardian",
-      "kind": "headline"
-    },
-    {
       "id": "f79eadc8155f",
       "category": "News",
       "tag": "UPDATED",
@@ -115,12 +95,32 @@
       "kind": "headline"
     },
     {
-      "id": "1d3b4423f866",
+      "id": "0376f1afa4a1",
+      "category": "News",
+      "tag": "HOTFIX",
+      "line": "Hotfix applied: Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+      "title": "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONjlYcEJxcWh6djFUeEhBbnR4eHJKWHdqOVNOVHhwc2ZGM3QtWGtDNUN3bHA2eUN0WEV3SkxwRVVyNXgzZzVlVHU5YXBZVm5CQmRoNUQ5ck00Rk1lOGFGc3FLRUFFelRnckhkaF9oVmplSE9UR2lEdEFQbFBNRjMya2l0WmFsTVR3bDM4SjNGS0FwOGJhblBsRmNKTQ?oc=5",
+      "source": "The Guardian",
+      "kind": "headline"
+    },
+    {
+      "id": "38350f948f9c",
+      "category": "News",
+      "tag": "HOTFIX",
+      "line": "Hotfix applied: Thanksgiving travel forecast 2026: storms on both coasts",
+      "title": "Thanksgiving travel forecast 2026: storms on both coasts",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQmw2TEtLbnNjV0ZOWC11YXYyc2hzU2hHM3JZWDJqcEh4bGFoOE9VRk54S0xxSWdGRTFId0JIb0RmZU9ZOXEyWGw2dGVvRWVuMUtRemVjX2RQZVdiV0hDOENfVWw3TG5uUUpSamRPZkp6R3NGWjkxR1NfanptZkdDRUYwUHljMHZzWm94dU9tTGpzY1JpMlVMLTlRV3JHT2M?oc=5",
+      "source": "The Weather Channel",
+      "kind": "headline"
+    },
+    {
+      "id": "b6a43f98b2da",
       "category": "News",
       "tag": "UPDATED",
-      "line": "Server announcement: Russian warship hit by Ukrainian drones in Libya, Zelensky says",
-      "title": "Russian warship hit by Ukrainian drones in Libya, Zelensky says",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5RYTdJa3FLUUotRjRtWmFYcWsyT29UT0FCVDUycVp4MmlCMUkzUVR3cVJUVTJWNDlQX0JLbk01S29SZEtLM0lXZHdzX2U4N2JBVDdhVjN2TEdlczg?oc=5",
+      "line": "Server announcement: Seattle airport operator 'outraged' over ICE arrest of two passengers",
+      "title": "Seattle airport operator 'outraged' over ICE arrest of two passengers",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1GUERNQ05ZVmtwbUl5N1hfdzNiZWxwMllPVWlEb3dsaHhqY1ZOUDNZc2U2NVYwdFpvT2s3SHctN1VXTVc1azRoLWFwZE1BU3U0cW1RX01JVGR6UEE?oc=5",
       "source": "BBC",
       "kind": "headline"
     },
@@ -135,16 +135,6 @@
       "kind": "headline"
     },
     {
-      "id": "245cd0f5d66a",
-      "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "Known issue logged: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
-      "source": "The Guardian",
-      "kind": "headline"
-    },
-    {
       "id": "2c62840ddf59",
       "category": "News",
       "tag": "UPDATED",
@@ -152,6 +142,16 @@
       "title": "Democrats win largest House majority since 1992 after flipping North Carolina seat",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1jOG9ydHBscFFlNlFfSUZyMEU5MS1hZU03c1pEU1l3YWJkOEFlZHFyZE1zdWsxM0F6YUpPaWhSR1JVdzA2NVZiTTYzQi0ycnRLTm9mVlE3eXBYT3c?oc=5",
       "source": "BBC",
+      "kind": "headline"
+    },
+    {
+      "id": "ef03161c6ed2",
+      "category": "News",
+      "tag": "FIXED",
+      "line": "Stability pass addressing: NATO believes Russia is ready to launch nuclear-armed satellite, German media say",
+      "title": "NATO believes Russia is ready to launch nuclear-armed satellite, German media say",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQmRybDRhZzhaRkRlSHZUdWxTZVRPUEU1NDJfRFBwX3ItMDZsb0pSZWdFMlgwbDhzclBlaWwyTndXYUQxS0JrZFd5SjlNWC05YWYtYWZhREFHNE5VLXFEOGx3SkY5bWNrMWlYbVhEVklQN3YzMnZSNmVtcmNqdzlSQ21vZW1yWU4xN1UySDE1SHNCUXZfekUyQlRMQUFGMlBSWk5Hc0JFTjlsZGN6NS14M2E2eXk4a2tPUjZGd2Y4a09SX212UUlNY2lkVG1XQXZUMmhOMHRZMA?oc=5",
+      "source": "Reuters",
       "kind": "headline"
     },
     {
@@ -175,6 +175,16 @@
       "kind": "headline"
     },
     {
+      "id": "245cd0f5d66a",
+      "category": "News",
+      "tag": "KNOWN ISSUE",
+      "line": "Known issue logged: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
+      "source": "The Guardian",
+      "kind": "headline"
+    },
+    {
       "id": "205a1121ba16",
       "category": "News",
       "tag": "KNOWN ISSUE",
@@ -185,13 +195,13 @@
       "kind": "headline"
     },
     {
-      "id": "ef03161c6ed2",
+      "id": "a072975dd205",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Stability pass addressing: NATO believes Russia is ready to launch nuclear-armed satellite, German media say",
-      "title": "NATO believes Russia is ready to launch nuclear-armed satellite, German media say",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQmRybDRhZzhaRkRlSHZUdWxTZVRPUEU1NDJfRFBwX3ItMDZsb0pSZWdFMlgwbDhzclBlaWwyTndXYUQxS0JrZFd5SjlNWC05YWYtYWZhREFHNE5VLXFEOGx3SkY5bWNrMWlYbVhEVklQN3YzMnZSNmVtcmNqdzlSQ21vZW1yWU4xN1UySDE1SHNCUXZfekUyQlRMQUFGMlBSWk5Hc0JFTjlsZGN6NS14M2E2eXk4a2tPUjZGd2Y4a09SX212UUlNY2lkVG1XQXZUMmhOMHRZMA?oc=5",
-      "source": "Reuters",
+      "tag": "UPDATED",
+      "line": "Server announcement: Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
+      "title": "Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOLWZPYzljeFRNZ0RiSFEwUXlpRU5sRGg3MWEta2RKcWppQ1lVNUZxUFVvc1JMR05neGtva3hrblREVlVlVExpS2tIVkJPM1liRS1lYklmR0ZFME40WElSRkk5Wnc0Yk54Q1RNX1RWd3g4QmZTNFZPbGhPMVJWSWFOMERjMWdOWXd5WFBfalFQR2JuOHdRUVFEN3NCcHpEc0toTVlKVkJGZTk?oc=5",
+      "source": "NPR",
       "kind": "headline"
     },
     {
@@ -205,23 +215,13 @@
       "kind": "headline"
     },
     {
-      "id": "feaf11ef2107",
+      "id": "acb28cb49de4",
       "category": "News",
-      "tag": "PATCH",
-      "line": "Incident report filed: Iran vows 'every means' to counter US blockade after Trump threat",
-      "title": "Iran vows 'every means' to counter US blockade after Trump threat",
+      "tag": "UPDATED",
+      "line": "World state updated: Iran vows 'every means' to counter US blockade of Hormuz after Trump threat",
+      "title": "Iran vows 'every means' to counter US blockade of Hormuz after Trump threat",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZERsTGg1S2ltaDZLdHdmVElHakxUQ01UWk5SaTdQUm5USUtYV3ZadWZkUHByM0lpckxTWXhqVy1sa2YyOXdhQ0VkRXljOTlwV0ZkRUhQTmQwSVYxX0YyTE1CWmxJWG5pZEpsblF6V3pGQlpOSEJFbFdaeHZyTl9fWVR1YjFGTEwxc1ViOG1tVkhIcVV4SWM1YWhCUGt1ZmxDTzhsTXh2Wnd5WmdxUHc?oc=5",
-      "source": "Euronews",
-      "kind": "headline"
-    },
-    {
-      "id": "a956ba6c6d54",
-      "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "Known issue logged: Trump\u2019s Thanksgiving turkeys arrive at luxury DC hotel as Americans vote on their names",
-      "title": "Trump\u2019s Thanksgiving turkeys arrive at luxury DC hotel as Americans vote on their names",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOaWlwMG1GbzFGYnRVUE1rQTZZTVFpSjFyMzF3T1lfc09aRlBEa004M3pXR3U3RXNweEN4bW05alg3Q0tkcjBxZUdxcm9pdDlJV0xjT3NzT2dFNzJReHhYMnNBNkoyMlJYd1Q1dHYtWTUzWDFFVnVvV2xnS0dSR04yT21GemtOYzd3M2dBNnRRZnppUENnZ0RyUXhGaUpqVTVzRnRiYTAtcFZQQldzNGdzNEF3WVFHcjZfS1hOaXNiaHBSMjA?oc=5",
-      "source": "New York Post",
+      "source": "Euronews.com",
       "kind": "headline"
     },
     {
@@ -245,16 +245,6 @@
       "kind": "headline"
     },
     {
-      "id": "a072975dd205",
-      "category": "News",
-      "tag": "UPDATED",
-      "line": "Server announcement: Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
-      "title": "Democrats win House by largest margin in 50 years. And, COP31 ends with no deal",
-      "url": "https://www.npr.org/2026/11/23/g-s1-155021/up-first-newsletter-midterms-house-ai-stocks-poland-nato-cop31",
-      "source": "npr news",
-      "kind": "headline"
-    },
-    {
       "id": "d7bd08c65724",
       "category": "News",
       "tag": "UPDATED",
@@ -271,6 +261,16 @@
       "line": "World state updated: Seniors embrace Tesla automated driving technology despite questions about safety",
       "title": "Seniors embrace Tesla automated driving technology despite questions about safety",
       "url": "https://www.npr.org/2026/11/23/nx-s1-6020559/senior-drivers-tesla-automated-driving-safety",
+      "source": "npr news",
+      "kind": "headline"
+    },
+    {
+      "id": "2c6acb73e9bf",
+      "category": "News",
+      "tag": "UPDATED",
+      "line": "Server announcement: K is for kindness, but families worry the world has less of it",
+      "title": "K is for kindness, but families worry the world has less of it",
+      "url": "https://www.npr.org/2026/11/23/nx-s1-6035702/kindness-kids-sesame-street-parents-survey",
       "source": "npr news",
       "kind": "headline"
     },
@@ -325,16 +325,6 @@
       "kind": "headline"
     },
     {
-      "id": "f548ad67b79e",
-      "category": "Tech",
-      "tag": "ADDED",
-      "line": "New feature rolled out: iPhone Duo Could Get More Lock Screen Widgets, Leak Suggests",
-      "title": "iPhone Duo Could Get More Lock Screen Widgets, Leak Suggests",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQlV3d2ZQNVhWdmczdXMzS3FubnUwQktRak9tcEpKOEdIR0lhbHIwV25yWkM5TG5aYk9VNHVrRmFVdmdKSmhwMjRtUXNWaWJuLV9LTkdIWjZZVjBpNlJQbWl5RlljbFgyMG11N2t4cW5hQWEwYmtCbWFNVkxrVUJoQWZjanMyamNoUDVR?oc=5",
-      "source": "MacRumors",
-      "kind": "headline"
-    },
-    {
       "id": "8e2f46b8c2c2",
       "category": "Tech",
       "tag": "HOTFIX",
@@ -342,6 +332,16 @@
       "title": "A Guide to the Best Black Friday Streaming Deals: See Platforms, Prices & Plans for Less",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRmJLRmRkY2JkRTJ4VVNDWUZTNTRtN3hIQ2hJbm12U0FuYWYtbVhMMEdYMEpsZkRBVGlic3pSNV9KZVVwTTd0WUpub01rMHpTdWlxQlpvaHo3UV9RUlJyWXY2ak5tWGxJdnk0R29BTVRMVXNXT2xNYnVXcjJ2NVpxeDlWdS1DQVkwbFM3OTEyeEtlQ0dybVVnNmJXNFBnVHhoRDA4RnFvOXBfbTVVYjFDTHdiUUVYbF9YRXY2UzJB?oc=5",
       "source": "Billboard",
+      "kind": "headline"
+    },
+    {
+      "id": "f548ad67b79e",
+      "category": "Tech",
+      "tag": "ADDED",
+      "line": "New feature rolled out: iPhone Duo Could Get More Lock Screen Widgets, Leak Suggests",
+      "title": "iPhone Duo Could Get More Lock Screen Widgets, Leak Suggests",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQlV3d2ZQNVhWdmczdXMzS3FubnUwQktRak9tcEpKOEdIR0lhbHIwV25yWkM5TG5aYk9VNHVrRmFVdmdKSmhwMjRtUXNWaWJuLV9LTkdIWjZZVjBpNlJQbWl5RlljbFgyMG11N2t4cW5hQWEwYmtCbWFNVkxrVUJoQWZjanMyamNoUDVR?oc=5",
+      "source": "MacRumors",
       "kind": "headline"
     },
     {
@@ -385,6 +385,16 @@
       "kind": "headline"
     },
     {
+      "id": "a6441459a826",
+      "category": "Culture",
+      "tag": "UPDATED",
+      "line": "Cosmetic update: A resurgent \u2018Hunger Games\u2019 goes big at the box office, despite competition of \u2018Grand Theft Auto VI\u2019",
+      "title": "A resurgent \u2018Hunger Games\u2019 goes big at the box office, despite competition of \u2018Grand Theft Auto VI\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNajlMRzZxa0l2ZU1KNW12a2VnN2JCYTlhbjRQcG1uZmZPZUw0NU90NTZGcjk5TERRVjdKNG1tbW14REgwMDhNbC1CSDJ1dnE5Q0gtTGJ6QnBxWmxBN21UMUIwQnhWVFBidktRZkdDQ3hzcXA5YkhMWW5KRG1nSkhHQXhqQ2NXRE5HdVlrV3RUMTE5UTZpbVd4WnU2RjU1ZUo3WExHS3RhVnpQZ3V2TTlrQ3VZQ2c5QVY3ZFhJWlkzN3RBNnM?oc=5",
+      "source": "NBC News",
+      "kind": "headline"
+    },
+    {
       "id": "44609e042d3d",
       "category": "Music",
       "tag": "ADDED",
@@ -412,16 +422,6 @@
       "title": "The 200 Best Songs of the 1990s",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSnYyNXVfYXc1NjM3Q3F5em1QWURHSXlRNUR6WWZUUWJYdS10eGV0U3BpODdjbjJYVUhSa0ItSnZybXEzOWt6SERQR2k2cmFRNlI5SUhmcnVWU1NFQWw0VFZ4TUVhMC1QU1BMc01FWEJuV3h2bXVqZkJtb09TOHF0aQ?oc=5",
       "source": "Rolling Stone",
-      "kind": "headline"
-    },
-    {
-      "id": "ac8c1c1bac33",
-      "category": "Culture",
-      "tag": "BUFFED",
-      "line": "Cultural meta shift: Derek Hough alludes to being sexually abused as a child in new doc: \u2018Terrorized\u2019",
-      "title": "Derek Hough alludes to being sexually abused as a child in new doc: \u2018Terrorized\u2019",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8xWWhkY2dfZ09lUVlsa3RJVWZHMjRmOVI0QVQ1c1JrSk80N0NwdjZZendCcGJ5YmdFYmNWakZkRmRDMTVwd24xQWhLTXFMLTJ5NFdfR3huNmlVSUNXSHNFSU9rSzMzX2pfR2Q0TUMxMjg3cjhFVDctLU1UQk8?oc=5",
-      "source": "Entertainment Weekly",
       "kind": "headline"
     },
     {
@@ -665,6 +665,16 @@
       "kind": "headline"
     },
     {
+      "id": "cbd0c72150c9",
+      "category": "Politics",
+      "tag": "NERFED",
+      "line": "Power ranking shuffle: Hegseth says US and Canadian military officials need permission before socializing",
+      "title": "Hegseth says US and Canadian military officials need permission before socializing",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYXVmeDNHbXNiSkpET1doTlBseTc3dmtHaFRTS2RkbUU3M2g5OG9ZYWpYYTYxYWg5WXJ4aHFBNk02M2hKcDl6eF94VXJ6TU1KSm41RGpidTgyaFBTVHJOOGMwN1NibXRRdjN3cWVRUU51cHlKXzQ2Ri1XaDN2czE3SVItUGNPUzRvUk9JLUpvd2VlWDVYRE1vUjYzRzFySEVrbml4Skl4WVByOGViTW56aUhB?oc=5",
+      "source": "The Independent",
+      "kind": "headline"
+    },
+    {
       "id": "8f66f38d1da9",
       "category": "Politics",
       "tag": "PATCH",
@@ -705,21 +715,11 @@
       "kind": "headline"
     },
     {
-      "id": "85fa2f2a52bc",
-      "category": "Politics",
-      "tag": "KNOWN ISSUE",
-      "line": "Debate thread marked open: California Democrats split over sweeping energy bill backed by Trump",
-      "title": "California Democrats split over sweeping energy bill backed by Trump",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOc19ncnlhWFR6SUZFOTQ5Yzkta3dhUHJaZ09ZcTRRdEd1NER4Nms0SE5fdmRCblBiRjJPZGE0YzV3RnpJT2JZcVJXcHhHV0ZtWDRyY18zSkFpZE1abE9yREhRdGVKS0lGbEpjRE53OWFlQzZmWDdFdDQ3ZmVmZnhFNHl3RkRhdHpneGdnMzFEamZSaDJj?oc=5",
-      "source": "San Francisco Chronicle",
-      "kind": "headline"
-    },
-    {
-      "id": "e50166dbdece",
+      "id": "25826ddbae64",
       "category": "Markets",
-      "tag": "UPDATED",
-      "line": "Economy rebalance: Jensen Huang reinstated as Nvidia CEO after Trump calls in to board meeting",
-      "title": "Jensen Huang reinstated as Nvidia CEO after Trump calls in to board meeting",
+      "tag": "NERFED",
+      "line": "Risk-off patch: Jensen Huang reinstated as Nvidia CEO after Trump pushes board",
+      "title": "Jensen Huang reinstated as Nvidia CEO after Trump pushes board",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaEh6QTZFYnYwckh0TDFqV2ExekUtZ1VodWtvZGk4ci1MZFhObzhLM1V4Mms3RXBhcnZYMXRMcjFGUU5JNFhmMTZFUnZadGMyY3F3azJOc1UwUWtTWEFCMEMwZUEtODl4MmItQjdIOGNmMlI5aE1UX3puUVlwWjZoZ0dtNjNid28?oc=5",
       "source": "NBC News",
       "kind": "headline"
@@ -738,20 +738,10 @@
       "id": "0a51917e8406",
       "category": "Markets",
       "tag": "PATCH",
-      "line": "Market bulletin: One AI Stock Struggling To Rally: Anthropic",
-      "title": "One AI Stock Struggling To Rally: Anthropic",
+      "line": "Market bulletin: One AI Stock Struggling to Rally: Anthropic",
+      "title": "One AI Stock Struggling to Rally: Anthropic",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNd2lSU19CdlpuRXkzTEVPZ3g3V0ttTGZDWWQtdFk3aDlzVXlzRlEtMEdIUzhQWlloWGEyU1k5NUYxUHhtNURVQUJ4c21vcWRrR0JJSEUwem9JUnM4MnFKakUtOHIzVlZpbkxWekVaam5VNXkxaXZEWG0yX3gzVXFMRk9ZMk1qYy1MXzViRW9jXzhpc1NocVZ4VFlpSHZNeVRlWTR0bFZ6bGNWVDFveWF3RG9sMlZockhUYnhxYzN6a0RVZExSNi1WcWs5VVY5OGNDT2llZmJpeHRvTnpfLXJXVk01RQ?oc=5",
       "source": "WSJ",
-      "kind": "headline"
-    },
-    {
-      "id": "e09e39285cda",
-      "category": "Markets",
-      "tag": "UPDATED",
-      "line": "Economy rebalance: U.S. chip and neocloud stocks rally premarket after last week\u2019s selloff",
-      "title": "U.S. chip and neocloud stocks rally premarket after last week\u2019s selloff",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaC12TnM1bUZIMUxFX1RKZmVvU2JobVU0T1ljRWpBODU3T3JfTllkOEg3bGVidDQxdzZ2TnVTWWJ0aDVHaUJtOS1Jdl8yS2lvS2FnTGlCWG92NG5aVVVIVUJuczVfdEVqVkY1cjVVX0l1RzlvWk9RYk5fREo1YWRHc01QNnB0YndjQVpfTF9OMXNQbDlTdVJtdw?oc=5",
-      "source": "Yahoo Finance",
       "kind": "headline"
     },
     {
@@ -765,13 +755,23 @@
       "kind": "headline"
     },
     {
-      "id": "22114ab4fab9",
+      "id": "56147cbf5432",
       "category": "Markets",
-      "tag": "NERFED",
-      "line": "Risk-off patch: Grocers Take Losses on Thanksgiving Meal Bundles to Draw Shoppers",
-      "title": "Grocers Take Losses on Thanksgiving Meal Bundles to Draw Shoppers",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOY0l5Qm56SjNXaWdZcTBJSXZCLTBrS2IzdHhVY3Uwdzg4YnFRVEs0dm1vcGFIMXRQT3IwdkxVSWR4SEIzQ2VZRmdTNmZUYWl2RkFZeFZTWnpRVER6YUxGMThQRnBVaXBoWG1sbi04WVhwTDFDaHRScDJSN0dBd0JWSk9R?oc=5",
-      "source": "The New York Times",
+      "tag": "UPDATED",
+      "line": "Ledger updated: Walmart\u2019s turkey dinner deal draws a rush of orders",
+      "title": "Walmart\u2019s turkey dinner deal draws a rush of orders",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQU1BOeVZwNk1iVEpNNDJSZ1hubmNHVk9CYW9CQThpV0NpWHlKQVFjQzZOMmdlM1BUTXNWZEhvaTYwOXVwS3ZYT1JvUmxBWUZuUFBYeE1Wc0U3NkthOTk3MUdwWVFNdHN2NWZScE0yZnRIUE5YOE1XNXdPY25DM1N1dVF4ZjRRTlZMUVJncE9zaU9aWnlOZEFCQXRFYkJzdw?oc=5",
+      "source": "Yahoo Finance",
+      "kind": "headline"
+    },
+    {
+      "id": "e8399e5292cc",
+      "category": "Markets",
+      "tag": "UPDATED",
+      "line": "Economy rebalance: Nasdaq roars back by 6% as Nvidia soars on Huang\u2019s return, S&P 500 rebounds 5%: Live updates",
+      "title": "Nasdaq roars back by 6% as Nvidia soars on Huang\u2019s return, S&P 500 rebounds 5%: Live updates",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE55Qzd6R1BVMkNsU2hwVWc4OElya24tNzEwcjFjd1NyVkczM2dDTHk2WnNzdkxlR2huZW1IcTgtMDBTUVU3WWxZNW1PeFQyaHgwdGl3LTlaVjV1cEtWa0JSQmNuQ3hnQmViVG5XYndIVEFaRFVEUzJ30gF8QVVfeXFMTWJnbFVGZ0NXUU1Xb04xRi1tMnlKazVMVWxSOUpYSWtBV2dHVHZycUpyUk1XX24zQ2o4bHFEVDEyaklmcktGaTFvMHlualhDckJrZ25tMDB5VnEzbTRYQmhEOThhNDZSWWtMSDYya2ZHckRQLUtEZGl0Tmp2TQ?oc=5",
+      "source": "CNBC",
       "kind": "headline"
     },
     {
@@ -867,8 +867,8 @@
       "url": "https://trends.google.com/trends/explore?geo=US&q=monza+vs+fiorentina",
       "source": "Google Trends (US) \u00b7 1000+ searches",
       "kind": "trend",
-      "related": "https://www.bbc.com/sport/football/live/cm752zy0qdedt",
-      "related_source": "BBC"
+      "related": "https://www.goal.com/en-us/news/watch-monza-vs-fiorentina-live-today-tv-channel-and-streaming-details/blt39b04020f7688291",
+      "related_source": "Goal.com"
     },
     {
       "id": "a9d93bc86029",
