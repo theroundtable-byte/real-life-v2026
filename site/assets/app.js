@@ -48,10 +48,11 @@
     setInterval(loadCrypto, 60000);
   }
 
-  const DAY_COLOR = "#eef4e6";
-  const NIGHT_COLOR = "#0c1612";
+  const DAY_COLOR = "#f3c14a";
+  const NIGHT_COLOR = "#10051c";
   const toggle = document.getElementById("theme-toggle");
   const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const favicon = document.getElementById("favicon");
 
   function currentTheme() {
     return document.documentElement.getAttribute("data-theme") === "night" ? "night" : "day";
@@ -63,6 +64,11 @@
     toggle.setAttribute("aria-label", night ? "Switch to day mode" : "Switch to night mode");
     toggle.setAttribute("aria-pressed", night ? "true" : "false");
     if (themeMeta) themeMeta.setAttribute("content", night ? NIGHT_COLOR : DAY_COLOR);
+    if (favicon) {
+      const href = favicon.getAttribute("href") || "";
+      const base = href.replace(/favicon(?:-night)?\.svg.*$/, "");
+      favicon.setAttribute("href", base + (night ? "favicon-night.svg" : "favicon.svg"));
+    }
   }
 
   function setTheme(theme, persist) {

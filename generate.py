@@ -1272,8 +1272,8 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(description)}">
-  <meta name="theme-color" content="#eef4e6">{updated_meta}
-  <link rel="icon" href="{esc(prefix)}assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f3c14a">{updated_meta}
+  <link rel="icon" id="favicon" href="{esc(prefix)}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1293,11 +1293,15 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
 </head>
 <body>
   <a class="skip" href="#main">Skip to patch notes</a>
+  <div class="px-rain" aria-hidden="true"></div>
   <header class="top">
     <div class="scanlines" aria-hidden="true"></div>
     <div class="wrap top-row">
       <a class="brand" href="{esc(prefix)}index.html">
-        <span class="logo" aria-hidden="true">RL</span>
+        <span class="logo" aria-hidden="true">
+          <img class="logo-day" src="{esc(prefix)}assets/pixel/logo-day.svg" alt="" width="36" height="36">
+          <img class="logo-night" src="{esc(prefix)}assets/pixel/logo-night.svg" alt="" width="36" height="36">
+        </span>
         <span><strong>Real Life</strong><em>v2026</em></span>
       </a>
       <p class="satire-flag">Satire. Real news, written as patch notes. Every item links to its source — we don’t invent events.</p>
@@ -1337,11 +1341,13 @@ def filters_html() -> str:
         "</div>"
     )
 
-def section_badge(name: str) -> str:
-    tag, hook, icon = SECTION_UI.get(name, ("PATCH", "patch", "•"))
+def section_badge(name: str, prefix: str = "") -> str:
+    tag, hook, _icon = SECTION_UI.get(name, ("PATCH", "patch", "•"))
+    src = html.escape(f"{prefix}assets/pixel/icon-{hook}.svg", quote=True)
     return (
         f'<span class="sec-badge sec-{hook}" aria-hidden="true">'
-        f'<span class="sec-ico">{icon}</span>[{html.escape(tag)}]</span>'
+        f'<img class="sec-ico" src="{src}" alt="" width="16" height="16">'
+        f'[{html.escape(tag)}]</span>'
     )
 
 def entry_item(item: dict, tier: str = "featured") -> str:
@@ -1373,7 +1379,7 @@ def entry_item(item: dict, tier: str = "featured") -> str:
         f"</li>"
     )
 
-def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured") -> str:
+def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured", prefix: str = "") -> str:
     chunks = []
     for name, items in groups:
         if not items:
@@ -1382,7 +1388,7 @@ def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured") 
         lis = "".join(entry_item(it, tier) for it in items)
         chunks.append(
             f'<section class="patch-section sec-{hook}" data-section="{html.escape(name)}">'
-            f"<h2>{section_badge(name)} {html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
+            f"<h2>{section_badge(name, prefix)} {html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
         )
     return "".join(chunks)
 
@@ -1498,8 +1504,8 @@ def market_blurb(mode: str) -> str:
     return "Stock quotes were unavailable this run. Crypto still updates live in the ticker."
 
 def patch_post_html(meta, featured, rest, prefix="", extras="", blurb=""):
-    feat_html = sections_html(organize_sections(featured), "featured")
-    rest_html = sections_html(organize_sections(rest), "more") if rest else ""
+    feat_html = sections_html(organize_sections(featured), "featured", prefix)
+    rest_html = sections_html(organize_sections(rest), "more", prefix) if rest else ""
     more_btn = ""
     more_wrap = ""
     if rest:
@@ -1620,7 +1626,7 @@ def history_html(archive: list[dict], current_id: str, prefix: str) -> str:
         feat, rest = split_featured(notes, [annotate(n) for n in written] if written else [])
         if not feat and notes:
             feat, rest = notes[:FEATURED_LIMIT], notes[FEATURED_LIMIT:]
-        body = sections_html(organize_sections(feat or notes[:FEATURED_LIMIT]), "featured")
+        body = sections_html(organize_sections(feat or notes[:FEATURED_LIMIT]), "featured", prefix)
         href = f"{html.escape(prefix)}archive/{html.escape(p['id'])}.html"
         items.append(
             f'<details class="history-item">'
@@ -1666,16 +1672,21 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
             '<p class="kicker">This week</p>'
             "<h2>Weekly Patch Notes</h2>"
             '<p class="lede">An automatic rollup of standout items from the last 7 days, until a hand-written Sunday recap is added.</p>'
-            + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured")
+            + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured", "")
             + '<p class="src"><a href="weekly/index.html">Weekly recap archive</a></p></section>'
         )
     body = f"""
   {ticker_html(stocks, eia)}
+  <div class="px-horizon" aria-hidden="true">
+    <span class="px-orb"></span>
+    <span class="px-bird"></span>
+    <span class="px-bee"></span>
+  </div>
   {world_state_html(notes, stocks, eia)}
   <main id="main">
     <div class="wrap">
-      {weekly}
       {patch_post_html(meta, featured, rest, prefix="", extras=extras, blurb=market_blurb(stock_mode))}
+      {weekly}
       {history_html(archive, meta["id"], "")}
     </div>
   </main>
@@ -1695,7 +1706,7 @@ def render_archive_index(archive: list[dict]) -> str:
             )
         lis = f'<ol class="archive-list">{"".join(items)}</ol>'
     body = f"""
-  <main id="main"><div class="wrap">
+  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
     <section class="hero">
       <p class="kicker"><a href="../index.html">← Latest patch</a></p>
       <h1>Patch archive</h1>
@@ -1711,7 +1722,7 @@ def render_archive_patch(meta, notes, anilist, series, stock_mode, written=None,
     featured, rest = split_featured(notes, written)
     extras = extras_html(anilist, notes, series, trends or [])
     body = f"""
-  <main id="main"><div class="wrap">
+  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
     <p class="crumb"><a href="../index.html">← Latest patch</a> · <a href="index.html">Archive</a></p>
     {patch_post_html(meta, featured, rest, prefix="../", extras=extras, blurb=market_blurb(stock_mode))}
   </div></main>
@@ -1726,7 +1737,7 @@ def render_weekly_index(recaps: list[dict]) -> str:
         items = [f'<li><a href="{html.escape(r["id"])}.html"><strong>{html.escape(r["title"])}</strong><span>{html.escape(r["date"])}</span></a></li>' for r in recaps]
         lis = f'<ol class="archive-list">{"".join(items)}</ol>'
     body = f"""
-  <main id="main"><div class="wrap">
+  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
     <section class="hero">
       <p class="kicker"><a href="../index.html">← Latest patch</a></p>
       <h1>Weekly recaps</h1>
@@ -1739,7 +1750,7 @@ def render_weekly_index(recaps: list[dict]) -> str:
 
 def render_weekly_page(recap: dict) -> str:
     body = f"""
-  <main id="main"><div class="wrap">
+  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
     <section class="hero">
       <p class="kicker"><a href="../index.html">Latest patch</a> · <a href="index.html">Weekly recaps</a></p>
       <h1>{html.escape(recap["title"])}</h1>

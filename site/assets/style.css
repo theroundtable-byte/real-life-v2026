@@ -1,51 +1,69 @@
-/* Real Life v2026 — solarpunk base, cyberpunk accents */
+/* Real Life v2026 — solarpunk day, cyberpunk night, 8-bit decor */
 :root {
-  --bg: #eef4e6;
-  --bg-deep: #e3edd8;
-  --ink: #1a2a1c;
-  --muted: #4a5c4d;
-  --paper: #fbf8ef;
-  --line: #d0ddc6;
-  --lime: #2f6b32;
-  --lime-soft: #e1f0d2;
-  --gold: #8a6410;
-  --gold-soft: #f6e9c6;
-  --teal: #0f6e6e;
-  --teal-soft: #d7efee;
-  --red: #9a3a2c;
-  --red-soft: #f8e3de;
-  --blue: #1d5a72;
-  --blue-soft: #dceef4;
-  --accent: #0f6e6e;
+  --bg: #cfeec8;
+  --bg-deep: #b7e3b4;
+  --ink: #142418;
+  --muted: #35553c;
+  --paper: #fff8e6;
+  --line: #c3dc9e;
+  --lime: #187a2e;
+  --lime-soft: #d5f5c6;
+  --gold: #8f5808;
+  --gold-soft: #ffe7a6;
+  --teal: #0b6a6e;
+  --teal-soft: #c6f1f0;
+  --red: #b3332c;
+  --red-soft: #ffd8d0;
+  --blue: #1a5f88;
+  --blue-soft: #d3eef8;
+  --accent: #0b6a6e;
+  --sky: #7ec8ea;
   --max: 760px;
-  --shadow: 0 10px 28px rgba(47, 107, 50, 0.08);
-  --rise: radial-gradient(1200px 420px at 50% -80px, #f4e2a4 0%, rgba(244, 226, 164, 0.35) 28%, transparent 62%),
-          radial-gradient(900px 500px at 100% 0%, rgba(15, 110, 110, 0.10), transparent 50%),
-          var(--bg);
+  --shadow: 0 12px 32px rgba(24, 122, 46, 0.12);
+  --rise: radial-gradient(900px 380px at 80% -40px, #ffcd4a 0%, rgba(255, 205, 74, 0.65) 18%, transparent 50%),
+          linear-gradient(180deg, #f3c14a 0%, #ffd98a 8%, #8ecef0 26%, #d8f5c8 68%, #8ed98a 100%);
+  --px-vine-left: url(pixel/vine-left.svg);
+  --px-vine-right: url(pixel/vine-right.svg);
+  --px-skyline: url(pixel/skyline-day.svg);
+  --px-orb: url(pixel/sun.svg);
+  --px-corner: url(pixel/corner-day.svg);
+  --px-corner-ne: url(pixel/corner-day-ne.svg);
+  --px-corner-sw: url(pixel/corner-day-sw.svg);
+  --px-corner-se: url(pixel/corner-day-se.svg);
   color-scheme: light;
 }
 html[data-theme="night"] {
-  --bg: #0c1612;
-  --bg-deep: #08110e;
-  --ink: #e7eee6;
-  --muted: #a8b8a8;
-  --paper: #12201a;
-  --line: #2a4036;
-  --lime: #7dcc7a;
-  --lime-soft: #1a3320;
-  --gold: #e0c56a;
-  --gold-soft: #2e2712;
-  --teal: #3ecfaf;
-  --teal-soft: #16352f;
-  --red: #f08a7a;
-  --red-soft: #3a1c18;
-  --blue: #7ec8e0;
-  --blue-soft: #163038;
-  --accent: #3ecfaf;
-  --shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  --rise: radial-gradient(1000px 380px at 50% -100px, rgba(62, 207, 175, 0.14), transparent 55%),
-          radial-gradient(800px 400px at 100% 0%, rgba(224, 197, 106, 0.08), transparent 48%),
-          var(--bg);
+  --bg: #10051c;
+  --bg-deep: #0a0314;
+  --ink: #ece8f8;
+  --muted: #b8b0d0;
+  --paper: #1a0d2c;
+  --line: #4a2a70;
+  --lime: #5dff9a;
+  --lime-soft: #16301e;
+  --gold: #ffd56a;
+  --gold-soft: #2a2040;
+  --teal: #3ef0ff;
+  --teal-soft: #123038;
+  --red: #ff6b9a;
+  --red-soft: #3a1024;
+  --blue: #c084ff;
+  --blue-soft: #241040;
+  --accent: #ff3eb5;
+  --sky: #2a1450;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --rise: url(pixel/rain.svg),
+          radial-gradient(800px 360px at 80% -60px, rgba(255, 62, 181, 0.28), transparent 55%),
+          radial-gradient(700px 400px at 10% 0%, rgba(62, 240, 255, 0.12), transparent 50%),
+          linear-gradient(180deg, #2a0a40 0%, #14081e 42%, #0a0314 100%);
+  --px-vine-left: url(pixel/circuit-left.svg);
+  --px-vine-right: url(pixel/circuit-right.svg);
+  --px-skyline: url(pixel/skyline-night.svg);
+  --px-orb: url(pixel/moon.svg);
+  --px-corner: url(pixel/corner-night.svg);
+  --px-corner-ne: url(pixel/corner-night-ne.svg);
+  --px-corner-sw: url(pixel/corner-night-sw.svg);
+  --px-corner-se: url(pixel/corner-night-se.svg);
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -90,12 +108,18 @@ html[data-theme="night"] .scanlines { opacity: 0.12; }
 .brand strong { display: block; }
 .brand em { font-style: normal; font-family: "IBM Plex Mono", monospace; color: var(--lime); font-weight: 600; font-size: 0.86rem; }
 .logo {
-  width: 36px; height: 36px; border-radius: 12px 8px 14px 8px; display: grid; place-items: center;
-  font-family: "IBM Plex Mono", monospace; font-weight: 700; font-size: 0.78rem;
-  color: #fbf8ef; background: linear-gradient(160deg, var(--lime) 0%, var(--teal) 100%);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 40%, transparent);
+  width: 36px; height: 36px; border-radius: 4px; display: grid; place-items: center;
+  overflow: hidden; flex: 0 0 36px;
+  background: transparent; box-shadow: none;
 }
-html[data-theme="night"] .logo { color: #0c1612; box-shadow: 0 0 0 1px color-mix(in srgb, var(--teal) 50%, transparent); }
+.logo img {
+  width: 36px; height: 36px; display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.logo-night { display: none; }
+html[data-theme="night"] .logo-day { display: none; }
+html[data-theme="night"] .logo-night { display: block; }
 .satire-flag { margin: 0; flex: 1 1 16rem; max-width: 34rem; color: var(--muted); font-size: 0.84rem; }
 
 .theme-toggle {
@@ -386,6 +410,109 @@ html[data-theme="night"] .chip.is-on { color: #0c1612; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .scanlines, .status-dot, .ver::after, .chip { animation: none !important; transition: none !important; }
+  .scanlines, .status-dot, .ver::after, .chip, .px-bee, .px-rain {
+    animation: none !important; transition: none !important;
+  }
   .status-dot { box-shadow: none; }
+}
+
+/* --- 8-bit scenery --- */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 64px;
+  pointer-events: none;
+  z-index: 2;
+  background-repeat: repeat-y;
+  background-size: 64px auto;
+  background-position: top;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+body::before { left: 10px; background-image: var(--px-vine-left); }
+body::after { right: 10px; background-image: var(--px-vine-right); }
+
+.px-rain { display: none; }
+html[data-theme="night"] body {
+  background-size: 48px 72px, auto, auto, auto;
+  animation: rain-fall 1.2s linear infinite;
+}
+
+.top, .ticker-wrap, .world-state, main, .site-foot { position: relative; z-index: 3; }
+.top { z-index: 10; }
+
+.px-horizon {
+  position: relative;
+  height: 96px;
+  margin: 0;
+  background: var(--px-skyline) repeat-x bottom;
+  background-size: auto 64px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  z-index: 3;
+  overflow: hidden;
+}
+.px-orb, .px-bird, .px-bee {
+  position: absolute;
+  pointer-events: none;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.px-orb {
+  right: max(16px, calc(50% - var(--max) / 2 - 20px));
+  bottom: 28px;
+  width: 56px; height: 56px;
+  background: var(--px-orb) no-repeat center / contain;
+}
+.px-bird {
+  left: max(12px, calc(50% - var(--max) / 2 + 40px));
+  bottom: 60px;
+  width: 32px; height: 32px;
+  background: url(pixel/bird.svg) no-repeat center / contain;
+}
+.px-bee {
+  left: max(80px, calc(50% - var(--max) / 2 + 160px));
+  bottom: 68px;
+  width: 28px; height: 28px;
+  background: url(pixel/bee.svg) no-repeat center / contain;
+  animation: buzz 3.2s ease-in-out infinite;
+}
+html[data-theme="night"] .px-bird,
+html[data-theme="night"] .px-bee { display: none; }
+
+.patch-post, .weekly {
+  background-color: var(--paper);
+  background-image: var(--px-corner), var(--px-corner-ne), var(--px-corner-sw), var(--px-corner-se);
+  background-repeat: no-repeat;
+  background-position: -2px -2px, right -2px top -2px, -2px bottom -2px, right -2px bottom -2px;
+  background-size: 32px 32px;
+}
+
+.sec-ico {
+  width: 16px; height: 16px; display: block; flex: 0 0 16px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+@keyframes rain-fall {
+  from { background-position: 0 0; }
+  to { background-position: 0 48px; }
+}
+@keyframes buzz {
+  0%, 100% { transform: translate(0, 0); }
+  40% { transform: translate(10px, -8px); }
+  70% { transform: translate(-6px, -2px); }
+}
+
+@media (max-width: 1100px) {
+  body::before, body::after { display: none; }
+}
+@media (max-width: 720px) {
+  .px-bird, .px-bee { display: none !important; }
+  .px-horizon { height: 48px; background-size: auto 40px; }
+  .px-orb { width: 40px; height: 40px; bottom: 20px; right: 12px; }
+  .patch-post, .weekly { background-image: none; }
+  html[data-theme="night"] body { animation: none; }
 }
