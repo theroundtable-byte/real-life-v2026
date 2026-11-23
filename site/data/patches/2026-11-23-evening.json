@@ -7,17 +7,52 @@
     "month": 11,
     "week": 4,
     "day": 23,
-    "iso": "2026-11-23T17:21:53-05:00",
-    "display_date": "Monday, November 23, 2026, 5:21 PM ET"
+    "iso": "2026-11-23T17:23:35-05:00",
+    "display_date": "Monday, November 23, 2026, 5:23 PM ET"
   },
   "stock_mode": "majors",
   "trends": [
+    {
+      "title": "byu basketball",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=byu+basketball",
+      "news_url": "https://byucougars.com/news/2026/11/22/no-21-byu-faces-washington-in-southwest-maui-invitational",
+      "news_source": "BYU Athletics"
+    },
+    {
+      "title": "russia",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=russia",
+      "news_url": "https://www.nytimes.com/2026/11/23/world/europe/russia-ukraine-war-deaths.html",
+      "news_source": "The New York Times"
+    },
+    {
+      "title": "internacional vs vit\u00f3ria",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=internacional+vs+vit%C3%B3ria",
+      "news_url": "https://ge.globo.com/rs/futebol/brasileirao-serie-a/noticia/2026/11/23/internacional-x-vitoria-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+      "news_source": "ge"
+    },
+    {
+      "title": "nevada basketball",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=nevada+basketball",
+      "news_url": "https://nevadasportsnet.com/news/reporters/nevada-basketball-versus-san-francisco-three-keys-to-victory-and-a-prediction",
+      "news_source": "Nevada Sports Net"
+    },
     {
       "title": "tom holland",
       "traffic": "2000+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=tom+holland",
       "news_url": "https://www.yahoo.com/entertainment/movies/trailers/articles/tom-holland-spider-man-back-164948323.html",
       "news_source": "Yahoo"
+    },
+    {
+      "title": "is there a full moon tonight",
+      "traffic": "5000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=is+there+a+full+moon+tonight",
+      "news_url": "https://www.forbes.com/sites/jamiecartereurope/2026/11/23/supermoon-meets-the-seven-sisters-the-night-sky-this-week/",
+      "news_source": "Forbes"
     },
     {
       "title": "grayson chrisley",
@@ -34,13 +69,6 @@
       "news_source": "The Guardian"
     },
     {
-      "title": "wwe raw",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=wwe+raw",
-      "news_url": "https://www.wwe.com/shows/raw/2026-11-23",
-      "news_source": "WWE"
-    },
-    {
       "title": "manny manuel",
       "traffic": "200+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=manny+manuel",
@@ -48,39 +76,11 @@
       "news_source": "El Nuevo D\u00eda"
     },
     {
-      "title": "airbag",
-      "traffic": "10000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=airbag",
-      "news_url": "https://www.foxbusiness.com/economy/honda-recalls-810k-vehicles-over-dangerous-takata-airbag-inflator-rupture-risk",
-      "news_source": "Fox Business"
-    },
-    {
-      "title": "michigan vs miami fl",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=michigan+vs+miami+fl",
-      "news_url": "https://mgoblue.com/news/2026/11/20/womens-basketball-michigan-to-head-to-bahamas-for-baha-mar-pink-flamingo-championship",
-      "news_source": "University of Michigan Athletics"
-    },
-    {
-      "title": "flood watch",
-      "traffic": "50000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=flood+watch",
-      "news_url": "https://www.wesh.com/article/flooding-central-florida-roads-closed/74505623",
-      "news_source": "WESH"
-    },
-    {
-      "title": "maria middleton",
+      "title": "wwe raw",
       "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=maria+middleton",
-      "news_url": "https://abcnews.com/US/pennsylvania-teen-died-2020-become-gen-saint/story?id=138378815",
-      "news_source": "ABC News - Breaking News, Latest News and Videos"
-    },
-    {
-      "title": "what time does the stock market close",
-      "traffic": "5000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=what+time+does+the+stock+market+close",
-      "news_url": "https://finance.yahoo.com/personal-finance/investing/article/is-the-stock-market-open-on-thanksgiving-and-black-friday-135419542.html",
-      "news_source": "Yahoo Finance"
+      "url": "https://trends.google.com/trends/explore?geo=US&q=wwe+raw",
+      "news_url": "https://www.wwe.com/shows/raw/2026-11-23",
+      "news_source": "WWE"
     }
   ],
   "notes": [
@@ -190,19 +190,19 @@
       "text": "World state: Trump postpones planned detonation of toxic drums at Iowa army facility"
     },
     {
-      "id": "d0a045ef61c8",
+      "id": "7afbcbcb0d1e",
       "category": "News",
       "tag": "ADDED",
-      "line": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "digest": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "title": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUThKclEzNmdSeWQ1MUIzc0hJWnBqSWdXdUtSVkIxMVdYTWIwQjU5UGVIclhJVUl1bVVyLVlCSVFLdWRHckdabDh6RDNsMVNDdUdKdjNFZEJLb3FCVE5Qa1RLVWp1NHVjeUxRWERFT3pJYWpOY3o1emQ3Z1JGbHNQeEhTdmZCeVUzUVpmY3dCeUdzSWZELUZlUjJTck5QaHJyLWVTeF9uV1BsQlBtSEE?oc=5",
-      "source": "AP News",
+      "line": "Storms to hit both coasts, threatening Thanksgiving travel for millions and Macy's 100th parade",
+      "digest": "Storms to hit both coasts, threatening Thanksgiving travel for millions and Macy's 100th parade",
+      "title": "Storms to hit both coasts, threatening Thanksgiving travel for millions and Macy's 100th parade",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ3ZrOFdHdVY2TkplWE9iV0x1Z3ZPanBpMU9Wd09XUTBhX3hZckt2Y0k4Ym9aRVRyaDlZN2F3RnFuV1VlS3Z6YkJ3SGxLcGtrT2M3bmpMRnNmOXdHeHc3dVNkNnBha1FYc3dOY3RZSmpvV2dGUjZ2QmRWMUNFanRsTEE5R0ZyNzRGRFhFRTRqdDhjb05pb18weXQ3bWM?oc=5",
+      "source": "KSL News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "New Content",
-      "text": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches"
+      "text": "Storms to hit both coasts, threatening Thanksgiving travel for millions and Macy's 100th parade"
     },
     {
       "id": "4c421bdd61e9",
@@ -340,21 +340,6 @@
       "text": "Black Friday deals live: great savings on wireless headphones, OLED TVs and more, handpicked by our experts"
     },
     {
-      "id": "00acff02496a",
-      "category": "Tech",
-      "tag": "ROSTER",
-      "line": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'",
-      "digest": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'",
-      "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5Ib2NHeDh2MDBCX0ZyZHdybUlycXRJSWRfU0FzOVFQOHZiYjByVFc0Rm9vbVBrenkwVUJCQnNRWHExMTNpbjhCYkE2QXpHdGFHa2ZPb01lbFYtcWc?oc=5",
-      "source": "BBC",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "Buffs",
-      "text": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'"
-    },
-    {
       "id": "a514e7b66767",
       "category": "Tech",
       "tag": "BUFFED",
@@ -370,21 +355,6 @@
       "text": "Samsung Galaxy S27 Ultra could debut with a brilliant new Galaxy feature you'll love"
     },
     {
-      "id": "fed9afd09ab8",
-      "category": "Tech",
-      "tag": "ADDED",
-      "line": "Black Friday streaming deals LIVE \u2014 today's best discounts from $0.99 on HBO Max, Paramount+, Apple TV, Peacock, Prime Video add-ons and more",
-      "digest": "Black Friday streaming deals LIVE \u2014 today's best discounts from $0.99 on HBO Max, Paramount+, Apple TV, Peacock, Prime Video add-ons and more",
-      "title": "Black Friday streaming deals LIVE \u2014 today's best discounts from $0.99 on HBO Max, Paramount+, Apple TV, Peacock, Prime Video add-ons and more",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOEJLODZKYTRDUXBfN19BYnRpQWJPR3hLQThUZWpKSEVYa3ZhMXpPekhxam5xZjJ1NUFVNDYyOXJ3dkRKUEZqd1VVaFdUMnFEVXVQWHpGeG5yY050eVBlb2Z6eF9pWF9PZUtRLWMyQUloQkdWTGxDQ1FTUGF2bVpPSjY3SHFCQnZlcUYycjhrTQ?oc=5",
-      "source": "Tom's Guide",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "New Content",
-      "text": "Black Friday streaming deals LIVE \u2014 today's best discounts from $0.99 on HBO Max, Paramount+, Apple TV, Peacock, Prime Video add-ons and more"
-    },
-    {
       "id": "f7d8e1ae6d26",
       "category": "Tech",
       "tag": "UPDATED",
@@ -398,6 +368,36 @@
       "filter": "Tech & Science",
       "section": "Hotfixes",
       "text": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI"
+    },
+    {
+      "id": "2b7ca24e3538",
+      "category": "Tech",
+      "tag": "PATCH",
+      "line": "The Galaxy Z Fold8 Is Basically the iPhone Duo for Android Fans, Only Lighter and Now Cheaper Than Ever",
+      "digest": "The Galaxy Z Fold8 Is Basically the iPhone Duo for Android Fans, Only Lighter and Now Cheaper Than Ever",
+      "title": "The Galaxy Z Fold8 Is Basically the iPhone Duo for Android Fans, Only Lighter and Now Cheaper Than Ever",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQODVyNFZObDFZdnliMzlFaFRJOW5zNGQ4N1lKb1ZUWVFiX2RhaXN0M2VYSFJtRThHYXlra2UxQW4tT2E5WVFWMmx1OGFfSlg0alRLSm0tTWtpLXYxenFjX3FCaDRkRlFneV9iWFRoSDYyejQxMGxHV0g0SG9XcGdqMW93MWZlMHhEdnhUaHBNZnhCS19nV3hib2pWYjJOTkFRMmh0dnFXTzhvTzhMU0d0Mm1vb3JPR1hnSUxzbGZ5TGlVSjV0WUt3QlBRdmR3QQ?oc=5",
+      "source": "Gizmodo",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "Hotfixes",
+      "text": "The Galaxy Z Fold8 Is Basically the iPhone Duo for Android Fans, Only Lighter and Now Cheaper Than Ever"
+    },
+    {
+      "id": "820cb7653a1b",
+      "category": "Tech",
+      "tag": "ADDED",
+      "line": "AirPods Pro 3 Plunge to $149 for Black Friday ($100 Off)",
+      "digest": "AirPods Pro 3 Plunge to $149 for Black Friday ($100 Off)",
+      "title": "AirPods Pro 3 Plunge to $149 for Black Friday ($100 Off)",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BbG5SRml6T3oxOFk5V1gzekp4VmdyNjV5QU5RR2wwa3FsZl9nUVlyWUtMVVluNmZRTW9fSnZ2eWgwX29ZdlB2YkMxdEx3TXZlNGlDZ09lR2ltS3hFMENsUnBVMDMwcHo3VzlldFh0UDBoWEU?oc=5",
+      "source": "MacRumors",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "New Content",
+      "text": "AirPods Pro 3 Plunge to $149 for Black Friday ($100 Off)"
     },
     {
       "id": "10811a1c9071",
@@ -625,19 +625,19 @@
       "text": "Bestiary: Software issues have even reached Mercury as BepiColombo probe arrives in uncertain state"
     },
     {
-      "id": "c75c10ce95e6",
+      "id": "592e209d86d0",
       "category": "Science & Nature",
       "tag": "UPDATED",
-      "line": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
-      "digest": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
-      "title": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
-      "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPVFRZQzloamJkRE40M2pJREVaeHlxbC10ejRFcXZkWFU1Sk1aY2ltWVppRnJrb0Njek9TRlVVa21WdFpORTZwdDV2aVcwLUJyNml6NVlJenBLeXcyWk9zYThseU9xa0d0b1J6amV5cmFzV0lUY3F3RzVHWm1ib3RkUkhUTDdxVFlHbTFnb0xJT0M1dGhqYVlzMHJJdmt4TkstZXcyWmV2YmVVdU1fZk9VaFl3RWJUbFhVX3R4S09uMW1lWGtINXEzcjE4NndIWGstcnVndERBM2M5MjUybWZoaS1HUTVrd1NjMXpuQXhpbXJCd1FXUlZENm42NnZpbUVWRFFZQnNDNmFfYjBPY19VMnZiaGxyX1RmS1JEZDdEcVZvZVZ0MG0yQTdfVFp0X09lTnE2edIBugJBVV95cUxQTUNKVlFja3M0cmVqY3ZWSXlXVnZac0swMlJ4SDhrcFBkR1lOTVJlMFlHczJtMzRsYnVYSnJwdWVLczdPaXowRTdDMS1JOVp6QzVGb2h0ZzRlVGZNY1g2LU55LWpXcFQ4S3BIRVBSSWJ4OENleVBOZnN0c3ZZZDlCbkM3ZFpWLWhROFd3UlJvRm5OeWl2U3NCcm1JOEs3WGU5LUJKMmVTWnV1cllqZVV3MFZqM2lxV3hlMG9ZVUlaODhFVV80RTI3d1JhQ202SjlLX0tibGlfUFgwLTVNQWZ3MFNlTjNEMnlTR2FvbDNsMXltazZTSmtFaXBvQlJrdENJQ21ONEtockxkSG9GMnBpN1ZBdUdLSjJmMFdOWDlmSlU5VEdXX0VyNTJ5WXJCZkdsUXJ3Y2YxOVVodw?oc=5",
-      "source": "The Times of India",
+      "line": "Voyager 1 reaches a light-day from Earth in golden milestone",
+      "digest": "Voyager 1 reaches a light-day from Earth in golden milestone",
+      "title": "Voyager 1 reaches a light-day from Earth in golden milestone",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPXzl3TEJqb2lxNnJBRmh5Y0s4RG9mdGtRUzZJa1hyc29DV1J4VVRzdUY2MnVNWWhEbnV2TnloNGl6S2NGVEZaMmt6TkZHRDZlV1g1WDNUVU80NzZuM29HM0tLczR4X3VFRHpUS3JObmFYekhHNmsyUEFuM0dfUzA5dG02Vm9NMG5sOHdrRUk2SFQ0Z2dpX3RRYXlmY0RHT1plZHpZcGowcEhfQjZoc3kw?oc=5",
+      "source": "AccuWeather",
       "kind": "headline",
       "weird": false,
       "filter": "Tech & Science",
       "section": "Hotfixes",
-      "text": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with"
+      "text": "Voyager 1 reaches a light-day from Earth in golden milestone"
     },
     {
       "id": "4b3fe0cd0a42",
@@ -1090,6 +1090,81 @@
       "text": "Grocers Take Losses on Thanksgiving Meal Bundles to Draw Shoppers"
     },
     {
+      "id": "cd3b761cc2c2",
+      "category": "Gaming",
+      "tag": "BALANCE",
+      "line": "GTA 6 Players Are Upset Its New Train Can Actually Be Stopped After Spending 13 Years With the Unstoppable GTA 5 Train",
+      "digest": "GTA 6 Players Are Upset Its New Train Can Actually Be Stopped After Spending 13 Years With the Unstoppable GTA 5 Train",
+      "title": "GTA 6 Players Are Upset Its New Train Can Actually Be Stopped After Spending 13 Years With the Unstoppable GTA 5 Train",
+      "url": "https://www.ign.com/articles/gta-6-players-are-upset-its-new-train-can-actually-be-stopped-after-spending-13-years-with-the-unstoppable-gta-5-train",
+      "source": "ign",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Buffs",
+      "text": "GTA 6 Players Are Upset Its New Train Can Actually Be Stopped After Spending 13 Years With the Unstoppable GTA 5 Train"
+    },
+    {
+      "id": "6d04e8f9aacf",
+      "category": "Gaming",
+      "tag": "META",
+      "line": "Meta shift: GTA 6's Waink App Can Unlock New Hairstyles and Makeup",
+      "digest": "Meta shift: GTA 6's Waink App Can Unlock New Hairstyles and Makeup",
+      "title": "GTA 6's Waink App Can Unlock New Hairstyles and Makeup",
+      "url": "https://www.ign.com/articles/gta-6-waink-app-unlock-hairstyles-makeup",
+      "source": "ign",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Buffs",
+      "text": "Meta shift: GTA 6's Waink App Can Unlock New Hairstyles and Makeup"
+    },
+    {
+      "id": "52d5b9ec4695",
+      "category": "Gaming",
+      "tag": "ADDED",
+      "line": "Save $100 Off the Latest Generation 2026 Apple Watch Series 12 for Black Friday",
+      "digest": "Save $100 Off the Latest Generation 2026 Apple Watch Series 12 for Black Friday",
+      "title": "Save $100 Off the Latest Generation 2026 Apple Watch Series 12 for Black Friday",
+      "url": "https://www.ign.com/articles/apple-watch-series-12-deal-black-friday-sale-2026",
+      "source": "ign",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Save $100 Off the Latest Generation 2026 Apple Watch Series 12 for Black Friday"
+    },
+    {
+      "id": "819e368c1384",
+      "category": "Gaming",
+      "tag": "ADDED",
+      "line": "The Rushed Rings of Power Episode Release Schedule Is Likely Thanks to Amazon's Black Friday Sale Strategy",
+      "digest": "The Rushed Rings of Power Episode Release Schedule Is Likely Thanks to Amazon's Black Friday Sale Strategy",
+      "title": "The Rushed Rings of Power Episode Release Schedule Is Likely Thanks to Amazon's Black Friday Sale Strategy",
+      "url": "https://www.ign.com/articles/amazon-the-lord-of-the-the-rings-of-power-release-schedule-is-likely-thanks-to-black-friday-2026",
+      "source": "ign",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "The Rushed Rings of Power Episode Release Schedule Is Likely Thanks to Amazon's Black Friday Sale Strategy"
+    },
+    {
+      "id": "6a9bdb9c107a",
+      "category": "Gaming",
+      "tag": "ADDED",
+      "line": "Nvidia CEO Jensen Huang Will Have to Testify Publicly Before US Senate",
+      "digest": "Nvidia CEO Jensen Huang Will Have to Testify Publicly Before US Senate",
+      "title": "Nvidia CEO Jensen Huang Will Have to Testify Publicly Before US Senate",
+      "url": "https://www.ign.com/articles/nvidia-ceo-jensen-huang-will-have-to-testify-publicly-before-us-senate",
+      "source": "ign",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Nvidia CEO Jensen Huang Will Have to Testify Publicly Before US Senate"
+    },
+    {
       "id": "226a21af0883",
       "category": "Gaming",
       "tag": "META",
@@ -1103,81 +1178,6 @@
       "filter": "Entertainment",
       "section": "Buffs",
       "text": "Meta shift: Save $800 Off the Sonos Pre-Matched Ultimate Immersive Set With Arc Ultra, Sub 4, Era 300 Speakers"
-    },
-    {
-      "id": "f76f52d932a2",
-      "category": "Gaming",
-      "tag": "ADDED",
-      "line": "The Sonos Black Friday Sale Is Live With Deals on Soundbars, Speakers, and Headphones",
-      "digest": "The Sonos Black Friday Sale Is Live With Deals on Soundbars, Speakers, and Headphones",
-      "title": "The Sonos Black Friday Sale Is Live With Deals on Soundbars, Speakers, and Headphones",
-      "url": "https://www.ign.com/articles/sonos-black-friday-sale-2026-and-new-product-releases",
-      "source": "ign",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "The Sonos Black Friday Sale Is Live With Deals on Soundbars, Speakers, and Headphones"
-    },
-    {
-      "id": "ce029b1b8463",
-      "category": "Gaming",
-      "tag": "ADDED",
-      "line": "PS5 Games on Sale for $15 for Black Friday",
-      "digest": "PS5 Games on Sale for $15 for Black Friday",
-      "title": "PS5 Games on Sale for $15 for Black Friday",
-      "url": "https://www.ign.com/articles/ps5-games-on-sale-for-15-for-black-friday",
-      "source": "ign",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "PS5 Games on Sale for $15 for Black Friday"
-    },
-    {
-      "id": "1ed8fff79d84",
-      "category": "Gaming",
-      "tag": "META",
-      "line": "Meta shift: The $749 ABS Cyclone RTX 5060 Gaming PC Is More Powerful AND Less Expensive Than the Steam Machine",
-      "digest": "Meta shift: The $749 ABS Cyclone RTX 5060 Gaming PC Is More Powerful AND Less Expensive Than the Steam Machine",
-      "title": "The $749 ABS Cyclone RTX 5060 Gaming PC Is More Powerful AND Less Expensive Than the Steam Machine",
-      "url": "https://www.ign.com/articles/abs-cyclone-rtx-5060-gaming-pc-deal-black-friday-sale-2026",
-      "source": "ign",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Buffs",
-      "text": "Meta shift: The $749 ABS Cyclone RTX 5060 Gaming PC Is More Powerful AND Less Expensive Than the Steam Machine"
-    },
-    {
-      "id": "4924c9bfc81d",
-      "category": "Gaming",
-      "tag": "BALANCE",
-      "line": "The Avengers: Doomsday Final Trailer Has Us Even More Confused About Steve Rogers and Peggy Carter",
-      "digest": "The Avengers: Doomsday Final Trailer Has Us Even More Confused About Steve Rogers and Peggy Carter",
-      "title": "The Avengers: Doomsday Final Trailer Has Us Even More Confused About Steve Rogers and Peggy Carter",
-      "url": "https://www.ign.com/articles/avengers-doomsday-final-trailer-confusion-steve-rogers-peggy-carter",
-      "source": "ign",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Buffs",
-      "text": "The Avengers: Doomsday Final Trailer Has Us Even More Confused About Steve Rogers and Peggy Carter"
-    },
-    {
-      "id": "206fb1ea879c",
-      "category": "Gaming",
-      "tag": "ADDED",
-      "line": "The Ecovacs Deebot T90 Pro Omni Robot Vacuum Delivers Incredible 30,000Pa Suction and More High-End Features for $499 During Black Friday",
-      "digest": "The Ecovacs Deebot T90 Pro Omni Robot Vacuum Delivers Incredible 30,000Pa Suction and More High-End Features for $499 During Black Friday",
-      "title": "The Ecovacs Deebot T90 Pro Omni Robot Vacuum Delivers Incredible 30,000Pa Suction and More High-End Features for $499 During Black Friday",
-      "url": "https://www.ign.com/articles/the-ecovacs-deebot-t90-pro-omni-robot-vacuum-delivers-incredible-30000pa-suction-and-more-high-end-features-for-499-during-black-friday",
-      "source": "ign",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "The Ecovacs Deebot T90 Pro Omni Robot Vacuum Delivers Incredible 30,000Pa Suction and More High-End Features for $499 During Black Friday"
     },
     {
       "id": "6e3ae995f303",
@@ -1630,6 +1630,21 @@
       "text": "\u2018Clashing Through The Snow\u2019 Stars Christopher Briney & Michelle Randolph Talk Comedy\u2019s \u201cImportant\u201d Presence In Script And How They Built Their Characters"
     },
     {
+      "id": "86350892751d",
+      "category": "Movies & TV",
+      "tag": "DLC",
+      "line": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "digest": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "title": "Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPaXRlYjJkcnZzTHpDVEtsNnJUcW95SkZ6TDFVTUgzU29hQlkzNlY5ZlNTY1g1NTJTVkhVRkVIbU1vYUJHVWZoUXgwTlQzWk5aRDJHcWMxc1dONFRPbElmZUgzYVdTeTZTUmRlSmZmSmZseFdxRk5BU1Iyd1F3RERmZ240aE9odw?oc=5",
+      "source": "Netflix",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More"
+    },
+    {
       "id": "802923d95fad",
       "category": "Movies & TV",
       "tag": "PATCH",
@@ -1645,19 +1660,19 @@
       "text": "Steven Spielberg Sets Adaptation Of \u2018The Heart In Winter\u2019 As Next Film At Focus With Jessie Buckley, Cillian Murphy And Mark Rylance Starring And Paul Thomas Anderson Adapting The Script"
     },
     {
-      "id": "95c2ddb2e874",
+      "id": "cc3b52d2c663",
       "category": "Movies & TV",
-      "tag": "DLC",
-      "line": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "digest": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "title": "Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8tQzhvQmNiWDBTcHRVczRyR19NVGhOUGwzazE5NmxSMEdXM1k2OGlmY19OR3V4NDBzZmFhUTE1aVo1T2tNOVlxeHhCU3phMDF4V2VZTzdQRER6b0lQQUgyRnFQV2hwU2k2U2E3NjhB?oc=5",
-      "source": "Disney Plus",
+      "tag": "PATCH",
+      "line": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "digest": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "title": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNM1EyLVMza0xpLVJacm1ZUEN3cXgwWTlDeFJFYm9LZU14dTVKWUNkT1NKcmllZF9Uc0lfalc2ZXEwS0g0bWZiRW9na25OLVNHQklPeVZ0d1AzWTlHb2pKWGtlajI5LVp1N2dEUzQ3VmxTV2NXSER4UnhTLTVjT2Z6ZFJZa05pOWNNV2c?oc=5",
+      "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+"
+      "section": "Hotfixes",
+      "text": "Catherine, Princess of Wales, Documents Life With Cancer in BBC Film"
     },
     {
       "id": "9984c1669869",
@@ -1673,21 +1688,6 @@
       "filter": "Entertainment",
       "section": "Hotfixes",
       "text": "Ariana Grande Teases \u2018Eternal Sunshine Tour\u2019 Movie at Peacock"
-    },
-    {
-      "id": "736841376a48",
-      "category": "Movies & TV",
-      "tag": "UPDATED",
-      "line": "Trailer: Graham Moore and Julia Garner on the Love Story at the Heart of The Altruists",
-      "digest": "Trailer: Graham Moore and Julia Garner on the Love Story at the Heart of The Altruists",
-      "title": "Graham Moore and Julia Garner on the Love Story at the Heart of The Altruists",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5JQm83aGRwVUNEZWU1Ry01bl9iaW9hbDRjLUg5UjVQVkxVUnZqZXdZbmdGRjFxeDNFbHAxQ1BMZDdleXMxZFdUbm9XU1VjYjVSdmN6LU53SDM1bmpjTk5DWkxaOXJCeUplQ1p3RlZ5WQ?oc=5",
-      "source": "Netflix",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Hotfixes",
-      "text": "Trailer: Graham Moore and Julia Garner on the Love Story at the Heart of The Altruists"
     },
     {
       "id": "9c7a2d59b06a",
@@ -1960,21 +1960,6 @@
       "text": "Upcoming: World Premiere of \u2018Murci\u00e9lago\u2019 Headlines HIDIVE\u2019s Anime Frontier Program"
     },
     {
-      "id": "477196fb8852",
-      "category": "Anime & Manga",
-      "tag": "UPDATED",
-      "line": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
-      "digest": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
-      "title": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE13NWlWSDBZT01vYTlsbTM4OXpGVzlWdjNyUm9GZ1FwYkQ4SjJDVVlGc1g1RTNoSlhtcV9TRkhPcmpDMjVMYWQzdlh1Tjc2T09hTlRkNTRaWFpnYngwTE9GRnd6T2ZOUlE0WU44QUhpd3N1RGJH?oc=5",
-      "source": "Brooklyn Museum",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Hotfixes",
-      "text": "The Brooklyn Museum Announces Public Programs in December for Visitors of All Ages"
-    },
-    {
       "id": "b542d6cc7c6a",
       "category": "Anime & Manga",
       "tag": "UPDATED",
@@ -2005,19 +1990,34 @@
       "text": "The 8 Coziest Anime of All Time, Ranked"
     },
     {
-      "id": "c528dd833ea4",
+      "id": "2b515a1d65bc",
+      "category": "Anime & Manga",
+      "tag": "ADDED",
+      "line": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
+      "digest": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
+      "title": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbTNDTG85dnl6bUxscTFwdDhsa2tuNW1XMFp3UmlUdDBWSDhZeDVfQnl1QURhYk5YMGptZlp0NVA2Yk45NzV2QWF2cXk2UnlkN3JEaWFyUktQbnNfVzdRLTNKaUFDNWQ4bml4Q1lnbjRKeGVLZnc2VUVYbTVzQU9EdnZZQndabndnV18ySFdFcHVOR3VPZG9fOVVwcGs0S2lPWHJYYW5aSEpPOUoxdE1IblZCUklmRkxCMXNNMlhuTmdTZm5rRHlaTNIB3AFBVV95cUxQODlwMk9LTlEyYnN3ajhjTlZuNHZZYVEyR0o4bzM3Wms2WFRENU1tQUlONmpqeERNY1hxMXBlOWFndDIxZ0NmeHpIVnNqSEFtTDlrcjhSZ3JKc2RZZ3FwalZPcWdmb3dDcXYzTDhNOHE0bEZPUENndzFpZ2MwSGMzcEVqOGFJOG5hZDlGSXl5V2JhZmJoVHNBQ2JUMm14cWRnbE91UEt1M3MyQXBnUTdBaV9xWFhzX0dUcklWRjhkbHlSZlBMaXpuWlpjMjc1QXFUc3R0QjJSSDVpU0pP?oc=5",
+      "source": "Syracuse.com",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Crunchyroll\u2019s Black Friday deal is the cheapest way to watch the 2026 winter anime season"
+    },
+    {
+      "id": "77bc5d4bd0dc",
       "category": "Sports",
-      "tag": "BUFFED",
-      "line": "Mets made multiple offers to Tarik Skubal before landing on record deal: Sources",
-      "digest": "Mets made multiple offers to Tarik Skubal before landing on record deal: Sources",
-      "title": "Mets made multiple offers to Tarik Skubal before landing on record deal: Sources",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUEI1Nk83cTZtS25nNVF2QlVlQzI1MDRIYkVXWkhIemllb0Q4UDZzWWlPRXRZeXZrUGx4ZzZxUmdVdkJoTU5Fa0gtWHJ3TjFkVHFLdlg3QzJkYjV1MDJlM1RXYzJTSVNqY2pTdHowX2g0bjNueXZqdDZUQmlEMGRYN294QTRIamJuQVA0MW44Si0yNTVIemNYekNfNU9Xc28?oc=5",
-      "source": "The New York Times",
+      "tag": "UPDATED",
+      "line": "Mets make the big splash, agree with Skubal for 9 years, $450M (sources)",
+      "digest": "Mets make the big splash, agree with Skubal for 9 years, $450M (sources)",
+      "title": "Mets make the big splash, agree with Skubal for 9 years, $450M (sources)",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9TVFgzbG9pbXI2TFpEY0ZXMng3SExBOFlXX0Y0OExEZWp4dmNLMU84UzE0MjgtU20zLWZobm5ZZVVHTGhqN1VtRG52MUFCaU9QNGkzbWFxTUkybUtlX1AzVw?oc=5",
+      "source": "MLB.com",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
-      "section": "Buffs",
-      "text": "Mets made multiple offers to Tarik Skubal before landing on record deal: Sources"
+      "section": "Hotfixes",
+      "text": "Mets make the big splash, agree with Skubal for 9 years, $450M (sources)"
     },
     {
       "id": "03f1a39f499b",
@@ -2065,19 +2065,19 @@
       "text": "Mayor Lucas excuses residents from obligations for KC Current victory march"
     },
     {
-      "id": "2f0a6e5d2305",
+      "id": "16988f14c7c7",
       "category": "Sports",
-      "tag": "PATCH",
-      "line": "Canadiens coach St. Louis: 'Harsh thing to say' Larkin 'quit' on Red Wings",
-      "digest": "Canadiens coach St. Louis: 'Harsh thing to say' Larkin 'quit' on Red Wings",
-      "title": "Canadiens coach St. Louis: 'Harsh thing to say' Larkin 'quit' on Red Wings",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeXQ3a0FERlF5SDdtMkpiLVEtOTNTV0Z6Q05PbC1MaFFnMGw0YXdXTkpGWUh0NGg5bFl4REVkRm90bzNHbWZudVYyTFd3aVluNDdZMTFGV25iN19EZ3VjczlwUlAtSFBaLXFmaXhfXzJJUTl6NTVrbzBIU3lfQXlSUHpZeUZWQW5Sci1IZE9HZHJqOEwwNHc?oc=5",
-      "source": "ESPN",
+      "tag": "ROSTER",
+      "line": "Roster: Red Wings trade Dylan Larkin to Montreal Canadiens, ending dramatic 5-month saga - The Athletic",
+      "digest": "Roster: Red Wings trade Dylan Larkin to Montreal Canadiens, ending dramatic 5-month saga - The Athletic",
+      "title": "Red Wings trade Dylan Larkin to Montreal Canadiens, ending dramatic 5-month saga - The Athletic",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbWk2NlFmdnMtUUptOTJLQ1MxYnVoOWVXM2loREdqNzM3eHA5eW13VHdGXzI3UXFDZndRUXhBajdTd0dJdUVFTE9BTW1WRnN2dnZ5T0hnQnVPdWRISXhoc0Y4cmlzUGttYnVxZHI5NkRRdGNQMk96RWlWMkhLNU5iWU00Q2pRT21BeDVPQm83R0xZcmloM05uZTNR?oc=5",
+      "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
-      "section": "Hotfixes",
-      "text": "Canadiens coach St. Louis: 'Harsh thing to say' Larkin 'quit' on Red Wings"
+      "section": "Buffs",
+      "text": "Roster: Red Wings trade Dylan Larkin to Montreal Canadiens, ending dramatic 5-month saga - The Athletic"
     },
     {
       "id": "67bc544fb3ab",
@@ -2095,49 +2095,34 @@
       "text": "Bengals-Commanders Monday Night Football betting odds, picks and predictions: Best bets, player props"
     },
     {
-      "id": "55660b532df0",
-      "category": "Sports",
-      "tag": "ROSTER",
-      "line": "Roster: Re-ranking 138 college football teams: Big Ten\u2019s bad luck and a showdown to avoid No. 138",
-      "digest": "Roster: Re-ranking 138 college football teams: Big Ten\u2019s bad luck and a showdown to avoid No. 138",
-      "title": "Re-ranking 138 college football teams: Big Ten\u2019s bad luck and a showdown to avoid No. 138",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOakpTbFZvV3FIOXQ4VThQVjZYU1hMck9QQlE1c3BJcm4xM2Q0X3A3VTVfV2NiUk9CVXAtOVlWNzlzSkZYVjNZdUZGaVpvdDZCekpselNRbmZlVkRweGEzVWViOTBBZDd2QUh6VFRwRngzOWV4TjU0OElseHkwR3l6aFR2NVpGU0NqZzI1RUNFY18tRHdXeWc?oc=5",
-      "source": "The New York Times",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Buffs",
-      "text": "Roster: Re-ranking 138 college football teams: Big Ten\u2019s bad luck and a showdown to avoid No. 138"
-    },
-    {
-      "id": "1b40845972fa",
+      "id": "e5b95a079a9b",
       "category": "Sports",
       "tag": "META",
-      "line": "Mike Evans TD and Parker Washington non-TD raise more questions about NFL catch rules",
-      "digest": "Mike Evans TD and Parker Washington non-TD raise more questions about NFL catch rules",
-      "title": "Mike Evans TD and Parker Washington non-TD raise more questions about NFL catch rules",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPcGVXUWVwUkFYaW5taElFTC1xclgtNmlRcTlFV05NSDVhZm5DYnVBVXViaEpxbTJjbHVNVkFrb3ROeTNxNHUtd2xVaHhVR3hrdTVUcVo3XzJSSlVDeGpYc2VhcThYX29QSk1MZWNCNFVCSm5yd2lQWjQwUGk5eUJpUVV1QkoxUjFndy1iQVE5SEc1UnRwXzRBU0tNS3RCQXpoUURyWDIyMXVtQkhwSlN4QWdBNjFVZ2ZzbVRfelNnLUh0SDliUkdWTDRiMzdpMHlTWDRMeURBamdiaFNQZUw4RQ?oc=5",
-      "source": "NBC Sports",
+      "line": "College Football Playoff projections: Big Ten could get just 1 spot",
+      "digest": "College Football Playoff projections: Big Ten could get just 1 spot",
+      "title": "College Football Playoff projections: Big Ten could get just 1 spot",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdEFsaVhZRW9qMGFEbDdyVy1CaUc1U3BLQk9ub09pQVRmN1psbUJNT0Z2UFc4QTZRM1kzeUx4eGF4TzR3SkwzX1BPZDFTZlV6b3k3ekpfdVJadUxDZ05VYV9NclVJbFptQW02UEJHNHAza3J3RnVOaWh6bVBESWoxTVIySUtLNE9qbzQ5QXlJMmx0bUxTUjY4bWJ4SFBQRUVsZHpBcmZEb2NJSnJTSlN5a3dnWnVwc1pmU00xbzl6ekFiU3dGNkZnYVNqSQ?oc=5",
+      "source": "Yahoo Sports",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
       "section": "Buffs",
-      "text": "Mike Evans TD and Parker Washington non-TD raise more questions about NFL catch rules"
+      "text": "College Football Playoff projections: Big Ten could get just 1 spot"
     },
     {
-      "id": "882515956197",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
-      "digest": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
-      "title": "Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CNkpRRHlsSENSTHZia05oNGQtaGx5SlZ4cG03OHNHZDRtanZrY2xxT2IwOWpDVkVrbVh1bkhtVUYyYldWTzBGakFhdVdPci1HRmt1RXJqSkoxWmtFd3Bz?oc=5",
-      "source": "OnTheSnow.com",
+      "id": "9fa7b577f69b",
+      "category": "Sports",
+      "tag": "ROSTER",
+      "line": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "digest": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "title": "2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVEZEdk56a2NMYnZ4RnpUb1FmdkdIRlpOZ1ptWUd2OXliLXJPNDhKNFdhR29tY3BENkdTNGhSZzVUNjFNYkJRYjBlWFhyalhEZ3lBblk1dTEtMUhoODFwTTBtS1FYVmRCcUlXRzhUdk5IY0h2VnhjNnNBYVJlTE1tTm5ERDdrVkE4d0k5b0VHMkhOOHh0b0ViX1UxYnhQX1lxWFVKM01nNV9RZGhnaWU4Vg?oc=5",
+      "source": "CBS Sports",
       "kind": "headline",
       "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday"
+      "filter": "Sports",
+      "section": "Buffs",
+      "text": "Roster: 2026 NFL playoff picture, standings: 49ers reign over NFC, Jaguars slip in AFC, wild-card battles heat up"
     },
     {
       "id": "892e59c89eca",
@@ -2153,6 +2138,36 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Server event: Wildfire Litigation Surpasses $18 Billion in U.S. Settlements"
+    },
+    {
+      "id": "f43719b8110a",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "Server event: Trump\u2019s Great Persecution: Carlos Joaqu\u00edn and Balin, life in the eye of the deportation storm",
+      "digest": "Server event: Trump\u2019s Great Persecution: Carlos Joaqu\u00edn and Balin, life in the eye of the deportation storm",
+      "title": "Trump\u2019s Great Persecution: Carlos Joaqu\u00edn and Balin, life in the eye of the deportation storm",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWjdTTmVfYlU0UEpUeUpRZFhIdU16akR3Zk8tMktHYkJ3S1BOejJZZFp1cWlfNFBabk83ZllpXzlHN1lWRkhXbjByOGMtZHRSZ2JpLU1NMDRSQ2I0VzAtSlJVRmJTb05udm5Fd3MxbVRIRzdBY0Z0VXluS2gwbEpZWUlwOUE4OTJienJ4cE9HU2ctZndpTWgyQlplc2ZmT090cWsxbWVxWjZBY0FraXlpdFl5clBvNmlkYVgyakJoSXhMVUZSOXExdWNTRzNvRXNtOEFv?oc=5",
+      "source": "EL PA\u00cdS English",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Server event: Trump\u2019s Great Persecution: Carlos Joaqu\u00edn and Balin, life in the eye of the deportation storm"
+    },
+    {
+      "id": "bc5124882623",
+      "category": "Weather & Disasters",
+      "tag": "UPDATED",
+      "line": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More \u2014 Hearthstone",
+      "digest": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More \u2014 Hearthstone",
+      "title": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More \u2014 Hearthstone",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPX3lhSlZNTmZXN21heWNVOFFSUjJXM3RQNklWWmNwZWRodU9TWmZXUGFtNG1jck5qekwtdnVmRjdkTVdHR3FZZVQzRzRXRjhrWUxUT3BaZ3dvS3o0UXBPa1JkT21SZ1JnTlJaRVBVUi12TXpDdUxHbkM2R2JKQjN6VGdadzdpTUFkUklvM096NzVYVkR2eFE5RHV1WUctakd5MFNYWTJqT2dIdHhNX0p2d2F3eEd1SmFkSjc0WmRGZmQ0UnEz?oc=5",
+      "source": "Blizzard News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "An Early Look at Patch 37.2: Battlegrounds Season 15, 2v2 Tavern Brawl, and More \u2014 Hearthstone"
     },
     {
       "id": "6cad8c5c6af3",
@@ -2183,21 +2198,6 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Server event: Thanksgiving travel trouble looms as Midwest storm threatens millions with snow, heavy rain"
-    },
-    {
-      "id": "264b98a7b387",
-      "category": "Weather & Disasters",
-      "tag": "ADDED",
-      "line": "The Weirdest Thanksgiving Weather Events In US History",
-      "digest": "The Weirdest Thanksgiving Weather Events In US History",
-      "title": "The Weirdest Thanksgiving Weather Events In US History",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaktra05EcmE5S2NMeDdDT3R2NFNVZGo3UlRSYkxudWxvOGg1anRYRTh6ckJLb3NEMFhCZC1pZUxBZk1YNEtKejRpeWttQXFTazZmUDJ3Z1lCYm5oakNKYzhNNjVocGdSaDZmWXZDRzRobU5MTWs2aE9SeHpoRXNWejlURGhaei13b3lxbkNlS2tIeWVCdWFQVl8wYllKUQ?oc=5",
-      "source": "The Weather Channel",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "The Weirdest Thanksgiving Weather Events In US History"
     },
     {
       "id": "2bf98276aae6",
@@ -2500,21 +2500,6 @@
       "text": "Ag and Food Statistics: Charting the Essentials - Food Prices and Spending"
     },
     {
-      "id": "a23d6a136a6a",
-      "category": "Gas & Grocery",
-      "tag": "UPDATED",
-      "line": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
-      "digest": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
-      "title": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhdGhlckZ3RVZhZG4wNXBfNHNRRTdMUGVWcS1MUVJEb2pkODVnckRxVFR3QkZJWVRnVHFseW5jVDByLWRsUW9TWUU5akhxLWJ0YzBzMGpzZ2lGdmtZbkk3SnhZVlF3aXR2d3BhRlIzMFNhMEM3Z1Z3?oc=5",
-      "source": "Forbes",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month"
-    },
-    {
       "id": "6d7c3646b4b6",
       "category": "Gas & Grocery",
       "tag": "UPDATED",
@@ -2528,6 +2513,21 @@
       "filter": "Life",
       "section": "Hotfixes",
       "text": "Have High Gas Prices Made You Change How You Drive? Tell Us About It."
+    },
+    {
+      "id": "a23d6a136a6a",
+      "category": "Gas & Grocery",
+      "tag": "UPDATED",
+      "line": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
+      "digest": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
+      "title": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhdGhlckZ3RVZhZG4wNXBfNHNRRTdMUGVWcS1MUVJEb2pkODVnckRxVFR3QkZJWVRnVHFseW5jVDByLWRsUW9TWUU5akhxLWJ0YzBzMGpzZ2lGdmtZbkk3SnhZVlF3aXR2d3BhRlIzMFNhMEM3Z1Z3?oc=5",
+      "source": "Forbes",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.66 Month Over Month"
     },
     {
       "id": "43fde8f7d759",
@@ -2545,19 +2545,19 @@
       "text": "Gas prices hit an eight-month low, easing inflation worries"
     },
     {
-      "id": "468b1f74816c",
+      "id": "29b4c0c30cd8",
       "category": "Gas & Grocery",
-      "tag": "UPDATED",
-      "line": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
-      "digest": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
-      "title": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaTJGaWFtVVRKdkwzZDJ2aXpBaHNsSnNhbzdWcEgwZWtUaG0xeFNBcE9aSi1BN3A5LUVudlZlb2h3QmQ5Si1XaHJxMk1JOXgzR1FjYU5zSmJNMnE2a3RvSlc2ZnpWZlVyZ3BJUFlqeER5cC1mNmhHemh1RzlMSjhVVnFmbWNuY18tT3libFdJbllEZTFIalNHbm9wVU5ISzdoWXphNWk0eWlmMkJjVFBzUFNGc3dHTGthcUhz?oc=5",
-      "source": "FactCheck.org",
+      "tag": "ADDED",
+      "line": "Wisconsin gas prices expected to continue dropping into Thanksgiving weekend",
+      "digest": "Wisconsin gas prices expected to continue dropping into Thanksgiving weekend",
+      "title": "Wisconsin gas prices expected to continue dropping into Thanksgiving weekend",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTzRZQ3lYSGRWTlRLRmpNaFBKM2poakFQNmJ6OUhETF82NE1pNXRRZ1l1MWJRNWRPLTI5MWlYeWtyRktpWGJPX3JMU0FIdXRXZGdieDZSUTlPWkdKNDdGenBxSGNyRkZ4MDAtc3M4RDVyTzA5RzdfcDdBTlJSUkFGYWRNOEZkUnViT09ORl9XWEJxWWkzV0RueUk1YTljMFV2c2pHVkJvMGlsd9IBvgFBVV95cUxPTUVlUzQtUmVUenpLV3hONWEwcVM3bmtaUWVzOUQzOVpZaGdLY2ltZ25IN2NRQTFPYXkzZDlLTTdGYzE3ODczUTE3ZE5wa3JZYU5wSU9TM2s4emxCdnRkMkRtbDhvZ0xEVVFvM2VINUtCbC1FWmhpLW5GT1hMQVdiWmU5eWpQTDR4ajh6SGZDRDRJUzVqS1pVNTJ4b2F0UmJhQ19pb1VMUU5OMjI2eWswZGc3YVZVcmY4WXJLbjV3?oc=5",
+      "source": "WEAU",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
-      "section": "Hotfixes",
-      "text": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms"
+      "section": "New Content",
+      "text": "Wisconsin gas prices expected to continue dropping into Thanksgiving weekend"
     },
     {
       "id": "28a16e2ddeea",
@@ -2575,6 +2575,70 @@
       "text": "US Has More Natural Gas Than It Can Use as War Chokes Global Supply"
     },
     {
+      "id": "55848d4d5058",
+      "category": "Slang",
+      "tag": "UPDATED",
+      "line": "byu basketball is climbing the search meta.",
+      "digest": "byu basketball is climbing the search meta.",
+      "title": "byu basketball",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=byu+basketball",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://byucougars.com/news/2026/11/22/no-21-byu-faces-washington-in-southwest-maui-invitational",
+      "related_source": "BYU Athletics",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "byu basketball is climbing the search meta."
+    },
+    {
+      "id": "09ccd0a7d3f4",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "russia",
+      "digest": "russia",
+      "title": "russia",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=russia",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://www.nytimes.com/2026/11/23/world/europe/russia-ukraine-war-deaths.html",
+      "related_source": "The New York Times",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "russia"
+    },
+    {
+      "id": "40b5ede0732a",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "internacional vs vit\u00f3ria",
+      "digest": "internacional vs vit\u00f3ria",
+      "title": "internacional vs vit\u00f3ria",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=internacional+vs+vit%C3%B3ria",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://ge.globo.com/rs/futebol/brasileirao-serie-a/noticia/2026/11/23/internacional-x-vitoria-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+      "related_source": "ge",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "internacional vs vit\u00f3ria"
+    },
+    {
+      "id": "c2ed0412c8b5",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "nevada basketball",
+      "digest": "nevada basketball",
+      "title": "nevada basketball",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=nevada+basketball",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://nevadasportsnet.com/news/reporters/nevada-basketball-versus-san-francisco-three-keys-to-victory-and-a-prediction",
+      "related_source": "Nevada Sports Net",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "nevada basketball"
+    },
+    {
       "id": "4546a5bc6ab9",
       "category": "Slang",
       "tag": "PATCH",
@@ -2589,6 +2653,22 @@
       "filter": "Life",
       "section": "Hotfixes",
       "text": "tom holland"
+    },
+    {
+      "id": "cfb0980dd122",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "is there a full moon tonight",
+      "digest": "is there a full moon tonight",
+      "title": "is there a full moon tonight",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=is+there+a+full+moon+tonight",
+      "source": "Google Trends (US) \u00b7 5000+ searches",
+      "kind": "trend",
+      "related": "https://www.forbes.com/sites/jamiecartereurope/2026/11/23/supermoon-meets-the-seven-sisters-the-night-sky-this-week/",
+      "related_source": "Forbes",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "is there a full moon tonight"
     },
     {
       "id": "fc127831b244",
@@ -2623,22 +2703,6 @@
       "text": "michelle randolph"
     },
     {
-      "id": "f0680051690e",
-      "category": "Slang",
-      "tag": "PATCH",
-      "line": "wwe raw",
-      "digest": "wwe raw",
-      "title": "wwe raw",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=wwe+raw",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.wwe.com/shows/raw/2026-11-23",
-      "related_source": "WWE",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "wwe raw"
-    },
-    {
       "id": "622d9e505c94",
       "category": "Slang",
       "tag": "UPDATED",
@@ -2655,84 +2719,20 @@
       "text": "manny manuel is climbing the search meta."
     },
     {
-      "id": "baf7971f5122",
+      "id": "f0680051690e",
       "category": "Slang",
       "tag": "PATCH",
-      "line": "airbag",
-      "digest": "airbag",
-      "title": "airbag",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=airbag",
-      "source": "Google Trends (US) \u00b7 10000+ searches",
-      "kind": "trend",
-      "related": "https://www.foxbusiness.com/economy/honda-recalls-810k-vehicles-over-dangerous-takata-airbag-inflator-rupture-risk",
-      "related_source": "Fox Business",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "airbag"
-    },
-    {
-      "id": "d0148ec18a5e",
-      "category": "Slang",
-      "tag": "PATCH",
-      "line": "michigan vs miami fl",
-      "digest": "michigan vs miami fl",
-      "title": "michigan vs miami fl",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=michigan+vs+miami+fl",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://mgoblue.com/news/2026/11/20/womens-basketball-michigan-to-head-to-bahamas-for-baha-mar-pink-flamingo-championship",
-      "related_source": "University of Michigan Athletics",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "michigan vs miami fl"
-    },
-    {
-      "id": "94765d43cd64",
-      "category": "Slang",
-      "tag": "EVENT",
-      "line": "Server event: flood watch",
-      "digest": "Server event: flood watch",
-      "title": "flood watch",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=flood+watch",
-      "source": "Google Trends (US) \u00b7 50000+ searches",
-      "kind": "trend",
-      "related": "https://www.wesh.com/article/flooding-central-florida-roads-closed/74505623",
-      "related_source": "WESH",
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Server event: flood watch"
-    },
-    {
-      "id": "8404b4a2465b",
-      "category": "Slang",
-      "tag": "BUFFED",
-      "line": "maria middleton",
-      "digest": "maria middleton",
-      "title": "maria middleton",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=maria+middleton",
+      "line": "wwe raw",
+      "digest": "wwe raw",
+      "title": "wwe raw",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=wwe+raw",
       "source": "Google Trends (US) \u00b7 200+ searches",
       "kind": "trend",
-      "related": "https://abcnews.com/US/pennsylvania-teen-died-2020-become-gen-saint/story?id=138378815",
-      "related_source": "ABC News - Breaking News, Latest News and Videos",
+      "related": "https://www.wwe.com/shows/raw/2026-11-23",
+      "related_source": "WWE",
       "filter": "Life",
-      "section": "Buffs",
-      "text": "maria middleton"
-    },
-    {
-      "id": "0ff0333c6a34",
-      "category": "Slang",
-      "tag": "BUFFED",
-      "line": "what time does the stock market close",
-      "digest": "what time does the stock market close",
-      "title": "what time does the stock market close",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=what+time+does+the+stock+market+close",
-      "source": "Google Trends (US) \u00b7 5000+ searches",
-      "kind": "trend",
-      "related": "https://finance.yahoo.com/personal-finance/investing/article/is-the-stock-market-open-on-thanksgiving-and-black-friday-135419542.html",
-      "related_source": "Yahoo Finance",
-      "filter": "Life",
-      "section": "Buffs",
-      "text": "what time does the stock market close"
+      "section": "Hotfixes",
+      "text": "wwe raw"
     },
     {
       "id": "03759a388cab",
@@ -2936,19 +2936,19 @@
       "id": "c39ad0c11669",
       "category": "Markets",
       "tag": "NERFED",
-      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
-      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
+      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
+      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
       "title": "Costco Wholesale Corp (COST) -0.38%",
       "url": "https://www.cnbc.com/quotes/COST",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "COST",
-      "price": 1097.92,
+      "price": 1097.91,
       "previous_close": 1102.15,
-      "change_pct": -0.3837953091684451,
+      "change_pct": -0.3847026266842089,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92"
+      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91"
     },
     {
       "id": "aac71a943651",
