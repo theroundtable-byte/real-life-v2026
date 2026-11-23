@@ -484,10 +484,96 @@ def _chart_quote(symbol: str) -> dict | None:
         return None
 
 
+
+def _parse_num(value) -> float | None:
+    if value is None:
+        return None
+    s = str(value).replace(",", "").replace("$", "").replace("+", "").replace("%", "").strip()
+    if not s or s in {"--", "N/A", "n/a"}:
+        return None
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def collect_cnbc() -> list[dict]:
+    symbols = [
+        "SPY", "QQQ", "DIA", "IWM", ".SPX", ".DJI", ".IXIC",
+        "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "AVGO",
+        "JPM", "V", "UNH", "XOM", "JNJ", "WMT", "PG", "MA", "HD", "COST",
+        "NFLX", "AMD", "ORCL", "KO", "BAC", "DIS", "ADBE", "CSCO", "INTC",
+        "CRM", "PEP", "ABBV", "LLY", "MRK", "TSM", "PLTR", "UBER", "COIN",
+        "QCOM", "AMAT", "INTU", "IBM", "GE", "CAT", "BA", "GS",
+    ]
+    joined = "%7C".join(symbols)
+    url = (
+        "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+        f"?symbols={joined}&requestMethod=quick&exthrs=1&noform=1&partnerId=2"
+        "&fundamentals=0&output=json"
+    )
+    raw = fetch(url)
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+        quotes = payload["FormattedQuoteResult"]["FormattedQuote"]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return []
+    if isinstance(quotes, dict):
+        quotes = [quotes]
+    parsed = []
+    for q in quotes:
+        symbol = q.get("symbol")
+        price = _parse_num(q.get("last"))
+        pct = _parse_num(q.get("change_pct"))
+        if not symbol or price is None or pct is None:
+            continue
+        if q.get("changetype") == "DOWN" and pct > 0:
+            pct = -pct
+        elif str(q.get("change") or "").startswith("-") and pct > 0:
+            pct = -pct
+        name = q.get("name") or q.get("shortName") or symbol
+        parsed.append(
+            {
+                "symbol": symbol,
+                "shortName": name,
+                "regularMarketPrice": price,
+                "regularMarketChangePercent": pct,
+            }
+        )
+    notes = []
+    indexes = {".SPX", ".DJI", ".IXIC", "SPY", "QQQ", "DIA", "IWM"}
+    movers = sorted(parsed, key=lambda r: r["regularMarketChangePercent"], reverse=True)
+    picked = []
+    seen = set()
+    for row in movers[:8] + list(reversed(movers[-8:])):
+        if row["symbol"] in seen:
+            continue
+        seen.add(row["symbol"])
+        picked.append(row)
+    for row in parsed:
+        if row["symbol"] in indexes and row["symbol"] not in seen:
+            picked.append(row)
+            seen.add(row["symbol"])
+    for row in picked:
+        note = _stock_note(row)
+        if note:
+            note["source"] = "CNBC"
+            note["url"] = f"https://www.cnbc.com/quotes/{urllib.parse.quote(row['symbol'])}"
+            notes.append(note)
+    return notes
+
+
 def collect_stocks() -> tuple[list[dict], str, bool]:
     log("Fetching stock movers…")
     notes: list[dict] = []
     mode = "movers"
+
+    cnbc_notes = collect_cnbc()
+    if cnbc_notes:
+        log(f"  cnbc majors: {len(cnbc_notes)}")
+        return cnbc_notes, "majors", True
 
     def screener(scr_id: str) -> list[dict]:
         for host in ("query1", "query2"):
@@ -721,6 +807,11 @@ def render_index(meta: dict, notes: list[dict], trends: list[dict], stock_mode: 
         market_note = (
             '<p class="lede">Top US day gainers and losers, logged as buffs and nerfs. '
             "Quotes via Yahoo Finance.</p>"
+        )
+    elif stock_mode == "majors":
+        market_note = (
+            '<p class="lede">Movers among major US stocks and indexes, logged as buffs and nerfs. '
+            "Quotes via CNBC. This is not a full-market day-gainers list.</p>"
         )
     elif stock_mode == "indexes":
         market_note = (
