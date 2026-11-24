@@ -1301,7 +1301,8 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="{esc(prefix)}index.html">
-        <img src="{esc(prefix)}assets/sprites/mascot-nav.webp" alt="" width="40" height="40">
+        <img class="brand-day" src="{esc(prefix)}assets/sprites/world-nav.webp" alt="" width="40" height="40">
+        <img class="brand-night" src="{esc(prefix)}assets/sprites/world-nav-night.webp" alt="" width="40" height="40">
         <span><strong>Real Life</strong><em>v2026</em></span>
       </a>
       <nav class="nav-links">
@@ -1541,7 +1542,8 @@ def hero_html(meta: dict, prefix: str = "") -> str:
     kind = html.escape(f"{meta.get('kind') or 'Evening'} Patch")
     bits = [b for b in (meta.get("label") or "").split(" · ") if not b.lower().endswith("patch")]
     edition = html.escape(" · ".join(bits) or (meta.get("label") or ""))
-    mascot = html.escape(f"{prefix}assets/sprites/mascot.webp", quote=True)
+    world = html.escape(f"{prefix}assets/sprites/world.webp", quote=True)
+    world_night = html.escape(f"{prefix}assets/sprites/world-night.webp", quote=True)
     return f"""
   <section class="hero">
     <div class="hero-copy">
@@ -1552,8 +1554,13 @@ def hero_html(meta: dict, prefix: str = "") -> str:
       <p class="hero-when">Published {html.escape(meta["display_date"])}</p>
       <a class="cta" href="#latest">Read today's patch</a>
     </div>
-    <div class="hero-art">
-      <img class="mascot" src="{mascot}" alt="A small cream-and-sage robot with a sprout on its head, the Real Life v2026 mascot." width="320" height="320">
+    <div class="hero-art" id="world-stage">
+      <div class="world-motion">
+        <img class="mascot world-day" src="{world}" alt="A smiling little toy world with tiny trees and houses, the Real Life v2026 mascot." width="320" height="320">
+        <img class="mascot world-night" src="{world_night}" alt="" width="320" height="320" aria-hidden="true">
+        <span class="world-lid lid-l" aria-hidden="true"></span>
+        <span class="world-lid lid-r" aria-hidden="true"></span>
+      </div>
     </div>
   </section>
 """

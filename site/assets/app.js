@@ -242,18 +242,32 @@
     reveals.forEach(function (el) { el.classList.add("is-in"); });
   }
 
-  const mascot = document.querySelector(".mascot");
-  if (mascot && !reduce) {
+  const stage = document.getElementById("world-stage") || document.querySelector(".hero-art");
+  const motion = stage && stage.querySelector(".world-motion");
+  if (stage && !reduce) {
     var ticking = false;
     window.addEventListener("scroll", function () {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
         const y = window.scrollY || 0;
-        mascot.style.setProperty("--py", Math.max(-28, Math.min(18, y * -0.08)) + "px");
+        stage.style.setProperty("--py", Math.max(-28, Math.min(18, y * -0.08)) + "px");
         ticking = false;
       });
     }, { passive: true });
+    if (motion && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      stage.addEventListener("mousemove", function (e) {
+        const r = stage.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        motion.style.setProperty("--tilt-x", (-y * 10).toFixed(2) + "deg");
+        motion.style.setProperty("--tilt-y", (x * 14).toFixed(2) + "deg");
+      });
+      stage.addEventListener("mouseleave", function () {
+        motion.style.setProperty("--tilt-x", "0deg");
+        motion.style.setProperty("--tilt-y", "0deg");
+      });
+    }
   }
 
   if (!reduce && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
