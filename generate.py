@@ -797,6 +797,821 @@ def collect_stocks() -> tuple[list[dict], str, bool]:
     log("  no stock data")
     return [], "unavailable", False
 
+def load_markets_config() -> dict:
+    path = CONTENT / "markets.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        log(f"  markets config unreadable: {exc}")
+        return {}
+
+
+def load_market_history() -> dict:
+    path = CONTENT / "market-history.json"
+    if not path.exists():
+        return {"updated": None, "prices": {}}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {"updated": None, "prices": {}}
+    if not isinstance(data, dict):
+        return {"updated": None, "prices": {}}
+    data.setdefault("prices", {})
+    return data
+
+
+def save_market_history(hist: dict) -> None:
+    path = CONTENT / "market-history.json"
+    prices = hist.get("prices") or {}
+    trimmed = {}
+    for sym, rows in prices.items():
+        if not isinstance(rows, list):
+            continue
+        cleaned = []
+        seen = set()
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            day, close = row.get("d"), row.get("c")
+            if not day or close is None:
+                continue
+            if day in seen:
+                continue
+            seen.add(day)
+            try:
+                cleaned.append({"d": str(day), "c": float(close)})
+            except (TypeError, ValueError):
+                continue
+        cleaned.sort(key=lambda r: r["d"])
+        trimmed[sym] = cleaned[-45:]
+    payload = {"updated": hist.get("updated") or now_et().date().isoformat(), "prices": trimmed}
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def _cnbc_quotes(symbols: list[str]) -> list[dict]:
+    if not symbols:
+        return []
+    joined = "%7C".join(symbols)
+    url = (
+        "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol"
+        f"?symbols={joined}&requestMethod=quick&exthrs=1&noform=1&partnerId=2"
+        "&fundamentals=0&output=json"
+    )
+    raw = fetch(url)
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+        quotes = payload["FormattedQuoteResult"]["FormattedQuote"]
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return []
+    if isinstance(quotes, dict):
+        quotes = [quotes]
+    parsed = []
+    for q in quotes:
+        symbol = q.get("symbol")
+        price = _parse_num(q.get("last"))
+        prev = _parse_num(q.get("previous_day_closing"))
+        pct = _parse_num(q.get("change_pct"))
+        if not symbol or price is None:
+            continue
+        if q.get("changetype") == "DOWN" and pct is not None and pct > 0:
+            pct = -pct
+        elif str(q.get("change") or "").startswith("-") and pct is not None and pct > 0:
+            pct = -pct
+        sane = sanitize_move(symbol, price, prev, pct)
+        if not sane:
+            continue
+        price, prev, pct = sane
+        parsed.append({
+            "symbol": symbol,
+            "shortName": q.get("name") or q.get("shortName") or symbol,
+            "regularMarketPrice": price,
+            "regularMarketPreviousClose": prev,
+            "regularMarketChangePercent": pct,
+            "_source": "CNBC",
+            "_url": f"https://www.cnbc.com/quotes/{urllib.parse.quote(symbol)}",
+        })
+    return parsed
+
+
+def _yahoo_symbol(symbol: str) -> str:
+    if symbol == "BRK.B":
+        return "BRK-B"
+    if symbol == ".SPX":
+        return "^GSPC"
+    if symbol == ".DJI":
+        return "^DJI"
+    if symbol == ".IXIC":
+        return "^IXIC"
+    return symbol
+
+
+def _yahoo_daily_history(symbol: str) -> list[dict]:
+    enc = urllib.parse.quote(_yahoo_symbol(symbol), safe="")
+    raw = fetch(f"https://query1.finance.yahoo.com/v8/finance/chart/{enc}?interval=1d&range=1mo")
+    if not raw:
+        raw = fetch(f"https://query2.finance.yahoo.com/v8/finance/chart/{enc}?interval=1d&range=1mo")
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+        result = payload["chart"]["result"][0]
+        ts = result.get("timestamp") or []
+        closes = (((result.get("indicators") or {}).get("quote") or [{}])[0].get("close") or [])
+    except (json.JSONDecodeError, KeyError, IndexError, TypeError):
+        return []
+    rows = []
+    for t, c in zip(ts, closes):
+        if c is None:
+            continue
+        try:
+            day = datetime.fromtimestamp(int(t), TZ).date().isoformat()
+            rows.append({"d": day, "c": float(c)})
+        except (TypeError, ValueError, OSError):
+            continue
+    rows.sort(key=lambda r: r["d"])
+    return rows
+
+
+NASDAQ_HEADERS = {
+    "User-Agent": UA,
+    "Accept": "application/json,text/plain,*/*",
+    "Origin": "https://www.nasdaq.com",
+    "Referer": "https://www.nasdaq.com/",
+}
+
+
+def _parse_mdy(value: str) -> str | None:
+    try:
+        return datetime.strptime(value.strip(), "%m/%d/%Y").date().isoformat()
+    except (TypeError, ValueError):
+        return None
+
+
+def _nasdaq_historical(symbol: str, assetclass: str, start: date, end: date) -> list[dict]:
+    enc = urllib.parse.quote(symbol, safe="")
+    url = (
+        f"https://api.nasdaq.com/api/quote/{enc}/historical"
+        f"?assetclass={urllib.parse.quote(assetclass)}"
+        f"&fromdate={start.isoformat()}&todate={end.isoformat()}&limit=40"
+    )
+    raw = fetch(url, headers=NASDAQ_HEADERS)
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+        rows = (((payload.get("data") or {}).get("tradesTable") or {}).get("rows") or [])
+    except (json.JSONDecodeError, TypeError, AttributeError):
+        return []
+    out = []
+    for row in rows:
+        day = _parse_mdy(str(row.get("date") or ""))
+        close = _parse_num(row.get("close"))
+        if not day or close is None:
+            continue
+        out.append({"d": day, "c": close})
+    out.sort(key=lambda r: r["d"])
+    return out
+
+
+def _nasdaq_intraday(symbol: str, assetclass: str, max_points: int = 96) -> list[float]:
+    enc = urllib.parse.quote(symbol, safe="")
+    url = f"https://api.nasdaq.com/api/quote/{enc}/chart?assetclass={urllib.parse.quote(assetclass)}"
+    raw = fetch(url, headers=NASDAQ_HEADERS)
+    if not raw:
+        return []
+    try:
+        payload = json.loads(raw)
+        points = ((payload.get("data") or {}).get("chart") or [])
+    except (json.JSONDecodeError, TypeError, AttributeError):
+        return []
+    values = []
+    for pt in points:
+        label = ""
+        z = pt.get("z") if isinstance(pt, dict) else None
+        if isinstance(z, dict):
+            label = str(z.get("dateTime") or "")
+        # Prefer regular-session prints when the label is in English ET.
+        if label:
+            upper = label.upper()
+            skip = False
+            if "AM ET" in upper or "PM ET" in upper:
+                # 4:00 AM–9:29 AM and after 4:00 PM are extended hours.
+                try:
+                    clock = label.split(" ")[0]
+                    hour_s, minute_s = clock.split(":")
+                    hour, minute = int(hour_s), int(minute_s)
+                    if "AM" in upper and (hour < 9 or (hour == 9 and minute < 30) or hour == 12):
+                        if not (hour == 9 and minute >= 30):
+                            skip = hour != 9 or minute < 30
+                    if "PM" in upper and hour != 12 and hour >= 4:
+                        skip = True
+                except (ValueError, IndexError):
+                    skip = False
+            if skip:
+                continue
+        val = pt.get("y") if isinstance(pt, dict) else None
+        if val is None and isinstance(z, dict):
+            val = z.get("value")
+        num = _parse_num(val)
+        if num is not None:
+            values.append(num)
+    return _downsample(values, max_points)
+
+
+def _downsample(values: list[float], max_points: int) -> list[float]:
+    if not values:
+        return []
+    if len(values) <= max_points:
+        return [round(v, 4) for v in values]
+    n = len(values)
+    out = []
+    last_i = -1
+    for i in range(max_points):
+        idx = round(i * (n - 1) / (max_points - 1))
+        if idx == last_i:
+            continue
+        last_i = idx
+        out.append(round(values[idx], 4))
+    if out[-1] != round(values[-1], 4):
+        out.append(round(values[-1], 4))
+    return out
+
+
+def _closes(rows: list[dict]) -> list[float]:
+    return [round(r["c"], 4) for r in rows if r.get("c") is not None]
+
+
+def _last_n(rows: list[dict], n: int) -> list[float]:
+    return _closes(rows[-n:])
+
+
+def _scale_rows(rows: list[dict], target_last: float | None) -> list[dict]:
+    if not rows or not target_last:
+        return list(rows)
+    last = rows[-1].get("c")
+    if not last:
+        return list(rows)
+    ratio = target_last / last
+    if abs(ratio - 1) < 0.02:
+        return list(rows)
+    return [{"d": r["d"], "c": round(r["c"] * ratio, 4)} for r in rows]
+
+
+def _scale_values(values: list[float], target_last: float | None) -> list[float]:
+    if not values or not target_last:
+        return list(values)
+    last = values[-1]
+    if not last:
+        return list(values)
+    ratio = target_last / last
+    if abs(ratio - 1) < 0.02:
+        return [round(v, 4) for v in values]
+    return [round(v * ratio, 4) for v in values]
+
+
+def _append_today(rows: list[dict], day: str, close: float | None) -> list[dict]:
+    if close is None:
+        return list(rows)
+    out = [r for r in rows if r.get("d") != day]
+    out.append({"d": day, "c": close})
+    out.sort(key=lambda r: r["d"])
+    return out
+
+
+def _is_stablecoin(row: dict, exclude_ids: set[str]) -> bool:
+    cid = str(row.get("id") or "").lower()
+    symbol = str(row.get("symbol") or "").upper()
+    name = str(row.get("name") or "").lower()
+    if cid in exclude_ids:
+        return True
+    if symbol in {"USDT", "USDC", "DAI", "USDE", "USDS", "PYUSD", "TUSD", "BUSD", "FDUSD", "USD1", "RLUSD", "USDP"}:
+        return True
+    price = _parse_num(row.get("current_price"))
+    peggish = "usd" in name or "stable" in name or "heloc" in cid or cid.endswith("-usd")
+    if price is not None and 0.98 <= price <= 1.04 and peggish:
+        return True
+    return False
+
+
+def collect_crypto_board(cfg: dict) -> tuple[list[dict], str]:
+    crypto_cfg = cfg.get("crypto") or {}
+    exclude = {str(x).lower() for x in (crypto_cfg.get("exclude_ids") or [])}
+    top_n = int(crypto_cfg.get("top") or 7)
+    url = (
+        "https://api.coingecko.com/api/v3/coins/markets"
+        "?vs_currency=usd&order=market_cap_desc&per_page=25&page=1"
+        "&sparkline=true&price_change_percentage=24h"
+    )
+    raw = fetch(url)
+    if not raw:
+        return [], "unavailable"
+    try:
+        rows = json.loads(raw)
+    except json.JSONDecodeError:
+        return [], "unavailable"
+    if not isinstance(rows, list):
+        return [], "unavailable"
+    picked = []
+    for row in rows:
+        if _is_stablecoin(row, exclude):
+            continue
+        cid = row.get("id")
+        symbol = str(row.get("symbol") or "").upper()
+        price = _parse_num(row.get("current_price"))
+        pct = _parse_num(row.get("price_change_percentage_24h"))
+        if pct is None:
+            pct = _parse_num(row.get("price_change_percentage_24h_in_currency"))
+        if not cid or not symbol or price is None:
+            continue
+        spark = (((row.get("sparkline_in_7d") or {}).get("price")) or [])
+        spark = [float(v) for v in spark if v is not None]
+        # CoinGecko 7d sparkline is hourly; last ~5 days is ~5/7 of the series.
+        h5d = _downsample(spark[max(0, len(spark) - 120):], 40)
+        h1m = _downsample(spark, 48)
+        picked.append({
+            "id": cid,
+            "kind": "crypto",
+            "symbol": symbol,
+            "name": row.get("name") or symbol,
+            "price": price,
+            "prev": None,
+            "change_pct": None if pct is None else round(pct, 2),
+            "url": f"https://www.coingecko.com/en/coins/{urllib.parse.quote(cid)}",
+            "source": "CoinGecko",
+            "history_source": "CoinGecko",
+            "h1d": [],
+            "h5d": h5d,
+            "h1m": h1m,
+        })
+        if len(picked) >= top_n:
+            break
+    return picked, "CoinGecko" if picked else "unavailable"
+
+
+def _fetch_history_for(symbol: str, assetclass: str, start: date, end: date, fallback_sym: str | None = None, fallback_class: str | None = None) -> tuple[list[dict], str]:
+    rows = _nasdaq_historical(symbol, assetclass, start, end)
+    if rows:
+        return rows, "Nasdaq"
+    time.sleep(0.2)
+    if fallback_sym:
+        rows = _nasdaq_historical(fallback_sym, fallback_class or "etf", start, end)
+        if rows:
+            return rows, "Nasdaq"
+    time.sleep(0.15)
+    rows = _yahoo_daily_history(fallback_sym or symbol)
+    if rows:
+        return rows, "Yahoo"
+    return [], "none"
+
+
+def collect_market_board() -> dict:
+    log("Fetching market board (top 15 stocks, indexes, crypto)…")
+    cfg = load_markets_config()
+    stocks_cfg = cfg.get("stocks") or []
+    indexes_cfg = cfg.get("indexes") or []
+    today = now_et()
+    today_s = today.date().isoformat()
+    start = (today.date() - timedelta(days=45))
+    end = today.date() + timedelta(days=1)
+
+    symbols = [s["symbol"] for s in stocks_cfg if s.get("symbol")] + [i["symbol"] for i in indexes_cfg if i.get("symbol")]
+    quotes = {q["symbol"]: q for q in _cnbc_quotes(symbols)}
+    if len(quotes) < len(symbols):
+        missing = [s for s in symbols if s not in quotes]
+        # One retry for the misses, then Yahoo last-quotes if needed.
+        if missing:
+            time.sleep(0.3)
+            for q in _cnbc_quotes(missing):
+                quotes[q["symbol"]] = q
+        for sym in [s for s in symbols if s not in quotes]:
+            time.sleep(0.4)
+            q = _chart_quote(_yahoo_symbol(sym))
+            if q:
+                q["symbol"] = sym
+                q["_source"] = "Yahoo"
+                q["_url"] = f"https://finance.yahoo.com/quote/{urllib.parse.quote(_yahoo_symbol(sym))}"
+                quotes[sym] = q
+
+    hist_store = load_market_history()
+    stored = hist_store.get("prices") or {}
+    assets: list[dict] = []
+    failed_stocks: list[str] = []
+    history_notes: dict[str, str] = {}
+
+    def history_for(cfg_row: dict, price: float | None, is_index: bool) -> tuple[list[dict], list[float], str]:
+        chart_sym = cfg_row.get("chart_symbol") or cfg_row["symbol"]
+        chart_cls = cfg_row.get("chart_class") or cfg_row.get("assetclass") or "stocks"
+        fb_sym = cfg_row.get("fallback_symbol")
+        fb_cls = cfg_row.get("fallback_class")
+        time.sleep(0.2)
+        rows, src = _fetch_history_for(chart_sym, chart_cls, start, end, fb_sym, fb_cls)
+        if is_index and price:
+            rows = _scale_rows(rows, price)
+        rows = _append_today(rows, today_s, price)
+        if (not rows or len(rows) < 2) and stored.get(cfg_row["symbol"]):
+            rows = _append_today(list(stored.get(cfg_row["symbol"]) or []), today_s, price)
+            if rows:
+                src = src if src != "none" else "build-history"
+        h1d: list[float] = []
+        return rows, h1d, src
+
+    for row in stocks_cfg:
+        sym = row["symbol"]
+        q = quotes.get(sym)
+        if not q:
+            failed_stocks.append(sym)
+            log(f"  stock quote failed: {sym}")
+            continue
+        price = q["regularMarketPrice"]
+        rows, _, src = history_for(row, price, False)
+        if src == "none":
+            log(f"  stock history failed: {sym}")
+        history_notes[sym] = src
+        assets.append({
+            "id": sym,
+            "kind": "stock",
+            "symbol": sym,
+            "name": row.get("name") or q.get("shortName") or sym,
+            "price": price,
+            "prev": q.get("regularMarketPreviousClose"),
+            "change_pct": None if q.get("regularMarketChangePercent") is None else round(q["regularMarketChangePercent"], 2),
+            "url": q.get("_url") or f"https://www.cnbc.com/quotes/{urllib.parse.quote(sym)}",
+            "source": q.get("_source") or "CNBC",
+            "history_source": src,
+            "h1d": [],
+            "h5d": _last_n(rows, 5),
+            "h1m": _closes(rows),
+        })
+        stored.setdefault(sym, [])
+        stored[sym] = _append_today(stored[sym], today_s, price)
+
+    featured_id = None
+    for row in indexes_cfg:
+        sym = row["symbol"]
+        if row.get("featured"):
+            featured_id = featured_id or sym
+        q = quotes.get(sym)
+        if not q:
+            log(f"  index quote failed: {sym}")
+            continue
+        price = q["regularMarketPrice"]
+        rows, _, src = history_for(row, price, True)
+        history_notes[sym] = src
+        time.sleep(0.2)
+        h1d = _nasdaq_intraday(row.get("chart_symbol") or sym, row.get("chart_class") or "etf")
+        if len(h1d) < 8 and row.get("fallback_symbol"):
+            time.sleep(0.2)
+            h1d = _nasdaq_intraday(row["fallback_symbol"], row.get("fallback_class") or "etf")
+        if h1d and price:
+            # COMP may already be in index units; ETFs (SPY/DIA) need scaling.
+            last = h1d[-1]
+            if last and abs(last - price) / price > 0.05:
+                h1d = _scale_values(h1d, price)
+            else:
+                h1d = _scale_values(h1d, price) if last and abs(last - price) / price > 0.005 else h1d
+        assets.append({
+            "id": sym,
+            "kind": "index",
+            "symbol": sym,
+            "name": row.get("name") or q.get("shortName") or sym,
+            "price": price,
+            "prev": q.get("regularMarketPreviousClose"),
+            "change_pct": None if q.get("regularMarketChangePercent") is None else round(q["regularMarketChangePercent"], 2),
+            "url": q.get("_url") or f"https://www.cnbc.com/quotes/{urllib.parse.quote(sym)}",
+            "source": q.get("_source") or "CNBC",
+            "history_source": src,
+            "h1d": h1d,
+            "h5d": _last_n(rows, 5),
+            "h1m": _closes(rows),
+        })
+        stored.setdefault(sym, [])
+        stored[sym] = _append_today(stored[sym], today_s, price)
+
+    stock_assets = [a for a in assets if a["kind"] == "stock" and a.get("change_pct") is not None]
+    buff = max(stock_assets, key=lambda a: a["change_pct"], default=None) if stock_assets else None
+    nerf = min(stock_assets, key=lambda a: a["change_pct"], default=None) if stock_assets else None
+    if buff and buff["change_pct"] <= 0:
+        buff = None
+    if nerf and nerf["change_pct"] >= 0:
+        nerf = None
+    if buff:
+        buff["flavor"] = f"{buff['name']} just picked up a {buff['change_pct']:+.2f}% movement-speed buff."
+        assets_by_id = {a["id"]: a for a in assets}
+        assets_by_id[buff["id"]]["flavor"] = buff["flavor"]
+        # Intraday for the featured mover, when cheap.
+        if not assets_by_id[buff["id"]].get("h1d"):
+            cfg_row = next((s for s in stocks_cfg if s["symbol"] == buff["id"]), None)
+            if cfg_row:
+                time.sleep(0.2)
+                assets_by_id[buff["id"]]["h1d"] = _nasdaq_intraday(cfg_row["symbol"], cfg_row.get("assetclass") or "stocks")
+    if nerf:
+        nerf["flavor"] = f"{nerf['name']} took a {nerf['change_pct']:+.2f}% durability hit."
+        assets_by_id = {a["id"]: a for a in assets}
+        assets_by_id[nerf["id"]]["flavor"] = nerf["flavor"]
+        if not assets_by_id[nerf["id"]].get("h1d"):
+            cfg_row = next((s for s in stocks_cfg if s["symbol"] == nerf["id"]), None)
+            if cfg_row:
+                time.sleep(0.2)
+                assets_by_id[nerf["id"]]["h1d"] = _nasdaq_intraday(cfg_row["symbol"], cfg_row.get("assetclass") or "stocks")
+
+    cryptos, crypto_src = collect_crypto_board(cfg)
+    assets.extend(cryptos)
+
+    kind = patch_kind(today)
+    as_of_clock = "8:00 AM ET" if kind == "Morning" else "6:00 PM ET"
+    as_of_label = f"Stocks as of {as_of_clock} · Crypto live"
+
+    hist_store["updated"] = today_s
+    hist_store["prices"] = stored
+    try:
+        save_market_history(hist_store)
+    except OSError as exc:
+        log(f"  could not save market-history.json: {exc}")
+
+    ok_names = [a["symbol"] for a in assets if a["kind"] == "stock"]
+    log(f"  stocks fetched: {len(ok_names)}/{len(stocks_cfg)} ({', '.join(ok_names) or 'none'})")
+    if failed_stocks:
+        log(f"  stocks failed: {', '.join(failed_stocks)}")
+    idx_ok = [a["symbol"] for a in assets if a["kind"] == "index"]
+    log(f"  indexes: {', '.join(idx_ok) or 'none'}")
+    log(f"  crypto: {len(cryptos)} via {crypto_src}")
+    hist_ok = [f"{k}:{v}" for k, v in history_notes.items()]
+    log(f"  history sources: {', '.join(hist_ok) or 'none'}")
+
+    board = {
+        "as_of": today.isoformat(timespec="seconds"),
+        "as_of_label": as_of_label,
+        "stock_source": "CNBC" if any(a.get("source") == "CNBC" for a in assets if a["kind"] != "crypto") else "Yahoo",
+        "history_source": "Nasdaq",
+        "crypto_source": crypto_src,
+        "featured": featured_id or (assets[0]["id"] if assets else None),
+        "buff": {"id": buff["id"], "pct": buff["change_pct"], "name": buff["name"]} if buff else None,
+        "nerf": {"id": nerf["id"], "pct": nerf["change_pct"], "name": nerf["name"]} if nerf else None,
+        "failed_stocks": failed_stocks,
+        "assets": assets,
+    }
+    return board
+
+
+def fmt_mkt_price(price, kind: str) -> str:
+    if price is None:
+        return "—"
+    try:
+        price = float(price)
+    except (TypeError, ValueError):
+        return "—"
+    if kind == "index":
+        return f"{price:,.2f}"
+    if price >= 1000:
+        return f"${price:,.2f}"
+    if price >= 1:
+        return f"${price:,.2f}"
+    if price >= 0.01:
+        return f"${price:.4f}"
+    return f"${price:.6f}"
+
+
+def fmt_mkt_pct(pct) -> str:
+    if pct is None:
+        return "—"
+    return f"{pct:+.2f}%"
+
+
+def spark_svg(values: list[float], *, width: int = 160, height: int = 48, asset_id: str, up: bool, thick: float = 1.7) -> str:
+    gid = re.sub(r"[^a-zA-Z0-9_-]", "", f"sp-{asset_id}-{width}-{len(values)}") or "sp"
+    if not values or len(values) < 2:
+        return f'<svg class="spark" viewBox="0 0 {width} {height}" aria-hidden="true"></svg>'
+    lo, hi = min(values), max(values)
+    span = (hi - lo) or 1.0
+    pad_x, pad_y = 2.0, 3.0
+    pts = []
+    n = len(values)
+    for i, v in enumerate(values):
+        x = pad_x + (width - 2 * pad_x) * i / (n - 1)
+        y = height - pad_y - (height - 2 * pad_y) * (v - lo) / span
+        pts.append((x, y))
+    d = "M" + " L".join(f"{x:.2f},{y:.2f}" for x, y in pts)
+    area = d + f" L{pts[-1][0]:.2f},{height} L{pts[0][0]:.2f},{height} Z"
+    color = "var(--up)" if up else "var(--down)"
+    return (
+        f'<svg class="spark" viewBox="0 0 {width} {height}" preserveAspectRatio="none" aria-hidden="true">'
+        f'<defs><linearGradient id="{html.escape(gid, quote=True)}" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0%" stop-color="{color}" stop-opacity="0.32"/>'
+        f'<stop offset="100%" stop-color="{color}" stop-opacity="0"/>'
+        f"</linearGradient></defs>"
+        f'<path class="spark-fill" d="{area}" fill="url(#{html.escape(gid, quote=True)})"/>'
+        f'<path class="spark-line" d="{d}" fill="none" stroke="{color}" stroke-width="{thick}" '
+        f'stroke-linejoin="round" stroke-linecap="round"/>'
+        f'<circle cx="{pts[-1][0]:.2f}" cy="{pts[-1][1]:.2f}" r="2.2" fill="{color}"/>'
+        "</svg>"
+    )
+
+
+def _asset_up(asset: dict) -> bool:
+    pct = asset.get("change_pct")
+    if pct is not None:
+        return pct >= 0
+    series = asset.get("h5d") or asset.get("h1m") or []
+    if len(series) >= 2:
+        return series[-1] >= series[0]
+    return True
+
+
+def _spark_values(asset: dict, prefer: str = "5d") -> list[float]:
+    if prefer == "1m" and len(asset.get("h1m") or []) >= 2:
+        return asset["h1m"]
+    if len(asset.get("h5d") or []) >= 2:
+        return asset["h5d"]
+    if len(asset.get("h1m") or []) >= 2:
+        return asset["h1m"]
+    return asset.get("h1d") or []
+
+
+def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "", meta: dict | None = None) -> str:
+    assets = board.get("assets") or []
+    mkt_src = html.escape(f"{prefix}assets/sprites/mkt.webp", quote=True)
+    as_of = html.escape(board.get("as_of_label") or "Stocks as of last update · Crypto live")
+    buff = board.get("buff")
+    nerf = board.get("nerf")
+    badges = []
+    if buff:
+        badges.append(
+            f'<span class="mkt-badge is-buff">Buff of the day · {html.escape(buff["id"])} {html.escape(fmt_mkt_pct(buff["pct"]))}</span>'
+        )
+    if nerf:
+        badges.append(
+            f'<span class="mkt-badge is-nerf">Nerf of the day · {html.escape(nerf["id"])} {html.escape(fmt_mkt_pct(nerf["pct"]))}</span>'
+        )
+    badge_html = f'<div class="mkt-highlights">{"".join(badges)}</div>' if badges else ""
+
+    tick_bits = []
+    for a in assets:
+        if a.get("price") is None:
+            continue
+        cls = "up" if _asset_up(a) else "down"
+        href = html.escape(a.get("url") or "#", quote=True)
+        tick_bits.append(
+            f'<a class="mkt-tick {cls}" href="{href}" rel="noopener noreferrer" data-id="{html.escape(str(a["id"]), quote=True)}">'
+            f'<b>{html.escape(a["symbol"])}</b>'
+            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
+            f'<span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span>'
+            "</a>"
+        )
+    tick_set = "".join(tick_bits) or '<span class="ticker-status">Quotes unavailable this run.</span>'
+    ticker = (
+        '<div class="mkt-ticker" id="mkt-ticker" tabindex="0" aria-label="Scrolling prices for top US stocks and crypto. Pauses when hovered or focused.">'
+        '<div class="mkt-ticker-viewport">'
+        f'<div class="mkt-ticker-track" style="--tick-count:{max(len(tick_bits), 1)}">'
+        f'<div class="mkt-ticker-set">{tick_set}</div>'
+        f'<div class="mkt-ticker-set" aria-hidden="true">{tick_set}</div>'
+        "</div></div></div>"
+    )
+
+    featured_id = board.get("featured")
+    feat = next((a for a in assets if a["id"] == featured_id), None) or next((a for a in assets if a["kind"] == "index"), None) or (assets[0] if assets else None)
+    feat_ranges = []
+    default_range = "5d"
+    if feat:
+        if len(feat.get("h1d") or []) >= 8:
+            feat_ranges.append("1d")
+        if len(feat.get("h5d") or []) >= 2:
+            feat_ranges.append("5d")
+        if len(feat.get("h1m") or []) >= 2:
+            feat_ranges.append("1m")
+        if "1d" in feat_ranges and "5d" not in feat_ranges:
+            default_range = "1d"
+        elif "5d" not in feat_ranges and "1m" in feat_ranges:
+            default_range = "1m"
+    range_btns = []
+    for key, label in (("1d", "1D"), ("5d", "5D"), ("1m", "1M")):
+        disabled = " disabled" if key not in feat_ranges else ""
+        on = " is-on" if key == default_range and key in feat_ranges else ""
+        range_btns.append(
+            f'<button type="button" class="mkt-range{on}" data-range="{key}"{disabled}>{label}</button>'
+        )
+    if feat:
+        series = {"1d": feat.get("h1d") or [], "5d": feat.get("h5d") or [], "1m": feat.get("h1m") or []}.get(default_range) or _spark_values(feat)
+        if default_range == "1m":
+            series = feat.get("h1m") or series
+        feat_up = _asset_up(feat)
+        feat_chart = spark_svg(series, width=640, height=220, asset_id=f"feat-{feat['id']}", up=feat_up, thick=2.2)
+        feat_cls = "up" if feat_up else "down"
+        feat_block = f"""
+        <div class="mkt-featured" id="mkt-featured" data-id="{html.escape(str(feat['id']), quote=True)}">
+          <div class="mkt-featured-top">
+            <div>
+              <p class="eyebrow">Featured</p>
+              <h3 id="feat-name">{html.escape(feat['name'])} <span class="feat-sym">{html.escape(feat['symbol'])}</span></h3>
+              <p class="feat-price {feat_cls}" id="feat-price">{html.escape(fmt_mkt_price(feat['price'], feat['kind']))} <span>{html.escape(fmt_mkt_pct(feat.get('change_pct')))}</span></p>
+            </div>
+            <div class="mkt-ranges" role="tablist" aria-label="Chart range">{''.join(range_btns)}</div>
+          </div>
+          <div class="feat-chart" id="feat-chart">{feat_chart}</div>
+        </div>"""
+    else:
+        feat_block = '<div class="mkt-featured"><p class="ticker-status">Chart data unavailable this run.</p></div>'
+
+    cards = []
+    for a in assets:
+        up = _asset_up(a)
+        cls = "up" if up else "down"
+        extra = ""
+        if buff and a["id"] == buff["id"]:
+            extra = " is-buff"
+        elif nerf and a["id"] == nerf["id"]:
+            extra = " is-nerf"
+        ribbon = ""
+        if extra == " is-buff":
+            ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>'
+        elif extra == " is-nerf":
+            ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>'
+        flavor = f'<p class="mkt-flavor">{html.escape(a["flavor"])}</p>' if a.get("flavor") else ""
+        spark = spark_svg(_spark_values(a), width=180, height=56, asset_id=str(a["id"]), up=up)
+        href = html.escape(a.get("url") or "#", quote=True)
+        on = " is-on" if feat and a["id"] == feat["id"] else ""
+        cards.append(
+            f'<button type="button" class="mkt-card {cls}{extra}{on}" data-id="{html.escape(str(a["id"]), quote=True)}" aria-pressed="{"true" if on else "false"}">'
+            f'<span class="mkt-card-top"><b>{html.escape(a["symbol"])}</b><span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span></span>'
+            f'<span class="mkt-card-name">{html.escape(a["name"])}</span>'
+            f"{ribbon}"
+            f'<span class="mkt-card-spark">{spark}</span>'
+            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
+            f"{flavor}"
+            f'<a class="mkt-card-link" href="{href}" rel="noopener noreferrer">Source</a>'
+            "</button>"
+        )
+    grid = f'<div class="mkt-grid" id="mkt-grid">{"".join(cards)}</div>' if cards else ""
+
+    compact = json.dumps(board, separators=(",", ":"), ensure_ascii=False)
+    # Keep the payload out of a visible node; JS reads this for live updates and chart toggles.
+    data_tag = f'<script type="application/json" id="markets-data">{compact}</script>'
+
+    # World-state counts prefer the configured board when present.
+    board_quotes = [a for a in assets if a["kind"] in {"stock", "index"} and a.get("change_pct") is not None]
+    use_for_ws = board_quotes or stocks
+    ups = downs = 0
+    for s in use_for_ws:
+        pct = s.get("change_pct")
+        if pct is None:
+            continue
+        if pct >= 0:
+            ups += 1
+        else:
+            downs += 1
+    if ups > downs:
+        mkt = f'<div class="ws-item"><b>Markets</b> <span class="up">▲ {ups} up</span> / {downs} down</div>'
+    elif downs > ups:
+        mkt = f'<div class="ws-item"><b>Markets</b> <span class="down">▼ {downs} down</span> / {ups} up</div>'
+    elif ups or downs:
+        mkt = f'<div class="ws-item"><b>Markets</b> mixed · {ups} up / {downs} down</div>'
+    else:
+        mkt = '<div class="ws-item"><b>Markets</b> quotes unavailable</div>'
+    alerts = sum(1 for n in notes if n.get("kind") == "alert")
+    weather = f'<div class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</div>' if alerts else '<div class="ws-item"><b>Weather</b> clear</div>'
+    bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
+    bug_bit = f'<div class="ws-item"><b>Known bugs</b> {bugs}</div>'
+    gas = ""
+    if eia and eia.get("regular"):
+        r = eia["regular"]
+        price = r["price"]
+        prev = r.get("prev")
+        cls = "up" if prev and price <= prev else "down" if prev and price > prev else ""
+        arrow = "▼" if cls == "up" else "▲" if cls == "down" else ""
+        gas = f'<div class="ws-item"><b>Gas</b> <span class="{cls}">${price:.2f}/gal {arrow}</span></div>'
+
+    return f"""
+    <section class="markets-panel reveal" id="markets" aria-label="Markets">
+      <div class="markets-head">
+        <img class="sec-sprite" src="{mkt_src}" alt="" width="72" height="72">
+        <div class="markets-titles">
+          <h2>Markets</h2>
+          <p class="sec-count" id="markets-asof">{as_of}</p>
+        </div>
+        {badge_html}
+      </div>
+      {ticker}
+      {feat_block}
+      {grid}
+      {data_tag}
+    </section>
+    <section class="status-grid" id="status" aria-label="World state">
+      <article class="sec-card status-card reveal">
+        <div class="sec-top">
+          <div>
+            <h2><span class="status-dot" aria-hidden="true"></span>World state</h2>
+            <p class="sec-count">Online</p>
+          </div>
+        </div>
+        <div class="world-stats">{mkt}{weather}{bug_bit}{gas}</div>
+      </article>
+    </section>
+    """
+
+
 def collect_nws() -> list[dict]:
     log("Fetching NWS alerts…")
     raw = fetch(
@@ -1321,7 +2136,7 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   <footer class="site-foot">
     <div class="wrap">
       <p><strong>Real Life v2026</strong> is a satirical changelog for life in the United States. The joke is the framing, not the facts. Health and recall items are worded carefully and always link to the official notice.</p>
-      <p>Updated automatically at 8:00 AM and 6:00 PM Eastern (13:00 and 23:00 UTC). Crypto prices refresh in your browser from CoinGecko. This site is unofficial and not affiliated with the sources it links to.</p>
+      <p>Updated automatically at 8:00 AM and 6:00 PM Eastern (13:00 and 23:00 UTC). Stock quotes and charts are baked at each update. Crypto prices refresh in your browser from CoinGecko. This site is unofficial and not affiliated with the sources it links to.</p>
       <nav>
         <a href="{esc(prefix)}index.html">Latest patch</a>
         <a href="{esc(prefix)}archive/index.html">Archive</a>
@@ -1443,7 +2258,9 @@ def world_state_html(notes: list[dict], stocks: list[dict], eia: dict | None) ->
     return status_row_html(notes, stocks, eia, prefix="")
 
 
-def status_row_html(notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "") -> str:
+def status_row_html(notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "", board: dict | None = None, meta: dict | None = None) -> str:
+    if board and board.get("assets"):
+        return markets_panel_html(board, notes, stocks, eia, prefix=prefix, meta=meta)
     ups = downs = 0
     for s in stocks:
         pct = s.get("change_pct")
@@ -1721,7 +2538,7 @@ def extras_html(anilist, notes, series, trends, prefix=""):
     return f'<details class="extras reveal"><summary>Watchlist, top anime, and trends</summary>{inner}</details>'
 
 
-def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written=None) -> str:
+def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written=None, board=None) -> str:
     written = written or []
     stocks = [n for n in notes if n.get("kind") == "stock"]
     featured, rest = split_featured(notes, written)
@@ -1749,7 +2566,7 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
   {hero_html(meta)}
   <main id="main">
       {patch_post_html(meta, featured, rest, prefix="", extras=extras, blurb=market_blurb(stock_mode), heading=False)}
-      {status_row_html(notes, stocks, eia, prefix="")}
+      {status_row_html(notes, stocks, eia, prefix="", board=board, meta=meta)}
       {weekly}
       {history_html(archive, meta["id"], "")}
   </main>
@@ -1847,7 +2664,7 @@ def write_robots_and_sitemap(archive: list[dict], recaps: list[dict], now: datet
     chunks.append("</urlset>\n")
     (SITE / "sitemap.xml").write_text("\n".join(chunks), encoding="utf-8")
 
-def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written) -> None:
+def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written, board=None) -> None:
     for path in (SITE, DATA, PATCHES, ARCHIVE, WEEKLY_OUT, SITE / "assets"):
         path.mkdir(parents=True, exist_ok=True)
     notes = [annotate(n) for n in notes]
@@ -1875,7 +2692,9 @@ def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwri
     (DATA / "latest.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     (PATCHES / f"{meta['id']}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     (DATA / "archive.json").write_text(json.dumps(archive, indent=2), encoding="utf-8")
-    (SITE / "index.html").write_text(render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written), encoding="utf-8")
+    if board:
+        (DATA / "markets.json").write_text(json.dumps(board, indent=2), encoding="utf-8")
+    (SITE / "index.html").write_text(render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written, board=board), encoding="utf-8")
     (ARCHIVE / "index.html").write_text(render_archive_index(archive), encoding="utf-8")
     (ARCHIVE / f"{meta['id']}.html").write_text(render_archive_patch(meta, notes, anilist, series, stock_mode, written, trends, eia), encoding="utf-8")
     (WEEKLY_OUT / "index.html").write_text(render_weekly_index(recaps), encoding="utf-8")
@@ -1893,6 +2712,7 @@ def main() -> int:
     headlines, ok_feeds = collect_headlines()
     trend_notes, trends, trends_ok = collect_trends()
     stock_notes, stock_mode, stocks_ok = collect_stocks()
+    board = collect_market_board()
     weather_notes = collect_nws()
     eia_notes, eia = collect_eia()
     holiday_notes = holiday_calendar(dt.date())
@@ -1913,8 +2733,8 @@ def main() -> int:
         weekly_auto = [n for n in pick_highlights(week_pool, 16) if n["id"] not in exclude][:10]
         if not weekly_auto:
             weekly_auto = pick_highlights(week_pool, 8)
-    write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written)
-    extras = (["trends"] if trends_ok else []) + (["stocks"] if stocks_ok else [])
+    write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written, board=board)
+    extras = (["trends"] if trends_ok else []) + (["stocks"] if stocks_ok else []) + (["market-board"] if board and board.get("assets") else [])
     if weather_notes:
         extras.append("nws")
     if eia_notes:

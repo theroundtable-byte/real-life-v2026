@@ -1,49 +1,218 @@
 (function () {
-  const cryptoBox = document.getElementById("crypto-ticker");
-  const coins = [
-    { id: "bitcoin", symbol: "BTC" },
-    { id: "ethereum", symbol: "ETH" },
-    { id: "solana", symbol: "SOL" },
-    { id: "ripple", symbol: "XRP" },
-    { id: "dogecoin", symbol: "DOGE" },
-    { id: "cardano", symbol: "ADA" },
-  ];
-
-  function money(n) {
-    if (n >= 1000) return n.toLocaleString("en-US", { maximumFractionDigits: 0 });
-    if (n >= 1) return n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    return n.toLocaleString("en-US", { minimumFractionDigits: 4, maximumFractionDigits: 6 });
+  function money(n, kind) {
+    if (typeof n !== "number" || !isFinite(n)) return "—";
+    if (kind === "index") return n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (n >= 1000) return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (n >= 1) return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    if (n >= 0.01) return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 4, maximumFractionDigits: 4 });
+    return "$" + n.toLocaleString("en-US", { minimumFractionDigits: 6, maximumFractionDigits: 6 });
+  }
+  function pct(n) {
+    if (typeof n !== "number" || !isFinite(n)) return "—";
+    const sign = n >= 0 ? "+" : "";
+    return sign + n.toFixed(2) + "%";
+  }
+  function sparkSvg(values, width, height, id, up, thick) {
+    width = width || 640; height = height || 220; thick = thick || 2.2;
+    if (!values || values.length < 2) {
+      return '<svg class="spark" viewBox="0 0 ' + width + " " + height + '" aria-hidden="true"></svg>';
+    }
+    var lo = Math.min.apply(null, values), hi = Math.max.apply(null, values);
+    var span = (hi - lo) || 1;
+    var padX = 2, padY = 3, pts = [];
+    for (var i = 0; i < values.length; i++) {
+      var x = padX + (width - 2 * padX) * i / (values.length - 1);
+      var y = height - padY - (height - 2 * padY) * (values[i] - lo) / span;
+      pts.push([x, y]);
+    }
+    var d = "M" + pts.map(function (p) { return p[0].toFixed(2) + "," + p[1].toFixed(2); }).join(" L");
+    var area = d + " L" + pts[pts.length - 1][0].toFixed(2) + "," + height + " L" + pts[0][0].toFixed(2) + "," + height + " Z";
+    var color = up ? "var(--up)" : "var(--down)";
+    var gid = ("sp-js-" + (id || "x") + "-" + values.length).replace(/[^a-zA-Z0-9_-]/g, "");
+    return '<svg class="spark" viewBox="0 0 ' + width + " " + height + '" preserveAspectRatio="none" aria-hidden="true">' +
+      '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0%" stop-color="' + color + '" stop-opacity="0.32"/>' +
+      '<stop offset="100%" stop-color="' + color + '" stop-opacity="0"/>' +
+      "</linearGradient></defs>" +
+      '<path d="' + area + '" fill="url(#' + gid + ')"/>' +
+      '<path d="' + d + '" fill="none" stroke="' + color + '" stroke-width="' + thick + '" stroke-linejoin="round" stroke-linecap="round"/>' +
+      '<circle cx="' + pts[pts.length - 1][0].toFixed(2) + '" cy="' + pts[pts.length - 1][1].toFixed(2) + '" r="2.4" fill="' + color + '"/>' +
+      "</svg>";
   }
 
-  function renderCrypto(data) {
+  var marketsData = null;
+  var featuredId = null;
+  var featuredRange = "5d";
+  var dataNode = document.getElementById("markets-data");
+  if (dataNode) {
+    try { marketsData = JSON.parse(dataNode.textContent || "{}"); } catch (err) { marketsData = null; }
+  }
+  if (marketsData && marketsData.featured) featuredId = marketsData.featured;
+
+  function assetById(id) {
+    if (!marketsData || !marketsData.assets) return null;
+    for (var i = 0; i < marketsData.assets.length; i++) {
+      if (marketsData.assets[i].id === id) return marketsData.assets[i];
+    }
+    return null;
+  }
+  function seriesFor(asset, range) {
+    if (!asset) return [];
+    if (range === "1d" && asset.h1d && asset.h1d.length >= 2) return asset.h1d;
+    if (range === "5d" && asset.h5d && asset.h5d.length >= 2) return asset.h5d;
+    if (range === "1m" && asset.h1m && asset.h1m.length >= 2) return asset.h1m;
+    return asset.h5d && asset.h5d.length >= 2 ? asset.h5d : (asset.h1m || asset.h1d || []);
+  }
+  function hasRange(asset, range) {
+    var key = range === "1d" ? "h1d" : range === "1m" ? "h1m" : "h5d";
+    var min = range === "1d" ? 8 : 2;
+    return asset && asset[key] && asset[key].length >= min;
+  }
+  function isUp(asset, range) {
+    if (!asset) return true;
+    if (typeof asset.change_pct === "number") return asset.change_pct >= 0;
+    var s = seriesFor(asset, range || "5d");
+    return !s.length || s[s.length - 1] >= s[0];
+  }
+  function paintPrices(asset) {
+    if (!asset) return;
+    var up = isUp(asset);
+    var cls = up ? "up" : "down";
+    document.querySelectorAll('[data-id="' + CSS.escape(String(asset.id)) + '"]').forEach(function (el) {
+      el.classList.toggle("up", up);
+      el.classList.toggle("down", !up);
+      var px = el.querySelector(".mkt-px");
+      var ch = el.querySelector(".mkt-ch") || (el.classList.contains("feat-price") ? el.querySelector("span") : null);
+      if (px) px.textContent = money(asset.price, asset.kind);
+      if (ch) ch.textContent = pct(asset.change_pct);
+    });
+    var feat = document.getElementById("mkt-featured");
+    if (feat && feat.getAttribute("data-id") === String(asset.id)) {
+      var priceEl = document.getElementById("feat-price");
+      if (priceEl) {
+        priceEl.className = "feat-price " + cls;
+        priceEl.innerHTML = money(asset.price, asset.kind) + " <span>" + pct(asset.change_pct) + "</span>";
+      }
+    }
+  }
+  function renderFeatured(id, range) {
+    var asset = assetById(id);
+    var feat = document.getElementById("mkt-featured");
+    var chart = document.getElementById("feat-chart");
+    if (!asset || !feat || !chart) return;
+    featuredId = id;
+    var chosen = range;
+    if (!hasRange(asset, chosen)) {
+      chosen = hasRange(asset, "5d") ? "5d" : hasRange(asset, "1m") ? "1m" : hasRange(asset, "1d") ? "1d" : "5d";
+    }
+    featuredRange = chosen;
+    feat.setAttribute("data-id", asset.id);
+    var name = document.getElementById("feat-name");
+    if (name) name.innerHTML = asset.name + ' <span class="feat-sym">' + asset.symbol + "</span>";
+    var priceEl = document.getElementById("feat-price");
+    var up = isUp(asset, chosen);
+    if (priceEl) {
+      priceEl.className = "feat-price " + (up ? "up" : "down");
+      priceEl.innerHTML = money(asset.price, asset.kind) + " <span>" + pct(asset.change_pct) + "</span>";
+    }
+    chart.innerHTML = sparkSvg(seriesFor(asset, chosen), 640, 220, "feat-" + asset.id + "-" + chosen, up, 2.2);
+    feat.querySelectorAll(".mkt-range").forEach(function (btn) {
+      var r = btn.getAttribute("data-range");
+      btn.disabled = !hasRange(asset, r);
+      btn.classList.toggle("is-on", r === chosen);
+    });
+    document.querySelectorAll("#mkt-grid .mkt-card").forEach(function (card) {
+      var on = card.getAttribute("data-id") === String(asset.id);
+      card.classList.toggle("is-on", on);
+      card.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  var ticker = document.getElementById("mkt-ticker");
+  if (ticker) {
+    function pause() { ticker.classList.add("is-paused"); }
+    function resume() { ticker.classList.remove("is-paused"); }
+    ticker.addEventListener("pointerdown", pause);
+    ticker.addEventListener("pointerup", resume);
+    ticker.addEventListener("pointercancel", resume);
+    ticker.addEventListener("pointerleave", resume);
+    ticker.addEventListener("touchstart", pause, { passive: true });
+    ticker.addEventListener("touchend", resume);
+    ticker.addEventListener("touchcancel", resume);
+  }
+
+  var rangeBox = document.querySelector("#mkt-featured .mkt-ranges");
+  if (rangeBox) {
+    rangeBox.addEventListener("click", function (e) {
+      var btn = e.target.closest(".mkt-range");
+      if (!btn || btn.disabled) return;
+      renderFeatured(featuredId, btn.getAttribute("data-range"));
+    });
+  }
+  var grid = document.getElementById("mkt-grid");
+  if (grid) {
+    grid.addEventListener("click", function (e) {
+      if (e.target.closest(".mkt-card-link")) return;
+      var card = e.target.closest(".mkt-card");
+      if (!card) return;
+      e.preventDefault();
+      renderFeatured(card.getAttribute("data-id"), featuredRange);
+    });
+  }
+
+  // Live crypto: reuse baked ids, refresh prices about once a minute.
+  var cryptoIds = [];
+  if (marketsData && marketsData.assets) {
+    marketsData.assets.forEach(function (a) {
+      if (a.kind === "crypto") cryptoIds.push(a.id);
+    });
+  }
+  var cryptoBox = document.getElementById("crypto-ticker");
+  if (!cryptoIds.length && cryptoBox && cryptoBox.getAttribute("data-endpoint")) {
+    // Archive / legacy card still uses the old six-coin ticker.
+    cryptoIds = ["bitcoin", "ethereum", "solana", "ripple", "dogecoin", "cardano"];
+  }
+  function renderLegacyCrypto(data) {
     if (!cryptoBox) return;
-    const parts = [];
-    coins.forEach(function (c) {
-      const row = data[c.id];
+    var map = { bitcoin: "BTC", ethereum: "ETH", solana: "SOL", ripple: "XRP", dogecoin: "DOGE", cardano: "ADA" };
+    var parts = [];
+    cryptoIds.forEach(function (id) {
+      var row = data[id];
       if (!row || typeof row.usd !== "number") return;
-      const ch = row.usd_24h_change || 0;
-      const cls = ch >= 0 ? "up" : "down";
-      const sign = ch >= 0 ? "+" : "";
-      parts.push('<span class="coin ' + cls + '"><b>' + c.symbol + "</b> $" + money(row.usd) + " " + sign + ch.toFixed(2) + "%</span>");
+      var ch = row.usd_24h_change || 0;
+      parts.push('<span class="coin ' + (ch >= 0 ? "up" : "down") + '"><b>' + (map[id] || id.toUpperCase()) + "</b> " + money(row.usd) + " " + pct(ch) + "</span>");
     });
     if (parts.length) cryptoBox.innerHTML = parts.join(" ");
   }
-
   async function loadCrypto() {
-    if (!cryptoBox) return;
-    const url = cryptoBox.getAttribute("data-endpoint");
+    if (!cryptoIds.length) return;
+    var url = "https://api.coingecko.com/api/v3/simple/price?ids=" + encodeURIComponent(cryptoIds.join(",")) + "&vs_currencies=usd&include_24hr_change=true";
+    if (cryptoBox && cryptoBox.getAttribute("data-endpoint") && !document.getElementById("markets-data")) {
+      url = cryptoBox.getAttribute("data-endpoint");
+    }
     try {
-      const res = await fetch(url, { headers: { Accept: "application/json" } });
+      var res = await fetch(url, { headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error("status " + res.status);
-      renderCrypto(await res.json());
+      var data = await res.json();
+      if (marketsData && marketsData.assets) {
+        marketsData.assets.forEach(function (asset) {
+          if (asset.kind !== "crypto") return;
+          var row = data[asset.id];
+          if (!row || typeof row.usd !== "number") return;
+          asset.price = row.usd;
+          if (typeof row.usd_24h_change === "number") asset.change_pct = row.usd_24h_change;
+          paintPrices(asset);
+        });
+      } else {
+        renderLegacyCrypto(data);
+      }
     } catch (err) {
-      if (!cryptoBox.querySelector(".coin")) {
+      if (cryptoBox && !cryptoBox.querySelector(".coin")) {
         cryptoBox.innerHTML = '<span class="ticker-status">Prices unavailable right now.</span>';
       }
     }
   }
-
-  if (cryptoBox) {
+  if (cryptoIds.length) {
     loadCrypto();
     setInterval(loadCrypto, 60000);
   }
@@ -167,6 +336,10 @@
       if (show) visible += 1;
     });
     sections.forEach(function (section) {
+      if (section.id === "markets" || section.id === "status" || section.classList.contains("status-card") || section.closest("#status") || section.closest("#markets")) {
+        section.hidden = false;
+        return;
+      }
       const has = section.querySelector(".entry:not([hidden])");
       section.hidden = !has;
       if (filtering && has) section.classList.add("is-open");
@@ -183,8 +356,9 @@
       if (active === "all" && input) input.value = "";
       chips.forEach(function (c) { c.classList.toggle("is-on", c === chip); });
       apply();
-      if (article && chip.getBoundingClientRect().bottom < (article.getBoundingClientRect().top)) {
-        article.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      var target = (active === "Markets" && document.getElementById("markets")) ? document.getElementById("markets") : article;
+      if (target && chip.getBoundingClientRect().bottom < (target.getBoundingClientRect().top + 8)) {
+        target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
       }
     });
   });

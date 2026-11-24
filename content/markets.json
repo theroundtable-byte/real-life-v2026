@@ -1,0 +1,45 @@
+{
+  "updated": "2026-11-23",
+  "note": "Top 15 US companies by market cap as of late November 2026, using liquid quoted names. TSMC is omitted as a foreign issuer. SpaceX (SPCX) and Anthropic (ANT) are included because they now quote among the US mega-caps; swap names here when the ranking changes.",
+  "stocks": [
+    {"symbol": "AAPL", "name": "Apple", "assetclass": "stocks"},
+    {"symbol": "NVDA", "name": "NVIDIA", "assetclass": "stocks"},
+    {"symbol": "MSFT", "name": "Microsoft", "assetclass": "stocks"},
+    {"symbol": "GOOGL", "name": "Alphabet", "assetclass": "stocks"},
+    {"symbol": "AMZN", "name": "Amazon", "assetclass": "stocks"},
+    {"symbol": "SPCX", "name": "SpaceX", "assetclass": "stocks"},
+    {"symbol": "META", "name": "Meta", "assetclass": "stocks"},
+    {"symbol": "TSLA", "name": "Tesla", "assetclass": "stocks"},
+    {"symbol": "AVGO", "name": "Broadcom", "assetclass": "stocks"},
+    {"symbol": "LLY", "name": "Eli Lilly", "assetclass": "stocks"},
+    {"symbol": "BRK.B", "name": "Berkshire Hathaway", "assetclass": "stocks"},
+    {"symbol": "ANT", "name": "Anthropic", "assetclass": "stocks"},
+    {"symbol": "WMT", "name": "Walmart", "assetclass": "stocks"},
+    {"symbol": "JPM", "name": "JPMorgan Chase", "assetclass": "stocks"},
+    {"symbol": "MU", "name": "Micron", "assetclass": "stocks"}
+  ],
+  "indexes": [
+    {"symbol": ".SPX", "name": "S&P 500", "featured": true, "chart_symbol": "SPY", "chart_class": "etf"},
+    {"symbol": ".IXIC", "name": "Nasdaq", "chart_symbol": "COMP", "chart_class": "index", "fallback_symbol": "QQQ", "fallback_class": "etf"},
+    {"symbol": ".DJI", "name": "Dow Jones", "chart_symbol": "DIA", "chart_class": "etf"}
+  ],
+  "crypto": {
+    "top": 7,
+    "exclude_ids": [
+      "tether",
+      "usd-coin",
+      "dai",
+      "ethena-usde",
+      "first-digital-usd",
+      "paypal-usd",
+      "true-usd",
+      "frax",
+      "usds",
+      "binance-bridged-usdt-bnb-smart-chain",
+      "figure-heloc",
+      "usd1-wlfi",
+      "tether-gold",
+      "paypal-usd-pyusd"
+    ]
+  }
+}
