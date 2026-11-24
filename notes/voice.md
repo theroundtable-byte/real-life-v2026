@@ -1,8 +1,8 @@
 # Real Life v2026 — Chad's writing voice
 
-Use this when writing Daily/Weekly Patch Notes so they sound like Chad (Joey / @joeychadass), not like generic AI satire or a polished recap blog.
+Use this when writing the daily update and the weekly recap so they sound like Chad (Joey / @joeychadass), not like generic AI satire or a polished recap blog.
 
-**Sources:** his Substack essays (raw voice; movie reviews skipped because those were expanded with Gemini), his recent X posts as @joeychadass, and spoken videos from [youtube.com/@joeychadass](https://www.youtube.com/@joeychadass). For the site, lead with the X voice (the cadence Chad already approved). Borrow the essay voice when a line needs a little more weight. Use YouTube for warmth, openings/closings, and how he talks through a take — not for dumping filler into patch lines.
+**Sources:** his Substack essays (raw voice; movie reviews skipped because those were expanded with Gemini), his recent X posts as @joeychadass, and spoken videos from [youtube.com/@joeychadass](https://www.youtube.com/@joeychadass). For the site, lead with the X voice (the cadence Chad already approved). Borrow the essay voice when a line needs a little more weight. Use YouTube for warmth, openings/closings, and how he talks through a take — not for dumping filler into update lines.
 
 **Substack essays read (all non-review posts on the stack as of Nov 23, 2026):**
 
@@ -19,13 +19,13 @@ His X handle is [@joeychadass](https://x.com/joeychadass) (display name: Chado).
 
 ## Two registers, one person
 
-**X is the default for patch lines.** Short, spoken, hyped or blunt, slangy, a little messy. He already thinks in game language on there ("speedrunning," "WR," "peak"). That is why "Human Buff: Senators now have Lizard eye roll skill" works for him: mechanic + punch, no extra speech.
+**X is the default for patch lines.** Short, spoken, hyped or blunt, slangy, a little messy. He already thinks in game language on there ("speedrunning," "WR," "peak"). That punchy shape still works for him: a short label, then the change, no extra speech. On the site, use the everyday labels (Leveling Up, Took a Hit, Fixed, What's New, Still Broken, Happening Now) so people who don't play video games can follow along. Example: "Leveling Up: Senators now have the Lizard Eye-Roll skill."
 
-**Substack essays are the Sunday-recap register.** Longer, structured, conviction-heavy. He sets a baseline, runs an analogy or thought experiment, then lands a verdict. Slang can still slip in ("deadass real"), but the sentences are cleaner and more built-out. Use this for a short intro or a closer on the weekly recap, not for stuffing every hotfix.
+**Substack essays are the Sunday-recap register.** Longer, structured, conviction-heavy. He sets a baseline, runs an analogy or thought experiment, then lands a verdict. Slang can still slip in ("deadass real"), but the sentences are cleaner and more built-out. Use this for a short intro or a closer on the weekly recap, not for stuffing every fix.
 
-**YouTube is how he sounds when he is thinking out loud.** Same person, looser and warmer: "your boy Chad," "y'all," "you feel me," "but yeah, man," then a real close. The talking-head videos ramble more than the writing — lots of *like*, *you know*, and *um*. That is useful for tone. It is not a license to make patch notes wordy.
+**YouTube is how he sounds when he is thinking out loud.** Same person, looser and warmer: "your boy Chad," "y'all," "you feel me," "but yeah, man," then a real close. The talking-head videos ramble more than the writing — lots of *like*, *you know*, and *um*. That is useful for tone. It is not a license to make update lines wordy.
 
-Do not split the personality. All three registers are direct, anti-BS, and allergic to hedging. The difference is length and polish, not worldview. The approved patch cadence stays tight. YouTube should add flavor, not water that down.
+Do not split the personality. All three registers are direct, anti-BS, and allergic to hedging. The difference is length and polish, not worldview. The approved line cadence stays tight. YouTube should add flavor, not water that down.
 
 ---
 
@@ -47,10 +47,10 @@ He is funny by pointing at the absurd part of a real situation and saying it pla
 
 - Observational and slightly exasperated. The joke is usually the situation itself.
 - Thought-experiment and analogy humor in longer writing (the "free ice cream shop," the grade-redistribution test, the guy arguing with an AI girlfriend).
-- Game / patch / speedrun framing comes naturally and should be the site's main joke engine.
+- Game and speedrun framing comes naturally to him, but the published site now leads with everyday labels so anyone can follow. Keep a light wink in the structure (it still reads like a daily update), not in jargon the reader has to decode. Use Leveling Up, Took a Hit, Fixed, What's New, Still Broken, and Happening Now.
 - Hype humor: "Peak," "we are about to witness PEAK anime," "Peak childhood is back!"
-- Deadpan labels over winking hashtags. "Human Buff" is funnier than "LOL politicians am I right."
-- He will call out absurdity, then often pivot to the real point. Patch lines can stop at the joke; the weekly recap can land the point.
+- Deadpan labels over winking hashtags. "Leveling Up" is funnier than "LOL politicians am I right."
+- He will call out absurdity, then often pivot to the real point. Update lines can stop at the joke; the weekly recap can land the point.
 - Do not over-joke a serious story (a recall, a disaster, a death). A dry mechanic line is fine. A bit routine is not.
 - **From YouTube:** dry asides while walking through examples ("I don't eat Chipotle cuz I don't eat slop bowls, but whoever wants to eat the slop bowls, hey, eat the slop bowls"). He asks himself a question and answers it on the next beat: "Am I phased by any of it? No. Are we living in the end times and this is bound to happen? Yes." Sarcasm can be a label he repeats back, like "mostly peaceful but fiery." On a heavy story he drops the jokes and just sounds sad and straight.
 
@@ -58,7 +58,7 @@ He is funny by pointing at the absurd part of a real situation and saying it pla
 
 ## Sentence length and rhythm
 
-**Patch lines:** one breath. Label, then the change, then maybe a short kicker. No preamble.
+**Update lines:** one breath. Label, then the change, then maybe a short kicker. No preamble.
 
 **X rhythm (copy this):** fragments, dropped words, a question that is really an accusation, caps for one word, done.
 
@@ -83,17 +83,17 @@ Use these lightly and only when they fit. One or two per line is plenty. Do not 
 
 **Everyday / X:** deadass, lmao, atp, rn, tbh, fasho, on me, goated, peak / PEAK, tryna, szn, mid (implied: he talks in highs and lows), Yooo, LETS GOOOOOO, standing on business, "the exact mix," "a world of difference," "better in EVERY way."
 
-**From YouTube (spoken):** y'all, your boy, I'm out, Peace, you feel me, bro, dude, man, I'mma, "it's been a minute," "that's it y'all," "to each their own," "stay prayed up," "happy camper," "it gets no simpler than that," "that's just my honest take," "I don't mean to toot my own horn," "keep it a buck with you," "let's get it," "bangers," "give the people what they want," "as simple as that," "first mind's telling me." He says "period" out loud for emphasis. These work as seasoning. Do not paste the full YouTuber intro into a patch line.
+**From YouTube (spoken):** y'all, your boy, I'm out, Peace, you feel me, bro, dude, man, I'mma, "it's been a minute," "that's it y'all," "to each their own," "stay prayed up," "happy camper," "it gets no simpler than that," "that's just my honest take," "I don't mean to toot my own horn," "keep it a buck with you," "let's get it," "bangers," "give the people what they want," "as simple as that," "first mind's telling me." He says "period" out loud for emphasis. These work as seasoning. Do not paste the full YouTuber intro into an update line.
 
-**Game language he already uses or will sound right in:** buff, nerf, hotfix, patch, speedrun, WR, known bug, working as intended, new game mode, disabled / re-enabled.
+**Game language he already uses on X** (speedrun, WR, peak, and the like) can flavor a line, but do not use Buff, Nerf, Hotfix, Known Bug, or similar game terms as the published section or line labels. Those are now everyday words: Leveling Up, Took a Hit, Fixed, What's New, Still Broken, Happening Now.
 
 **Essay tells:** "Let's get one thing straight out of the gate." "Let that sink in." "Make no mistake." "Under the guise of." "The kicker." "The reality check." "The bottom line." "The verdict." "Quite frankly, I don't buy it." "Reality isn't negotiable." "AI slop." "Vote with their feet."
 
 **Caps for emphasis,** not for whole paragraphs: NOTHING, EVERY, PEAK, REAL.
 
-**Emojis:** common on X (🔥 💯 🙏🏽 🇺🇸 😂 🤯). Almost never in the essays. On the site, skip them in the patch body, or use one at most in a genuinely hyped line. Do not sprinkle them.
+**Emojis:** common on X (🔥 💯 🙏🏽 🇺🇸 😂 🤯). Almost never in the essays. On the site, skip them in the update body, or use one at most in a genuinely hyped line. Do not sprinkle them.
 
-**Apostrophes:** essays are mostly correct; X often drops them ("im," "tryna," "thats"). For the site, write correctly enough to look published, but do not clean the voice into formal English. A dropped apostrophe in a short hotfix is fine. Do not fake-misspell everything.
+**Apostrophes:** essays are mostly correct; X often drops them ("im," "tryna," "thats"). For the site, write correctly enough to look published, but do not clean the voice into formal English. A dropped apostrophe in a short fix is fine. Do not fake-misspell everything.
 
 ---
 
@@ -148,19 +148,19 @@ If a story touches one of these, lean in. If it does not, still write it in his 
 - No filler: "In today's rapidly evolving landscape," "It's important to note," "Moreover," "Furthermore," "a testament to the human spirit," "let's unpack this," "the internet is buzzing."
 - No both-sides hedging and no both-sides jokes that cancel the take.
 - No late-night monologue cadence or desperate punchline stacking.
-- No empty patch labels slapped on a headline ("New content: scientists discover frog"). If it is not a joke or a point, cut it.
+- No empty labels slapped on a headline ("What's New: scientists discover frog"). If it is not a joke or a point, cut it.
 - Do not invent news, lore, or "lizard people" as if they were facts. The format is satirical; the event has to be real and sourced.
 - Do not over-explain the joke. If you need a second sentence to make the first one funny, rewrite the first one.
-- Do not flood a patch with slang, caps, and emojis. That reads like a brand account doing "how do you do, fellow kids."
+- Do not flood an update with slang, caps, and emojis. That reads like a brand account doing "how do you do, fellow kids."
 - Do not use slurs or the roughest reply-guy language on the site, even though some of that appears in casual X replies. The public register is blunt, not ugly.
 - Do not write smirking church jokes, and do not write unhinged conspiracy-board voice. He has a line between those on purpose.
-- **From YouTube:** do not write "Hey yo, what is going on ladies and gentlemen, this is your boy Chad bringing y'all another video" into the site. That is his video open, not a patch line. Do not fill lines with *like* / *you know* / *um* just because the captions are full of them. His approved written cadence is tighter than the way he talks when a camera is rolling.
+- **From YouTube:** do not write "Hey yo, what is going on ladies and gentlemen, this is your boy Chad bringing y'all another video" into the site. That is his video open, not an update line. Do not fill lines with *like* / *you know* / *um* just because the captions are full of them. His approved written cadence is tighter than the way he talks when a camera is rolling.
 
 ---
 
 ## Spoken voice (YouTube)
 
-Chad already approved the written patch cadence ("those sound exactly like me"). This section adds how he talks on camera. It does not replace that cadence.
+Chad already approved the written line cadence ("those sound exactly like me"). This section adds how he talks on camera. It does not replace that cadence.
 
 **How a video usually opens.** Almost every commentary video starts the same way, with light variation:
 
@@ -176,7 +176,7 @@ Faith-heavy or dark-culture videos can add "stay prayed up." A thinking-out-loud
 
 **How a take moves.** He walks examples one by one, puts a personal aside in the middle, then lands a short verdict. He will contrast "years ago I wouldn't have paid attention... once I came to the Lord" when the topic is spiritual. He is comfortable saying he took a break, he is late, or he does not have the whole plan yet. The close is still a close: "it gets no simpler than that," "it's as simple as that," "but it won't be me."
 
-**What the spoken register is good for on the site.** A little "y'all," "man," "you feel me," "to each their own," or a self-answered question. The best spoken closers already sound like patch notes — especially the "you'll own nothing and be happy... But it won't be me" ending from *There Were Things In Society That Just Don't Exist Anymore..*. Steal that tightness, not the warmup.
+**What the spoken register is good for on the site.** A little "y'all," "man," "you feel me," "to each their own," or a self-answered question. The best spoken closers already sound like tight update lines — especially the "you'll own nothing and be happy... But it won't be me" ending from *There Were Things In Society That Just Don't Exist Anymore..*. Steal that tightness, not the warmup.
 
 ## Real quotes
 
@@ -247,38 +247,38 @@ Faith-heavy or dark-culture videos can add "stay prayed up." A thinking-out-loud
 
 ## Applying this to Real Life v2026
 
-**Canonical format** (Chad's own example, keep this shape):
+**Canonical format** (keep this shape, with the everyday labels):
 
-`Human Buff: Senators now have Lizard eye roll skill`
+`Leveling Up: Senators now have the Lizard Eye-Roll skill`
 
 Recipe:
 
-1. A short mechanic tag: Buff, Nerf, Hotfix, New Content, Known Bug, New Game Mode, Re-enabled, Disabled.
+1. A short everyday label: Leveling Up, Took a Hit, Fixed, What's New, Still Broken, or Happening Now.
 2. The subject, named plainly.
-3. The change, as if a designer shipped it on purpose.
+3. The change, said clearly (a light wink is fine; the reader should not need game vocabulary).
 4. Optional kicker: one dry clause, not a paragraph.
 5. Link the real source. If you cannot source it, do not write it.
 
-Write 10–15 of the best lines for a daily patch; fewer on a slow day. The Sunday recap is the "major update": keep the same line shape, and add a short essay-voice intro if the week had a theme.
+Write 10–15 of the best lines for a daily update; fewer on a slow day. The Sunday recap is the longer look at the week: keep the same line shape, and add a short essay-voice intro if the week had a theme.
 
 Quality bar: important or funny. Skip filler. A food recall, a corporate rights grab, a manga return, a genuine sports shift, or a policy that backfired will always beat a generic trending headline.
 
 ### Style demos only
 
-The six lines below are **invented examples for voice and format**. They are not real news, not real patch notes, and must not be published as if the events happened.
+The six lines below are **invented examples for voice and format**. They are not real news, not real updates, and must not be published as if the events happened.
 
-1. **Nerf: Salads.** Chance to apply E. coli on consume. Touch grass, just not that grass.
-2. **Nerf: "Tax the rich" ult.** Target left the map. Middle class inherited the cooldown and the bill.
-3. **Hotfix: Game ownership.** Disc drive removed. You now rent a temporary license, and the store can yank it whenever they feel like it.
-4. **Buff: Anime slate.** Kagurabachi got an anime date. We are about to witness PEAK. Bring snacks.
-5. **New Game Mode: Voluntary Matrix.** Strap in, ignore the real server. Known bug: taking the headset off feels worse than leaving it on.
-6. **Hotfix: Shame.** Re-enabled after being disabled for a decade. Some players already filing tickets.
+1. **Took a Hit: Salads.** Chance of E. coli if you eat them. Touch grass, just not that grass.
+2. **Took a Hit: "Tax the rich."** The target left town. Middle class inherited the wait and the bill.
+3. **Fixed: Game ownership.** Disc drive removed. You now rent a temporary license, and the store can yank it whenever they feel like it.
+4. **Leveling Up: Anime slate.** Kagurabachi got an anime date. We are about to witness PEAK. Bring snacks.
+5. **Happening Now: Voluntary Matrix.** Strap in, ignore the real world. Still broken: taking the headset off feels worse than leaving it on.
+6. **Fixed: Shame.** It's back after being gone for a decade. Some people are already complaining.
 
 These three were written after listening to his YouTube voice. Same approved cadence, a little more of the spoken flavor. Still **invented samples**, not real news, and not for publishing as events:
 
-7. **Nerf: Friday nights.** Blockbuster is gone, the shelf is a license, and they still want you to smile about it. Not me.
-8. **Known Bug: Corporate Halloween ads.** Ouija boards now come with a promo code. Stay prayed up.
-9. **Nerf: 401k.** Money you don't see, plus a penalty if you make a smarter move with it. First mind says park it and wait.
+7. **Took a Hit: Friday nights.** Blockbuster is gone, the shelf is a license, and they still want you to smile about it. Not me.
+8. **Still Broken: Corporate Halloween ads.** Ouija boards now come with a promo code. Stay prayed up.
+9. **Took a Hit: 401k.** Money you don't see, plus a penalty if you make a smarter move with it. First mind says park it and wait.
 
 If a demo line ever matches a real story later, rewrite it from the actual source. Do not paste these as if they were reported.
 

@@ -92,10 +92,10 @@
     var ribbon = "";
     if (buff && asset.id === buff.id) {
       extra = " is-buff";
-      ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>';
+      ribbon = '<span class="mkt-ribbon is-buff">Got better today</span>';
     } else if (nerf && asset.id === nerf.id) {
       extra = " is-nerf";
-      ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>';
+      ribbon = '<span class="mkt-ribbon is-nerf">Took a hit today</span>';
     }
     var flavor = asset.flavor ? '<p class="mkt-flavor">' + asset.flavor.replace(/</g, "&lt;") + "</p>" : "";
     var href = asset.url || "#";
@@ -117,8 +117,8 @@
     var head = document.querySelector("#mkt-crypto .mkt-highlights");
     if (head) {
       var bits = [];
-      if (ex.buff) bits.push('<span class="mkt-badge is-buff">Buff of the day · ' + ex.buff.symbol + " " + pct(ex.buff.change_pct) + "</span>");
-      if (ex.nerf) bits.push('<span class="mkt-badge is-nerf">Nerf of the day · ' + ex.nerf.symbol + " " + pct(ex.nerf.change_pct) + "</span>");
+      if (ex.buff) bits.push('<span class="mkt-badge is-buff">Got better today · ' + ex.buff.symbol + " " + pct(ex.buff.change_pct) + "</span>");
+      if (ex.nerf) bits.push('<span class="mkt-badge is-nerf">Took a hit today · ' + ex.nerf.symbol + " " + pct(ex.nerf.change_pct) + "</span>");
       head.innerHTML = bits.join("");
     }
   }
@@ -269,7 +269,7 @@
     fullLog.hidden = !open;
     moreBtn.setAttribute("aria-expanded", open ? "true" : "false");
     const n = moreBtn.getAttribute("data-count") || "";
-    moreBtn.textContent = open ? "Hide full changelog" : (n ? "Full changelog (" + n + " more)" : "Full changelog");
+    moreBtn.textContent = open ? "Hide the rest" : (n ? "The rest of today's update (" + n + " more)" : "The rest of today's update");
   }
 
   if (moreBtn && fullLog) {

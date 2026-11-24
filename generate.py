@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Real Life v2026: satirical US patch notes from real, linked sources."""
+"""Build Real Life v2026: real, sourced US headlines written like a daily update."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import html
 import json
 import re
 import ssl
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -98,41 +99,320 @@ FILTERS = [
     ("Life", ["Weather & Disasters", "Holidays & Events", "Health & Recalls", "Gas & Grocery", "Slang", "Culture"]),
     ("Markets", ["Markets"]),
 ]
-SECTIONS = ["Buffs", "Nerfs", "Hotfixes", "New Content", "Known Bugs", "Limited-Time Events", "Markets"]
-# Terminal badge, CSS hook, compact icon for section headers.
+# Display names. Stored JSON may still use the old game-section names; normalize_section() maps them.
+SECTIONS = ["Leveling Up", "Took a Hit", "Fixed", "What's New", "Still Broken", "Happening Now", "Markets"]
+SECTION_ALIASES = {
+    "Buffs": "Leveling Up",
+    "Nerfs": "Took a Hit",
+    "Hotfixes": "Fixed",
+    "New Content": "What's New",
+    "Known Bugs": "Still Broken",
+    "Limited-Time Events": "Happening Now",
+    "Leveling Up": "Leveling Up",
+    "Took a Hit": "Took a Hit",
+    "Fixed": "Fixed",
+    "What's New": "What's New",
+    "Still Broken": "Still Broken",
+    "Happening Now": "Happening Now",
+    "Markets": "Markets",
+}
+SECTION_HINTS = {
+    "Leveling Up": "Something got better.",
+    "Took a Hit": "Something got worse.",
+    "Fixed": "A problem was corrected.",
+    "What's New": "Something arrived or started.",
+    "Still Broken": "A problem that's still around.",
+    "Happening Now": "A limited-time event or alert.",
+    "Markets": "Money, prices, and market news.",
+}
+# Terminal badge, CSS hook / sprite file stem, compact icon.
 SECTION_UI = {
-    "Buffs": ("BUFF", "buff", "↑"),
-    "Nerfs": ("NERF", "nerf", "↓"),
-    "Hotfixes": ("HOTFIX", "hotfix", "✚"),
-    "New Content": ("NEW", "new", "+"),
-    "Known Bugs": ("BUG", "bug", "!"),
-    "Limited-Time Events": ("EVENT", "event", "◈"),
+    "Leveling Up": ("UP", "up", "↑"),
+    "Took a Hit": ("HIT", "hit", "↓"),
+    "Fixed": ("FIXED", "fixed", "✚"),
+    "What's New": ("NEW", "new", "+"),
+    "Still Broken": ("BROKEN", "broken", "!"),
+    "Happening Now": ("NOW", "now", "◈"),
     "Markets": ("MKT", "mkt", "▣"),
 }
 SECTION_FOR_TAG = {
-    "BUFFED": "Buffs", "BALANCE": "Buffs", "ROSTER": "Buffs", "META": "Buffs",
-    "NERFED": "Nerfs",
-    "HOTFIX": "Hotfixes", "FIXED": "Hotfixes", "UPDATED": "Hotfixes", "PATCH": "Hotfixes",
-    "ADDED": "New Content", "DLC": "New Content", "WATCHLIST": "New Content",
-    "KNOWN ISSUE": "Known Bugs", "RECALL": "Known Bugs",
-    "EVENT": "Limited-Time Events",
+    "BUFFED": "Leveling Up", "BALANCE": "Leveling Up", "ROSTER": "Leveling Up", "META": "Leveling Up",
+    "NERFED": "Took a Hit",
+    "HOTFIX": "Fixed", "FIXED": "Fixed", "UPDATED": "Fixed", "PATCH": "Fixed",
+    "ADDED": "What's New", "DLC": "What's New", "WATCHLIST": "What's New",
+    "KNOWN ISSUE": "Still Broken", "RECALL": "Still Broken",
+    "EVENT": "Happening Now",
 }
 TAG_LABELS = {
-    "BUFFED": "Buffs", "NERFED": "Nerfs", "HOTFIX": "Hotfix",
-    "KNOWN ISSUE": "Known bug", "ADDED": "New content", "FIXED": "Fixed",
-    "UPDATED": "Patch", "PATCH": "Patch", "DLC": "DLC",
-    "ROLLBACK": "Rollback", "META": "Meta", "ROSTER": "Roster update",
-    "BALANCE": "Balance change", "EVENT": "Server event",
+    "BUFFED": "Leveling Up", "NERFED": "Took a Hit", "HOTFIX": "Fixed",
+    "KNOWN ISSUE": "Still Broken", "ADDED": "What's New", "FIXED": "Fixed",
+    "UPDATED": "Updated", "PATCH": "Update", "DLC": "What's New",
+    "ROLLBACK": "Reversal", "META": "A Shift", "ROSTER": "Lineup",
+    "BALANCE": "A Shift", "EVENT": "Happening Now",
     "RECALL": "Recall", "WATCHLIST": "Watchlist",
 }
 FEATURED_LIMIT = 18
 PREVIEW_LIMIT = 4
+THUMBS_DIR = SITE / "assets" / "thumbs"
+USED_THUMBS: set[str] = set()
+THUMB_FETCH_ENABLED = False
+
+def normalize_section(name: str | None) -> str:
+    if not name:
+        return "Fixed"
+    return SECTION_ALIASES.get(name, name if name in SECTIONS else "Fixed")
+
+
+FRIENDLY_PREFIXES = [
+    (re.compile(r"^(Human )?Buffs?:\s*", re.I), ""),
+    (re.compile(r"^Nerfs?:\s*", re.I), ""),
+    (re.compile(r"^Hotfix(?:es)?:\s*", re.I), ""),
+    (re.compile(r"^Known Bugs?:\s*", re.I), ""),
+    (re.compile(r"^New Content:\s*", re.I), ""),
+    (re.compile(r"^Limited-Time Events?:\s*", re.I), ""),
+    (re.compile(r"^Bestiary:\s*", re.I), "New find: "),
+    (re.compile(r"^Respawn:\s*", re.I), "Back again: "),
+    (re.compile(r"^Faction balance:\s*", re.I), ""),
+    (re.compile(r"^Meta shift:\s*", re.I), ""),
+    (re.compile(r"^Roster:\s*", re.I), "Lineup: "),
+    (re.compile(r"^Server event:\s*", re.I), ""),
+    (re.compile(r"^World boss:\s*", re.I), ""),
+    (re.compile(r"^World state:\s*", re.I), ""),
+    (re.compile(r"^Movement tech:\s*", re.I), ""),
+    (re.compile(r"^DLC:\s*", re.I), ""),
+    (re.compile(r"^Season pass:\s*", re.I), "New season: "),
+    (re.compile(r"^Experimental build:\s*", re.I), ""),
+    (re.compile(r"^Cosmetic:\s*", re.I), ""),
+    (re.compile(r"^Upcoming DLC:\s*", re.I), "Upcoming: "),
+    (re.compile(r"^Players are now searching for:\s*", re.I), "People are searching for: "),
+    (re.compile(r" is climbing the search meta\.\s*$", re.I), " is trending."),
+]
+
+
+def friendly_line(text: str) -> str:
+    out = (text or "").strip()
+    for pat, repl in FRIENDLY_PREFIXES:
+        out = pat.sub(repl, out, count=1)
+    return out.strip()
+
+
+def _rss_image(item: ET.Element) -> str:
+    for child in list(item):
+        cname = local(child.tag)
+        url = (child.get("url") or child.get("href") or "").strip()
+        typ = (child.get("type") or child.get("medium") or "").lower()
+        if cname in {"thumbnail", "image"} and (url or text_of(child).startswith("http")):
+            return url or text_of(child)
+        if cname in {"content", "enclosure"} and url:
+            if "image" in typ or url.lower().split("?")[0].endswith((".jpg", ".jpeg", ".png", ".webp", ".gif")):
+                return url
+        # some feeds nest media:thumbnail
+        if cname in {"content", "group"}:
+            nested = _rss_image(child)
+            if nested:
+                return nested
+    return ""
+
+
+def _abs_url(src: str, base: str) -> str:
+    src = (src or "").strip()
+    if not src or src.startswith("data:"):
+        return ""
+    return urllib.parse.urljoin(base or "", src)
+
+
+def fetch_curl(url: str, timeout: int = 12, headers: dict | None = None, data: bytes | None = None) -> bytes | None:
+    cmd = [
+        "curl", "-sL", "--compressed", "--max-redirs", "8",
+        "--max-time", str(int(timeout)),
+        "-A", UA, "-o", "-",
+        "-w", "\n__HTTP__:%{http_code}",
+    ]
+    for key, value in (headers or {}).items():
+        if key.lower() == "user-agent":
+            continue
+        cmd.extend(["-H", f"{key}: {value}"])
+    if data is not None:
+        cmd.extend(["--data-binary", data.decode("ascii") if isinstance(data, bytes) else data])
+    cmd.append(url)
+    try:
+        out = subprocess.check_output(cmd, stderr=subprocess.DEVNULL)
+    except (OSError, subprocess.CalledProcessError) as exc:
+        log(f"  curl fail {url} ({exc})")
+        return None
+    if b"\n__HTTP__:" not in out:
+        return out or None
+    body, _, code = out.rpartition(b"\n__HTTP__:")
+    if code.strip() not in {b"200", b"206"}:
+        return None
+    return body or None
+
+
+def resolve_google_news_url(url: str) -> str:
+    """Turn a news.google.com/rss/articles/... link into the publisher URL."""
+    if "news.google.com" not in (url or ""):
+        return url
+    raw = fetch_curl(url, timeout=12, headers={"Accept": "text/html"}) or fetch(url, timeout=12, retries=0)
+    if not raw:
+        return url
+    page = raw.decode("utf-8", "replace")
+    sg = re.search(r'data-n-a-sg="([^"]+)"', page)
+    ts = re.search(r'data-n-a-ts="([^"]+)"', page)
+    aid = re.search(r'data-n-a-id="([^"]+)"', page)
+    if not (sg and ts and aid):
+        return url
+    try:
+        stamp = int(ts.group(1))
+    except ValueError:
+        return url
+    rpc_inner = json.dumps(
+        [
+            "garturlreq",
+            [
+                ["X", "X", ["X", "X"], None, None, 1, 1, "US:en", None, 1, None, None, None, None, None, 0, 1],
+                "X", "X", 1, [1, 1, 1], 1, 1, None, 0, 0, None, 0,
+            ],
+            aid.group(1), stamp, sg.group(1),
+        ],
+        separators=(",", ":"),
+    )
+    f_req = json.dumps([[["Fbv4je", rpc_inner, None, "generic"]]], separators=(",", ":"))
+    post = urllib.parse.urlencode({"f.req": f_req}).encode("ascii")
+    resp = fetch_curl(
+        "https://news.google.com/_/DotsSplashUi/data/batchexecute",
+        timeout=12,
+        headers={
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            "Referer": "https://news.google.com/",
+            "Origin": "https://news.google.com",
+        },
+        data=post,
+    )
+    if not resp:
+        return url
+    text = re.sub(r"^\)\]\}'\s*", "", resp.decode("utf-8", "replace"))
+    m = re.search(r'garturlres","(https?://[^"\\]+)"', text)
+    if m:
+        return html.unescape(m.group(1))
+    try:
+        envelopes = json.loads(text)
+    except json.JSONDecodeError:
+        return url
+    for env in envelopes:
+        if isinstance(env, list) and len(env) >= 3 and env[1] == "Fbv4je":
+            try:
+                payload = json.loads(env[2])
+            except (TypeError, json.JSONDecodeError):
+                continue
+            if payload and payload[0] == "garturlres" and isinstance(payload[1], str) and payload[1].startswith("http"):
+                return payload[1]
+    return url
+
+
+def extract_og_image(page: str, page_url: str) -> str:
+    if not page:
+        return ""
+    snippet = page[:120000]
+    for pat in (
+        r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image(?::secure_url)?["\']',
+        r'<meta[^>]+name=["\']twitter:image(?::src)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image(?::src)?["\']',
+        r'<link[^>]+rel=["\']image_src["\'][^>]+href=["\']([^"\']+)["\']',
+    ):
+        m = re.search(pat, snippet, re.I)
+        if m:
+            return _abs_url(html.unescape(m.group(1)), page_url)
+    return ""
+
+
+def _save_thumb(data: bytes, dest: Path) -> bool:
+    try:
+        from PIL import Image
+        from io import BytesIO
+        im = Image.open(BytesIO(data))
+        if im.mode not in {"RGB", "RGBA"}:
+            im = im.convert("RGB")
+        elif im.mode == "RGBA":
+            bg = Image.new("RGB", im.size, (244, 239, 228))
+            bg.paste(im, mask=im.split()[-1])
+            im = bg
+        w, h = im.size
+        if w < 80 or h < 80:
+            return False
+        # Fit a gentle 16:10 window if the image is very tall or wide.
+        target_ratio = 16 / 10
+        ratio = w / h
+        if ratio > target_ratio * 1.25:
+            new_w = int(h * target_ratio)
+            left = (w - new_w) // 2
+            im = im.crop((left, 0, left + new_w, h))
+        elif ratio < target_ratio / 1.35:
+            new_h = int(w / target_ratio)
+            top = max(0, (h - new_h) // 4)  # bias upward for faces
+            im = im.crop((0, top, w, min(h, top + new_h)))
+        im.thumbnail((640, 400), Image.Resampling.LANCZOS)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        tmp = dest.with_suffix(".tmp.webp")
+        im.save(tmp, "WEBP", quality=78, method=4)
+        tmp.replace(dest)
+        return dest.exists() and dest.stat().st_size > 800
+    except Exception as exc:  # noqa: BLE001
+        log(f"  thumb skip ({dest.name}): {type(exc).__name__}: {exc}")
+        return False
+
+
+def ensure_thumb(note: dict, section: str, prefix: str = "") -> tuple[str, bool]:
+    """Return (src, is_article_image). Falls back to the category icon."""
+    hook = SECTION_UI.get(normalize_section(section), ("FIXED", "fixed", "•"))[1]
+    fallback = f"{prefix}assets/sprites/{hook}.webp"
+    nid = str(note.get("id") or "")
+    if not nid:
+        return fallback, False
+    dest = THUMBS_DIR / f"{nid}.webp"
+    rel = f"{prefix}assets/thumbs/{nid}.webp"
+    if dest.exists() and dest.stat().st_size > 800:
+        USED_THUMBS.add(nid)
+        return rel, True
+    candidates = [note.get("image") or "", note.get("thumb") or ""]
+    page_url = note.get("url") or ""
+    if not THUMB_FETCH_ENABLED:
+        return fallback, False
+    if "news.google.com" in page_url:
+        resolved = resolve_google_news_url(page_url)
+        if resolved and resolved != page_url:
+            page_url = resolved
+    if page_url and not any(c.strip() for c in candidates if c):
+        raw = fetch(page_url, timeout=10, retries=0) or fetch_curl(page_url, timeout=10, headers={"Accept": "text/html"})
+        if raw:
+            try:
+                page = raw.decode("utf-8", "replace")
+            except Exception:
+                page = ""
+            og = extract_og_image(page, page_url)
+            if og:
+                candidates.append(og)
+    for src in candidates:
+        src = _abs_url(src, page_url)
+        if not src:
+            continue
+        raw = fetch(src, timeout=10, retries=0, headers={"Accept": "image/*,*/*;q=0.8"})
+        if not raw or len(raw) < 2000:
+            raw = fetch_curl(src, timeout=10, headers={"Accept": "image/*,*/*;q=0.8"})
+        if not raw or len(raw) < 2000:
+            continue
+        if _save_thumb(raw, dest):
+            USED_THUMBS.add(nid)
+            log(f"  thumb {nid} from {src[:80]}")
+            return rel, True
+    return fallback, False
+
 
 # (tag, line, digest). No redundant "Buffs:" / "New content:" prefix — the section header covers that.
 TEMPLATES = {
     "News": [
-        ("HOTFIX", "World state: {title}", "World state: {title}"),
-        ("UPDATED", "World state: {title}", "World state: {title}"),
+        ("HOTFIX", "{title}", "{title}"),
+        ("UPDATED", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
         ("KNOWN ISSUE", "{title}", "{title}"),
         ("FIXED", "{title}", "{title}"),
@@ -143,39 +423,39 @@ TEMPLATES = {
         ("BUFFED", "{title}", "{title}"),
         ("KNOWN ISSUE", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
-        ("UPDATED", "Experimental build: {title}", "Experimental build: {title}"),
+        ("UPDATED", "{title}", "{title}"),
     ],
     "Culture": [
         ("ADDED", "{title}", "{title}"),
-        ("UPDATED", "Cosmetic: {title}", "Cosmetic: {title}"),
-        ("BUFFED", "Meta shift: {title}", "Meta shift: {title}"),
+        ("UPDATED", "{title}", "{title}"),
+        ("BUFFED", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
     ],
     "Music": [
-        ("ADDED", "Soundtrack: {title}", "Soundtrack: {title}"),
+        ("ADDED", "New music: {title}", "New music: {title}"),
         ("BUFFED", "{title}", "{title}"),
         ("UPDATED", "Now playing: {title}", "Now playing: {title}"),
         ("PATCH", "{title}", "{title}"),
     ],
     "Science & Nature": [
-        ("ADDED", "Bestiary: {title}", "Bestiary: {title}"),
+        ("ADDED", "New find: {title}", "New find: {title}"),
         ("UPDATED", "{title}", "{title}"),
         ("HOTFIX", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
     ],
     "Slang": [
-        ("ADDED", "Players are now searching for: {title}", "Players are now searching for: {title}"),
-        ("UPDATED", "{title} is climbing the search meta.", "{title} is climbing the search meta."),
+        ("ADDED", "People are searching for: {title}", "People are searching for: {title}"),
+        ("UPDATED", "{title} is trending.", "{title} is trending."),
         ("BUFFED", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
     ],
     "Politics": [
-        ("BALANCE", "Faction balance: {title}", "Faction balance: {title}"),
+        ("BALANCE", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
         ("HOTFIX", "{title}", "{title}"),
         ("KNOWN ISSUE", "{title}", "{title}"),
         ("UPDATED", "{title}", "{title}"),
-        ("ROSTER", "Roster: {title}", "Roster: {title}"),
+        ("ROSTER", "Lineup: {title}", "Lineup: {title}"),
     ],
     "Markets": [
         ("UPDATED", "{title}", "{title}"),
@@ -188,15 +468,15 @@ TEMPLATES = {
         ("ADDED", "{title}", "{title}"),
         ("BALANCE", "{title}", "{title}"),
         ("HOTFIX", "{title}", "{title}"),
-        ("META", "Meta shift: {title}", "Meta shift: {title}"),
+        ("META", "{title}", "{title}"),
         ("KNOWN ISSUE", "{title}", "{title}"),
         ("BUFFED", "{title}", "{title}"),
         ("PATCH", "{title}", "{title}"),
-        ("DLC", "DLC: {title}", "DLC: {title}"),
+        ("DLC", "{title}", "{title}"),
     ],
     "Movies & TV": [
         ("ADDED", "{title}", "{title}"),
-        ("DLC", "Season pass: {title}", "Season pass: {title}"),
+        ("DLC", "New season: {title}", "New season: {title}"),
         ("UPDATED", "Trailer: {title}", "Trailer: {title}"),
         ("PATCH", "{title}", "{title}"),
         ("BUFFED", "{title}", "{title}"),
@@ -211,7 +491,7 @@ TEMPLATES = {
     ],
     "Sports": [
         ("BALANCE", "{title}", "{title}"),
-        ("ROSTER", "Roster: {title}", "Roster: {title}"),
+        ("ROSTER", "Lineup: {title}", "Lineup: {title}"),
         ("BUFFED", "{title}", "{title}"),
         ("NERFED", "{title}", "{title}"),
         ("UPDATED", "{title}", "{title}"),
@@ -219,7 +499,7 @@ TEMPLATES = {
         ("META", "{title}", "{title}"),
     ],
     "Weather & Disasters": [
-        ("EVENT", "Server event: {title}", "Server event: {title}"),
+        ("EVENT", "{title}", "{title}"),
         ("HOTFIX", "{title}", "{title}"),
         ("UPDATED", "{title}", "{title}"),
         ("KNOWN ISSUE", "Travel advisory: {title}", "Travel advisory: {title}"),
@@ -249,17 +529,17 @@ TEMPLATES = {
 
 KEYWORD_RULES = [
     (re.compile(r"\b(new species|species of|flying frog|fungus)\b", re.I), "ADDED",
-     "Bestiary: {title}", "Bestiary: {title}"),
+     "New find: {title}", "New find: {title}"),
     (re.compile(r"\b(snake|slither|serpent)\b", re.I), "BUFFED",
-     "Movement tech: {title}", "Movement tech: {title}"),
+     "{title}", "{title}"),
     (re.compile(r"\b(frog|whale|bird|lizard|mealybug|chimpanzee)\b", re.I), "ADDED",
-     "Bestiary: {title}", "Bestiary: {title}"),
+     "New find: {title}", "New find: {title}"),
     (re.compile(r"\b(storm|blizzard|hurricane|flood|wildfire|tornado)\b", re.I), "EVENT",
-     "Server event: {title}", "Server event: {title}"),
+     "{title}", "{title}"),
     (re.compile(r"\b(recall|undeclared)\b", re.I), "RECALL",
      "{title}", "{title}"),
     (re.compile(r"\b(trade|traded|signs with|agrees with|releasing|released)\b", re.I), "ROSTER",
-     "Roster: {title}", "Roster: {title}"),
+     "Lineup: {title}", "{title}"),
     (re.compile(r"\b(upset|blowout|beats|comeback)\b", re.I), "BALANCE",
      "{title}", "{title}"),
     (re.compile(r"\b(black friday|cyber monday|thanksgiving)\b", re.I), "ADDED",
@@ -267,7 +547,7 @@ KEYWORD_RULES = [
     (re.compile(r"\b(gas prices?|grocery prices?|egg prices?)\b", re.I), "UPDATED",
      "{title}", "{title}"),
     (re.compile(r"\b(reinstated|returns as|respawn)\b", re.I), "BUFFED",
-     "Respawn: {title}", "Respawn: {title}"),
+     "Back again: {title}", "Back again: {title}"),
     (re.compile(r"\b(ai\b|chatgpt|chatbot|artificial intelligence)\b", re.I), "UPDATED",
      "{title}", "{title}"),
     (re.compile(r"\b(chapter|volume)\b", re.I), "ADDED",
@@ -353,7 +633,7 @@ def parse_rss(data: bytes) -> list[dict]:
         name = local(item.tag)
         if name not in {"item", "entry"}:
             continue
-        title = link = source = published = ""
+        title = link = source = published = image = ""
         for child in list(item):
             cname = local(child.tag)
             if cname == "title":
@@ -364,6 +644,15 @@ def parse_rss(data: bytes) -> list[dict]:
                 published = text_of(child)
             elif cname == "source":
                 source = text_of(child)
+            elif not image:
+                maybe = _rss_image(child) if cname in {"content", "thumbnail", "image", "enclosure", "group"} else ""
+                if not maybe:
+                    url = (child.get("url") or child.get("href") or "").strip()
+                    typ = (child.get("type") or child.get("medium") or "").lower()
+                    if url and (cname in {"thumbnail", "image"} or "image" in typ or url.lower().split("?")[0].endswith((".jpg", ".jpeg", ".png", ".webp", ".gif"))):
+                        maybe = url
+                if maybe:
+                    image = maybe
         if not title:
             continue
         for sep in (" - ", " – ", " — "):
@@ -381,6 +670,7 @@ def parse_rss(data: bytes) -> list[dict]:
             "link": link.strip(),
             "source": source.strip(),
             "published": published.strip(),
+            "image": image.strip(),
         })
     return items
 
@@ -490,10 +780,13 @@ def collect_headlines() -> tuple[list[dict], list[str]]:
             if not key or key in used:
                 continue
             category = recategorize(feed["category"], entry["title"])
+            extra = {"weird": bool(feed.get("weird"))}
+            if entry.get("image"):
+                extra["image"] = entry["image"]
             note = make_note(
                 entry["title"], entry["link"],
                 entry["source"] or feed["id"].replace("_", " "),
-                category, extra={"weird": bool(feed.get("weird"))},
+                category, extra=extra,
             )
             notes.append(note)
             used.add(key)
@@ -1299,7 +1592,7 @@ def collect_market_board() -> dict:
     if nerf and nerf["change_pct"] >= 0:
         nerf = None
     if buff:
-        buff["flavor"] = f"{buff['name']} just picked up a {buff['change_pct']:+.2f}% movement-speed buff."
+        buff["flavor"] = f"{buff['name']} jumped {buff['change_pct']:+.2f}% today."
         assets_by_id = {a["id"]: a for a in assets}
         assets_by_id[buff["id"]]["flavor"] = buff["flavor"]
         # Intraday for the featured mover, when cheap.
@@ -1309,7 +1602,7 @@ def collect_market_board() -> dict:
                 time.sleep(0.2)
                 assets_by_id[buff["id"]]["h1d"] = _nasdaq_intraday(cfg_row["symbol"], cfg_row.get("assetclass") or "stocks")
     if nerf:
-        nerf["flavor"] = f"{nerf['name']} took a {nerf['change_pct']:+.2f}% durability hit."
+        nerf["flavor"] = f"{nerf['name']} dropped {nerf['change_pct']:+.2f}% today."
         assets_by_id = {a["id"]: a for a in assets}
         assets_by_id[nerf["id"]]["flavor"] = nerf["flavor"]
         if not assets_by_id[nerf["id"]].get("h1d"):
@@ -1471,10 +1764,10 @@ def _mover_cards_html(movers: list[dict], buff: dict | None, nerf: dict | None) 
         ribbon = ""
         if buff and a["id"] == buff["id"]:
             extra = " is-buff"
-            ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>'
+            ribbon = '<span class="mkt-ribbon is-buff">Got better today</span>'
         elif nerf and a["id"] == nerf["id"]:
             extra = " is-nerf"
-            ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>'
+            ribbon = '<span class="mkt-ribbon is-nerf">Took a hit today</span>'
         flavor = f'<p class="mkt-flavor">{html.escape(a["flavor"])}</p>' if a.get("flavor") else ""
         spark = spark_svg(_spark_values(a), width=180, height=56, asset_id=str(a["id"]), up=up)
         href = html.escape(a.get("url") or "#", quote=True)
@@ -1512,11 +1805,11 @@ def _block_badges(buff: dict | None, nerf: dict | None) -> str:
     badges = []
     if buff:
         badges.append(
-            f'<span class="mkt-badge is-buff">Buff of the day · {html.escape(buff["id"])} {html.escape(fmt_mkt_pct(buff["pct"]))}</span>'
+            f'<span class="mkt-badge is-buff">Got better today · {html.escape(buff["id"])} {html.escape(fmt_mkt_pct(buff["pct"]))}</span>'
         )
     if nerf:
         badges.append(
-            f'<span class="mkt-badge is-nerf">Nerf of the day · {html.escape(nerf["id"])} {html.escape(fmt_mkt_pct(nerf["pct"]))}</span>'
+            f'<span class="mkt-badge is-nerf">Took a hit today · {html.escape(nerf["id"])} {html.escape(fmt_mkt_pct(nerf["pct"]))}</span>'
         )
     return f'<div class="mkt-highlights">{"".join(badges)}</div>' if badges else ""
 
@@ -1546,7 +1839,7 @@ def for_homepage_cards(notes: list[dict]) -> list[dict]:
             continue
         n = dict(src)
         if n.get("section") == "Markets":
-            n["section"] = SECTION_FOR_TAG.get(n.get("tag") or "", "Hotfixes")
+            n["section"] = SECTION_FOR_TAG.get(n.get("tag") or "", "Fixed")
         out.append(n)
     return out
 
@@ -1580,8 +1873,8 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
 
     alerts = sum(1 for n in notes if n.get("kind") == "alert")
     weather = f'<div class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</div>' if alerts else '<div class="ws-item"><b>Weather</b> clear</div>'
-    bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
-    bug_bit = f'<div class="ws-item"><b>Known bugs</b> {bugs}</div>'
+    bugs = sum(1 for n in notes if normalize_section(n.get("section")) == "Still Broken" or n.get("tag") == "RECALL")
+    bug_bit = f'<div class="ws-item"><b>Still broken</b> {bugs}</div>'
     gas = ""
     if eia and eia.get("regular"):
         r = eia["regular"]
@@ -1670,8 +1963,8 @@ def collect_nws() -> list[dict]:
         note = make_note(headline, url, source, "Weather & Disasters", kind="alert", extra=extra)
         if sev == "Extreme" or re.search(r"Tornado|Hurricane|Tsunami", event, re.I):
             note["tag"] = "EVENT"
-            note["line"] = f"World boss: {headline}"
-            note["digest"] = f"Server event: {headline}"
+            note["line"] = headline
+            note["digest"] = headline
         notes.append(note)
         if len(notes) >= 8:
             break
@@ -1722,7 +2015,7 @@ def collect_eia() -> tuple[list[dict], dict | None]:
             tag = "UPDATED"
             title = f"{pretty} averaged ${current:.3f}/gal this week"
             line = f"Price check: {title}"
-            digest = f"Patch: {title}"
+            digest = title
         notes.append({
             "id": hashlib.sha1(f"eia:{label}".encode()).hexdigest()[:12],
             "category": "Gas & Grocery", "tag": tag, "line": line, "digest": digest,
@@ -1975,7 +2268,7 @@ def parse_weekly_file(path: Path) -> dict | None:
     except ValueError:
         return None
     if not title:
-        title = f"Weekly Patch Notes — {day.strftime('%B %-d, %Y')}"
+        title = f"This week — {day.strftime('%B %-d, %Y')}"
     return {"date": day.isoformat(), "title": title, "html": simple_md(body), "id": path.stem}
 
 def load_handwritten_weeklies() -> list[dict]:
@@ -2008,17 +2301,19 @@ def broad_filter(category: str) -> str:
     return "Life"
 
 def note_section(note: dict) -> str:
-    if note.get("section") in SECTIONS:
-        return note["section"]
+    if note.get("section"):
+        mapped = normalize_section(note["section"])
+        if mapped in SECTIONS:
+            return mapped
     if note.get("kind") in {"stock", "eia"} or note.get("category") == "Markets":
         return "Markets"
     if note.get("kind") == "holiday" or note.get("category") == "Holidays & Events":
-        return "Limited-Time Events"
+        return "Happening Now"
     if note.get("kind") == "alert" or note.get("tag") == "EVENT" or note.get("category") == "Weather & Disasters":
-        return "Limited-Time Events"
+        return "Happening Now"
     if note.get("category") == "Health & Recalls" and note.get("tag") in {"RECALL", "KNOWN ISSUE"}:
-        return "Known Bugs"
-    return SECTION_FOR_TAG.get(note.get("tag") or "", "Hotfixes")
+        return "Still Broken"
+    return SECTION_FOR_TAG.get(note.get("tag") or "", "Fixed")
 
 _REDUNDANT = re.compile(
     r"^(Buffs|Nerfs|Hotfix|New content|Known bug|Recall|Patch|Limited-time event|DLC|Upcoming DLC|Watchlist|Roster update|Balance change|Meta|Cost-of-living (?:buff|nerf)):\s*",
@@ -2027,9 +2322,9 @@ _REDUNDANT = re.compile(
 
 def annotate(note: dict) -> dict:
     note["filter"] = note.get("filter") or broad_filter(note.get("category") or "")
-    note["section"] = note_section(note)
+    note["section"] = normalize_section(note_section(note))
     text = (note.get("text") or note.get("digest") or note.get("line") or note.get("title") or "").strip()
-    text = _REDUNDANT.sub("", text).strip()
+    text = friendly_line(_REDUNDANT.sub("", text).strip())
     note["text"] = text
     return note
 
@@ -2057,9 +2352,9 @@ def load_written_patch(meta: dict) -> list[dict]:
         if not text or not url:
             continue
         tag = (raw.get("tag") or raw.get("filter") or "News & Politics").strip()
-        section = raw.get("section") or "Hotfixes"
+        section = normalize_section(raw.get("section") or "Fixed")
         if section not in SECTIONS:
-            section = "Hotfixes"
+            section = "Fixed"
         filt = tag if tag in {name for name, _ in FILTERS} else "Life"
         notes.append(annotate({
             "id": hashlib.sha1(f"written:{text}".encode()).hexdigest()[:12],
@@ -2083,6 +2378,7 @@ def organize_sections(notes: list[dict]) -> list[tuple[str, list[dict]]]:
     buckets = {s: [] for s in SECTIONS}
     for n in notes:
         annotate(n)
+        n["section"] = normalize_section(n.get("section"))
         buckets.setdefault(n["section"], []).append(n)
     return [(s, buckets[s]) for s in SECTIONS if buckets[s]]
 
@@ -2136,11 +2432,11 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
     }})();
   </script>
   <script type="application/ld+json">
-  {json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "Real Life v2026", "url": SITE_URL + "/", "description": "Satirical patch notes for real life in the United States. Every item is based on a real, linked source.", "inLanguage": "en-US"})}
+  {json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "Real Life v2026", "url": SITE_URL + "/", "description": "A satirical daily update for real life in the United States. Every item is based on a real, linked source.", "inLanguage": "en-US"})}
   </script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to patch notes</a>
+  <a class="skip" href="#main">Skip to today's update</a>
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="{esc(prefix)}index.html">
@@ -2163,7 +2459,7 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   {body}
   <footer class="site-foot">
     <div class="wrap">
-      <p><strong>Real Life v2026</strong> is a satirical changelog for life in the United States. The joke is the framing, not the facts. Health and recall items are worded carefully and always link to the official notice.</p>
+      <p><strong>Real Life v2026</strong> is a satirical daily update for life in the United States. The joke is the framing, not the facts. Health and recall items are worded carefully and always link to the official notice.</p>
       <p>Updated automatically at 8:00 AM and 6:00 PM Eastern (13:00 and 23:00 UTC). Stock quotes and charts are baked at each update. Crypto prices refresh in your browser from CoinGecko. This site is unofficial and not affiliated with the sources it links to.</p>
       <nav>
         <a href="{esc(prefix)}index.html">Latest patch</a>
@@ -2183,7 +2479,7 @@ def filters_html() -> str:
     chips = ['<button type="button" class="chip is-on" data-filter="all">All</button>']
     for name, _cats in FILTERS:
         chips.append(f'<button type="button" class="chip" data-filter="{html.escape(name)}">{html.escape(name)}</button>')
-    return f'<div class="filters" role="group" aria-label="Filter patch notes">{"".join(chips)}</div>'
+    return '<div class="filters" role="group" aria-label="Filter today\'s update">' + "".join(chips) + "</div>"
 
 
 def sprite_src(name: str, prefix: str = "") -> str:
@@ -2197,14 +2493,14 @@ def section_badge(name: str, prefix: str = "") -> str:
     )
 
 
-def entry_item(item: dict, tier: str = "featured", extra: bool = False) -> str:
-    text_raw = item.get("text") or item.get("digest") or item.get("line") or item.get("title") or ""
+def entry_item(item: dict, tier: str = "featured", extra: bool = False, *, lead: bool = False, prefix: str = "") -> str:
+    text_raw = friendly_line(item.get("text") or item.get("digest") or item.get("line") or item.get("title") or "")
     text = html.escape(text_raw)
     url = item.get("url") or ""
     url_esc = html.escape(url, quote=True)
     source = html.escape(item.get("source") or "Source")
     filt = html.escape(item.get("filter") or broad_filter(item.get("category") or ""))
-    section = item.get("section") or note_section(item)
+    section = normalize_section(item.get("section") or note_section(item))
     nid = html.escape(str(item.get("id") or ""))
     data = html.escape(" ".join([
         text_raw, item.get("title") or "", item.get("source") or "",
@@ -2212,17 +2508,46 @@ def entry_item(item: dict, tier: str = "featured", extra: bool = False) -> str:
     ]).lower())
     tweet = urllib.parse.quote(f"{text_raw} — via Real Life v2026 {url}".strip())
     share_text = html.escape(text_raw, quote=True)
-    extra_cls = " is-extra" if extra else ""
+    cls = "entry"
+    if extra:
+        cls += " is-extra"
+    thumb = ""
+    photo_note = ""
+    if lead:
+        cls += " is-lead"
+        src, is_photo = ensure_thumb(item, section, prefix)
+        kind = "is-photo" if is_photo else "is-fallback"
+        alt = html.escape(item.get("source") or "Source") if is_photo else ""
+        thumb = (
+            f'<a class="entry-thumb {kind}" href="{url_esc}" rel="noopener noreferrer">'
+            f'<img src="{html.escape(src, quote=True)}" alt="{alt}" width="320" height="200" loading="lazy" decoding="async">'
+            f"</a>"
+        )
+        if is_photo:
+            photo_note = ' · <span class="photo-credit">Photo from the source</span>'
     return (
-        f'<li class="entry{extra_cls}" id="n-{nid}" data-id="{nid}" data-filter="{filt}" data-section="{html.escape(section)}" '
+        f'<li class="{cls}" id="n-{nid}" data-id="{nid}" data-filter="{filt}" data-section="{html.escape(section)}" '
         f'data-tier="{html.escape(tier)}" data-text="{data}">'
+        f"{thumb}<div class=\"entry-body\">"
         f'<a href="{url_esc}" rel="noopener noreferrer">{text}</a>'
-        f'<span class="meta"><span class="pill">{filt}</span> · {source}'
+        f'<span class="meta"><span class="pill">{filt}</span> · {source}{photo_note}'
         f'<span class="share-group">'
-        f'<button type="button" class="share" data-share-text="{share_text}" data-share-url="{url_esc}" aria-label="Copy this patch line">Share</button>'
+        f'<button type="button" class="share" data-share-text="{share_text}" data-share-url="{url_esc}" aria-label="Copy this line">Share</button>'
         f'<a class="share-x" href="https://twitter.com/intent/tweet?text={tweet}" target="_blank" rel="noopener noreferrer" aria-label="Share this line on X">X</a>'
-        f"</span></span>"
+        f"</span></span></div>"
         f"</li>"
+    )
+
+
+def key_legend_html() -> str:
+    return (
+        '<p class="key-legend"><span class="key-legend-label">A quick key</span>'
+        '<span title="Used to be called Buffs">Leveling Up</span> means something got better. '
+        '<span title="Used to be called Nerfs">Took a Hit</span> means it got worse. '
+        '<span title="Used to be called Known Bugs">Still Broken</span> is a problem that is still around. '
+        '<span title="Used to be called Hotfixes or Bug fixes">Fixed</span> means it was corrected. '
+        "<span title=\"Used to be called New Content\">What's New</span> just arrived. "
+        '<span title="Used to be called Limited-Time Events">Happening Now</span> is a limited-time event.</p>'
     )
 
 
@@ -2231,11 +2556,13 @@ def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured", 
     for name, items in groups:
         if not items:
             continue
-        hook = SECTION_UI.get(name, ("PATCH", "hotfix", "•"))[1]
+        name = normalize_section(name)
+        hook = SECTION_UI.get(name, ("FIXED", "fixed", "•"))[1]
+        hint = SECTION_HINTS.get(name, "")
         shown = items if preview <= 0 else items[:preview]
         hidden = [] if preview <= 0 else items[preview:]
-        lis = "".join(entry_item(it, tier, extra=False) for it in shown)
-        lis += "".join(entry_item(it, tier, extra=True) for it in hidden)
+        lis = "".join(entry_item(it, tier, extra=False, lead=(i == 0), prefix=prefix) for i, it in enumerate(shown))
+        lis += "".join(entry_item(it, tier, extra=True, prefix=prefix) for it in hidden)
         more = ""
         if hidden:
             label = f"Show {len(hidden)} more"
@@ -2243,11 +2570,13 @@ def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured", 
                 f'<button type="button" class="expand" aria-expanded="false" data-more-label="{html.escape(label)}">'
                 f"{html.escape(label)}</button>"
             )
-        count = f"{len(items)} note{'s' if len(items) != 1 else ''}"
+        count = f"{len(items)} item{'s' if len(items) != 1 else ''}"
+        hint_esc = html.escape(hint, quote=True)
         chunks.append(
             f'<section class="sec-card patch-section sec-{hook} reveal" data-section="{html.escape(name)}">'
             f'<div class="sec-top">{section_badge(name, prefix)}'
-            f"<div><h2>{html.escape(name)}</h2><p class=\"sec-count\">{count}</p></div></div>"
+            f"<div><h2 title=\"{hint_esc}\">{html.escape(name)}</h2>"
+            f'<p class="sec-count" title="{hint_esc}">{count}</p></div></div>'
             f'<ul class="log">{lis}</ul>{more}</section>'
         )
     return "".join(chunks)
@@ -2311,8 +2640,8 @@ def status_row_html(notes: list[dict], stocks: list[dict], eia: dict | None, pre
         weather = f'<div class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</div>'
     else:
         weather = '<div class="ws-item"><b>Weather</b> clear</div>'
-    bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
-    bug_bit = f'<div class="ws-item"><b>Known bugs</b> {bugs}</div>'
+    bugs = sum(1 for n in notes if normalize_section(n.get("section")) == "Still Broken" or n.get("tag") == "RECALL")
+    bug_bit = f'<div class="ws-item"><b>Still broken</b> {bugs}</div>'
     gas = ""
     if eia and eia.get("regular"):
         r = eia["regular"]
@@ -2369,7 +2698,7 @@ def anime_boards_html(anilist: dict, watch_notes: list[dict], series: list[str])
     if watch_notes:
         watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}</p><ul class="log">{"".join(entry_item(n) for n in watch_notes)}</ul></div>'
     else:
-        watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}. No new pings in this patch.</p></div>'
+        watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}. No new items in this update.</p></div>'
     return '<div class="anime-extra">' + watch + '<div class="boards">' + col("Top airing", anilist.get("trending") or [], True) + col("New & upcoming", anilist.get("upcoming") or [], False) + "</div></div>"
 
 
@@ -2392,12 +2721,12 @@ def hero_html(meta: dict, prefix: str = "") -> str:
     return f"""
   <section class="hero">
     <div class="hero-copy">
-      <p class="eyebrow">Today's patch</p>
+      <p class="eyebrow">Today's update</p>
       <p class="hero-ed">{edition}</p>
       <h1 class="hero-ver">{kind}</h1>
-      <p class="hero-tag">Real news, written as a game update. Every line links to its source — we don't invent events.</p>
+      <p class="hero-tag">Real news, written like a daily update. Every line links to its source — we don't invent events.</p>
       <p class="hero-when">Published {html.escape(meta["display_date"])}</p>
-      <a class="cta" href="#latest">Read today's patch</a>
+      <a class="cta" href="#latest">See what's new</a>
     </div>
     <div class="hero-art" id="world-stage">
       <div class="world-motion">
@@ -2417,17 +2746,24 @@ def patch_post_html(meta, featured, rest, prefix="", extras="", blurb="", headin
     more_btn = ""
     more_wrap = ""
     if rest:
-        more_btn = f'<div class="more-wrap"><button type="button" class="more" id="full-changelog" aria-expanded="false" aria-controls="full-log">Full changelog ({len(rest)} more)</button></div>'
-        more_wrap = f'<div id="full-log" class="full-log" hidden><h2 class="full-h">Full changelog</h2>{rest_html}</div>'
+        more_btn = (
+            '<div class="more-wrap"><button type="button" class="more" id="full-changelog" '
+            'aria-expanded="false" aria-controls="full-log">'
+            f"The rest of today's update ({len(rest)} more)</button></div>"
+        )
+        more_wrap = (
+            '<div id="full-log" class="full-log" hidden>'
+            f"<h2 class=\"full-h\">The rest of today's update</h2>{rest_html}</div>"
+        )
     label = html.escape(meta["label"])
     head = ""
     if heading:
         head = f"""
       <header class="patch-head">
-        <p class="kicker">Patch notes</p>
+        <p class="kicker">Daily update</p>
         <h2 class="ver">{label}</h2>
         <p class="when">Published {html.escape(meta["display_date"])}</p>
-        <p class="intro">A satirical changelog for real life in the United States. Every line is based on a real, linked source. The joke is the framing, not the facts.</p>
+        <p class="intro">Real headlines from the United States, written like a daily update. Every line is based on a real, linked source. The joke is the framing, not the facts.</p>
         {f'<p class="lede market-note">{html.escape(blurb)}</p>' if blurb else ""}
       </header>
         """
@@ -2435,16 +2771,17 @@ def patch_post_html(meta, featured, rest, prefix="", extras="", blurb="", headin
         head = """
       <header class="patch-head">
         <p class="kicker">Today's notes</p>
-        <h2>What's in this patch</h2>
+        <h2>What's in today's update</h2>
       </header>
         """
     return f"""
     <article class="patch-post" id="latest" data-patch-id="{html.escape(meta.get("id") or "")}">
       {head}
       <div class="search-row">
-        <label class="search"><span class="sr">Search patch notes</span>
-        <input id="q" type="search" placeholder="Search this patch…" autocomplete="off"></label>
+        <label class="search"><span class="sr">Search today's update</span>
+        <input id="q" type="search" placeholder="Search today's update…" autocomplete="off"></label>
       </div>
+      {key_legend_html()}
       <div id="notes" class="patch-body">
         {feat_html}
       </div>
@@ -2585,7 +2922,7 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
         weekly = (
             '<section class="weekly-block reveal" id="weekly">'
             '<p class="eyebrow">This week</p>'
-            "<h2>Weekly Patch Notes</h2>"
+            "<h2>This week's recap</h2>"
             '<p class="lede">An automatic rollup of standout items from the last 7 days, until a hand-written Sunday recap is added.</p>'
             + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured", "", preview=PREVIEW_LIMIT)
             + '<p class="src"><a href="weekly/index.html">Weekly recap archive</a></p></section>'
@@ -2599,8 +2936,8 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
       {history_html(archive, meta["id"], "")}
   </main>
 """
-    desc = f"Satirical US patch notes for {meta['label']}. Real headlines framed as a game update, with every line linked to its source."
-    return render_page(title=f"Real Life {meta['label']} — Patch Notes for America", description=desc, canonical=f"{SITE_URL}/", prefix="", body=body, updated=meta["iso"], show_filters=True, current="latest")
+    desc = f"Today's update for {meta['label']}. Real headlines, written clearly, with every line linked to its source."
+    return render_page(title=f"Real Life {meta['label']} — Today's update for America", description=desc, canonical=f"{SITE_URL}/", prefix="", body=body, updated=meta["iso"], show_filters=True, current="latest")
 
 
 def render_archive_index(archive: list[dict]) -> str:
@@ -2624,7 +2961,7 @@ def render_archive_index(archive: list[dict]) -> str:
     {lis}
   </main>
 """
-    return render_page(title="Archive — Real Life v2026", description="Browse past satirical US patch notes.", canonical=f"{SITE_URL}/archive/", prefix="../", body=body, current="archive")
+    return render_page(title="Archive — Real Life v2026", description="Browse past daily updates.", canonical=f"{SITE_URL}/archive/", prefix="../", body=body, current="archive")
 
 
 def render_archive_patch(meta, notes, anilist, series, stock_mode, written=None, trends=None, eia=None) -> str:
@@ -2637,7 +2974,7 @@ def render_archive_patch(meta, notes, anilist, series, stock_mode, written=None,
     {patch_post_html(meta, featured, rest, prefix="../", extras=extras, blurb=market_blurb(stock_mode), heading=True)}
   </main>
 """
-    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived satirical US patch notes for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta.get("iso"), show_filters=True, current="archive")
+    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived daily update for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta.get("iso"), show_filters=True, current="archive")
 
 
 def render_weekly_index(recaps: list[dict]) -> str:
@@ -2651,12 +2988,12 @@ def render_weekly_index(recaps: list[dict]) -> str:
     <section class="page-hero">
       <p class="crumb"><a href="../index.html">← Latest patch</a></p>
       <h1>Weekly recaps</h1>
-      <p class="intro">Hand-written Sunday patch notes, when they exist. The automatic weekly rollup lives on the homepage the rest of the time.</p>
+      <p class="intro">Hand-written Sunday recaps, when they exist. The automatic weekly rollup lives on the homepage the rest of the time.</p>
     </section>
     {lis}
   </main>
 """
-    return render_page(title="Weekly recaps — Real Life v2026", description="Hand-written weekly patch notes for Real Life v2026.", canonical=f"{SITE_URL}/weekly/", prefix="../", body=body, current="weekly")
+    return render_page(title="Weekly recaps — Real Life v2026", description="Hand-written weekly recaps for Real Life v2026.", canonical=f"{SITE_URL}/weekly/", prefix="../", body=body, current="weekly")
 
 
 def render_weekly_page(recap: dict) -> str:
@@ -2670,7 +3007,7 @@ def render_weekly_page(recap: dict) -> str:
     <section class="weekly handwritten"><div class="prose">{recap["html"]}</div></section>
   </main>
 """
-    return render_page(title=f"{recap['title']} — Real Life v2026", description=f"Weekly patch notes recap for {recap['date']}.", canonical=f"{SITE_URL}/weekly/{recap['id']}.html", prefix="../", body=body, current="weekly")
+    return render_page(title=f"{recap['title']} — Real Life v2026", description=f"Weekly recap for {recap['date']}.", canonical=f"{SITE_URL}/weekly/{recap['id']}.html", prefix="../", body=body, current="weekly")
 
 
 
@@ -2693,7 +3030,7 @@ def write_robots_and_sitemap(archive: list[dict], recaps: list[dict], now: datet
     (SITE / "sitemap.xml").write_text("\n".join(chunks), encoding="utf-8")
 
 def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwritten, recaps, anilist, eia, series, written, board=None) -> None:
-    for path in (SITE, DATA, PATCHES, ARCHIVE, WEEKLY_OUT, SITE / "assets"):
+    for path in (SITE, DATA, PATCHES, ARCHIVE, WEEKLY_OUT, SITE / "assets", THUMBS_DIR):
         path.mkdir(parents=True, exist_ok=True)
     notes = [annotate(n) for n in notes]
     written = [annotate(n) for n in written]
@@ -2722,13 +3059,23 @@ def write_site(meta, notes, trends, stock_mode, highlights, weekly_auto, handwri
     (DATA / "archive.json").write_text(json.dumps(archive, indent=2), encoding="utf-8")
     if board:
         (DATA / "markets.json").write_text(json.dumps(board, indent=2), encoding="utf-8")
+    global THUMB_FETCH_ENABLED
+    THUMB_FETCH_ENABLED = True
     (SITE / "index.html").write_text(render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written, board=board), encoding="utf-8")
-    (ARCHIVE / "index.html").write_text(render_archive_index(archive), encoding="utf-8")
     (ARCHIVE / f"{meta['id']}.html").write_text(render_archive_patch(meta, notes, anilist, series, stock_mode, written, trends, eia), encoding="utf-8")
+    THUMB_FETCH_ENABLED = False
+    (ARCHIVE / "index.html").write_text(render_archive_index(archive), encoding="utf-8")
     (WEEKLY_OUT / "index.html").write_text(render_weekly_index(recaps), encoding="utf-8")
     for recap in recaps:
         (WEEKLY_OUT / f"{recap['id']}.html").write_text(render_weekly_page(recap), encoding="utf-8")
     write_robots_and_sitemap(archive, recaps, now_et())
+    if THUMBS_DIR.exists():
+        stale = 0
+        for thumb in THUMBS_DIR.glob("*.webp"):
+            if thumb.stem not in USED_THUMBS:
+                thumb.unlink()
+                stale += 1
+        log(f"  thumbs kept={len(USED_THUMBS)} pruned={stale}")
     log(f"Wrote site for {meta['label']} ({len(notes)} notes, featured written={len(written)}, archive={len(archive)})")
 
 
