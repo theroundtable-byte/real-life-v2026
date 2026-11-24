@@ -7,11 +7,53 @@
     "month": 11,
     "week": 4,
     "day": 23,
-    "iso": "2026-11-23T22:08:39-05:00",
-    "display_date": "Monday, November 23, 2026, 10:08 PM ET"
+    "iso": "2026-11-23T22:13:36-05:00",
+    "display_date": "Monday, November 23, 2026, 10:13 PM ET"
   },
   "stock_mode": "majors",
   "trends": [
+    {
+      "title": "amber alert",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=amber+alert",
+      "news_url": "https://www.syracuse.com/crime/2026/11/amber-alert-issued-for-abduction-of-baby-in-cayuga-county.html",
+      "news_source": "Syracuse.com"
+    },
+    {
+      "title": "raptors",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=raptors",
+      "news_url": "https://sports.yahoo.com/articles/5-big-questions-ahead-bucks-200003980.html",
+      "news_source": "Yahoo Sports"
+    },
+    {
+      "title": "where is the super bowl this year",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=where+is+the+super+bowl+this+year",
+      "news_url": "https://www.imax.com/pr/espn-walt-disney-company-nfl-and-imax-bring-super-bowl-imax",
+      "news_source": "IMAX"
+    },
+    {
+      "title": "trevon diggs",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=trevon+diggs",
+      "news_url": "https://www.seahawks.com/news/seahawks-sign-trevon-diggs-bobby-hart-to-53-man-roster",
+      "news_source": "Seattle Seahawks"
+    },
+    {
+      "title": "vcu basketball",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=vcu+basketball",
+      "news_url": "https://www.golocalprov.com/sports/preview-of-pcs-critical-trip-to-hawaii-kevin-stacom",
+      "news_source": "Go Local Prov"
+    },
+    {
+      "title": "toronto maple leafs",
+      "traffic": "500+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=toronto+maple+leafs",
+      "news_url": "https://www.blogto.com/sports_play/2026/11/auston-matthews-stares-anthem-singer/",
+      "news_source": "blogTO"
+    },
     {
       "title": "what happened to tom jackson",
       "traffic": "2000+",
@@ -39,48 +81,6 @@
       "url": "https://trends.google.com/trends/explore?geo=US&q=jason+kelce",
       "news_url": "https://www.instyle.com/taylor-swift-niece-wyatt-cheer-on-travis-kelce-kansas-city-chiefs-game-12274200",
       "news_source": "InStyle"
-    },
-    {
-      "title": "steve harvey",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=steve+harvey",
-      "news_url": "https://www.axios.com/2026/11/24/thanksgiving-air-travel-record-expected",
-      "news_source": "Axios"
-    },
-    {
-      "title": "usher chris brown tour fire performer",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=usher+chris+brown+tour+fire+performer",
-      "news_url": "https://www.tmz.com/2026/11/22/usher-and-chris-brown-tour-fire-performer-falls-off-stage/",
-      "news_source": "TMZ"
-    },
-    {
-      "title": "bryan cook",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=bryan+cook",
-      "news_url": "https://sports.yahoo.com/articles/bengals-bryan-cook-suffers-injury-023647371.html",
-      "news_source": "Yahoo Sports"
-    },
-    {
-      "title": "matthew stafford",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=matthew+stafford",
-      "news_url": "https://sports.yahoo.com/articles/full-practice-matthew-stafford-monday-220418035.html",
-      "news_source": "Yahoo Sports"
-    },
-    {
-      "title": "jazz - lakers",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jazz+-+lakers",
-      "news_url": "https://sports.yahoo.com/articles/lakers-optimistic-austin-reaves-availability-022245376.html",
-      "news_source": "Yahoo Sports"
-    },
-    {
-      "title": "derek hough",
-      "traffic": "1000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=derek+hough",
-      "news_url": "https://people.com/derek-hough-says-neighbor-really-inappropriate-physically-kid-12275560",
-      "news_source": "People.com"
     }
   ],
   "notes": [
@@ -115,6 +115,21 @@
       "text": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space"
     },
     {
+      "id": "ba59970075a9",
+      "category": "News",
+      "tag": "EVENT",
+      "line": "Server event: Bomb cyclone? Storm to wallop East Coast",
+      "digest": "Server event: Bomb cyclone? Storm to wallop East Coast",
+      "title": "Bomb cyclone? Storm to wallop East Coast",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdU5YVU5aQmwydFp6TDJpZ0JWMVpWNDVQQVVuOFBWT2tYcTBDLXIxVVg4clpzT2wtSVVZalJkYWk3d0xVd2Y2T252YnY2OUdQWVJISHFoSGIxbVZWYWhobjNEZTl2Um9USUNCa2hwOTVueDB1RDgtalRLVHRxTE80bWdrUWJNZllMMk1KdkdjOFE0WmxfQXBMSVJ0eVlNVnpQMGxIX3R2OW41Y0tNM0xZalo3dEFRT25V?oc=5",
+      "source": "USA Today",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Limited-Time Events",
+      "text": "Server event: Bomb cyclone? Storm to wallop East Coast"
+    },
+    {
       "id": "1ab05a7f3c98",
       "category": "News",
       "tag": "PATCH",
@@ -130,19 +145,19 @@
       "text": "California Democrat Rep. Gomez resigns following ethics report on sexual misconduct allegations"
     },
     {
-      "id": "fdb4c348c658",
+      "id": "ec9f343658d3",
       "category": "News",
       "tag": "FIXED",
-      "line": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
-      "digest": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
-      "title": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAxeHBZeVU0VUJqbTZMY3JYZlVwcFVqak05aURsLTZOYU5uUEMzc2VvX2djLUhhWFJ5YlBUQ1pHX1laYzViNFRreFd2VEdiX1B2TnZrcEFaenhCdl90RWkyb0JobUtoUm5BLThhclo1YXptenlrWTVhaw?oc=5",
-      "source": "CBS News",
+      "line": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
+      "digest": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
+      "title": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNkttSjlveXdrMHJKLVNYMWNTMFh3YlJtLXRtTXcwUnI2Z3VMOWJPajRpelJzRDk0ZG0xekVqSlpoM1dac1RwU045bjdjREd3NENUYTdHcHFiMEt3WWdVcDA4S3JMOVBfR2hNdV9YLXpiNTd6OC01QzctQmxaX2I4TmNmLXd4MVJxZkZ5T09NT01uZHhpYVNKQ052YVUybll3SHl1MTBNMGx2Um1vekdPTVptQU1XUQ?oc=5",
+      "source": "AP News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Hotfixes",
-      "text": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship"
+      "text": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news"
     },
     {
       "id": "0a0d4230ac5e",
@@ -158,36 +173,6 @@
       "filter": "News & Politics",
       "section": "Hotfixes",
       "text": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle"
-    },
-    {
-      "id": "4cf5c3832e39",
-      "category": "News",
-      "tag": "EVENT",
-      "line": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
-      "digest": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
-      "title": "As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOeGVxQjBhSFZySWJLdFVPQVpiNmx1UDZwempXRWVPVlhoQnJLXzNOSWlhaDhtWjRFY3MzbmQyYWNfUGhqcWpja0FoTzl5cEFZNGpsdUZoblFfenVGNmpLZVBkOUVKM0Q1clkycjVuWjItbHlBLVZNbzJ2S0NBaFdjTg?oc=5",
-      "source": "The New York Times",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Limited-Time Events",
-      "text": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse"
-    },
-    {
-      "id": "669ba202f5ae",
-      "category": "News",
-      "tag": "UPDATED",
-      "line": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
-      "digest": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
-      "title": "Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYnFzVFZqMjBjY2Y1cll0UUxLU2VQMktTZDQ5QmFpaENUUzBXeHJJRS1nQUtpLUdhYVFVbnUxaGI1d1lWc0lwSUM1MWVNcGY0MlVEY3dDbFRXbGxMX3BvRzMzYnFhcTZFUG1xcTh6bDRlQVNhR1JlVmxxVEJ6S2xCZjZxRDgtcGFZWndwUUJ3RkdGLWFDakE?oc=5",
-      "source": "AP News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa"
     },
     {
       "id": "676ae0e87066",
@@ -220,19 +205,19 @@
       "text": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel"
     },
     {
-      "id": "a002755d6807",
+      "id": "71b5a9315920",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
-      "digest": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
-      "title": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zRkxrYlpPZ3M1bnlNRGctNWVYZjEzODZvaGFoUm5FWUN3eEFnREUwWEUzLTQwUHBMYklkV2hPdzM1YnBzdmRaaTlyV1luaTNEVmJ5aVhsNGZLbUREMUpVYXc2UFdCYndYYy1pMDBCd0k1WUJH0gF6QVVfeXFMTWtLWmZ0MUZ4NzlSR2lMNERsNWJkWlFjdWVfZ1R1cXRhVkJVWlFGWDdlaXJLM1VzNGdVUzVGWFE1VWtfTzRmTks4UjdqeDM1VjZaQ0hIQWJlSlppQkZ1RjNzNFZpQndrbm5LcVM2eE9ScHYtTTFYb1JvcGc?oc=5",
-      "source": "The Hill",
+      "tag": "KNOWN ISSUE",
+      "line": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "digest": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcVdZZl9tRjc0WjhZbUY0NVZvdTRDQ01ZOTl4RmZUQndRR0ZHRmpkRVJ6ZjFCQzJYVml0cnoycjNWaW1rWWVENmJHbS1xaHZLc1U5azdFRmU4UmdDa0thQmlkeW9GZlhmeElDTS1NWXFHUmJPOFFBZU1rbml2dWxQQnRMVTMwSmxDTDFPQU92WTJBaUNEclZB?oc=5",
+      "source": "AP News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction"
+      "section": "Known Bugs",
+      "text": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction"
     },
     {
       "id": "ca65b433903c",
@@ -248,6 +233,21 @@
       "filter": "News & Politics",
       "section": "Hotfixes",
       "text": "Rain Storms Overwhelm San Francisco\u2019s Sewers, Sending Wastewater Into the Streets"
+    },
+    {
+      "id": "4c421bdd61e9",
+      "category": "News",
+      "tag": "KNOWN ISSUE",
+      "line": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "digest": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "title": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdndzQTF2WUh5cGs3VFRkeC1MbkRwVmZtZXBoSmNQRmNmMTNIZzF6ZDBlLW9IbExDcTV1anppUHA3RDdfcDdBSGVqRVFxVEFmTFZPMVNiRm80OFp0b1RhQ3BvZjIzZWZEZ2pPMWtTcnJBUnFkY05INWR2WWJHa2MxdDhWM01iQ2RadmtQbGlDNERDTUFlVi1GcGt2dw?oc=5",
+      "source": "The New York Times",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Known Bugs",
+      "text": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week"
     },
     {
       "id": "dc1ee295e069",
@@ -310,21 +310,6 @@
       "text": "'Medicare for all' is back on the drawing board. Does it stand a better chance this time?"
     },
     {
-      "id": "f5e6ab4228d1",
-      "category": "Tech",
-      "tag": "KNOWN ISSUE",
-      "line": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "digest": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "title": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPclgzZzdTUURYSmdheC1iVEg4SkJTOUxYMDZoaGttRU9leTlENGs4RkMwLVk0UG9yOTA2b0VWd2U0b0l1UUJHOGJmTDRtMTF1ZmF5TU9hU2Q2S01vUU00eUszbWlaTDZET202OHBuWDctYkgxUjd4Y0Rxa2RUVkpFSXJ2NkVkWTl3bUZMYjdwZTZhbVNFZFBj?oc=5",
-      "source": "AP News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "Known Bugs",
-      "text": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action"
-    },
-    {
       "id": "115ffefc1091",
       "category": "Tech",
       "tag": "BUFFED",
@@ -370,19 +355,19 @@
       "text": "Ladybird, the first new browser engine in years, is now available to test"
     },
     {
-      "id": "cee90a70fc8e",
+      "id": "f5e6ab4228d1",
       "category": "Tech",
-      "tag": "ADDED",
-      "line": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "digest": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "title": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44WWEwV2xkLVh1VG84QUNrdm8tX3FWTjVZak1wNnJGa0hHbHhPSmUxRkFBeVp0R1JvQmUtYXVSb18tQjItc1RBN25uZmVfZjNjSVZ0QnhfaG56bzdVbWFXQzFUa1lkY3dWLU1EM240WW0?oc=5",
-      "source": "Gizmodo",
+      "tag": "KNOWN ISSUE",
+      "line": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "digest": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "title": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPclgzZzdTUURYSmdheC1iVEg4SkJTOUxYMDZoaGttRU9leTlENGs4RkMwLVk0UG9yOTA2b0VWd2U0b0l1UUJHOGJmTDRtMTF1ZmF5TU9hU2Q2S01vUU00eUszbWlaTDZET202OHBuWDctYkgxUjd4Y0Rxa2RUVkpFSXJ2NkVkWTl3bUZMYjdwZTZhbVNFZFBj?oc=5",
+      "source": "AP News",
       "kind": "headline",
       "weird": false,
       "filter": "Tech & Science",
-      "section": "New Content",
-      "text": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring"
+      "section": "Known Bugs",
+      "text": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action"
     },
     {
       "id": "00acff02496a",
@@ -400,6 +385,21 @@
       "text": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'"
     },
     {
+      "id": "cee90a70fc8e",
+      "category": "Tech",
+      "tag": "ADDED",
+      "line": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "digest": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "title": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44WWEwV2xkLVh1VG84QUNrdm8tX3FWTjVZak1wNnJGa0hHbHhPSmUxRkFBeVp0R1JvQmUtYXVSb18tQjItc1RBN25uZmVfZjNjSVZ0QnhfaG56bzdVbWFXQzFUa1lkY3dWLU1EM240WW0?oc=5",
+      "source": "Gizmodo",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "New Content",
+      "text": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring"
+    },
+    {
       "id": "c4006f166199",
       "category": "Culture",
       "tag": "BUFFED",
@@ -415,19 +415,19 @@
       "text": "Meta shift: \u2018Blade Runner 2099\u2019 Rotten Tomatoes Critics\u2019 Score Is Below Both \u2018Blade Runner\u2019 Movies"
     },
     {
-      "id": "3591b09cd098",
+      "id": "9c7a2d59b06a",
       "category": "Movies & TV",
-      "tag": "UPDATED",
-      "line": "Trailer: \u2018Avengers: Doomsday\u2019 Final Trailer Shows Major X-Men Moment",
-      "digest": "Trailer: \u2018Avengers: Doomsday\u2019 Final Trailer Shows Major X-Men Moment",
-      "title": "\u2018Avengers: Doomsday\u2019 Final Trailer Shows Major X-Men Moment",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbUFqVlZubmZBQnBsazVlVERKZUItUnZXZHBlTWpNSUhDYjh3b3hiZHNUSVZ2SUotTHVZRllnN2RuSk1tNEpOemRXeWdvVzhCR1h3eUQtMEw5SS1DWGNQUjY1bUZ6aGx6UUJRbkZFNzR2ZGFfZDVLcFE0b0NlTlVCYkl2aGxZaUJlT0dQbTA1Vy04VDF2OWxPSVp5QThKTU5lcEU4?oc=5",
-      "source": "The Hollywood Reporter",
+      "tag": "ADDED",
+      "line": "Marvel crams every superhero ever into Avengers: Doomsday final trailer",
+      "digest": "Marvel crams every superhero ever into Avengers: Doomsday final trailer",
+      "title": "Marvel crams every superhero ever into Avengers: Doomsday final trailer",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZUZTcjNfaE1FcnQ0NTFDVldwTDNsY2ZfaGFYcC05Y2hLOXFvS0RxVHpWZTlEd280VEJjWmhfUlRrUERtVUlvZG5jNFBzRlZfbkRoZnVIYzN5ZHVGSGNwdnduQjNZQ2VINmJMX3BVTjFCdzRvVmRJVmdxQ0t3d3JRNk05SFU2bFkwdE1NcHQxbnRLUDBGLWxrQk1yei1uVmdlOVJ6SEd5V1Y3N2NCSk1hcA?oc=5",
+      "source": "Ars Technica",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
-      "section": "Hotfixes",
-      "text": "Trailer: \u2018Avengers: Doomsday\u2019 Final Trailer Shows Major X-Men Moment"
+      "section": "New Content",
+      "text": "Marvel crams every superhero ever into Avengers: Doomsday final trailer"
     },
     {
       "id": "38c67fefd7a1",
@@ -445,6 +445,21 @@
       "text": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says"
     },
     {
+      "id": "e09110481d88",
+      "category": "Movies & TV",
+      "tag": "DLC",
+      "line": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "digest": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "title": "Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYTdSdEVOLTBsRHVNekJ0SjNDOG8zN3hvamEwaEJsZkxscVk4dkhvS253YUFPMHltbzR3X3ZfSGNJTF9MZGpkTVJtN0JSVGN6cEsyQ01Yd183QU9UQUVYLUs3c3JoQzhLZUhmUmdGS2RkdG5FcnFETGt0RWhhSXZfNml1bDJCTGd4UV9kSXk1UnM1V0M4LTB4RngwWFNNNTBvUFNn?oc=5",
+      "source": "Variety",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Season pass: Steven Spielberg to Direct Western Movie Starring Cillian Murphy, Jessie Buckley; Paul Thomas Anderson to Write Script Based on \u2018The Heart in Winter\u2019"
+    },
+    {
       "id": "5f1949461316",
       "category": "Movies & TV",
       "tag": "PATCH",
@@ -458,21 +473,6 @@
       "filter": "Entertainment",
       "section": "Hotfixes",
       "text": "Bela Bajaria Says Her Phone Has Been Ringing Since Netflix Exit, But \u201cI\u2019m Not Really A \u2018Just Do The Exact Same Thing\u2019 Kind Of Person\u201d"
-    },
-    {
-      "id": "f0987a2425c5",
-      "category": "Culture",
-      "tag": "BUFFED",
-      "line": "Meta shift: Seth Rogen says starring in hit \u201990s show was so bad he had a \u2018nervous breakdown\u2019",
-      "digest": "Meta shift: Seth Rogen says starring in hit \u201990s show was so bad he had a \u2018nervous breakdown\u2019",
-      "title": "Seth Rogen says starring in hit \u201990s show was so bad he had a \u2018nervous breakdown\u2019",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbkNLYU5IWkNEa0NOeWY2MWtUanNGYXliVDdaUXU2QjB1MWRQQXl4Q204V2QtX21ianZRaFcwcXVHYjc0cFVLUGNjNnFGMkM2MHlBc2tyR00wcFdXRmFTOVFWTjFyMEI2aVZBNWhISEVSLXYwSi1RYTNYd2RGQTNiVURVWWFyV3EwbTRLRXJEOXpvMnpFYXEtSkpSbzlnT0RyX3hoVHpMcWNIOWFZQ2VQbjVMeEp4ZE84MzFFdFVwSzNBQQ?oc=5",
-      "source": "Page Six",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Buffs",
-      "text": "Meta shift: Seth Rogen says starring in hit \u201990s show was so bad he had a \u2018nervous breakdown\u2019"
     },
     {
       "id": "d0965426bd38",
@@ -775,21 +775,6 @@
       "text": "For the First Time in 85 Years, Two New Howler Monkey Species Discovered in the Amazon"
     },
     {
-      "id": "9b74b88c16d6",
-      "category": "Science & Nature",
-      "tag": "ADDED",
-      "line": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
-      "digest": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
-      "title": "Tiny new species of flying frog found in Indonesian mountains",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQVUFtOXR6VWhOUEN3Z2k5dUduWnFQQ3NNdktaNVQyMnQ2THNHcjdIQ3V1M2kzbzBhaWd6T0VBWE5fRjhlSHFPcVlwNldoWkpkOTFIUzk0NHRTR3B6TVhuaS1UbmR5bUNwT0V5SEhGWW1DVGoyVTYxc2x1LXo2RFVkVG1rTW9Reml1TWlBN0QwOGZjT1plaVVGTlJ2bGc0LWlTX0xISHREUW42d2UtOWQ2VjVSWmVzRW5lMVF4ODV4ZmxxSjhUY2x2VndYVXcxS0lVNUZTSGVsMm1UQnROeGhyekx6dWdLeGxFNDFCWEQyUHE?oc=5",
-      "source": "Key Biscayne Portal",
-      "kind": "headline",
-      "weird": true,
-      "filter": "Tech & Science",
-      "section": "New Content",
-      "text": "Bestiary: Tiny new species of flying frog found in Indonesian mountains"
-    },
-    {
       "id": "8d009f703d43",
       "category": "Science & Nature",
       "tag": "ADDED",
@@ -803,6 +788,21 @@
       "filter": "Tech & Science",
       "section": "New Content",
       "text": "Bestiary: A New Species of Fungus in the Wintergreen Gorge?"
+    },
+    {
+      "id": "9b74b88c16d6",
+      "category": "Science & Nature",
+      "tag": "ADDED",
+      "line": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
+      "digest": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
+      "title": "Tiny new species of flying frog found in Indonesian mountains",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQVUFtOXR6VWhOUEN3Z2k5dUduWnFQQ3NNdktaNVQyMnQ2THNHcjdIQ3V1M2kzbzBhaWd6T0VBWE5fRjhlSHFPcVlwNldoWkpkOTFIUzk0NHRTR3B6TVhuaS1UbmR5bUNwT0V5SEhGWW1DVGoyVTYxc2x1LXo2RFVkVG1rTW9Reml1TWlBN0QwOGZjT1plaVVGTlJ2bGc0LWlTX0xISHREUW42d2UtOWQ2VjVSWmVzRW5lMVF4ODV4ZmxxSjhUY2x2VndYVXcxS0lVNUZTSGVsMm1UQnROeGhyekx6dWdLeGxFNDFCWEQyUHE?oc=5",
+      "source": "Key Biscayne Portal",
+      "kind": "headline",
+      "weird": true,
+      "filter": "Tech & Science",
+      "section": "New Content",
+      "text": "Bestiary: Tiny new species of flying frog found in Indonesian mountains"
     },
     {
       "id": "72f0c8cd2336",
@@ -880,6 +880,21 @@
       "text": "Bestiary: NYC pol sets record straight as viral \u2018eyes\u2019 video sparks looney lizard people theories: \u2018Full-blown \u2018Men In Black\u201d"
     },
     {
+      "id": "dab06c00bedd",
+      "category": "News",
+      "tag": "KNOWN ISSUE",
+      "line": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
+      "digest": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
+      "title": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQREU3NE56V0YtRTZ6M0d1VVRKdi1fWGRRQTk0SDkza0Y3elNxQVZkTDk3RnNiRGxzVktKdXJfUFhrWWF2Y0FEcGwzZkhKSklZbUdfV2JyVk9aTHNLTG50aDZTODVyYTRDLWxudkJXZVZzY0V6ODZVanJvc3NrRWlidUlCTGtoVXprWG0zbGR5LXl3eEYwZlFMeDJKalpXUVV1OUZNa0FiTExEejFGVFFWdmpqeVl2cDZUS0dMN1BOTXVpSlduTzhLUWZjN3p5a1NaM2fSAdcBQVVfeXFMT2doLUdIM0lZTFZVUEN1V010eWlVMFdqOHlvaURDcWY2dmlmellHSlNxdjBoRUZWRHFnZzJMNUN5U3U3T04zVW9nazhIdE1lYlNVWFNiVXloakM1MFVPOTZzaGJuQlozbEp1ZGhrZEZueG1yMlRGc0dzTEg5S1dsRHk0aVJ4Y2JVaVljWEZtRmxJM0Qyc1JxanBDRlFBZlFQYmtndlRKaVZaUGxiaU9pRmxhbVU2M2VUZ25uOVYwYjhnT3Q4S0h3NGdNUVM0R1QxaUs1V2t3VW8?oc=5",
+      "source": "NewsNation",
+      "kind": "headline",
+      "weird": true,
+      "filter": "News & Politics",
+      "section": "Known Bugs",
+      "text": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death"
+    },
+    {
       "id": "8aaef90e0726",
       "category": "News",
       "tag": "KNOWN ISSUE",
@@ -910,21 +925,6 @@
       "text": "World state: \u2018Mitt and Ted\u2019 recounts how a political odd couple changed U.S. healthcare"
     },
     {
-      "id": "5ddd05e931ad",
-      "category": "News",
-      "tag": "PATCH",
-      "line": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
-      "digest": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
-      "title": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE94VFB2QTlTX0NENXBHTjZrZk1BaGJCT01tVndHaFhkV1I5NG5RRlRnS1hxVzNXX2FZSXlZeWItQlA3UzJ4MC14cUxvekswdEcxYTl5WmhjZ19ublN5RXhZQmJjN0hrdUNPUXlKZjd1a0pkQQ?oc=5",
-      "source": "CBS News",
-      "kind": "headline",
-      "weird": true,
-      "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\""
-    },
-    {
       "id": "74a2d31167b5",
       "category": "Politics",
       "tag": "HOTFIX",
@@ -940,34 +940,49 @@
       "text": "Hegseth's Former Chief of Staff Says Defense Secretary Has 'Napalmed' Bridges With Congress and Should Resign"
     },
     {
-      "id": "99fb54402a28",
+      "id": "3abb7de1702b",
       "category": "Politics",
       "tag": "ROSTER",
-      "line": "Roster: Schumer vows to investigate circumstances around Jensen Huang\u2019s reinstatement",
-      "digest": "Roster: Schumer vows to investigate circumstances around Jensen Huang\u2019s reinstatement",
-      "title": "Schumer vows to investigate circumstances around Jensen Huang\u2019s reinstatement",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZ0lWQWZUNmNEQzEzUzI4TzdjOXRZVE4zeWRyTC1ELTdYNlhwOEl1d1VaT2RRY3BkNHdGSmd2ZHpESnJLbjY2QUlZWnVWcFhJbVJFekpsUEhSZWxQMnVKRlhqWlVFVUptZktPTy0zdjVkdzY5M2ExMmRjVV9oajFGQ05hS01LTElVMVZwcjRSSG5lSFB2SzZfU09OVjh0QUtjM2c?oc=5",
+      "line": "Roster: Jensen Huang's return to Nvidia sparks bipartisan backlash on Capitol Hill",
+      "digest": "Roster: Jensen Huang's return to Nvidia sparks bipartisan backlash on Capitol Hill",
+      "title": "Jensen Huang's return to Nvidia sparks bipartisan backlash on Capitol Hill",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5jS1FHa3lIV05rSE5iLTZ1WTQ3MGtCRUdhUTZkZUFTRktOYzZPVUVuRXVSTHlIYTdmSXlrSi1VTmZ1VDdPYVRDdFQ5dkFjZzBuX2pGek5XSml0QlNnX3lxQm9IanY1U2FtRy1idmduNEVPUUhlc2dsTktKbm1RUQ?oc=5",
+      "source": "Axios",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Buffs",
+      "text": "Roster: Jensen Huang's return to Nvidia sparks bipartisan backlash on Capitol Hill"
+    },
+    {
+      "id": "637a4c1814ec",
+      "category": "Politics",
+      "tag": "HOTFIX",
+      "line": "Key House Democrat will oppose permitting reform bill",
+      "digest": "Key House Democrat will oppose permitting reform bill",
+      "title": "Key House Democrat will oppose permitting reform bill",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSFlXQUF2SmtzMXR3cC1vS2tCMGdiNDZONWNlbm0xLWo4QnlHdnJHNDFLOHhKNU9HeWxaRXFNODdPTER1ZHlqTFFrbVhwNVY3bGtnVjZkSmIteGY3UGtqTE1FSU4xZ1N3V004ejlpdC03a2JPRlREVndDaWFuQVl4ZXNhRjR4d9IBiwFBVV95cUxPWGhWTkVuTDdGYjZ0T1RvWl91cDVndk5pMUpzMTdXRzctVzhOT1d6R1NnTERycEVtZ1dEQ3dxOU1DZlZfZWpsTTdoVlRvMHdsWnl2eGRFbDk1blRjekNEcFdBaVAtdktoMFZVWV90RFlSUDRYd3ItdFRBNE5aQ1QxRi1wTVdxY0p4Qm5N?oc=5",
+      "source": "The Hill",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Hotfixes",
+      "text": "Key House Democrat will oppose permitting reform bill"
+    },
+    {
+      "id": "a1d2c85e5d79",
+      "category": "Politics",
+      "tag": "ROSTER",
+      "line": "Roster: Senate schedules Jensen Huang hearing",
+      "digest": "Roster: Senate schedules Jensen Huang hearing",
+      "title": "Senate schedules Jensen Huang hearing",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcjd3VE9YUEVubzNBZGswajJJU2pqU2hvMjY3X2R2UE9fMDlybEQ2a3ZFb0o4NUVxd2ZlSHlMUkxNeHdodG81SFdsQlpFY3RNZ2FEd21HZ09DRXYwcldvWmRXLWF0NG5xeFVqN3pIdmJtbFRiVnlxREd1NmdXQ2Y1ZkdMVm5vcjZBaTJCVllQYVdrZmo1dGZoT3BHQ1RSN0pOMWgta0FUZ3VxeHAtczI1c2VnZjByczZTNmc?oc=5",
       "source": "Politico",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Buffs",
-      "text": "Roster: Schumer vows to investigate circumstances around Jensen Huang\u2019s reinstatement"
-    },
-    {
-      "id": "a836375c7381",
-      "category": "Politics",
-      "tag": "HOTFIX",
-      "line": "Katie Britt says Nvidia CEO Jensen Huang must answer for \u2018national security concerns\u2019",
-      "digest": "Katie Britt says Nvidia CEO Jensen Huang must answer for \u2018national security concerns\u2019",
-      "title": "Katie Britt says Nvidia CEO Jensen Huang must answer for \u2018national security concerns\u2019",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSVVnOG1uNWdJQXc5YWxLYjFwT0JsSnRKeThJeEphMjdLdEZzMy1GdER1VFRoUmxxMkZqOWwzQng1YmdpVFJXTko2d2hQdEJqM0dVRG1VblR5aFFfanpjZzFJazYydXVxcGpqZ05IM0RnWjV2SmlRN2puZlhBMG1NZ0ltUWhqMU1JY3RhaTNLUmFSWlhoWDhzYk9HSUpXMU9HWGNSOXpFcGQyTUdSbkxzYmkySTF5QXdpcDhLOUlQekY1Zw?oc=5",
-      "source": "AL.com",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "Katie Britt says Nvidia CEO Jensen Huang must answer for \u2018national security concerns\u2019"
+      "text": "Roster: Senate schedules Jensen Huang hearing"
     },
     {
       "id": "257bae7c48f5",
@@ -998,21 +1013,6 @@
       "filter": "News & Politics",
       "section": "Known Bugs",
       "text": "Congress is \u2018out of time\u2019 to decide on reconciliation, needs to settle topline spending: Sen. Coons"
-    },
-    {
-      "id": "77959624c185",
-      "category": "Politics",
-      "tag": "ROSTER",
-      "line": "Roster: Trump, Jensen Huang, and American Communism",
-      "digest": "Roster: Trump, Jensen Huang, and American Communism",
-      "title": "Trump, Jensen Huang, and American Communism",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBXU2Z6WTNDSEYtRlhKX2RnZ2xDRVZfejJoNmZmSndsYTY1UjZLbUZHdnVXMVVMYzNwdko1cHRtajY1RGs0eGZrNnVkeHB0RkM4aU1CSnhxa3JFNUN0YmY3ZFhVZ2E5S0pHVTRtVm5ZRXltVzBqM25IVnRn?oc=5",
-      "source": "The Bulwark",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Buffs",
-      "text": "Roster: Trump, Jensen Huang, and American Communism"
     },
     {
       "id": "0bbbb7b06634",
@@ -1405,21 +1405,6 @@
       "text": "How to Play Grand Theft Auto VI in the Cloud and with Remote Play"
     },
     {
-      "id": "764ea3c4213f",
-      "category": "Gaming",
-      "tag": "ADDED",
-      "line": "Best early Black Friday Nintendo Switch deals live now",
-      "digest": "Best early Black Friday Nintendo Switch deals live now",
-      "title": "Best early Black Friday Nintendo Switch deals live now",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR3o4ZEk4eVRpUjhhZ3pvUUhjUDRNYWhMUE5EWENqOHVVQXY1cUdnbmxZVW1IYTl0VXE2VDA1OXRtWTgzYTNNTVF2YlZNRW8xUVNUTmU3ckx1ektRQlVfWHl3QXpnekpSenZqOWdHUS1wOXZKU0hSSUV1OU83Q0lZMnQzVzkzLVFselBnVUUwSHVzM0lUUWs4czh3WmE?oc=5",
-      "source": "ZDNET",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Best early Black Friday Nintendo Switch deals live now"
-    },
-    {
       "id": "4456e2e5ad0f",
       "category": "Gaming",
       "tag": "ADDED",
@@ -1433,6 +1418,21 @@
       "filter": "Entertainment",
       "section": "New Content",
       "text": "GTA 6 boots on PC only 3 hours after Xbox executable leaked"
+    },
+    {
+      "id": "d309f2f921f9",
+      "category": "Gaming",
+      "tag": "KNOWN ISSUE",
+      "line": "GTA 6 leaker reportedly releases file needed to run leaked Xbox build",
+      "digest": "GTA 6 leaker reportedly releases file needed to run leaked Xbox build",
+      "title": "GTA 6 leaker reportedly releases file needed to run leaked Xbox build",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWi1TNlMzX2pabjF5djdEcUlPWjlnSWhUOW11MTVWTFlaZmhGLXRfZ3hSOC1BRVJ1U2x3Y0NCaXowOFlpUkFlc1lVSW5hbmM1UkpvOWNnd1pYejBKRlRWSmpMNEY3TXFfLXZ3TTRKR1BDOE54R3R3MmtRUTJrUnB2Wi1yMlVNXzA0V3dqYnI0aGxpT2F3SUY4ZVh0M0l3RkRU?oc=5",
+      "source": "GamesIndustry.biz",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Known Bugs",
+      "text": "GTA 6 leaker reportedly releases file needed to run leaked Xbox build"
     },
     {
       "id": "feb8ed4e1dd3",
@@ -1510,6 +1510,21 @@
       "text": "Season pass: Interactive Films \u2018The Run,\u2019 \u2018Kaiju Princess,\u2019 \u2018Back From the Other World\u2019 Hit Taiwan Cinemas as Audiences Vote on Endings by Smartphone (EXCLUSIVE)"
     },
     {
+      "id": "1cdc134e4f58",
+      "category": "Movies & TV",
+      "tag": "DLC",
+      "line": "Season pass: 2026 International Emmy Winners Revealed: \u2018Car\u00eame\u2019 Wins Best Drama",
+      "digest": "Season pass: 2026 International Emmy Winners Revealed: \u2018Car\u00eame\u2019 Wins Best Drama",
+      "title": "2026 International Emmy Winners Revealed: \u2018Car\u00eame\u2019 Wins Best Drama",
+      "url": "https://www.hollywoodreporter.com/tv/tv-news/2026-international-emmys-winners-list-1236761237/",
+      "source": "hollywood",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Season pass: 2026 International Emmy Winners Revealed: \u2018Car\u00eame\u2019 Wins Best Drama"
+    },
+    {
       "id": "901f76f7a783",
       "category": "Movies & TV",
       "tag": "UPDATED",
@@ -1553,21 +1568,6 @@
       "filter": "Entertainment",
       "section": "New Content",
       "text": "Oura Ring 5, Red Light Therapy and Cult-Favorite Skin Care Lead the Sam\u2019s Club Black Friday Sale"
-    },
-    {
-      "id": "74e17ea22052",
-      "category": "Movies & TV",
-      "tag": "BUFFED",
-      "line": "New \u2018Hunger Games\u2019 Movie on the Way? Lionsgate Film Chief Shares Latest on Franchise\u2019s Future",
-      "digest": "New \u2018Hunger Games\u2019 Movie on the Way? Lionsgate Film Chief Shares Latest on Franchise\u2019s Future",
-      "title": "New \u2018Hunger Games\u2019 Movie on the Way? Lionsgate Film Chief Shares Latest on Franchise\u2019s Future",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/hunger-games-sequel-sunrise-on-the-reaping-lionsgate-chief-1236761582/",
-      "source": "hollywood",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Buffs",
-      "text": "New \u2018Hunger Games\u2019 Movie on the Way? Lionsgate Film Chief Shares Latest on Franchise\u2019s Future"
     },
     {
       "id": "1d6501875168",
@@ -1630,19 +1630,19 @@
       "text": "\u2018Hooters: The Movie\u2019 Sets Owen Patrick Joyner, Kyle Clark & Audrey Trullinger"
     },
     {
-      "id": "82f788004c60",
+      "id": "86350892751d",
       "category": "Movies & TV",
-      "tag": "ADDED",
-      "line": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
-      "digest": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
-      "title": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOal9NdWgxS0liSmpFQnBWN2c0aGplV3dNU296NDRmaWxYajRrbktTNWFadUloTjRZZTl1RDhGRHlyT0g5bXh0a3pXTGp6Z2tQaThMbFN1b0g0YUJfUGZhUXpGMlNvT3BEM1ZhcFR1VDZMLVRZZ2RjT2FDM3JhRzBISW8xUWNSRHZ2ZjlUdVhn?oc=5",
+      "tag": "DLC",
+      "line": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "digest": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "title": "Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPaXRlYjJkcnZzTHpDVEtsNnJUcW95SkZ6TDFVTUgzU29hQlkzNlY5ZlNTY1g1NTJTVkhVRkVIbU1vYUJHVWZoUXgwTlQzWk5aRDJHcWMxc1dONFRPbElmZUgzYVdTeTZTUmRlSmZmSmZseFdxRk5BU1Iyd1F3RERmZ240aE9odw?oc=5",
       "source": "Netflix",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
       "section": "New Content",
-      "text": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder"
+      "text": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More"
     },
     {
       "id": "5a6afe8d4d72",
@@ -1660,21 +1660,6 @@
       "text": "Trailer: Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times"
     },
     {
-      "id": "8e3bdfbd0c1e",
-      "category": "Movies & TV",
-      "tag": "ADDED",
-      "line": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
-      "digest": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
-      "title": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CMFFGZFRRcXI0X2pUUlRDZnVCTVNNRGFnM0FJeXNaLXBsUDNsUU9RY2c5Mkhib1BxQmttM3BOUTlxMGJNUW04RFFJTmlMZDRVaEo2MENsY1Y?oc=5",
-      "source": "www.usafa.edu",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m."
-    },
-    {
       "id": "04062df2d4e6",
       "category": "Movies & TV",
       "tag": "ADDED",
@@ -1690,19 +1675,34 @@
       "text": "What we learned from watching Netflix's new documentary \"The Trials of Karen Read\""
     },
     {
-      "id": "78c9c2d332dd",
+      "id": "68811bfe1c5f",
       "category": "Movies & TV",
-      "tag": "BUFFED",
-      "line": "Breaking Down the Final \u2018Avengers: Doomsday\u2019 Trailer",
-      "digest": "Breaking Down the Final \u2018Avengers: Doomsday\u2019 Trailer",
-      "title": "Breaking Down the Final \u2018Avengers: Doomsday\u2019 Trailer",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOelFwbnVYcFIxUmFGbXlsWEdGTnVVUlF2WDJiQkZfMUJwWkJhS3BaWVNyb0NhX19UQVZHdjdJaGgyTUFuRHFvLS1hT21lUkV0T1ZVbFZWUS1zcU5Id0FfaEYxY1pjMVZ3TDFmdXZTZnZjTnZUcV9BeExleXZ3dWYzZ2R2NEZIb2VLWFRUT3RxbGwwWTQ?oc=5",
-      "source": "The Nerds of Color",
+      "tag": "DLC",
+      "line": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
+      "digest": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
+      "title": "USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE11Zm1SMXBlQ25kWjJGZFlEOFNvYnhwME5ER3drME5rbXZPZXJVdTVOenZGMTJVTkJwVlNyTUJjWG9VYWJmRzlyaVNxRlBkSkstMmNkeWg0R2x0TWdJ?oc=5",
+      "source": "www.usafa.edu",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
-      "section": "Buffs",
-      "text": "Breaking Down the Final \u2018Avengers: Doomsday\u2019 Trailer"
+      "section": "New Content",
+      "text": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m."
+    },
+    {
+      "id": "95c2ddb2e874",
+      "category": "Movies & TV",
+      "tag": "DLC",
+      "line": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
+      "digest": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
+      "title": "Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8tQzhvQmNiWDBTcHRVczRyR19NVGhOUGwzazE5NmxSMEdXM1k2OGlmY19OR3V4NDBzZmFhUTE1aVo1T2tNOVlxeHhCU3phMDF4V2VZTzdQRER6b0lQQUgyRnFQV2hwU2k2U2E3NjhB?oc=5",
+      "source": "Disney Plus",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+"
     },
     {
       "id": "91f58c6091a5",
@@ -2005,6 +2005,21 @@
       "text": "Upcoming: World Premiere of \u2018Murci\u00e9lago\u2019 Headlines HIDIVE\u2019s Anime Frontier Program"
     },
     {
+      "id": "fcfa7e8c65a3",
+      "category": "Sports",
+      "tag": "UPDATED",
+      "line": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
+      "digest": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
+      "title": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcTFFTktwU3NzOHJ0VjYwUzFyMjBrb1I4elZMNjVCMXBWSFVWRy12MXEtdExnQmhVSksxc25tVTlkb1JkZEs2WlBiMjhmTVowbDR2UGJRdFFiMUZsRk9FRE1TWWF6a2hwX2dwbHVYQ01WdE5vb2l4M2I2THZUNTJLaDBXbUJUYllFQUcwSjhjcDdVNmQyeTdZQkxMOHhYaTAxdGdldjNfVjVuY1BOME5iLTRR?oc=5",
+      "source": "ESPN",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Hotfixes",
+      "text": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State"
+    },
+    {
       "id": "34797aabeb82",
       "category": "Sports",
       "tag": "ROSTER",
@@ -2033,51 +2048,6 @@
       "filter": "Sports",
       "section": "Hotfixes",
       "text": "NFL Week 11 Sunday aftermath: Brock Purdy too much for Vikings' defense; Giants score huge win"
-    },
-    {
-      "id": "75042416c691",
-      "category": "Sports",
-      "tag": "BALANCE",
-      "line": "Mayor Lucas excuses residents from obligations for KC Current victory march",
-      "digest": "Mayor Lucas excuses residents from obligations for KC Current victory march",
-      "title": "Mayor Lucas excuses residents from obligations for KC Current victory march",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSGgtRG55MDJxRnUtTi14TmVBTzNjOXdVNDh4bFRGSmE1UlJPd0JIY1lBR0pFUGYyLVk2RkJGQ2cyd2Z2Z3VtYkxJZmR5elVneGVuS1BxRzQ1b05Wdmd5OU9BS1JlTGRra3ZNdEFEaG0zeDgzakIzbEFkc2NlOTF0NjhSTFV2ZTZhTG94X1d3QURfX1J0cnl3QnpINWIzdVM0eXVJUGpjWHNlaC00d1prNi1MVdIBuAFBVV95cUxOVG1oWjJ1UnZ0bUpIX1FTRWtmdWVQWWx6djVaZWZJeGJmWE5wT0hRZVl4eHZRc0E0TExvcnViZUhXUWRJbjZKZVdGSm5BeWdFTUtQMDMwYmRrME9ac1FaTGhENlBPUzB1SERRTUVRN2ptUjFxRVV5eVpZMHpNOXppeWVQYkxtQnNjMXh2bFJ5bXZvZVgwVGZEMWUzaEJ2cVVxRzFrdXBKM0xkVXJJWG1GT2tEX1Q0Q1JT?oc=5",
-      "source": "FOX4KC.com",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Buffs",
-      "text": "Mayor Lucas excuses residents from obligations for KC Current victory march"
-    },
-    {
-      "id": "6b14a1a48d3f",
-      "category": "Sports",
-      "tag": "NERFED",
-      "line": "Trevor Lawrence, Liam Coen share the blame for the Jaguars' loss to the Giants",
-      "digest": "Trevor Lawrence, Liam Coen share the blame for the Jaguars' loss to the Giants",
-      "title": "Trevor Lawrence, Liam Coen share the blame for the Jaguars' loss to the Giants",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTTJ5WlRqV29GaURhdVBGV0xPdXRxd1NfMW1ucXlqVlJJajBGdGdEYnltb0M4cEdlVjZoLTBWcFJnZ2ZNbHhUTXNNelNkY05TbDhZbGlqa3luSFdiTlVlc0lUSW9CZWZyZDBiN0dKRGhEOUMzblYwM1JWMVRpbHN4dUdncWRidGllOHhFY2lqYl9FMUU4NlhV?oc=5",
-      "source": "ESPN",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Nerfs",
-      "text": "Trevor Lawrence, Liam Coen share the blame for the Jaguars' loss to the Giants"
-    },
-    {
-      "id": "f990ed488393",
-      "category": "Sports",
-      "tag": "ROSTER",
-      "line": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach",
-      "digest": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach",
-      "title": "Florida State Hires Glenn Schumann as New Head Football Coach",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUkdlYUxNZmpCRXhrNHRMSjcwcC1Lc0Nna3FXR1VMT2dOTUtDN2dhRkI2blRKN1lIQ05vVDN0ZUpMTXZHNnRNNVlaLV92R2tCMFBMaGh2TUF0cUNWSndmUi1vWllVcWI2VVdJel9GcE02MVJLaVlwdjA3ZmpBZkV5YUJVYnhnNUlTWnpzc2lwaTdXUmNJSk5zQ25OZWgyMWZXQTdEYmFmQzRtekFDeDRTZDlMTFRzY094RHJjcW1wXzcyQQ?oc=5",
-      "source": "247Sports",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Buffs",
-      "text": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach"
     },
     {
       "id": "838ad10a4b4a",
@@ -2123,6 +2093,36 @@
       "filter": "Sports",
       "section": "Nerfs",
       "text": "NFL playoff picture, Week 11: 49ers look like class of NFC; can anyone catch Bills in AFC? - The Athletic"
+    },
+    {
+      "id": "fd0fe66d7862",
+      "category": "Sports",
+      "tag": "ROSTER",
+      "line": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
+      "digest": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
+      "title": "Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPN1FTSFpLUkE4UmRQRzhxcTh3VnloQ3VxdVUxTGFjVTVfRDl3QzhLOVZpY01XOUhqUDNpaDI2dkt6T3AwTjhCSWx3Tm4wOHExZklJRzYtWEd6ZGdSM0Fycm1CYmwyQ091QzJhV2NfV3ZGOVlxbXBHNERUYnJNR0RfN1NUdEp0a1l1MFN5eVNCdnprM0tNMmNSNUhIU2RXdEU4RFRlRHNHYWF1ci1hdFZZ?oc=5",
+      "source": "Fox News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Buffs",
+      "text": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football"
+    },
+    {
+      "id": "7ca94c3eff30",
+      "category": "Sports",
+      "tag": "PATCH",
+      "line": "Kansas City Broke Through The Noise",
+      "digest": "Kansas City Broke Through The Noise",
+      "title": "Kansas City Broke Through The Noise",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51UTFrcm16T1dSYnVYQUpQOEpCdGI4aUxEd1pTOVFUaWJrVGdnNWM4T0U2S0VUSWxoNWlmRFlVLThMVWtRQzhUYVYzT1lmeF83cGJDVjZDLXNqdUNXci12M0V0QkpocHc?oc=5",
+      "source": "Defector",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Hotfixes",
+      "text": "Kansas City Broke Through The Noise"
     },
     {
       "id": "b4afeb63c594",
@@ -2290,126 +2290,6 @@
       "text": "Thanksgiving travel: Storms could affect flights and drives in Florida and on East Coast"
     },
     {
-      "id": "d207e3f3b033",
-      "category": "Health & Recalls",
-      "tag": "HOTFIX",
-      "line": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "digest": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "title": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/prime-food-processing-llc-issues-safety-warning-regarding-uneviscerated-dried-herring-fish-0",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d"
-    },
-    {
-      "id": "18417c36e507",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
-      "digest": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
-      "title": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/shanghai-san-niu-food-co-ltd-recalling-sanniu-evergeen-biscuits-due-undeclared-milk-and-sanniu-salt",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Known Bugs",
-      "text": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp"
-    },
-    {
-      "id": "1e9f53d5b705",
-      "category": "Health & Recalls",
-      "tag": "NERFED",
-      "line": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
-      "digest": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
-      "title": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/grand-strand-sandwich-company-recalls-lunch-box-bacon-egg-and-cheese-biscuit-lunch-box-jumbo-sausage",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Nerfs",
-      "text": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination"
-    },
-    {
-      "id": "e6752213f8a5",
-      "category": "Health & Recalls",
-      "tag": "PATCH",
-      "line": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
-      "digest": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
-      "title": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/larbi-inc-recalls-yellow-dock-root-because-possible-health-risk",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk"
-    },
-    {
-      "id": "9dd21d0d7717",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
-      "digest": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
-      "title": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-expands-recall-include-fresh-you-brand-sausage-egg-cheese-biscuit-sandwich-and",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Known Bugs",
-      "text": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk"
-    },
-    {
-      "id": "bf341dace13a",
-      "category": "Health & Recalls",
-      "tag": "HOTFIX",
-      "line": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
-      "digest": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
-      "title": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/aldi-recalls-priano-protein-carbonara-tortelloni-and-priano-protein-herb-cheese-tortelloni-because",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk"
-    },
-    {
-      "id": "3ca2273060c9",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "digest": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "title": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/naia-inc-recalls-chocolate-banana-bar-sorbetto-because-undeclared-milk-eggs-and-nuts",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Known Bugs",
-      "text": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts"
-    },
-    {
-      "id": "e38b2af79a29",
-      "category": "Health & Recalls",
-      "tag": "KNOWN ISSUE",
-      "line": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "digest": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "title": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/prime-food-processing-llc-issues-safety-warning-regarding-two-uneviscerated-dried-fish-products",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Known Bugs",
-      "text": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products"
-    },
-    {
       "id": "bcda98deac74",
       "category": "Health & Recalls",
       "tag": "RECALL",
@@ -2425,64 +2305,64 @@
       "text": "Brett Anthony Foods Recalls Frozen Fully Cooked Cheeseburger Products Due to Misbranding And Undeclared Allergens"
     },
     {
-      "id": "4200ffd19993",
-      "category": "Health & Recalls",
-      "tag": "PATCH",
-      "line": "FSIS Issues Public Health Alert For Meat And Poultry Products Containing Biscuits Recalled Due to Possible Listeria Contaminationpha",
-      "digest": "FSIS Issues Public Health Alert For Meat And Poultry Products Containing Biscuits Recalled Due to Possible Listeria Contaminationpha",
-      "title": "FSIS Issues Public Health Alert For Meat And Poultry Products Containing Biscuits Recalled Due to Possible Listeria Contaminationpha",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766882",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "FSIS Issues Public Health Alert For Meat And Poultry Products Containing Biscuits Recalled Due to Possible Listeria Contaminationpha"
-    },
-    {
-      "id": "c5b785a1d49c",
+      "id": "18417c36e507",
       "category": "Health & Recalls",
       "tag": "RECALL",
-      "line": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "digest": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "title": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766818",
+      "line": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
+      "digest": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
+      "title": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766892",
       "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Known Bugs",
-      "text": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk"
+      "text": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp"
     },
     {
-      "id": "026b2fd7f1ee",
+      "id": "1e9f53d5b705",
       "category": "Health & Recalls",
       "tag": "NERFED",
-      "line": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "digest": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "title": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766813",
+      "line": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
+      "digest": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
+      "title": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766877",
       "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Nerfs",
-      "text": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk"
+      "text": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination"
     },
     {
-      "id": "11fe35ca008f",
+      "id": "e6752213f8a5",
+      "category": "Health & Recalls",
+      "tag": "PATCH",
+      "line": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
+      "digest": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
+      "title": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766857",
+      "source": "cdc new",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk"
+    },
+    {
+      "id": "9dd21d0d7717",
       "category": "Health & Recalls",
       "tag": "RECALL",
-      "line": "FSIS Issues Public Health Alert for Meat and Poultry Products Due to Misbranding and Undeclared Allergenspha",
-      "digest": "FSIS Issues Public Health Alert for Meat and Poultry Products Due to Misbranding and Undeclared Allergenspha",
-      "title": "FSIS Issues Public Health Alert for Meat and Poultry Products Due to Misbranding and Undeclared Allergenspha",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766809",
+      "line": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
+      "digest": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
+      "title": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766861",
       "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Known Bugs",
-      "text": "FSIS Issues Public Health Alert for Meat and Poultry Products Due to Misbranding and Undeclared Allergenspha"
+      "text": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk"
     },
     {
       "id": "9702231a4d72",
@@ -2575,6 +2455,102 @@
       "text": "US Has More Natural Gas Than It Can Use as War Chokes Global Supply"
     },
     {
+      "id": "fc71f6448965",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "Players are now searching for: amber alert",
+      "digest": "Players are now searching for: amber alert",
+      "title": "amber alert",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=amber+alert",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://www.syracuse.com/crime/2026/11/amber-alert-issued-for-abduction-of-baby-in-cayuga-county.html",
+      "related_source": "Syracuse.com",
+      "filter": "Life",
+      "section": "New Content",
+      "text": "Players are now searching for: amber alert"
+    },
+    {
+      "id": "452348b181ae",
+      "category": "Slang",
+      "tag": "UPDATED",
+      "line": "raptors is climbing the search meta.",
+      "digest": "raptors is climbing the search meta.",
+      "title": "raptors",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=raptors",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://sports.yahoo.com/articles/5-big-questions-ahead-bucks-200003980.html",
+      "related_source": "Yahoo Sports",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "raptors is climbing the search meta."
+    },
+    {
+      "id": "d32961c4c922",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "Players are now searching for: where is the super bowl this year",
+      "digest": "Players are now searching for: where is the super bowl this year",
+      "title": "where is the super bowl this year",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=where+is+the+super+bowl+this+year",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.imax.com/pr/espn-walt-disney-company-nfl-and-imax-bring-super-bowl-imax",
+      "related_source": "IMAX",
+      "filter": "Life",
+      "section": "New Content",
+      "text": "Players are now searching for: where is the super bowl this year"
+    },
+    {
+      "id": "ad8c64548bbd",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "trevon diggs",
+      "digest": "trevon diggs",
+      "title": "trevon diggs",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=trevon+diggs",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.seahawks.com/news/seahawks-sign-trevon-diggs-bobby-hart-to-53-man-roster",
+      "related_source": "Seattle Seahawks",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "trevon diggs"
+    },
+    {
+      "id": "7419ea76767b",
+      "category": "Slang",
+      "tag": "BUFFED",
+      "line": "vcu basketball",
+      "digest": "vcu basketball",
+      "title": "vcu basketball",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=vcu+basketball",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://www.golocalprov.com/sports/preview-of-pcs-critical-trip-to-hawaii-kevin-stacom",
+      "related_source": "Go Local Prov",
+      "filter": "Life",
+      "section": "Buffs",
+      "text": "vcu basketball"
+    },
+    {
+      "id": "47da72b2080f",
+      "category": "Slang",
+      "tag": "UPDATED",
+      "line": "toronto maple leafs is climbing the search meta.",
+      "digest": "toronto maple leafs is climbing the search meta.",
+      "title": "toronto maple leafs",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=toronto+maple+leafs",
+      "source": "Google Trends (US) \u00b7 500+ searches",
+      "kind": "trend",
+      "related": "https://www.blogto.com/sports_play/2026/11/auston-matthews-stares-anthem-singer/",
+      "related_source": "blogTO",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "toronto maple leafs is climbing the search meta."
+    },
+    {
       "id": "3a1ef2a70022",
       "category": "Slang",
       "tag": "ADDED",
@@ -2635,102 +2611,6 @@
       "filter": "Life",
       "section": "Hotfixes",
       "text": "jason kelce"
-    },
-    {
-      "id": "83c8295693be",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "Players are now searching for: steve harvey",
-      "digest": "Players are now searching for: steve harvey",
-      "title": "steve harvey",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=steve+harvey",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://www.axios.com/2026/11/24/thanksgiving-air-travel-record-expected",
-      "related_source": "Axios",
-      "filter": "Life",
-      "section": "New Content",
-      "text": "Players are now searching for: steve harvey"
-    },
-    {
-      "id": "d09e61bd3585",
-      "category": "Slang",
-      "tag": "UPDATED",
-      "line": "usher chris brown tour fire performer is climbing the search meta.",
-      "digest": "usher chris brown tour fire performer is climbing the search meta.",
-      "title": "usher chris brown tour fire performer",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=usher+chris+brown+tour+fire+performer",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.tmz.com/2026/11/22/usher-and-chris-brown-tour-fire-performer-falls-off-stage/",
-      "related_source": "TMZ",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "usher chris brown tour fire performer is climbing the search meta."
-    },
-    {
-      "id": "67b74c4b7f2b",
-      "category": "Slang",
-      "tag": "UPDATED",
-      "line": "bryan cook is climbing the search meta.",
-      "digest": "bryan cook is climbing the search meta.",
-      "title": "bryan cook",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=bryan+cook",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://sports.yahoo.com/articles/bengals-bryan-cook-suffers-injury-023647371.html",
-      "related_source": "Yahoo Sports",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "bryan cook is climbing the search meta."
-    },
-    {
-      "id": "712244fd965d",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "Players are now searching for: matthew stafford",
-      "digest": "Players are now searching for: matthew stafford",
-      "title": "matthew stafford",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=matthew+stafford",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://sports.yahoo.com/articles/full-practice-matthew-stafford-monday-220418035.html",
-      "related_source": "Yahoo Sports",
-      "filter": "Life",
-      "section": "New Content",
-      "text": "Players are now searching for: matthew stafford"
-    },
-    {
-      "id": "8dc93c545fd3",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "Players are now searching for: jazz - lakers",
-      "digest": "Players are now searching for: jazz - lakers",
-      "title": "jazz - lakers",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jazz+-+lakers",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://sports.yahoo.com/articles/lakers-optimistic-austin-reaves-availability-022245376.html",
-      "related_source": "Yahoo Sports",
-      "filter": "Life",
-      "section": "New Content",
-      "text": "Players are now searching for: jazz - lakers"
-    },
-    {
-      "id": "6470ef802fa0",
-      "category": "Slang",
-      "tag": "BUFFED",
-      "line": "derek hough",
-      "digest": "derek hough",
-      "title": "derek hough",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=derek+hough",
-      "source": "Google Trends (US) \u00b7 1000+ searches",
-      "kind": "trend",
-      "related": "https://people.com/derek-hough-says-neighbor-really-inappropriate-physically-kid-12275560",
-      "related_source": "People.com",
-      "filter": "Life",
-      "section": "Buffs",
-      "text": "derek hough"
     },
     {
       "id": "03759a388cab",
@@ -2934,19 +2814,19 @@
       "id": "c39ad0c11669",
       "category": "Markets",
       "tag": "NERFED",
-      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
-      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
+      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
+      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
       "title": "Costco Wholesale Corp (COST) -0.38%",
       "url": "https://www.cnbc.com/quotes/COST",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "COST",
-      "price": 1097.91,
+      "price": 1097.92,
       "previous_close": 1102.15,
-      "change_pct": -0.3847026266842089,
+      "change_pct": -0.3837953091684451,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91"
+      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92"
     },
     {
       "id": "aac71a943651",
@@ -3502,16 +3382,16 @@
       "text": "For the First Time in 85 Years, Two New Howler Monkey Species Discovered in the Amazon"
     },
     {
-      "id": "9b74b88c16d6",
-      "digest": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
-      "title": "Tiny new species of flying frog found in Indonesian mountains",
-      "text": "Bestiary: Tiny new species of flying frog found in Indonesian mountains"
-    },
-    {
       "id": "8d009f703d43",
       "digest": "Bestiary: A New Species of Fungus in the Wintergreen Gorge?",
       "title": "A New Species of Fungus in the Wintergreen Gorge?",
       "text": "Bestiary: A New Species of Fungus in the Wintergreen Gorge?"
+    },
+    {
+      "id": "9b74b88c16d6",
+      "digest": "Bestiary: Tiny new species of flying frog found in Indonesian mountains",
+      "title": "Tiny new species of flying frog found in Indonesian mountains",
+      "text": "Bestiary: Tiny new species of flying frog found in Indonesian mountains"
     },
     {
       "id": "72f0c8cd2336",
