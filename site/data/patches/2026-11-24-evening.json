@@ -7,8 +7,8 @@
     "month": 11,
     "week": 4,
     "day": 24,
-    "iso": "2026-11-24T16:37:10-05:00",
-    "display_date": "Tuesday, November 24, 2026, 4:37 PM ET"
+    "iso": "2026-11-24T16:38:45-05:00",
+    "display_date": "Tuesday, November 24, 2026, 4:38 PM ET"
   },
   "stock_mode": "majors",
   "trends": [
@@ -85,49 +85,64 @@
   ],
   "notes": [
     {
-      "id": "7d9f34548774",
+      "id": "7a4cb65b12e2",
       "category": "News",
       "tag": "UPDATED",
-      "line": "Army Schedules Detonation Of Toxic Bomb-Making Materials In Iowa For Wednesday",
-      "digest": "Army Schedules Detonation Of Toxic Bomb-Making Materials In Iowa For Wednesday",
-      "title": "Army Schedules Detonation Of Toxic Bomb-Making Materials In Iowa For Wednesday",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMF9oYWczYjZmNlp3SGp1NnZWXzhKbkJRV1dmSEZvQ18yZFdMdHpNNDJsSVBoVTZFdXc0WU1Zd2hFMHR1S1ZBdmEyOC1BYnFneXppcWRiNjV0T2ZJclRvUGNpNmZXSlF5Y3IzZHAzdmFEaFZ4VXdjTl83dFZtTFVXYy1kUWdMN2owbURYMHdfQnd1LUozdW5RZU1Icy1VWlJmNm5BUldOR3VQWEg1d3kwb01BTGxZQWlleEQydWloNGpfZTZ3U1E0?oc=5",
-      "source": "Forbes",
+      "line": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
+      "digest": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
+      "title": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMk9hWGY4bXNvTUVpWWNkZHU2S3I1b0U5RUV4a3M1RVBHLVBPX2ZiSmpBSkk0Znd5Qjh3SzBPX1l2dzFFdVJNYmZPZk9CNFRkYmpEempxZlkyWlhQSGVybnpVVmR6bmg0cUJKbmt5TDZaQWlxMDlGMW8zS3pndXJXbENwWlZUSExtMG9OeUlpQmZGUGgxcDJFUlZncXRvMFB6U0ppeDBnWC01Q3BSd2tSeW1UMGRVWFR3ellKTWpTeWFjV3c4QVIzZ1NHY3Fzbl9QNmc?oc=5",
+      "source": "The Washington Post",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Fixed",
-      "text": "Army Schedules Detonation Of Toxic Bomb-Making Materials In Iowa For Wednesday"
+      "text": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate"
     },
     {
-      "id": "48ac756974bc",
+      "id": "254b4d70a50d",
       "category": "News",
       "tag": "EVENT",
-      "line": "Live storm updates: Record king tides leave Bay Area roads flooded",
-      "digest": "Live storm updates: Record king tides leave Bay Area roads flooded",
-      "title": "Live storm updates: Record king tides leave Bay Area roads flooded",
+      "line": "Live storm updates: King tide flooding begins in Bay Area, causing road closures",
+      "digest": "Live storm updates: King tide flooding begins in Bay Area, causing road closures",
+      "title": "Live storm updates: King tide flooding begins in Bay Area, causing road closures",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOdlJ3bzd6dnZTdzZrYTR5RWRnNTF1OE1IXy1hME8zVWlNdFBjZXBtQVo1VER5NF9YelIyZXlQWkxSbzU0SUxWdUlYVzMzZmVKVW8tM3ZKSkJybEI1eGcwZEhjMzhSZUtPNDRsRHh2ZVRpUkpLelJsSGRHTzVkelZlSXNLQ0M5Tk1iX0R3eVFuT3piRFdpU3BmZi1JQkxicEk2MTk2TUNjRGRESUlwNWdkeXRuMkZiZGJjRWFPOGlIaUw1SVhzWFpxX3V1a3ljT2xFRjhJckFVeFZtWFhZUmxFX0g4NHpXZjBka0tNdHdGc3VlT3g4?oc=5",
       "source": "ABC7 Bay Area",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Happening Now",
-      "text": "Live storm updates: Record king tides leave Bay Area roads flooded"
+      "text": "Live storm updates: King tide flooding begins in Bay Area, causing road closures"
     },
     {
-      "id": "e599c479bf76",
+      "id": "e9ea78c5efdc",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Trump Is Bringing Tariffs Back, and China Will Likely Get Hit Hardest: WSJ",
-      "digest": "Trump Is Bringing Tariffs Back, and China Will Likely Get Hit Hardest: WSJ",
-      "title": "Trump Is Bringing Tariffs Back, and China Will Likely Get Hit Hardest: WSJ",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMTkwck9aVXRkSFRvWlVoM1NSVjlXTlcwc2pmOGRZb0xwVXVQV1dZUTFpdlhibjJVRnpXUkpzYW9fUU4xbklFY3VYbUgyZHlJZ2R3ekd3bTQtRGdXYy0tZ0w4V0JBVHg4STFmVWZKVXBHemo1WGJMamp2TGFEYjRNZl9Gam9mbWZ0eGtfLXRobm5yVlN0cWZjS3NqR0dLVXc?oc=5",
-      "source": "Yahoo Finance",
+      "tag": "HOTFIX",
+      "line": "DOJ recovers $8B, charges more than 800 suspects in largest anti-scam surge in history",
+      "digest": "DOJ recovers $8B, charges more than 800 suspects in largest anti-scam surge in history",
+      "title": "DOJ recovers $8B, charges more than 800 suspects in largest anti-scam surge in history",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRWtQTzNmYmxDYmwxNWFyYjJ0ZzZteFpkR1pRVGZzbW5xcjRKTE9zU2VlcjNvZ1l4MmowNHFvSDhpWEtLek9Hb3BjcFhOT3ZYNUNFRjdCRmdOYWY0b0Y3QU5RSGZKenU4bktvck5nSTlULVBoczA3cDZnZVljRTBRTVNvVnBadTBmRHBpWGlZYmxac3dGaHBVMzhsbC1VVFJLYUNuS2lHS0RadHNRX3dHZtIBtgFBVV95cUxNdG1BRm1TVTlnT2lQYVJJVm5zQVNGdzVxR1lEcWRvdF9jRWp2eXo3ekNTZzV1c3lTdk5oX3VNUFhmamFXUWprUzQ4aTJmVkU2cE1IcVRieERCTExtckhrRmEyM25BLThGZnIwai1hRkZQMDZsOXQtSWVyQTZ6Sk1VOC1VTnAxX3F6S1dkaktOS2dYZFF0WlhjRUpsdC1vRUlQYW1SaG12VkRTa3VfVW5kc0kzR3lqQQ?oc=5",
+      "source": "Fox News",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Fixed",
-      "text": "Trump Is Bringing Tariffs Back, and China Will Likely Get Hit Hardest: WSJ"
+      "text": "DOJ recovers $8B, charges more than 800 suspects in largest anti-scam surge in history"
+    },
+    {
+      "id": "76243dcde2d5",
+      "category": "News",
+      "tag": "HOTFIX",
+      "line": "Exclusive | U.S. Prepares to Raise Tariffs on China and Other Countries",
+      "digest": "Exclusive | U.S. Prepares to Raise Tariffs on China and Other Countries",
+      "title": "Exclusive | U.S. Prepares to Raise Tariffs on China and Other Countries",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPblRKZFY1SDBYYTNwNWlxcjFqNFdGMmpQdXc3RzEyb0NoWHE3MmZoX3hBMmdnR0doa3JUUmhoN2xaUTR6dUVuajlkX19tZmN3ZHFOTUNkWnJmV3RVaThzRXVWbXZlNWVpb3k1WmNzOFRYUDRCTjg1S1g3YTRaMDZMT3lhVm8wM3VHdG1BaWlvTTZNY2JNMlR1aHNzV3RyQVk5MW44?oc=5",
+      "source": "WSJ",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Fixed",
+      "text": "Exclusive | U.S. Prepares to Raise Tariffs on China and Other Countries"
     },
     {
       "id": "12cad94dc5de",
@@ -175,19 +190,19 @@
       "text": "Severe Thanksgiving storms threaten millions of travelers nationwide and Macy\u2019s Day parade"
     },
     {
-      "id": "7a4cb65b12e2",
+      "id": "21b237322d8d",
       "category": "News",
       "tag": "UPDATED",
-      "line": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
-      "digest": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
-      "title": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMk9hWGY4bXNvTUVpWWNkZHU2S3I1b0U5RUV4a3M1RVBHLVBPX2ZiSmpBSkk0Znd5Qjh3SzBPX1l2dzFFdVJNYmZPZk9CNFRkYmpEempxZlkyWlhQSGVybnpVVmR6bmg0cUJKbmt5TDZaQWlxMDlGMW8zS3pndXJXbENwWlZUSExtMG9OeUlpQmZGUGgxcDJFUlZncXRvMFB6U0ppeDBnWC01Q3BSd2tSeW1UMGRVWFR3ellKTWpTeWFjV3c4QVIzZ1NHY3Fzbl9QNmc?oc=5",
-      "source": "The Washington Post",
+      "line": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
+      "digest": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
+      "title": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcXdGMEl0TUtBOUd6dFAxcHdQS2FybHE3V0lGTzlKbjlWQkJ2LTJONFBCTkJ3Q2FzQXhmTl9ZZnpULW5yNmFEa3dBcFNYdXZkXzJhMDUzWFBYa0kyMUNVVHd6WnNPYlpvZHhCdGlhV1NKWW1ISkpSNTNYbUsxQXkzdWxHTmtnMHBpWGk5Wm9wMmk2bFZSUmFINzBveWo4ZFFjZjRJejhRZDVZZDhmX28xWXpWOWFYOVprbHVvN2JnYWs2bmRuRnJoemU4bDJiLUnSAdQBQVVfeXFMTlc1c2ZxSDJWcDQ3MTFxQ3pYOG5TYmVrYng3cUNZR0EtQ3dOS2NYM1RRLUxkUWpKd2hzM1Nhb2J6SEF3TGxtYTN4eVVsVjRhWWs1MXZBSVktLURPLXRJYno5Tnd1azdOdVB4QjI0NUhBN1ExbjV2cTZJNm9vMmtYUVRyaWVnaEpSVXBLOEN5bDd2REN2VlhDaDA1MHNBTl9QTTZja3NjLXQzZjB1QUVvd09lSXJFanp4TVZtdlNBVjY1TzJsTWdmQUZkdDZPV3RMaTNqY0k?oc=5",
+      "source": "PBS",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Fixed",
-      "text": "Lead azide must be detonated in Iowa, Army says; some residents urged to evacuate"
+      "text": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home"
     },
     {
       "id": "34ce71b86a1a",
@@ -205,19 +220,19 @@
       "text": "MAGA Attacked Harvard. So Harvard Taught a Class About It."
     },
     {
-      "id": "3d553473a342",
+      "id": "48ac756974bc",
       "category": "News",
-      "tag": "UPDATED",
-      "line": "Trump awards \u2018America\u2019s Mayor\u2019 Giuliani nation\u2019s highest civilian honor",
-      "digest": "Trump awards \u2018America\u2019s Mayor\u2019 Giuliani nation\u2019s highest civilian honor",
-      "title": "Trump awards \u2018America\u2019s Mayor\u2019 Giuliani nation\u2019s highest civilian honor",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdkwzNHRNSzFpRVAxdHZPdjBObVVLUHFXZVZwbGs3WmN1T0Q0TTlpWW45V2MwYUlSNklRZWlUUGRqVmI0OWFydTdrdHRnenQ4eVl0elgyVTBhMlJoajJkdndoUkRNek1mTTJrdVllS2xPZzdYNHUwRXRtTWQ0clhac29RQTJWbHNFLXJPY2Z6aHZsVnZGbG1pdlZzRXdsbVVaeDhiYUgxcDdLTjI0TXotekl4aFUxUHcz0gG-AUFVX3lxTE9ad19PM0kyazMzUS1weldRR205S19ZSGU1bUUwdFJfUnNkMUFjekw2UTVtQjY2Y2tOa3R2a253b3NFVl9qa3hlMUxFNi1MSVhPcXROZWZyb2VBcjU4bmpGdV9Sa0w1U29SZGtnOW52TlhCT25GSWl3a2huakloMDRkTFMzM0pnOTdRLUhmYkxPYkMxVnlyaGpKYkQ0dE0xUDBZcElYTHo4UEFpMDZBNFplWTd6NnhKN3VEdC1IaHc?oc=5",
-      "source": "The Hill",
+      "tag": "EVENT",
+      "line": "Live storm updates: Record king tides leave Bay Area roads flooded",
+      "digest": "Live storm updates: Record king tides leave Bay Area roads flooded",
+      "title": "Live storm updates: Record king tides leave Bay Area roads flooded",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOdlJ3bzd6dnZTdzZrYTR5RWRnNTF1OE1IXy1hME8zVWlNdFBjZXBtQVo1VER5NF9YelIyZXlQWkxSbzU0SUxWdUlYVzMzZmVKVW8tM3ZKSkJybEI1eGcwZEhjMzhSZUtPNDRsRHh2ZVRpUkpLelJsSGRHTzVkelZlSXNLQ0M5Tk1iX0R3eVFuT3piRFdpU3BmZi1JQkxicEk2MTk2TUNjRGRESUlwNWdkeXRuMkZiZGJjRWFPOGlIaUw1SVhzWFpxX3V1a3ljT2xFRjhJckFVeFZtWFhZUmxFX0g4NHpXZjBka0tNdHdGc3VlT3g4?oc=5",
+      "source": "ABC7 Bay Area",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
-      "section": "Fixed",
-      "text": "Trump awards \u2018America\u2019s Mayor\u2019 Giuliani nation\u2019s highest civilian honor"
+      "section": "Happening Now",
+      "text": "Live storm updates: Record king tides leave Bay Area roads flooded"
     },
     {
       "id": "eb66b15c9b86",
@@ -233,21 +248,6 @@
       "filter": "News & Politics",
       "section": "Fixed",
       "text": "Some Haitian Families Fleeing the U.S. for Canada Are Being Separated at the Border"
-    },
-    {
-      "id": "21b237322d8d",
-      "category": "News",
-      "tag": "UPDATED",
-      "line": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
-      "digest": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
-      "title": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcXdGMEl0TUtBOUd6dFAxcHdQS2FybHE3V0lGTzlKbjlWQkJ2LTJONFBCTkJ3Q2FzQXhmTl9ZZnpULW5yNmFEa3dBcFNYdXZkXzJhMDUzWFBYa0kyMUNVVHd6WnNPYlpvZHhCdGlhV1NKWW1ISkpSNTNYbUsxQXkzdWxHTmtnMHBpWGk5Wm9wMmk2bFZSUmFINzBveWo4ZFFjZjRJejhRZDVZZDhmX28xWXpWOWFYOVprbHVvN2JnYWs2bmRuRnJoemU4bDJiLUnSAdQBQVVfeXFMTlc1c2ZxSDJWcDQ3MTFxQ3pYOG5TYmVrYng3cUNZR0EtQ3dOS2NYM1RRLUxkUWpKd2hzM1Nhb2J6SEF3TGxtYTN4eVVsVjRhWWs1MXZBSVktLURPLXRJYno5Tnd1azdOdVB4QjI0NUhBN1ExbjV2cTZJNm9vMmtYUVRyaWVnaEpSVXBLOEN5bDd2REN2VlhDaDA1MHNBTl9QTTZja3NjLXQzZjB1QUVvd09lSXJFanp4TVZtdlNBVjY1TzJsTWdmQUZkdDZPV3RMaTNqY0k?oc=5",
-      "source": "PBS",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Fixed",
-      "text": "Records show how DOJ, judge debated constitutional implications of searching Rep. Ilhan Omar's home"
     },
     {
       "id": "cfdc43a33e33",
@@ -355,36 +355,6 @@
       "text": "10 Best Early Black Friday Gaming Deals You Can Already Shop"
     },
     {
-      "id": "1ee0de07ee35",
-      "category": "Tech",
-      "tag": "ADDED",
-      "line": "Mozilla Firefox 161 Is Now Available for Download, Here\u2019s What\u2019s New",
-      "digest": "Mozilla Firefox 161 Is Now Available for Download, Here\u2019s What\u2019s New",
-      "title": "Mozilla Firefox 161 Is Now Available for Download, Here\u2019s What\u2019s New",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTndmWXh2QnJLaUVNZ1BWOEJIMjBBaWMyOHBBRWFvZjcxdTZsOVFMVC1MOTFFZVJ3VFNyM3g3Q3RZTlNyUXlhZlFZSDFwU25BcC1KUU9YMGNHbXY2dlJiaE9TZ2xkRC1Ba2xmbzExVW5zZVlwdWpsbVRDelI1Y2tIZ2IzQVUxZlJSOGhJbGU0ZXM?oc=5",
-      "source": "9to5Linux",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "What's New",
-      "text": "Mozilla Firefox 161 Is Now Available for Download, Here\u2019s What\u2019s New"
-    },
-    {
-      "id": "737d7a6b84a6",
-      "category": "Tech",
-      "tag": "ADDED",
-      "line": "GTA 6 Results in Call of Duty Losing Nearly Half of Its Player Base During Launch Weekend",
-      "digest": "GTA 6 Results in Call of Duty Losing Nearly Half of Its Player Base During Launch Weekend",
-      "title": "GTA 6 Results in Call of Duty Losing Nearly Half of Its Player Base During Launch Weekend",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQnRiZVBBdGFlbVNza1loSldZXzFwakg1X3JLTHYxQ2lvSThUeWtWeHpGazM4TzFQYy16QlROV1JtZ0x0YlNReG9iM0VwNURNTkZDOHdmTGtmU0lDMFFUSVJOSVctOWVYZDVqTTNPck5xM0ZWTFNqZTZNZHlSQkFDRk1YN2plSVJqNFRkUzNDMS1LTjcyZ2lQWXE3aXF4OWp6NGh3YWotTkpZeW85TUJFeXdwR0wxenEtLTB3WjhB?oc=5",
-      "source": "IGN",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "What's New",
-      "text": "GTA 6 Results in Call of Duty Losing Nearly Half of Its Player Base During Launch Weekend"
-    },
-    {
       "id": "4a29d5c74ce9",
       "category": "Tech",
       "tag": "UPDATED",
@@ -400,6 +370,36 @@
       "text": "GrapheneOS shows off how it plans RCS support without Google Messages"
     },
     {
+      "id": "335fec01eac5",
+      "category": "Tech",
+      "tag": "UPDATED",
+      "line": "47mm Garmin Fenix 8 with solar charging and 28-day battery life drops to new record low on Amazon",
+      "digest": "47mm Garmin Fenix 8 with solar charging and 28-day battery life drops to new record low on Amazon",
+      "title": "47mm Garmin Fenix 8 with solar charging and 28-day battery life drops to new record low on Amazon",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBCc0Y5OUk1c1o2d1VLeXdYZzAxekgtZWZ3LXZmTkEyX3lBQmpMVXlRVm5GdkstSnR0bTRJMm1yTWdDelpibnZweTNaamFLVTl4Y0hRSDlWbl94RGZ6ajh4WXhyVDVzTUhQUjh2TG0xVEFBbm02YjZWemZiSEF0dw?oc=5",
+      "source": "PhoneArena",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "Fixed",
+      "text": "47mm Garmin Fenix 8 with solar charging and 28-day battery life drops to new record low on Amazon"
+    },
+    {
+      "id": "bf9e9bf99c56",
+      "category": "Tech",
+      "tag": "ADDED",
+      "line": "Every Great Black Friday Apple Deal We\u2019ve Found on iPads, AirPods, and More",
+      "digest": "Every Great Black Friday Apple Deal We\u2019ve Found on iPads, AirPods, and More",
+      "title": "Every Great Black Friday Apple Deal We\u2019ve Found on iPads, AirPods, and More",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBlNjdOdnFqOXdGX00zak9FbWIyOXFuWmpsVDM0aHRtdmp6b1dsSTlvOXpjeVdxQl9UVWZXUVZ1T2dPYzlpeXNFZC1oTkctWlJYanNWcUdRalp5X0RBeG1Idkp0QXZJNVpIbTd4Y1RNcV9MTGJCaTdDTVB4Yw?oc=5",
+      "source": "The New York Times",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "What's New",
+      "text": "Every Great Black Friday Apple Deal We\u2019ve Found on iPads, AirPods, and More"
+    },
+    {
       "id": "dfd8a82fcc78",
       "category": "Culture",
       "tag": "ADDED",
@@ -413,6 +413,21 @@
       "filter": "Life",
       "section": "What's New",
       "text": "Macy's 100th Thanksgiving Day parade: Fiona the hippo to be honored, big Broadway performance changes, plus a weather threat"
+    },
+    {
+      "id": "4d0c3473fa7c",
+      "category": "Culture",
+      "tag": "BUFFED",
+      "line": "Miley Cyrus Marries Maxx Morando in Palm Springs",
+      "digest": "Miley Cyrus Marries Maxx Morando in Palm Springs",
+      "title": "Miley Cyrus Marries Maxx Morando in Palm Springs",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRm5aTEN5U3lOc3RBRnlWUzg3a0NJaDZzWW5tNzVSY25XZnpMbzdkdjRWRjlzOFNMbDdEa0tuZzVBdG9xRXh4R0lIR0RmNWktWGg0WjlWcC1LeGwtdmhNVlI1LXdBc1JYcHhVTGNNTjhmUDUtMWlXbWM4b1N6RGc1N2M2TEc?oc=5",
+      "source": "The New York Times",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Leveling Up",
+      "text": "Miley Cyrus Marries Maxx Morando in Palm Springs"
     },
     {
       "id": "53dbdba97a41",
@@ -443,21 +458,6 @@
       "filter": "Entertainment",
       "section": "What's New",
       "text": "New season: \u2018Lord of the Rings: The Rings of Power\u2019 Renewed for Season 4 at Amazon Prime Video"
-    },
-    {
-      "id": "6ac79bb4d438",
-      "category": "Culture",
-      "tag": "ADDED",
-      "line": "Billy Ray Cyrus Shares Snapshots From Miley's Wedding: 'Beautiful' to See Family 'United by Love'",
-      "digest": "Billy Ray Cyrus Shares Snapshots From Miley's Wedding: 'Beautiful' to See Family 'United by Love'",
-      "title": "Billy Ray Cyrus Shares Snapshots From Miley's Wedding: 'Beautiful' to See Family 'United by Love'",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbzFpaFBneDlyVVpOMGlmUkwxLXVhdm5JdnotamF3dVZwRTI0SWRrbEt5M2RjOEFHMjBuWGo3Z2NXLUs1aU1tZkJIdm9JdWpjWU40Y3pxa3NNa3JDaTRZMUU2dHlYWVpGVEhrSU4xcDh6dUxEa3AzdXVtS2VBTmlORXZLd29iVlphX1ZYdk5ITnFCblZUZVR5QUF6RjRSM3Q1LUE?oc=5",
-      "source": "Rolling Stone",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "What's New",
-      "text": "Billy Ray Cyrus Shares Snapshots From Miley's Wedding: 'Beautiful' to See Family 'United by Love'"
     },
     {
       "id": "c4006f166199",
@@ -775,19 +775,19 @@
       "text": "New find: From New Variant to New Species: Unraveling the Mystery of the Pasture Mealybug"
     },
     {
-      "id": "8d6e68249f8f",
+      "id": "56f54da5b0aa",
       "category": "Science & Nature",
       "tag": "PATCH",
-      "line": "Deep-sea clam discovered living inside the throat of a sea urchin",
-      "digest": "Deep-sea clam discovered living inside the throat of a sea urchin",
-      "title": "Deep-sea clam discovered living inside the throat of a sea urchin",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5vQ3JQTFpSd1lIOWRBdkREZjRfX3hIRXlWeDVSbkNzd0lwc0N1VGU4VUViM1VZLTR3YUhObV9SSGp6V29ITFY5eEgwZU9fbUc0NFlKYURCZ0hUeFdV?oc=5",
-      "source": "EurekAlert!",
+      "line": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan",
+      "digest": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan",
+      "title": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTkJ2bi14M0NPTHpVVlFEMHZkU3Q2TERILUpBQ0d2b0xNZjYtMFUzQ3Rfb05MQjhJbURZcU51d0tnNWZ4ZzN5NG5YRGhjcDBweTN3MjVOdXkyTVUwZHIwSE91amlfakNwZjc4cnBOVkc4UWNxUFdLUm1zLW1SYUI4ckV3UjhaMW5zSUhUMnk2ejdXSmQwYjBKOEQ5X1VLejZ3ZnpPMzVQQjBON28?oc=5",
+      "source": "Bioengineer.org",
       "kind": "headline",
       "weird": true,
       "filter": "Tech & Science",
       "section": "Fixed",
-      "text": "Deep-sea clam discovered living inside the throat of a sea urchin"
+      "text": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan"
     },
     {
       "id": "67a050f80e8b",
@@ -820,21 +820,6 @@
       "text": "New find: Scientists discover a new type of depression that common antidepressants struggle to treat"
     },
     {
-      "id": "b846acdd5dba",
-      "category": "Science & Nature",
-      "tag": "UPDATED",
-      "line": "Scientists discover quasar formed within 630 million years of Big Bang",
-      "digest": "Scientists discover quasar formed within 630 million years of Big Bang",
-      "title": "Scientists discover quasar formed within 630 million years of Big Bang",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVlpkMGxDOE9ZQmhUcE1YSDFXZDJsMVYwQTItaW5xYWtldEpVWkQzSUVIZnRFNURxRDg5QURaQ3otRWZzZTNxVFZXWUxMZWJuOGUxQ3MwUnF3TGVzUXFwM2t4Wm1nT0VjdUx4U3k4dnpFaVpOUGdXcHE3dFpwVHd0Vi1UcHg0b0lrc21ncENFZTdnQWlXWjBuLXBXdHhmaTJLcTdqNFlOZlRlQ0dQODdULVdQb2JoOW10amNaYWVyNi1YR1luQXJzVlV30gHeAUFVX3lxTE9UUVFEUjY3eXlDRVNFQnVTZ2VmNEE0cWh3OEhtdnVMbXNSYlh2cWh1UUpuVVZGNGt5WjZldXJyaUNBY1ppQVdmcndCaFh0OTNIcEh5Qm5fSkdiV0lnVnhuakNPU0ZmbWhMREdhVWMyTS1XeHVjX0IzMzhjeXdmVnpBTkd2Q0NJcFRiUWQ1Ynp3bzdOY2VzRFpMbVZiUnQ0ekZTc2JQQU8tZV8tSVRiMUUwSkhiTDVESEVqSGNlb2xXZ3ZETjJKOHktV05Jck5NOTFYRjRGSjFFRy1IUnVKUQ?oc=5",
-      "source": "WDBO",
-      "kind": "headline",
-      "weird": true,
-      "filter": "Tech & Science",
-      "section": "Fixed",
-      "text": "Scientists discover quasar formed within 630 million years of Big Bang"
-    },
-    {
       "id": "a33b0a88c347",
       "category": "Science & Nature",
       "tag": "PATCH",
@@ -863,6 +848,21 @@
       "filter": "Tech & Science",
       "section": "Fixed",
       "text": "Scientists Discover the Human Ear May Work Very Differently Than We Thought"
+    },
+    {
+      "id": "b846acdd5dba",
+      "category": "Science & Nature",
+      "tag": "UPDATED",
+      "line": "Scientists discover quasar formed within 630 million years of Big Bang",
+      "digest": "Scientists discover quasar formed within 630 million years of Big Bang",
+      "title": "Scientists discover quasar formed within 630 million years of Big Bang",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZEgtMy1IQkhveF9YWUJVcXpjbmdiX3Jld210QXlZYXRwdW1LY1luNS01Y0VFd25BakE2eVV1aXBPclY2SzZrQjFiQVNCTi1ObFhDTEhsLXlCNFZySDRGV3huQ1V4aWdtVmxoVDV6bmsweWxOa0lJXzUtVVVMeE1xUHMzZFczcERzWHFIYUJxVjhpU2RLZUtuTUg4QS1rQUtfVzJZbU5HZ3hKUXp2TXVLa2JNcVRsanlFb0JvMHlueFBXLS1PLTFBcFZB0gHeAUFVX3lxTE9aai1aS1hXVlFCallfQm9admE1RjlZQng1a1plT040c0UzbFA1X1BpRTF2NVA2ZkxnVS1QTHlaVEo2YTBQdlRMeTgtSDNyZnFuLTktSnlWdk9WSkRXajNLU1p4Q2xIRGJfMHFzR2U0bUkwTkdXeU10MFh1QzFzTUE0anZZRko4SUNaZU1yODFSSW9GTzZTNzFvNnh5WmdnRWFFTUh2anBYaTJxWTNicW5kaWNGS2c5d0k0T1l3R28zRG9IaG9HeTg1Z3FSdnp4cmZqZlBNamRvcl9LV1l6Zw?oc=5",
+      "source": "WFTV",
+      "kind": "headline",
+      "weird": true,
+      "filter": "Tech & Science",
+      "section": "Fixed",
+      "text": "Scientists discover quasar formed within 630 million years of Big Bang"
     },
     {
       "id": "ba107006134e",
@@ -955,6 +955,21 @@
       "text": "Lineup: Capitol agenda: Congress vows to \u2018put the screws\u2019 to Huang"
     },
     {
+      "id": "57680fee39f3",
+      "category": "Politics",
+      "tag": "BALANCE",
+      "line": "Hegseth\u2019s former chief of staff calls for \u2018overindulged\u2019 defense secretary to quit in scathing takedown",
+      "digest": "Hegseth\u2019s former chief of staff calls for \u2018overindulged\u2019 defense secretary to quit in scathing takedown",
+      "title": "Hegseth\u2019s former chief of staff calls for \u2018overindulged\u2019 defense secretary to quit in scathing takedown",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNM19wb1dHMGc4VkRTOGM1ZjRJZTNvdTdLcl9MR0xoVnZxM2JZM2NzN0pPRTNaSG82TEg1bU9JQS1JM1pWMnRiQS1qcWd1eDY0eTBTbldOYUdNM0UzQkotLWg1c2Z4UF9wR2JCM1BBWnNBOUl3bGVCRWg3TnRwTnFvZW5GdVh0bEhKYVhyWmU0c25xVVA3X0cxODNpUmczNTlhQ3BJWUhGelJVY2hhTWFUSA?oc=5",
+      "source": "The Independent",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Leveling Up",
+      "text": "Hegseth\u2019s former chief of staff calls for \u2018overindulged\u2019 defense secretary to quit in scathing takedown"
+    },
+    {
       "id": "3ba46a4c5aeb",
       "category": "Politics",
       "tag": "ROSTER",
@@ -968,21 +983,6 @@
       "filter": "News & Politics",
       "section": "Leveling Up",
       "text": "Lineup: What Jensen Huang's return to Nvidia teaches China's Xi about Trump"
-    },
-    {
-      "id": "74a2d31167b5",
-      "category": "Politics",
-      "tag": "HOTFIX",
-      "line": "Hegseth's Former Chief of Staff Says Defense Secretary Has 'Napalmed' Bridges With Congress and Should Resign",
-      "digest": "Hegseth's Former Chief of Staff Says Defense Secretary Has 'Napalmed' Bridges With Congress and Should Resign",
-      "title": "Hegseth's Former Chief of Staff Says Defense Secretary Has 'Napalmed' Bridges With Congress and Should Resign",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaTVaRzVBWmtnWkRuZVVNVVhBUFpTX2JCcV9WLUVHdUF6eEoyZGQzTnpLS2pmcDd1S214VG50blBpTmliS29mYV9aVndsSTZBbE51UHVrTUdtWjVPeHZIbVpiSmUtUVhfV2laeHhJdzFYVGp5eUlOWGkxbS1ncWFJT2QyaTdpVnZyTHZyMzN2N2x6VHB1b0FRSV9YNVlVZnBfWllXbU5ydUJzNFFsV3ZOeW9MRlJTSDRRNjlWQzFFWEg?oc=5",
-      "source": "Military.com",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Fixed",
-      "text": "Hegseth's Former Chief of Staff Says Defense Secretary Has 'Napalmed' Bridges With Congress and Should Resign"
     },
     {
       "id": "9330b754ac4f",
@@ -1030,19 +1030,19 @@
       "text": "Jensen Huang tells staff that Nvidia doesn't need a succession plan"
     },
     {
-      "id": "acbfa6915a97",
+      "id": "4bd17df28849",
       "category": "Markets",
-      "tag": "UPDATED",
-      "line": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
-      "digest": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
-      "title": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSVZvZjNRaUNaQi1lRk1sdFRBT09HcXRaaUVEZG85RkI5UUU0VVpXOUgweTM4eFFWV3EzTGZiNk10a1BZZkRXRVIwa3hKRzZEenRXY21XbGdWZldCcUJFSnBJTkFpUVBsUVV2a1pxTU96OThHeVZSdnZNMkNmZG94N0VtMnl4bUpvNG9aamJRUjFSdm1CZC1PTw?oc=5",
-      "source": "Yahoo Finance",
+      "tag": "PATCH",
+      "line": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
+      "digest": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
+      "title": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQakQ0a2JfUmZTVkdhSmRUR3lpNF96cTVzdDVyaEtyYmhlbkdiWHJYNFRhdEpjUzhHeUc0UnJ4M0FoMFJHWExrYnMwQU12c29tVzJJXzYxLXBTTy1GbldPSWQ3bTEwSndFWmhNbWstLVNxNlJkQWVTdnFGOHVyN1F1cXlCSUxZbTM3ajdiRGNBaUF2ZG9uelFrYkhnVnlEbmtFcFE?oc=5",
+      "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return"
+      "text": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention"
     },
     {
       "id": "cd9e046a2fbf",
@@ -1060,21 +1060,6 @@
       "text": "Stock Market Today: Tech Stocks Slide Back After Epic Rally"
     },
     {
-      "id": "4bd17df28849",
-      "category": "Markets",
-      "tag": "PATCH",
-      "line": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
-      "digest": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
-      "title": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQakQ0a2JfUmZTVkdhSmRUR3lpNF96cTVzdDVyaEtyYmhlbkdiWHJYNFRhdEpjUzhHeUc0UnJ4M0FoMFJHWExrYnMwQU12c29tVzJJXzYxLXBTTy1GbldPSWQ3bTEwSndFWmhNbWstLVNxNlJkQWVTdnFGOHVyN1F1cXlCSUxZbTM3ajdiRGNBaUF2ZG9uelFrYkhnVnlEbmtFcFE?oc=5",
-      "source": "The New York Times",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Markets",
-      "section": "Markets",
-      "text": "Trump\u2019s Nvidia Move Heralds a New Front in Economic Intervention"
-    },
-    {
       "id": "f770951b46c2",
       "category": "Markets",
       "tag": "UPDATED",
@@ -1088,6 +1073,21 @@
       "filter": "Markets",
       "section": "Markets",
       "text": "Kalshi makes \u201cdifficult decision\u201d to halt Utah trading after losing court fights"
+    },
+    {
+      "id": "e364020cd4b0",
+      "category": "Markets",
+      "tag": "UPDATED",
+      "line": "US Blacklists Alibaba-Owned Company in Setback to AI Ambitions",
+      "digest": "US Blacklists Alibaba-Owned Company in Setback to AI Ambitions",
+      "title": "US Blacklists Alibaba-Owned Company in Setback to AI Ambitions",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNc2hMdW1ld1ZLcS1NQk9hNjN3Q3BrMFc2WUZvelRPS2dTMmNUYXVqbFkwOUJoei1URzV5WTNvalhfRUdxQldmcVdsV2F5VzUzdzhZR08wMFVlREVsZV9rcFNTel9SYkNMWk1EbW82ZGlyQjlCbjVOVExWeVJZOXpfckRGMEJTdUE3QkJvWTA0dERBOUVmakRfbzFfNG5tYlJqUnMteUJaWlE5NjA2cFVjejZYcw?oc=5",
+      "source": "Bloomberg.com",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Markets",
+      "section": "Markets",
+      "text": "US Blacklists Alibaba-Owned Company in Setback to AI Ambitions"
     },
     {
       "id": "779f4973eedd",
@@ -1424,21 +1424,6 @@
       "text": "Save $50 on the Best Nintendo Switch 2 Bundle"
     },
     {
-      "id": "64dd56f0df4b",
-      "category": "Gaming",
-      "tag": "KNOWN ISSUE",
-      "line": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
-      "digest": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
-      "title": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT2FweUxnUTRKTmlObWgyM3QzaFdTMERMa3VDZXdZNklqcGw1SjV3RDdyOFRLalM2d3RDdEp3ZmlQSUItZnVvRVZ6dHZFa29YdGxNa0JTTG4tbE5hbG9PQUpLZVFuZ1RrdzRMMTZlUk93R0JtMFp1UXJRR2NWRW1xSlpYZFV5NWp2WUV5czJyZ3FNMUFkRDFqLV9oc0o3X29ReUhKM1dB?oc=5",
-      "source": "Pure Xbox",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Still Broken",
-      "text": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5"
-    },
-    {
       "id": "250838bcd284",
       "category": "Gaming",
       "tag": "ADDED",
@@ -1452,6 +1437,21 @@
       "filter": "Entertainment",
       "section": "What's New",
       "text": "Zelda Switch 2 restock at Nintendo NYC? Reddit said plenty, but it\u2019s already gone"
+    },
+    {
+      "id": "64dd56f0df4b",
+      "category": "Gaming",
+      "tag": "KNOWN ISSUE",
+      "line": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
+      "digest": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
+      "title": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOT2FweUxnUTRKTmlObWgyM3QzaFdTMERMa3VDZXdZNklqcGw1SjV3RDdyOFRLalM2d3RDdEp3ZmlQSUItZnVvRVZ6dHZFa29YdGxNa0JTTG4tbE5hbG9PQUpLZVFuZ1RrdzRMMTZlUk93R0JtMFp1UXJRR2NWRW1xSlpYZFV5NWp2WUV5czJyZ3FNMUFkRDFqLV9oc0o3X29ReUhKM1dB?oc=5",
+      "source": "Pure Xbox",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Still Broken",
+      "text": "GTA 6 Comparison Reveals Two Advantages Of Xbox Series X Over PS5"
     },
     {
       "id": "7ef980ae5dd1",
@@ -1718,19 +1718,19 @@
       "text": "Trailer: Film Review | \u2018Ink\u2019 Leaves a Residue of Frustration"
     },
     {
-      "id": "c7128688a54b",
+      "id": "5a6afe8d4d72",
       "category": "Movies & TV",
-      "tag": "DLC",
-      "line": "New season: Beloved drive-thru worker and star of Netflix film \"on top of the world\" after making a year's salary on last day of work",
-      "digest": "New season: Beloved drive-thru worker and star of Netflix film \"on top of the world\" after making a year's salary on last day of work",
-      "title": "Beloved drive-thru worker and star of Netflix film \"on top of the world\" after making a year's salary on last day of work",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxON0pFekpPcl92WW1zdUxBaGlNQUpfQUU4S01xbW02LWVaQWhWa0tpSlZMdlJpMWRWWlVQSDI3QmxGQ3VJSWh1bWM2bkNKWnBzZk9aRWNudi1ydFExcVVMOHJjYjZPM0pCYUxRVGhjV0ZuM0RMazNPS3pDS0Q2d1U4OXFqaGFUQ2pxbmc?oc=5",
-      "source": "CBS News",
+      "tag": "UPDATED",
+      "line": "Trailer: Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times",
+      "digest": "Trailer: Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times",
+      "title": "Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORzdETVpyVE9pd1VWbnBrNXRPeU5RWDU1bWUzLUx5QXFVYm1WV3Vla3I4SVJRcW1JRWNXVDlxSXBLTVgwMG5nOVBKeU9WdUVSQ0ZXZUxudFFrU3FuODV1bWRVWTEtQ3hlQ3NDZE4wWm1lT05aTUpDN2N2WkYwN3dCdDN1SVJEeTdsUTNfMmJoQ2ExamtIWS1mdU42eW9wRUFzbm9F?oc=5",
+      "source": "The Independent",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
-      "section": "What's New",
-      "text": "New season: Beloved drive-thru worker and star of Netflix film \"on top of the world\" after making a year's salary on last day of work"
+      "section": "Fixed",
+      "text": "Trailer: Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times"
     },
     {
       "id": "a3ea6f18a738",
@@ -2023,34 +2023,19 @@
       "text": "Japan Tests AI to Detect Pirate Anime and Manga Sites at Scale"
     },
     {
-      "id": "3a5e1628ddfe",
+      "id": "149229f2b8be",
       "category": "Anime & Manga",
-      "tag": "PATCH",
-      "line": "Anime Adventures codes (November 2026): Full list and how to redeem",
-      "digest": "Anime Adventures codes (November 2026): Full list and how to redeem",
-      "title": "Anime Adventures codes (November 2026): Full list and how to redeem",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5HRUVKampjYk00bTkwY2RvcWwzT29tNWR5REJybWtaZmJwcHJnbDl4cnh4T3BUU1EzRkJQc1lnZDB0Q0kwM1hmVkJBY21pWmxHOW9uc1FqZi0xNl83ODY4amJIU0QwWi1sQTUtb0NUMXpQQkhqcnBF?oc=5",
-      "source": "Radio Times",
+      "tag": "UPDATED",
+      "line": "Ghost in the Shell Legend Finally Declares War on AI Anime 31 Years Later",
+      "digest": "Ghost in the Shell Legend Finally Declares War on AI Anime 31 Years Later",
+      "title": "Ghost in the Shell Legend Finally Declares War on AI Anime 31 Years Later",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBRLXBTRFdhbFEtQ080S1FnZ2NHWUdKTDZFZ0pWQVBvcUNEOHdLQ2hJQVBNdm92SjJ5QnZaYXoxZzdfS0MzajVGUE1rbXUwV3B4anNYNlZHV3hrT2FqLUlHaG53?oc=5",
+      "source": "IMDb",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
       "section": "Fixed",
-      "text": "Anime Adventures codes (November 2026): Full list and how to redeem"
-    },
-    {
-      "id": "0189d9165403",
-      "category": "Sports",
-      "tag": "UPDATED",
-      "line": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
-      "digest": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
-      "title": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0wOEF3bFk2V2lBSzFGV1RkUUJDbEMyRTc1SGMtN21kWk5FX3h4eHhmd0MyaDI2R05ST29YQXl6X05RT1BYTWdqaFBzMTVDQUJMam1qd2k5ZWJLdk0tMGo4dUNJbnpTSnplRmJqODYwRkdRMHRZZ0E?oc=5",
-      "source": "NFL.com",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Fixed",
-      "text": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall"
+      "text": "Ghost in the Shell Legend Finally Declares War on AI Anime 31 Years Later"
     },
     {
       "id": "6abbab549a68",
@@ -2066,6 +2051,21 @@
       "filter": "Sports",
       "section": "Leveling Up",
       "text": "Lineup: Former top pick Kirby Dach gets 'new beginning' in Red Wings' lineup"
+    },
+    {
+      "id": "0189d9165403",
+      "category": "Sports",
+      "tag": "UPDATED",
+      "line": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
+      "digest": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
+      "title": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0wOEF3bFk2V2lBSzFGV1RkUUJDbEMyRTc1SGMtN21kWk5FX3h4eHhmd0MyaDI2R05ST29YQXl6X05RT1BYTWdqaFBzMTVDQUJMam1qd2k5ZWJLdk0tMGo4dUNJbnpTSnplRmJqODYwRkdRMHRZZ0E?oc=5",
+      "source": "NFL.com",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Fixed",
+      "text": "NFL Power Rankings, Week 12: Broncos climb to No. 3; Giants crack top 10; Steelers in free fall"
     },
     {
       "id": "57ff30f83a02",
@@ -2188,21 +2188,6 @@
       "text": "Storms and flooding in US could disrupt Thanksgiving travel for tens of millions"
     },
     {
-      "id": "4d204ab036d7",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "The Market Cannot Absorb America\u2019s Flood Risk",
-      "digest": "The Market Cannot Absorb America\u2019s Flood Risk",
-      "title": "The Market Cannot Absorb America\u2019s Flood Risk",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVHd0Yzg5eTZVSmxsR2pDYXpLekp6eVNkUUJlWmNabmRFMWtqdWMyYUQtdDhSSy1ILUQ3WTIxUHEyVG1vZW1Ua3FRSFIxQ1doUWF1Z3Vrb1pFc0txRl81bVJzWjFMMWhMVG51WlRsRGhzSGl4bEFRMkhtSk9hdnNfYlJ5SFRmQzdCTEVDMjFPUWF0TFVCeUpRU09MeVNwbkNxRGxRcEpB?oc=5",
-      "source": "The Regulatory Review",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Happening Now",
-      "text": "The Market Cannot Absorb America\u2019s Flood Risk"
-    },
-    {
       "id": "045bf8255178",
       "category": "Weather & Disasters",
       "tag": "EVENT",
@@ -2216,6 +2201,21 @@
       "filter": "Life",
       "section": "Happening Now",
       "text": "Want Better Wildfire Management? Here\u2019s How to Fund It"
+    },
+    {
+      "id": "4d204ab036d7",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "The Market Cannot Absorb America\u2019s Flood Risk",
+      "digest": "The Market Cannot Absorb America\u2019s Flood Risk",
+      "title": "The Market Cannot Absorb America\u2019s Flood Risk",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVHd0Yzg5eTZVSmxsR2pDYXpLekp6eVNkUUJlWmNabmRFMWtqdWMyYUQtdDhSSy1ILUQ3WTIxUHEyVG1vZW1Ua3FRSFIxQ1doUWF1Z3Vrb1pFc0txRl81bVJzWjFMMWhMVG51WlRsRGhzSGl4bEFRMkhtSk9hdnNfYlJ5SFRmQzdCTEVDMjFPUWF0TFVCeUpRU09MeVNwbkNxRGxRcEpB?oc=5",
+      "source": "The Regulatory Review",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Happening Now",
+      "text": "The Market Cannot Absorb America\u2019s Flood Risk"
     },
     {
       "id": "df850802df3a",
@@ -2248,21 +2248,6 @@
       "text": "Thanksgiving travel trouble looms as Midwest storm threatens millions with snow, heavy rain"
     },
     {
-      "id": "760a6b165919",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Baltimore Penn Station bracing for Thanksgiving travel surge",
-      "digest": "Baltimore Penn Station bracing for Thanksgiving travel surge",
-      "title": "Baltimore Penn Station bracing for Thanksgiving travel surge",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQ0lXQnphdXFqTlRQZmg0S1VvMUNJQUhhcTlPalM3aG90cm05cXF4dlA5U2hyOV8xMWhyTHNYT0xVR19QMGozbkU1ZGpYdkU0V21oQWVSSzFwX0Mxam9iWWlEZzhZSnlwblVuWVBQSkhJMnRQdHlPZHhiaGNPdHpmamVOM3RFVEhDMDM1cjBJMEg?oc=5",
-      "source": "WBAL-TV",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Happening Now",
-      "text": "Baltimore Penn Station bracing for Thanksgiving travel surge"
-    },
-    {
       "id": "94550e087ea7",
       "category": "Holidays & Events",
       "tag": "ADDED",
@@ -2276,6 +2261,21 @@
       "filter": "Life",
       "section": "Happening Now",
       "text": "Men\u2019s Basketball Weekly Preview | Thanksgiving Holiday Matchups Highlight Weekly Slate"
+    },
+    {
+      "id": "760a6b165919",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Baltimore Penn Station bracing for Thanksgiving travel surge",
+      "digest": "Baltimore Penn Station bracing for Thanksgiving travel surge",
+      "title": "Baltimore Penn Station bracing for Thanksgiving travel surge",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQ0lXQnphdXFqTlRQZmg0S1VvMUNJQUhhcTlPalM3aG90cm05cXF4dlA5U2hyOV8xMWhyTHNYT0xVR19QMGozbkU1ZGpYdkU0V21oQWVSSzFwX0Mxam9iWWlEZzhZSnlwblVuWVBQSkhJMnRQdHlPZHhiaGNPdHpmamVOM3RFVEhDMDM1cjBJMEg?oc=5",
+      "source": "WBAL-TV",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Happening Now",
+      "text": "Baltimore Penn Station bracing for Thanksgiving travel surge"
     },
     {
       "id": "e39d2e966b7c",
@@ -2308,34 +2308,19 @@
       "text": "Thanksgiving Volunteers Spend Holiday Serving Flood Survivors"
     },
     {
-      "id": "5cc7f212ab5d",
+      "id": "e151dfe521ce",
       "category": "Holidays & Events",
       "tag": "ADDED",
-      "line": "Snow, flooding & storms could disrupt Thanksgiving plans for NC travelers",
-      "digest": "Snow, flooding & storms could disrupt Thanksgiving plans for NC travelers",
-      "title": "Snow, flooding & storms could disrupt Thanksgiving plans for NC travelers",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB6YWx2dEprNE5UQ1pZZk5GSXJFRFpXbERncUpKbWFaYV9RZHFPVjVIc2l4N3JTb3Bqay1HY09DMFMzVXJIa0NiRWdTTUpxaEQtS3lLS2EzWS0xZlFrLUFDNEVlTDM2UTU4SVUwaGdkanhKOFIzSENN0gF3QVVfeXFMTkppRks0anllaC1MM2hFNDhYYlktSGxySUNMYVJ0S1FEcThtN0plMEtkVTFFbGQ1anZ6LTJNRmZSQV91OEpxX1JSSVNfcWdpMDVCM1ppLS10TWI2OWtNNUJXLTBpWHJJSTJ4SDRDVndNVVNFQTE0VWc?oc=5",
-      "source": "Raleigh News & Observer",
+      "line": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "digest": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "title": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNckxTWDhTQXZVRHhxdjdFYVBBTF8tVl9DTnB1MEdIdW9Gd0paSFRhUUI2VEdsNEhQLUhuR3dRd0M1c19GaW9hcV84RFFSYnRwOGc5QklaUGI1S2JWcjZXVjlha0RCNmQ5Z0VybjZMa2hFMDBGTEx0RlhaaTR3OGFTWEVocjZJU2ctd3lQdEU1ZVk4Z1kxU1ZNZ1dpaGNuTnYtdFNPdllxeXRrVWhjMDVKekQzdGRXUUE?oc=5",
+      "source": "Federal Aviation Administration (.gov)",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Happening Now",
-      "text": "Snow, flooding & storms could disrupt Thanksgiving plans for NC travelers"
-    },
-    {
-      "id": "d207e3f3b033",
-      "category": "Health & Recalls",
-      "tag": "HOTFIX",
-      "line": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "digest": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "title": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/prime-food-processing-llc-issues-safety-warning-regarding-uneviscerated-dried-herring-fish-0",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "Prime Food Processing LLC Issues Safety Warning Regarding Uneviscerated \u201cDried Herring Fish\u201d"
+      "text": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026"
     },
     {
       "id": "18417c36e507",
@@ -2344,8 +2329,8 @@
       "line": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
       "digest": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
       "title": "Shanghai San Niu Food Co., LTD. Is Recalling Sanniu Evergeen Biscuits Due to Undeclared Milk and Sanniu Salt and Pepper Soda Biscuits Due to Undeclared Milk and Shrimp",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/shanghai-san-niu-food-co-ltd-recalling-sanniu-evergeen-biscuits-due-undeclared-milk-and-sanniu-salt",
-      "source": "fda food",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766892",
+      "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
@@ -2359,8 +2344,8 @@
       "line": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
       "digest": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
       "title": "Grand Strand Sandwich Company Recalls Lunch Box Bacon Egg and Cheese Biscuit, Lunch Box Jumbo Sausage Biscuit, Lunch Box Sausage Egg and Cheese Biscuit, Lunch Box Chicken Sausage Biscuit Due to Listeria Monocytogenes Contamination",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/grand-strand-sandwich-company-recalls-lunch-box-bacon-egg-and-cheese-biscuit-lunch-box-jumbo-sausage",
-      "source": "fda food",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766877",
+      "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
@@ -2374,8 +2359,8 @@
       "line": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
       "digest": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
       "title": "Larbi Inc. Recalls Yellow Dock Root Because of Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/larbi-inc-recalls-yellow-dock-root-because-possible-health-risk",
-      "source": "fda food",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766857",
+      "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
@@ -2389,8 +2374,8 @@
       "line": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
       "digest": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
       "title": "Fresh & Ready Foods LLC Expands Recall to Include Fresh to You Brand Sausage, Egg & Cheese Biscuit Sandwich and Meals Made in Minutes Brand Biscuit & Sausage Gravy Due to Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-expands-recall-include-fresh-you-brand-sausage-egg-cheese-biscuit-sandwich-and",
-      "source": "fda food",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766861",
+      "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
@@ -2404,118 +2389,13 @@
       "line": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
       "digest": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
       "title": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/aldi-recalls-priano-protein-carbonara-tortelloni-and-priano-protein-herb-cheese-tortelloni-because",
-      "source": "fda food",
+      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766851",
+      "source": "cdc new",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Fixed",
       "text": "ALDI Recalls Priano Protein Carbonara Tortelloni and Priano Protein Herb & Cheese Tortelloni Because Of Possible Health Risk"
-    },
-    {
-      "id": "3ca2273060c9",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "digest": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "title": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/naia-inc-recalls-chocolate-banana-bar-sorbetto-because-undeclared-milk-eggs-and-nuts",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Still Broken",
-      "text": "Naia, Inc. Recalls Chocolate Banana Bar Sorbetto Because of Undeclared Milk, Eggs, and Nuts"
-    },
-    {
-      "id": "e38b2af79a29",
-      "category": "Health & Recalls",
-      "tag": "KNOWN ISSUE",
-      "line": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "digest": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "title": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products",
-      "url": "http://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/prime-food-processing-llc-issues-safety-warning-regarding-two-uneviscerated-dried-fish-products",
-      "source": "fda food",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Still Broken",
-      "text": "Prime Food Processing LLC Issues Safety Warning Regarding Two Uneviscerated Dried Fish Products"
-    },
-    {
-      "id": "c5b785a1d49c",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "digest": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "title": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766818",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Still Broken",
-      "text": "Family Farmstead Dairy Announces Recall of All Cheddar Cheese Products Because of Possible Health Risk"
-    },
-    {
-      "id": "026b2fd7f1ee",
-      "category": "Health & Recalls",
-      "tag": "NERFED",
-      "line": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "digest": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "title": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766813",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Took a Hit",
-      "text": "Fresh & Ready Foods LLC Recalls Fresh To You Brand Sausage, Egg & Cheese Biscuit Sandwich Due to Possible Health Risk"
-    },
-    {
-      "id": "81a810d0ec9d",
-      "category": "Health & Recalls",
-      "tag": "RECALL",
-      "line": "Snack Right Super Foods, Inc. dba Brad's Raw Chips Recalls Brad's Crunchy Kale & Veggie Chips Due to Potential Thallium Contamination",
-      "digest": "Snack Right Super Foods, Inc. dba Brad's Raw Chips Recalls Brad's Crunchy Kale & Veggie Chips Due to Potential Thallium Contamination",
-      "title": "Snack Right Super Foods, Inc. dba Brad's Raw Chips Recalls Brad's Crunchy Kale & Veggie Chips Due to Potential Thallium Contamination",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766791",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Still Broken",
-      "text": "Snack Right Super Foods, Inc. dba Brad's Raw Chips Recalls Brad's Crunchy Kale & Veggie Chips Due to Potential Thallium Contamination"
-    },
-    {
-      "id": "25851784c803",
-      "category": "Health & Recalls",
-      "tag": "NERFED",
-      "line": "Once Upon A Farm Recalls All Lots and Varieties of Tractor Wheels Organic Toddler Soft-Baked Bars Due to Potential Choking Hazard",
-      "digest": "Once Upon A Farm Recalls All Lots and Varieties of Tractor Wheels Organic Toddler Soft-Baked Bars Due to Potential Choking Hazard",
-      "title": "Once Upon A Farm Recalls All Lots and Varieties of Tractor Wheels Organic Toddler Soft-Baked Bars Due to Potential Choking Hazard",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766789",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Took a Hit",
-      "text": "Once Upon A Farm Recalls All Lots and Varieties of Tractor Wheels Organic Toddler Soft-Baked Bars Due to Potential Choking Hazard"
-    },
-    {
-      "id": "0bed6d676358",
-      "category": "Health & Recalls",
-      "tag": "HOTFIX",
-      "line": "Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide Due to Potential Salmonella Contamination",
-      "digest": "Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide Due to Potential Salmonella Contamination",
-      "title": "Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide Due to Potential Salmonella Contamination",
-      "url": "https://tools.cdc.gov/api/embed/downloader/download.asp?m=316422&c=766778",
-      "source": "cdc new",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide Due to Potential Salmonella Contamination"
     },
     {
       "id": "2d9cc536f410",
@@ -2768,24 +2648,6 @@
       "text": "stewart mclean"
     },
     {
-      "id": "931405bb29ef",
-      "category": "Markets",
-      "tag": "BUFFED",
-      "line": "Meta Platforms, Inc. (META) +5.84%  \u00b7  $560.84 \u2192 $593.62",
-      "digest": "Meta Platforms, Inc. (META) +5.84%  \u00b7  $560.84 \u2192 $593.62",
-      "title": "Meta Platforms, Inc. (META) +5.84%",
-      "url": "https://www.cnbc.com/quotes/META",
-      "source": "CNBC",
-      "kind": "stock",
-      "symbol": "META",
-      "price": 593.62,
-      "previous_close": 560.84,
-      "change_pct": 5.844804222238066,
-      "filter": "Markets",
-      "section": "Markets",
-      "text": "Meta Platforms, Inc. (META) +5.84%  \u00b7  $560.84 \u2192 $593.62"
-    },
-    {
       "id": "4a8c0c0b62ba",
       "category": "Markets",
       "tag": "BUFFED",
@@ -2910,6 +2772,24 @@
       "filter": "Markets",
       "section": "Markets",
       "text": "Costco Wholesale Corp (COST) +2.23%  \u00b7  $1,067.91 \u2192 $1,091.71"
+    },
+    {
+      "id": "d7046bcd1cbb",
+      "category": "Markets",
+      "tag": "BUFFED",
+      "line": "The Home Depot, Inc. (HD) +2.20%  \u00b7  $346.06 \u2192 $353.69",
+      "digest": "The Home Depot, Inc. (HD) +2.20%  \u00b7  $346.06 \u2192 $353.69",
+      "title": "The Home Depot, Inc. (HD) +2.20%",
+      "url": "https://www.cnbc.com/quotes/HD",
+      "source": "CNBC",
+      "kind": "stock",
+      "symbol": "HD",
+      "price": 353.69,
+      "previous_close": 346.06,
+      "change_pct": 2.2048199734150136,
+      "filter": "Markets",
+      "section": "Markets",
+      "text": "The Home Depot, Inc. (HD) +2.20%  \u00b7  $346.06 \u2192 $353.69"
     },
     {
       "id": "260afe763865",
@@ -3167,19 +3047,19 @@
       "id": "3e7d20d6a3be",
       "category": "Markets",
       "tag": "NERFED",
-      "line": "Invesco QQQ Trust (QQQ) -1.98%  \u00b7  $651.03 \u2192 $638.14",
-      "digest": "Invesco QQQ Trust (QQQ) -1.98%  \u00b7  $651.03 \u2192 $638.14",
-      "title": "Invesco QQQ Trust (QQQ) -1.98%",
+      "line": "Invesco QQQ Trust (QQQ) -1.99%  \u00b7  $651.03 \u2192 $638.10",
+      "digest": "Invesco QQQ Trust (QQQ) -1.99%  \u00b7  $651.03 \u2192 $638.10",
+      "title": "Invesco QQQ Trust (QQQ) -1.99%",
       "url": "https://www.cnbc.com/quotes/QQQ",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "QQQ",
-      "price": 638.14,
+      "price": 638.1,
       "previous_close": 651.03,
-      "change_pct": -1.9799394805154888,
+      "change_pct": -1.9860835906179362,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Invesco QQQ Trust (QQQ) -1.98%  \u00b7  $651.03 \u2192 $638.14"
+      "text": "Invesco QQQ Trust (QQQ) -1.99%  \u00b7  $651.03 \u2192 $638.10"
     },
     {
       "id": "7ce3a997ecf7",
@@ -3401,10 +3281,10 @@
       "text": "New find: From New Variant to New Species: Unraveling the Mystery of the Pasture Mealybug"
     },
     {
-      "id": "8d6e68249f8f",
-      "digest": "Deep-sea clam discovered living inside the throat of a sea urchin",
-      "title": "Deep-sea clam discovered living inside the throat of a sea urchin",
-      "text": "Deep-sea clam discovered living inside the throat of a sea urchin"
+      "id": "56f54da5b0aa",
+      "digest": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan",
+      "title": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan",
+      "text": "Botanists Identify New Pink-Flowered Iris Species in High-Altitude Western Sichuan"
     },
     {
       "id": "67a050f80e8b",
@@ -3419,12 +3299,6 @@
       "text": "New find: Scientists discover a new type of depression that common antidepressants struggle to treat"
     },
     {
-      "id": "b846acdd5dba",
-      "digest": "Scientists discover quasar formed within 630 million years of Big Bang",
-      "title": "Scientists discover quasar formed within 630 million years of Big Bang",
-      "text": "Scientists discover quasar formed within 630 million years of Big Bang"
-    },
-    {
       "id": "a33b0a88c347",
       "digest": "Scientists discover quasar formed within a mere 630 million years of the Big Bang, setting a record - ABC News - Breaking News, Latest News and Videos",
       "title": "Scientists discover quasar formed within a mere 630 million years of the Big Bang, setting a record - ABC News - Breaking News, Latest News and Videos",
@@ -3435,6 +3309,12 @@
       "digest": "Scientists Discover the Human Ear May Work Very Differently Than We Thought",
       "title": "Scientists Discover the Human Ear May Work Very Differently Than We Thought",
       "text": "Scientists Discover the Human Ear May Work Very Differently Than We Thought"
+    },
+    {
+      "id": "b846acdd5dba",
+      "digest": "Scientists discover quasar formed within 630 million years of Big Bang",
+      "title": "Scientists discover quasar formed within 630 million years of Big Bang",
+      "text": "Scientists discover quasar formed within 630 million years of Big Bang"
     },
     {
       "id": "ba107006134e",
