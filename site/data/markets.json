@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-23T22:13:50-05:00",
+  "as_of": "2026-11-23T22:33:05-05:00",
   "as_of_label": "Stocks as of 6:00 PM ET \u00b7 Crypto live",
   "stock_source": "CNBC",
   "history_source": "Nasdaq",
@@ -498,9 +498,9 @@
       "kind": "stock",
       "symbol": "TSLA",
       "name": "Tesla",
-      "price": 385.46,
+      "price": 385.92,
       "prev": 345.82,
-      "change_pct": 11.46,
+      "change_pct": 11.6,
       "url": "https://www.cnbc.com/quotes/TSLA",
       "source": "CNBC",
       "history_source": "Nasdaq",
@@ -510,7 +510,7 @@
         383.72,
         374.41,
         345.82,
-        385.46
+        385.92
       ],
       "h1m": [
         382.7,
@@ -544,7 +544,7 @@
         383.72,
         374.41,
         345.82,
-        385.46
+        385.92
       ]
     },
     {
@@ -552,7 +552,7 @@
       "kind": "stock",
       "symbol": "AVGO",
       "name": "Broadcom",
-      "price": 313.55,
+      "price": 313.54,
       "prev": 304.41,
       "change_pct": 3.0,
       "url": "https://www.cnbc.com/quotes/AVGO",
@@ -564,7 +564,7 @@
         354.05,
         346.65,
         304.41,
-        313.55
+        313.54
       ],
       "h1m": [
         361.54,
@@ -598,7 +598,7 @@
         354.05,
         346.65,
         304.41,
-        313.55
+        313.54
       ]
     },
     {
@@ -1450,9 +1450,9 @@
       "kind": "crypto",
       "symbol": "BTC",
       "name": "Bitcoin",
-      "price": 59806.0,
+      "price": 60137.0,
       "prev": null,
-      "change_pct": -1.93,
+      "change_pct": -2.09,
       "url": "https://www.coingecko.com/en/coins/bitcoin",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -1555,9 +1555,9 @@
       "kind": "crypto",
       "symbol": "ETH",
       "name": "Ethereum",
-      "price": 1678.36,
+      "price": 1688.97,
       "prev": null,
-      "change_pct": -2.19,
+      "change_pct": -2.5,
       "url": "https://www.coingecko.com/en/coins/ethereum",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -1660,9 +1660,9 @@
       "kind": "crypto",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 547.66,
+      "price": 550.45,
       "prev": null,
-      "change_pct": -1.53,
+      "change_pct": -1.6,
       "url": "https://www.coingecko.com/en/coins/binancecoin",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -1765,9 +1765,9 @@
       "kind": "crypto",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 0.937024,
+      "price": 0.942522,
       "prev": null,
-      "change_pct": 1.59,
+      "change_pct": 0.92,
       "url": "https://www.coingecko.com/en/coins/ripple",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -1870,9 +1870,9 @@
       "kind": "crypto",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 70.5,
+      "price": 70.97,
       "prev": null,
-      "change_pct": -0.27,
+      "change_pct": -0.63,
       "url": "https://www.coingecko.com/en/coins/solana",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -1975,9 +1975,9 @@
       "kind": "crypto",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.308184,
+      "price": 0.308732,
       "prev": null,
-      "change_pct": 1.08,
+      "change_pct": 1.04,
       "url": "https://www.coingecko.com/en/coins/tron",
       "source": "CoinGecko",
       "history_source": "CoinGecko",
@@ -2080,9 +2080,9 @@
       "kind": "crypto",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 62.26,
+      "price": 62.79,
       "prev": null,
-      "change_pct": 0.31,
+      "change_pct": -0.15,
       "url": "https://www.coingecko.com/en/coins/hyperliquid",
       "source": "CoinGecko",
       "history_source": "CoinGecko",

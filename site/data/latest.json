@@ -7,24 +7,52 @@
     "month": 11,
     "week": 4,
     "day": 23,
-    "iso": "2026-11-23T22:13:36-05:00",
-    "display_date": "Monday, November 23, 2026, 10:13 PM ET"
+    "iso": "2026-11-23T22:32:56-05:00",
+    "display_date": "Monday, November 23, 2026, 10:32 PM ET"
   },
   "stock_mode": "majors",
   "trends": [
     {
-      "title": "amber alert",
+      "title": "jonathan allen",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=jonathan+allen",
+      "news_url": "https://www.bengals.com/news/quick-hits-jonathan-allen-returns-with-an-old-move-and-a-new-team-that-could-be-his-best-yet-joe-burrow-ja-marr-chase-s-newest-number-is-nine",
+      "news_source": "Cincinnati Bengals"
+    },
+    {
+      "title": "billie jean king",
       "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=billie+jean+king",
+      "news_url": "https://www.billiejeankingcup.com/en/news/watch-highlights-as-gauff-and-townsend-clinch-play-off-tie-for-usa",
+      "news_source": "Billie Jean King Cup"
+    },
+    {
+      "title": "gesicki",
+      "traffic": "500+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=gesicki",
+      "news_url": "https://sports.yahoo.com/articles/bengals-urged-replace-aging-mike-114930134.html",
+      "news_source": "Yahoo Sports"
+    },
+    {
+      "title": "who won dancing with the stars 2026",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=who+won+dancing+with+the+stars+2026",
+      "news_url": "https://www.yahoo.com/entertainment/tv/articles/robert-irwin-names-ezra-frech-224505488.html",
+      "news_source": "Yahoo"
+    },
+    {
+      "title": "joan beringer",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=joan+beringer",
+      "news_url": "https://dunkingwithwolves.com/timberwolves-should-play-lamelo-ball-and-joan-beringer-together-more-despite-risks",
+      "news_source": "Dunking with Wolves"
+    },
+    {
+      "title": "amber alert",
+      "traffic": "2000+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=amber+alert",
       "news_url": "https://www.syracuse.com/crime/2026/11/amber-alert-issued-for-abduction-of-baby-in-cayuga-county.html",
       "news_source": "Syracuse.com"
-    },
-    {
-      "title": "raptors",
-      "traffic": "1000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=raptors",
-      "news_url": "https://sports.yahoo.com/articles/5-big-questions-ahead-bucks-200003980.html",
-      "news_source": "Yahoo Sports"
     },
     {
       "title": "where is the super bowl this year",
@@ -41,18 +69,11 @@
       "news_source": "Seattle Seahawks"
     },
     {
-      "title": "vcu basketball",
-      "traffic": "1000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=vcu+basketball",
-      "news_url": "https://www.golocalprov.com/sports/preview-of-pcs-critical-trip-to-hawaii-kevin-stacom",
-      "news_source": "Go Local Prov"
-    },
-    {
-      "title": "toronto maple leafs",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=toronto+maple+leafs",
-      "news_url": "https://www.blogto.com/sports_play/2026/11/auston-matthews-stares-anthem-singer/",
-      "news_source": "blogTO"
+      "title": "islanders",
+      "traffic": "2000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=islanders",
+      "news_url": "https://www.espn.com/nhl/recap?gameId=401892776",
+      "news_source": "ESPN"
     },
     {
       "title": "what happened to tom jackson",
@@ -60,27 +81,6 @@
       "url": "https://trends.google.com/trends/explore?geo=US&q=what+happened+to+tom+jackson",
       "news_url": "https://www.wkyc.com/article/news/local/cleveland/cleveland-native-tom-jackson-former-broncos-star-sunday-nfl-countdown-analyst-dead-at-75/95-7bb42ec1-8b0d-401a-9ba9-81caf5a06d54",
       "news_source": "WKYC"
-    },
-    {
-      "title": "jaime munguia",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jaime+munguia",
-      "news_url": "",
-      "news_source": ""
-    },
-    {
-      "title": "pat mcafee",
-      "traffic": "1000+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=pat+mcafee",
-      "news_url": "https://www.espn.com/video/clip/_/id/50549970/the-rock-ends-epic-gameday-entrance-slamming-mcafee-table",
-      "news_source": "ESPN"
-    },
-    {
-      "title": "jason kelce",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jason+kelce",
-      "news_url": "https://www.instyle.com/taylor-swift-niece-wyatt-cheer-on-travis-kelce-kansas-city-chiefs-game-12274200",
-      "news_source": "InStyle"
     }
   ],
   "notes": [
@@ -100,36 +100,6 @@
       "text": "Trump told the Army to pause the detonation of 9,500 pounds of lead azide in Iowa. Here's what to know"
     },
     {
-      "id": "c588b08ae265",
-      "category": "News",
-      "tag": "UPDATED",
-      "line": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
-      "digest": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
-      "title": "Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUtWdVJPaUZZOXBmZ0VhUzJTaWNKQVNwUFhzMmVaRWY3MW9ITXVnbWpMd2h0cmdyTEtmaDloN2E1VmNQd056ZTMwSVFPazRtSWtLZ1NXa1NBMUkzQ3VwNjJUajFhZ3B3UXlGNnF3WWhNNUxHelhoZUkzWS1XZERMZ25lSDcxcHVYZHBUbmJlb0FHaGlNSFU1eXF3?oc=5",
-      "source": "The Guardian",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space"
-    },
-    {
-      "id": "ba59970075a9",
-      "category": "News",
-      "tag": "EVENT",
-      "line": "Server event: Bomb cyclone? Storm to wallop East Coast",
-      "digest": "Server event: Bomb cyclone? Storm to wallop East Coast",
-      "title": "Bomb cyclone? Storm to wallop East Coast",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdU5YVU5aQmwydFp6TDJpZ0JWMVpWNDVQQVVuOFBWT2tYcTBDLXIxVVg4clpzT2wtSVVZalJkYWk3d0xVd2Y2T252YnY2OUdQWVJISHFoSGIxbVZWYWhobjNEZTl2Um9USUNCa2hwOTVueDB1RDgtalRLVHRxTE80bWdrUWJNZllMMk1KdkdjOFE0WmxfQXBMSVJ0eVlNVnpQMGxIX3R2OW41Y0tNM0xZalo3dEFRT25V?oc=5",
-      "source": "USA Today",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Limited-Time Events",
-      "text": "Server event: Bomb cyclone? Storm to wallop East Coast"
-    },
-    {
       "id": "1ab05a7f3c98",
       "category": "News",
       "tag": "PATCH",
@@ -145,34 +115,79 @@
       "text": "California Democrat Rep. Gomez resigns following ethics report on sexual misconduct allegations"
     },
     {
-      "id": "ec9f343658d3",
+      "id": "c588b08ae265",
       "category": "News",
-      "tag": "FIXED",
-      "line": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
-      "digest": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
-      "title": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNkttSjlveXdrMHJKLVNYMWNTMFh3YlJtLXRtTXcwUnI2Z3VMOWJPajRpelJzRDk0ZG0xekVqSlpoM1dac1RwU045bjdjREd3NENUYTdHcHFiMEt3WWdVcDA4S3JMOVBfR2hNdV9YLXpiNTd6OC01QzctQmxaX2I4TmNmLXd4MVJxZkZ5T09NT01uZHhpYVNKQ052YVUybll3SHl1MTBNMGx2Um1vekdPTVptQU1XUQ?oc=5",
-      "source": "AP News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Hotfixes",
-      "text": "Ukrainian naval drones strike a new Russian warship in Libya, and other Mideast news"
-    },
-    {
-      "id": "0a0d4230ac5e",
-      "category": "News",
-      "tag": "HOTFIX",
-      "line": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "digest": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
+      "tag": "UPDATED",
+      "line": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
+      "digest": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
+      "title": "Germany taking seriously reports Russia may be planning to launch nuclear weapons into space",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUtWdVJPaUZZOXBmZ0VhUzJTaWNKQVNwUFhzMmVaRWY3MW9ITXVnbWpMd2h0cmdyTEtmaDloN2E1VmNQd056ZTMwSVFPazRtSWtLZ1NXa1NBMUkzQ3VwNjJUajFhZ3B3UXlGNnF3WWhNNUxHelhoZUkzWS1XZERMZ25lSDcxcHVYZHBUbmJlb0FHaGlNSFU1eXF3?oc=5",
       "source": "The Guardian",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Hotfixes",
-      "text": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle"
+      "text": "World state: Germany taking seriously reports Russia may be planning to launch nuclear weapons into space"
+    },
+    {
+      "id": "fdb4c348c658",
+      "category": "News",
+      "tag": "FIXED",
+      "line": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
+      "digest": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
+      "title": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAxeHBZeVU0VUJqbTZMY3JYZlVwcFVqak05aURsLTZOYU5uUEMzc2VvX2djLUhhWFJ5YlBUQ1pHX1laYzViNFRreFd2VEdiX1B2TnZrcEFaenhCdl90RWkyb0JobUtoUm5BLThhclo1YXptenlrWTVhaw?oc=5",
+      "source": "CBS News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Hotfixes",
+      "text": "Ukraine sinks Russian warship Merkury off Libya, damages sanctioned Russian cargo ship"
+    },
+    {
+      "id": "4cf5c3832e39",
+      "category": "News",
+      "tag": "EVENT",
+      "line": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
+      "digest": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
+      "title": "As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOeGVxQjBhSFZySWJLdFVPQVpiNmx1UDZwempXRWVPVlhoQnJLXzNOSWlhaDhtWjRFY3MzbmQyYWNfUGhqcWpja0FoTzl5cEFZNGpsdUZoblFfenVGNmpLZVBkOUVKM0Q1clkycjVuWjItbHlBLVZNbzJ2S0NBaFdjTg?oc=5",
+      "source": "The New York Times",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Limited-Time Events",
+      "text": "Server event: As Tides Near Record Levels in California, a Storm Threatens to Make Things Worse"
+    },
+    {
+      "id": "71b5a9315920",
+      "category": "News",
+      "tag": "KNOWN ISSUE",
+      "line": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "digest": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcVdZZl9tRjc0WjhZbUY0NVZvdTRDQ01ZOTl4RmZUQndRR0ZHRmpkRVJ6ZjFCQzJYVml0cnoycjNWaW1rWWVENmJHbS1xaHZLc1U5azdFRmU4UmdDa0thQmlkeW9GZlhmeElDTS1NWXFHUmJPOFFBZU1rbml2dWxQQnRMVTMwSmxDTDFPQU92WTJBaUNEclZB?oc=5",
+      "source": "AP News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Known Bugs",
+      "text": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction"
+    },
+    {
+      "id": "669ba202f5ae",
+      "category": "News",
+      "tag": "UPDATED",
+      "line": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
+      "digest": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
+      "title": "Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYnFzVFZqMjBjY2Y1cll0UUxLU2VQMktTZDQ5QmFpaENUUzBXeHJJRS1nQUtpLUdhYVFVbnUxaGI1d1lWc0lwSUM1MWVNcGY0MlVEY3dDbFRXbGxMX3BvRzMzYnFhcTZFUG1xcTh6bDRlQVNhR1JlVmxxVEJ6S2xCZjZxRDgtcGFZWndwUUJ3RkdGLWFDakE?oc=5",
+      "source": "AP News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Hotfixes",
+      "text": "World state: Federal appeals court clears way for US Army to detonate degraded bomb-making material in Iowa"
     },
     {
       "id": "676ae0e87066",
@@ -205,19 +220,19 @@
       "text": "Rough weather expected to hit both coasts, may disrupt Thanksgiving travel"
     },
     {
-      "id": "71b5a9315920",
+      "id": "a002755d6807",
       "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-      "digest": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-      "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcVdZZl9tRjc0WjhZbUY0NVZvdTRDQ01ZOTl4RmZUQndRR0ZHRmpkRVJ6ZjFCQzJYVml0cnoycjNWaW1rWWVENmJHbS1xaHZLc1U5azdFRmU4UmdDa0thQmlkeW9GZlhmeElDTS1NWXFHUmJPOFFBZU1rbml2dWxQQnRMVTMwSmxDTDFPQU92WTJBaUNEclZB?oc=5",
-      "source": "AP News",
+      "tag": "FIXED",
+      "line": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
+      "digest": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
+      "title": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8zRkxrYlpPZ3M1bnlNRGctNWVYZjEzODZvaGFoUm5FWUN3eEFnREUwWEUzLTQwUHBMYklkV2hPdzM1YnBzdmRaaTlyV1luaTNEVmJ5aVhsNGZLbUREMUpVYXc2UFdCYndYYy1pMDBCd0k1WUJH0gF6QVVfeXFMTWtLWmZ0MUZ4NzlSR2lMNERsNWJkWlFjdWVfZ1R1cXRhVkJVWlFGWDdlaXJLM1VzNGdVUzVGWFE1VWtfTzRmTks4UjdqeDM1VjZaQ0hIQWJlSlppQkZ1RjNzNFZpQndrbm5LcVM2eE9ScHYtTTFYb1JvcGc?oc=5",
+      "source": "The Hill",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
-      "section": "Known Bugs",
-      "text": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction"
+      "section": "Hotfixes",
+      "text": "Appeals court breathes new life into Trump\u2019s fight over hush money conviction"
     },
     {
       "id": "ca65b433903c",
@@ -233,21 +248,6 @@
       "filter": "News & Politics",
       "section": "Hotfixes",
       "text": "Rain Storms Overwhelm San Francisco\u2019s Sewers, Sending Wastewater Into the Streets"
-    },
-    {
-      "id": "4c421bdd61e9",
-      "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
-      "digest": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
-      "title": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdndzQTF2WUh5cGs3VFRkeC1MbkRwVmZtZXBoSmNQRmNmMTNIZzF6ZDBlLW9IbExDcTV1anppUHA3RDdfcDdBSGVqRVFxVEFmTFZPMVNiRm80OFp0b1RhQ3BvZjIzZWZEZ2pPMWtTcnJBUnFkY05INWR2WWJHa2MxdDhWM01iQ2RadmtQbGlDNERDTUFlVi1GcGt2dw?oc=5",
-      "source": "The New York Times",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Known Bugs",
-      "text": "Virginia School District Shaken by Sex Abuse Claims Closes for a Week"
     },
     {
       "id": "dc1ee295e069",
@@ -310,6 +310,21 @@
       "text": "'Medicare for all' is back on the drawing board. Does it stand a better chance this time?"
     },
     {
+      "id": "f5e6ab4228d1",
+      "category": "Tech",
+      "tag": "KNOWN ISSUE",
+      "line": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "digest": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "title": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPclgzZzdTUURYSmdheC1iVEg4SkJTOUxYMDZoaGttRU9leTlENGs4RkMwLVk0UG9yOTA2b0VWd2U0b0l1UUJHOGJmTDRtMTF1ZmF5TU9hU2Q2S01vUU00eUszbWlaTDZET202OHBuWDctYkgxUjd4Y0Rxa2RUVkpFSXJ2NkVkWTl3bUZMYjdwZTZhbVNFZFBj?oc=5",
+      "source": "AP News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "Known Bugs",
+      "text": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action"
+    },
+    {
       "id": "115ffefc1091",
       "category": "Tech",
       "tag": "BUFFED",
@@ -355,19 +370,19 @@
       "text": "Ladybird, the first new browser engine in years, is now available to test"
     },
     {
-      "id": "f5e6ab4228d1",
+      "id": "cee90a70fc8e",
       "category": "Tech",
-      "tag": "KNOWN ISSUE",
-      "line": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "digest": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "title": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPclgzZzdTUURYSmdheC1iVEg4SkJTOUxYMDZoaGttRU9leTlENGs4RkMwLVk0UG9yOTA2b0VWd2U0b0l1UUJHOGJmTDRtMTF1ZmF5TU9hU2Q2S01vUU00eUszbWlaTDZET202OHBuWDctYkgxUjd4Y0Rxa2RUVkpFSXJ2NkVkWTl3bUZMYjdwZTZhbVNFZFBj?oc=5",
-      "source": "AP News",
+      "tag": "ADDED",
+      "line": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "digest": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "title": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44WWEwV2xkLVh1VG84QUNrdm8tX3FWTjVZak1wNnJGa0hHbHhPSmUxRkFBeVp0R1JvQmUtYXVSb18tQjItc1RBN25uZmVfZjNjSVZ0QnhfaG56bzdVbWFXQzFUa1lkY3dWLU1EM240WW0?oc=5",
+      "source": "Gizmodo",
       "kind": "headline",
       "weird": false,
       "filter": "Tech & Science",
-      "section": "Known Bugs",
-      "text": "\u2018Grand Theft Auto VI\u2019 lives up to its hype with compelling characters and spectacular action"
+      "section": "New Content",
+      "text": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring"
     },
     {
       "id": "00acff02496a",
@@ -383,21 +398,6 @@
       "filter": "Tech & Science",
       "section": "Buffs",
       "text": "Roster: GTA 6 hacker released on licence with warning 'don't let this happen again'"
-    },
-    {
-      "id": "cee90a70fc8e",
-      "category": "Tech",
-      "tag": "ADDED",
-      "line": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "digest": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "title": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44WWEwV2xkLVh1VG84QUNrdm8tX3FWTjVZak1wNnJGa0hHbHhPSmUxRkFBeVp0R1JvQmUtYXVSb18tQjItc1RBN25uZmVfZjNjSVZ0QnhfaG56bzdVbWFXQzFUa1lkY3dWLU1EM240WW0?oc=5",
-      "source": "Gizmodo",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "New Content",
-      "text": "No. 1 Apple Leaker Says MacBook Neo 2 and Complete iPad Refresh Coming in Spring"
     },
     {
       "id": "c4006f166199",
@@ -430,21 +430,6 @@
       "text": "Marvel crams every superhero ever into Avengers: Doomsday final trailer"
     },
     {
-      "id": "38c67fefd7a1",
-      "category": "Culture",
-      "tag": "UPDATED",
-      "line": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
-      "digest": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
-      "title": "Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBFVDlES0hrSG5pY3BjYTlXa2p6OXJyRkVlTWdlV1E0bFdsZ1FIT3NhU0x3U0dlNEd0aTJEMTRBUERlUHNfcWVzVVZxUlY5Q2dkUHNnbW82NmF6R3dJenhsdl95aDdTekRVeEE?oc=5",
-      "source": "IMDb",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says"
-    },
-    {
       "id": "e09110481d88",
       "category": "Movies & TV",
       "tag": "DLC",
@@ -473,6 +458,21 @@
       "filter": "Entertainment",
       "section": "Hotfixes",
       "text": "Bela Bajaria Says Her Phone Has Been Ringing Since Netflix Exit, But \u201cI\u2019m Not Really A \u2018Just Do The Exact Same Thing\u2019 Kind Of Person\u201d"
+    },
+    {
+      "id": "38c67fefd7a1",
+      "category": "Culture",
+      "tag": "UPDATED",
+      "line": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
+      "digest": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
+      "title": "Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBFVDlES0hrSG5pY3BjYTlXa2p6OXJyRkVlTWdlV1E0bFdsZ1FIT3NhU0x3U0dlNEd0aTJEMTRBUERlUHNfcWVzVVZxUlY5Q2dkUHNnbW82NmF6R3dJenhsdl95aDdTekRVeEE?oc=5",
+      "source": "IMDb",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "Cosmetic: Gabriel Iglesias Is \u2018Doing Fine\u2019 After Being Helped Offstage During Show, Rep Says"
     },
     {
       "id": "d0965426bd38",
@@ -880,19 +880,19 @@
       "text": "Bestiary: NYC pol sets record straight as viral \u2018eyes\u2019 video sparks looney lizard people theories: \u2018Full-blown \u2018Men In Black\u201d"
     },
     {
-      "id": "dab06c00bedd",
+      "id": "5ddd05e931ad",
       "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "digest": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "title": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQREU3NE56V0YtRTZ6M0d1VVRKdi1fWGRRQTk0SDkza0Y3elNxQVZkTDk3RnNiRGxzVktKdXJfUFhrWWF2Y0FEcGwzZkhKSklZbUdfV2JyVk9aTHNLTG50aDZTODVyYTRDLWxudkJXZVZzY0V6ODZVanJvc3NrRWlidUlCTGtoVXprWG0zbGR5LXl3eEYwZlFMeDJKalpXUVV1OUZNa0FiTExEejFGVFFWdmpqeVl2cDZUS0dMN1BOTXVpSlduTzhLUWZjN3p5a1NaM2fSAdcBQVVfeXFMT2doLUdIM0lZTFZVUEN1V010eWlVMFdqOHlvaURDcWY2dmlmellHSlNxdjBoRUZWRHFnZzJMNUN5U3U3T04zVW9nazhIdE1lYlNVWFNiVXloakM1MFVPOTZzaGJuQlozbEp1ZGhrZEZueG1yMlRGc0dzTEg5S1dsRHk0aVJ4Y2JVaVljWEZtRmxJM0Qyc1JxanBDRlFBZlFQYmtndlRKaVZaUGxiaU9pRmxhbVU2M2VUZ25uOVYwYjhnT3Q4S0h3NGdNUVM0R1QxaUs1V2t3VW8?oc=5",
-      "source": "NewsNation",
+      "tag": "PATCH",
+      "line": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
+      "digest": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
+      "title": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\"",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE94VFB2QTlTX0NENXBHTjZrZk1BaGJCT01tVndHaFhkV1I5NG5RRlRnS1hxVzNXX2FZSXlZeWItQlA3UzJ4MC14cUxvekswdEcxYTl5WmhjZ19ublN5RXhZQmJjN0hrdUNPUXlKZjd1a0pkQQ?oc=5",
+      "source": "CBS News",
       "kind": "headline",
       "weird": true,
       "filter": "News & Politics",
-      "section": "Known Bugs",
-      "text": "How to survive holiday travel headaches; veterinarian on viral hippo Fiona\u2019s death"
+      "section": "Hotfixes",
+      "text": "Husband of woman detained in viral ICE arrest at Seattle airport calls episode \"unjust\""
     },
     {
       "id": "8aaef90e0726",
@@ -910,19 +910,19 @@
       "text": "Pentagon Pete Makes Bizarre Move Against America\u2019s Closest Ally"
     },
     {
-      "id": "ed00f978eae1",
+      "id": "0a0d4230ac5e",
       "category": "News",
-      "tag": "UPDATED",
-      "line": "World state: \u2018Mitt and Ted\u2019 recounts how a political odd couple changed U.S. healthcare",
-      "digest": "World state: \u2018Mitt and Ted\u2019 recounts how a political odd couple changed U.S. healthcare",
-      "title": "\u2018Mitt and Ted\u2019 recounts how a political odd couple changed U.S. healthcare",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9CWlFIN01RcXI4YVFyUG9KNmJqZ2J4U1VKYUlrbjV6bmtxdlVPeUVQUE9JLVhCTm50cGh6YUdmS3BTRDhSTDFHNEdKNENlY29BX2VxUnBScWIybUJ2THJHOGZ3MjBQelpFUW10S2wtcERvWHJ6dEE?oc=5",
-      "source": "Science News",
+      "tag": "HOTFIX",
+      "line": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "digest": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "title": "Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQalNpZG5KQVNvYTRDWm45eWpQZGJnQU9GdWZZOTQxajBtSXpId3FuY2RHbU0xMFhTN0VpUFZHdGY1TDEwajlJa3RYTUxpQm82SXJIN2RIMDhsY2lxd1BORlFtV0lBRHpnN3FaZzUwZ0JaOHpQeDE5YzU3d1gtYVNMWGpaRU1acFpQYWJqTEdjbk5WcGZOVURlVE15bC1VYkhEUTFwMUhVRWZleWRsZXFocGR2UQ?oc=5",
+      "source": "The Guardian",
       "kind": "headline",
       "weird": true,
       "filter": "News & Politics",
       "section": "Hotfixes",
-      "text": "World state: \u2018Mitt and Ted\u2019 recounts how a political odd couple changed U.S. healthcare"
+      "text": "World state: Video of ICE detaining father and daughter while boarding flight sparks protests in Seattle"
     },
     {
       "id": "74a2d31167b5",
@@ -1015,34 +1015,19 @@
       "text": "Congress is \u2018out of time\u2019 to decide on reconciliation, needs to settle topline spending: Sen. Coons"
     },
     {
-      "id": "0bbbb7b06634",
+      "id": "dd15a3d52192",
       "category": "Markets",
       "tag": "HOTFIX",
-      "line": "Republicans Break With Trump Over Jensen Huang\u2019s Reinstatement at Nvidia",
-      "digest": "Republicans Break With Trump Over Jensen Huang\u2019s Reinstatement at Nvidia",
-      "title": "Republicans Break With Trump Over Jensen Huang\u2019s Reinstatement at Nvidia",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOTXpwNDNib3dtQTRHQ0tVX1NtN2ZJNFM1VWs0WnFRNmZKcHJBcW9WOFI4WU50SGE2X1lDOElmQUFGVGVnWV9DMm9zZHo0ZHI3TEhCUE05czlpcjkxTEw4TExhNzhrZjBTaFpxc054c0dSMW5YOVlHUW1vMW1KemJEWHNOYV9VUHU4R2diRGVuSENrdw?oc=5",
-      "source": "The New York Times",
+      "line": "Stock futures inch higher as traders see whether Nvidia can extend rally from Jensen Huang\u2019s return: Live updates",
+      "digest": "Stock futures inch higher as traders see whether Nvidia can extend rally from Jensen Huang\u2019s return: Live updates",
+      "title": "Stock futures inch higher as traders see whether Nvidia can extend rally from Jensen Huang\u2019s return: Live updates",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE11bVhzTUlmU0hLLW0wRklRekw2eURvelhVMlZ3YThhUm5kNkctUE81eHlyNkRVQkRqTkc1enU3TWZZT0RKY2I1YWNTTmVpaDZkdlJYRGtqYkhFSGViT2NQN1A2MEVxNXEwbkNRMXlaejlRbzhtY2g40gF8QVVfeXFMTzg5Wkp0R2RYWWl3cUFWVjR1MzhPYlcwbzBsTGFFZVN0Z1QybjdvcThKTzBSd2NoOG51TU1JbkpKbUoyaWYtMGVGN2JKMWFkOWc2X3ZFODBBT3VBYkhzTmN3ZXNNTnlfUE5hRlZlM3pEaUgycEtwbWdNNlhuVw?oc=5",
+      "source": "CNBC",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Republicans Break With Trump Over Jensen Huang\u2019s Reinstatement at Nvidia"
-    },
-    {
-      "id": "d21e05ce08af",
-      "category": "Markets",
-      "tag": "PATCH",
-      "line": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
-      "digest": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
-      "title": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQR1l0YldHVjdWbVRmRXVkTWxOQTN0bWlZTU9rbkRMaS1MRlh6eW9zS2hESkNxVEdWODFIM3VLNkRsYmxCcUdEWGNLdlUtRU8zN3FUNGlPY3c4aWVPV0tiQ1lJN3E5VmlINjg3ZmhjdUNmZS1oZnFHenhNTXRZLWpNWWVHaDE2N0pIZURQVWlxWURBZnNSaE9YMTlyOTc3UzN0QmFWX296RzZJbEJqYnNjQjJfWVZ5MlBFNm9GbXVqMl9iTDVjSEQ1SDVfT0ZFTFhBYzE4dVNnS2JObHlmMFY4?oc=5",
-      "source": "Yahoo Finance",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Markets",
-      "section": "Markets",
-      "text": "Nvidia gains nearly $1T as Trump says nobody could 'revive the stock like it's being revived'"
+      "text": "Stock futures inch higher as traders see whether Nvidia can extend rally from Jensen Huang\u2019s return: Live updates"
     },
     {
       "id": "d0a045ef61c8",
@@ -1060,19 +1045,34 @@
       "text": "Thanksgiving travel could be messy with storms coming after a week filled with airline glitches"
     },
     {
-      "id": "3532a9b355ba",
+      "id": "69436c9f8983",
       "category": "Markets",
-      "tag": "ROSTER",
-      "line": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "digest": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "title": "Exclusive / Commerce adds Megaspeed to trade blacklist",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOeWx0S2VkQ0dLSnh1QVZKcUlpZ0lZVlZHSDNTYzY4bEc5RFFuUmhIMC0yby1iWTBFM08wOWlkOTFaTkFQWVpER0xEQTZmQVBtZ2ZxOUs3MjhYeFdXT0k4TjRqSVljekJHRG1BWVAxbmRCTWR6d0NWcjFVX1NmYjFramJIdlBhUnRiSGozeXZDOVQ?oc=5",
-      "source": "Semafor",
+      "tag": "HOTFIX",
+      "line": "Trump administration blacklists Megaspeed, key firm in Nvidia scandal",
+      "digest": "Trump administration blacklists Megaspeed, key firm in Nvidia scandal",
+      "title": "Trump administration blacklists Megaspeed, key firm in Nvidia scandal",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQdmlyVWhMSk5veUZMcWQ5dlRSRGdwenl3TnBpeER3cVVwYzVoellWQ08xX3ZfaHZUaXV1bVVaLVltVUxGZkhVTkw5cExBQVRobjZwR1dDeTZIZk52cmNQanQ3V1luc0tZN2RWa3g0QTFBV3NVaUZEWlhUSXhxZVJYMFJEdlVvenZ0QndCUm9WcXJGdGlXYlJJemhPcXFRWXdUcV9aZjNJXzg4UWpZQXA0NjFaRE44NHFnZTBr?oc=5",
+      "source": "The Washington Post",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Roster: Exclusive / Commerce adds Megaspeed to trade blacklist"
+      "text": "Trump administration blacklists Megaspeed, key firm in Nvidia scandal"
+    },
+    {
+      "id": "e49cf4d01369",
+      "category": "Markets",
+      "tag": "HOTFIX",
+      "line": "S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huang\u2019s Reinstatement \u2014 NVDA, NASA, TTWO, AMZN In Focus",
+      "digest": "S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huang\u2019s Reinstatement \u2014 NVDA, NASA, TTWO, AMZN In Focus",
+      "title": "S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huang\u2019s Reinstatement \u2014 NVDA, NASA, TTWO, AMZN In Focus",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPWjI5NzZ0c2t3SEVKaUlNZUFPb0NnRURkeHBTT1QxTWJvVHNTRERkSzVoeGp5QURjV2FXbUUwb28wT210Mm51SGlMTUY0RUdzb0pTVDdKMjZET2FyY3gxaGd2bjhBWXZnTHY4U2RfX1g3cmhPbGhpYVhsLTN1RTZQQ1NUZ0JXdWRVUXBLZUNudw?oc=5",
+      "source": "Yahoo Finance",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Markets",
+      "section": "Markets",
+      "text": "S&P 500, Nasdaq End Best Session Since April Last Year On Optimism Led By Jensen Huang\u2019s Reinstatement \u2014 NVDA, NASA, TTWO, AMZN In Focus"
     },
     {
       "id": "1ff828e9cfb8",
@@ -1570,6 +1570,21 @@
       "text": "Oura Ring 5, Red Light Therapy and Cult-Favorite Skin Care Lead the Sam\u2019s Club Black Friday Sale"
     },
     {
+      "id": "57a6ecc4882e",
+      "category": "Movies & TV",
+      "tag": "BUFFED",
+      "line": "\u2018Careme\u2019 & \u2018Divisi\u00f3n Palermo\u2019 Take Top Prizes At International Emmy Awards: Full Winners List",
+      "digest": "\u2018Careme\u2019 & \u2018Divisi\u00f3n Palermo\u2019 Take Top Prizes At International Emmy Awards: Full Winners List",
+      "title": "\u2018Careme\u2019 & \u2018Divisi\u00f3n Palermo\u2019 Take Top Prizes At International Emmy Awards: Full Winners List",
+      "url": "https://deadline.com/2026/11/2026-international-emmys-winners-list-1237232118/",
+      "source": "deadline",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Buffs",
+      "text": "\u2018Careme\u2019 & \u2018Divisi\u00f3n Palermo\u2019 Take Top Prizes At International Emmy Awards: Full Winners List"
+    },
+    {
       "id": "1d6501875168",
       "category": "Movies & TV",
       "tag": "ADDED",
@@ -1615,34 +1630,34 @@
       "text": "Trailer: \u2018I\u2019m A Celebrity\u2019s AJ Odudu Gets Support From \u2018BBUK\u2019 Co-Host Will Best & More Stars Amid Microaggressions On ITV Reality Series"
     },
     {
+      "id": "82f788004c60",
+      "category": "Movies & TV",
+      "tag": "ADDED",
+      "line": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
+      "digest": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
+      "title": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOal9NdWgxS0liSmpFQnBWN2c0aGplV3dNU296NDRmaWxYajRrbktTNWFadUloTjRZZTl1RDhGRHlyT0g5bXh0a3pXTGp6Z2tQaThMbFN1b0g0YUJfUGZhUXpGMlNvT3BEM1ZhcFR1VDZMLVRZZ2RjT2FDM3JhRzBISW8xUWNSRHZ2ZjlUdVhn?oc=5",
+      "source": "Netflix",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "Fall in Love with Nia Long and Larenz Tate in Don\u2019t Ever Wonder"
+    },
+    {
       "id": "cc5d0f8212b8",
       "category": "Movies & TV",
       "tag": "BUFFED",
       "line": "\u2018Hooters: The Movie\u2019 Sets Owen Patrick Joyner, Kyle Clark & Audrey Trullinger",
       "digest": "\u2018Hooters: The Movie\u2019 Sets Owen Patrick Joyner, Kyle Clark & Audrey Trullinger",
       "title": "\u2018Hooters: The Movie\u2019 Sets Owen Patrick Joyner, Kyle Clark & Audrey Trullinger",
-      "url": "https://deadline.com/2026/11/hooters-the-movie-sets-cast-1237232108/",
-      "source": "deadline",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9DNEIwOHZSdjExVW9uMFhDTnQtZG04SnZwN1ZLd0dnbjFvRk95VEdRSlBWNncxRGg3SDYwX3Q2ZFZvelVncmVVanlORWY4XzR0ZHZDTDJrcDlhYVZWVlg1dFJpakQ1ajVpZlpsZUduSWFjMjRWRURR?oc=5",
+      "source": "Deadline",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
       "section": "Buffs",
       "text": "\u2018Hooters: The Movie\u2019 Sets Owen Patrick Joyner, Kyle Clark & Audrey Trullinger"
-    },
-    {
-      "id": "86350892751d",
-      "category": "Movies & TV",
-      "tag": "DLC",
-      "line": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
-      "digest": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
-      "title": "Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPaXRlYjJkcnZzTHpDVEtsNnJUcW95SkZ6TDFVTUgzU29hQlkzNlY5ZlNTY1g1NTJTVkhVRkVIbU1vYUJHVWZoUXgwTlQzWk5aRDJHcWMxc1dONFRPbElmZUgzYVdTeTZTUmRlSmZmSmZseFdxRk5BU1Iyd1F3RERmZ240aE9odw?oc=5",
-      "source": "Netflix",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Season pass: Fury vs. Joshua Full Fight Card on Dec. 11: Wilder vs. Bakole and More"
     },
     {
       "id": "5a6afe8d4d72",
@@ -1660,6 +1675,21 @@
       "text": "Trailer: Petition to cancel \u2018blasphemous\u2019 Netflix show signed over 100,000 times"
     },
     {
+      "id": "8e3bdfbd0c1e",
+      "category": "Movies & TV",
+      "tag": "ADDED",
+      "line": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
+      "digest": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
+      "title": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m.",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CMFFGZFRRcXI0X2pUUlRDZnVCTVNNRGFnM0FJeXNaLXBsUDNsUU9RY2c5Mkhib1BxQmttM3BOUTlxMGJNUW04RFFJTmlMZDRVaEo2MENsY1Y?oc=5",
+      "source": "www.usafa.edu",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "New Content",
+      "text": "USAFA Family Movie: Elf on Mon, Dec 21 @ 10 a.m."
+    },
+    {
       "id": "04062df2d4e6",
       "category": "Movies & TV",
       "tag": "ADDED",
@@ -1675,34 +1705,34 @@
       "text": "What we learned from watching Netflix's new documentary \"The Trials of Karen Read\""
     },
     {
-      "id": "68811bfe1c5f",
-      "category": "Movies & TV",
+      "id": "46063de4f7b9",
+      "category": "Anime & Manga",
       "tag": "DLC",
-      "line": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
-      "digest": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
-      "title": "USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m.",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE11Zm1SMXBlQ25kWjJGZFlEOFNvYnhwME5ER3drME5rbXZPZXJVdTVOenZGMTJVTkJwVlNyTUJjWG9VYWJmRzlyaVNxRlBkSkstMmNkeWg0R2x0TWdJ?oc=5",
-      "source": "www.usafa.edu",
+      "line": "Upcoming: Jimoto no Ijimekko-tachi ni Shikaeshi Shiy\u014d to Shitara Anime's Video Unveils Cast",
+      "digest": "Upcoming: Jimoto no Ijimekko-tachi ni Shikaeshi Shiy\u014d to Shitara Anime's Video Unveils Cast",
+      "title": "Jimoto no Ijimekko-tachi ni Shikaeshi Shiy\u014d to Shitara Anime's Video Unveils Cast",
+      "url": "https://www.animenewsnetwork.com/news/2026-11-23/jimoto-no-ijimekko-tachi-ni-shikaeshi-shiyo-to-shitara-anime-video-unveils-cast/.244049",
+      "source": "ann news",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
       "section": "New Content",
-      "text": "Season pass: USAFA Family Movie: Home Alone 2: Lost in New York on Mon, Dec 21 @ 3 p.m."
+      "text": "Upcoming: Jimoto no Ijimekko-tachi ni Shikaeshi Shiy\u014d to Shitara Anime's Video Unveils Cast"
     },
     {
-      "id": "95c2ddb2e874",
-      "category": "Movies & TV",
+      "id": "ab8db89b9839",
+      "category": "Anime & Manga",
       "tag": "DLC",
-      "line": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "digest": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "title": "Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8tQzhvQmNiWDBTcHRVczRyR19NVGhOUGwzazE5NmxSMEdXM1k2OGlmY19OR3V4NDBzZmFhUTE1aVo1T2tNOVlxeHhCU3phMDF4V2VZTzdQRER6b0lQQUgyRnFQV2hwU2k2U2E3NjhB?oc=5",
-      "source": "Disney Plus",
+      "line": "Upcoming: Psyren TV Anime Adds 6 Cast Members",
+      "digest": "Upcoming: Psyren TV Anime Adds 6 Cast Members",
+      "title": "Psyren TV Anime Adds 6 Cast Members",
+      "url": "https://www.animenewsnetwork.com/news/2026-11-23/psyren-tv-anime-adds-6-cast-members/.244142",
+      "source": "ann news",
       "kind": "headline",
       "weird": false,
       "filter": "Entertainment",
       "section": "New Content",
-      "text": "Season pass: Marvel Studios\u2019 Avengers: Doomsday: Release Date, Trailer, Cast & More | Explore Disney+"
+      "text": "Upcoming: Psyren TV Anime Adds 6 Cast Members"
     },
     {
       "id": "91f58c6091a5",
@@ -1763,36 +1793,6 @@
       "filter": "Entertainment",
       "section": "New Content",
       "text": "Upcoming: Magical Buffs Anime Announces 3 More Cast Members"
-    },
-    {
-      "id": "7f889d82b991",
-      "category": "Anime & Manga",
-      "tag": "WATCHLIST",
-      "line": "Watchlist: Live-Action Wakako-zake Season 10 Unveils January 6 Debut, Year-End Special, Opening Song Artists",
-      "digest": "Watchlist: Live-Action Wakako-zake Season 10 Unveils January 6 Debut, Year-End Special, Opening Song Artists",
-      "title": "Live-Action Wakako-zake Season 10 Unveils January 6 Debut, Year-End Special, Opening Song Artists",
-      "url": "https://www.animenewsnetwork.com/news/2026-11-22/live-action-wakako-zake-season-10-unveils-january-6-debut-year-end-special-opening-song-artists/.244087",
-      "source": "ann news",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Live-Action Wakako-zake Season 10 Unveils January 6 Debut, Year-End Special, Opening Song Artists"
-    },
-    {
-      "id": "4bfd8d2794ae",
-      "category": "Anime & Manga",
-      "tag": "ADDED",
-      "line": "Champignon Witch Manga to Resume After 10 Months",
-      "digest": "Champignon Witch Manga to Resume After 10 Months",
-      "title": "Champignon Witch Manga to Resume After 10 Months",
-      "url": "https://www.animenewsnetwork.com/news/2026-11-22/champignon-witch-manga-to-resume-after-10-months/.244096",
-      "source": "ann news",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "New Content",
-      "text": "Champignon Witch Manga to Resume After 10 Months"
     },
     {
       "id": "5d0fdd432619",
@@ -2005,21 +2005,6 @@
       "text": "Upcoming: World Premiere of \u2018Murci\u00e9lago\u2019 Headlines HIDIVE\u2019s Anime Frontier Program"
     },
     {
-      "id": "fcfa7e8c65a3",
-      "category": "Sports",
-      "tag": "UPDATED",
-      "line": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
-      "digest": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
-      "title": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcTFFTktwU3NzOHJ0VjYwUzFyMjBrb1I4elZMNjVCMXBWSFVWRy12MXEtdExnQmhVSksxc25tVTlkb1JkZEs2WlBiMjhmTVowbDR2UGJRdFFiMUZsRk9FRE1TWWF6a2hwX2dwbHVYQ01WdE5vb2l4M2I2THZUNTJLaDBXbUJUYllFQUcwSjhjcDdVNmQyeTdZQkxMOHhYaTAxdGdldjNfVjVuY1BOME5iLTRR?oc=5",
-      "source": "ESPN",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Hotfixes",
-      "text": "Georgia defensive coordinator Glenn Schumann agrees to coach Florida State"
-    },
-    {
       "id": "34797aabeb82",
       "category": "Sports",
       "tag": "ROSTER",
@@ -2035,6 +2020,21 @@
       "text": "Roster: Mets owner Steve Cohen paid $450 million for Tarik Skubal. His fellow MLB owners want to stop him from doing it again"
     },
     {
+      "id": "542968a2569c",
+      "category": "Sports",
+      "tag": "PATCH",
+      "line": "Sources: Packers' Micah Parsons cleared to make season debut Wednesday vs. Rams",
+      "digest": "Sources: Packers' Micah Parsons cleared to make season debut Wednesday vs. Rams",
+      "title": "Sources: Packers' Micah Parsons cleared to make season debut Wednesday vs. Rams",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONHNOa0JTeWdoVTZraGZJR3hoMi1wUGppVFJ4MENmRmR4dV9yQ3pNVzdOUEpJUDZsYTVIdF9yajhwaVFiaU9LcnVERnRtbGRVb21peFlYOVBLVHBIdTk5QUdjOFY2TEtfRWRUSkFvVWFUUEhEcGJXMHE5TlJVMkNUYVlXclhJXzJmUURPQ1BoNkp1X3VNSmNlNEtfcU5KcmJy?oc=5",
+      "source": "ESPN",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Hotfixes",
+      "text": "Sources: Packers' Micah Parsons cleared to make season debut Wednesday vs. Rams"
+    },
+    {
       "id": "03f1a39f499b",
       "category": "Sports",
       "tag": "PATCH",
@@ -2048,6 +2048,36 @@
       "filter": "Sports",
       "section": "Hotfixes",
       "text": "NFL Week 11 Sunday aftermath: Brock Purdy too much for Vikings' defense; Giants score huge win"
+    },
+    {
+      "id": "0ad346dfe334",
+      "category": "Sports",
+      "tag": "ROSTER",
+      "line": "Roster: Making sense of Liam Coen\u2019s nonsensical decision to kick a late field goal",
+      "digest": "Roster: Making sense of Liam Coen\u2019s nonsensical decision to kick a late field goal",
+      "title": "Making sense of Liam Coen\u2019s nonsensical decision to kick a late field goal",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPeVJJZG05UmUtZDI0d0hDSS1yVFV4LS12eG9BNGd5d0VJZzRpc0k2YkVNR2RBNDg4REV6MkhYdU1URTU1YmFmUV9aMmwwY3lxb3FPWXZweWNNcTF6UVJRSjVEdG9BR2FlZVJRZVllSUlxUGZXcGtqeS1rRWFhYTAxZDllSzN5dGN1dEg5VTVMa0VtNDhrWjcyZHMza2VYaUNnalRRSDRCczFSUXJWcDUtaXBzdW92aGwxVk9sTHVRVmx2a3VxOFc1WHdlRFNKQlh2?oc=5",
+      "source": "NBC Sports",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Buffs",
+      "text": "Roster: Making sense of Liam Coen\u2019s nonsensical decision to kick a late field goal"
+    },
+    {
+      "id": "f990ed488393",
+      "category": "Sports",
+      "tag": "ROSTER",
+      "line": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach",
+      "digest": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach",
+      "title": "Florida State Hires Glenn Schumann as New Head Football Coach",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUkdlYUxNZmpCRXhrNHRMSjcwcC1Lc0Nna3FXR1VMT2dOTUtDN2dhRkI2blRKN1lIQ05vVDN0ZUpMTXZHNnRNNVlaLV92R2tCMFBMaGh2TUF0cUNWSndmUi1vWllVcWI2VVdJel9GcE02MVJLaVlwdjA3ZmpBZkV5YUJVYnhnNUlTWnpzc2lwaTdXUmNJSk5zQ25OZWgyMWZXQTdEYmFmQzRtekFDeDRTZDlMTFRzY094RHJjcW1wXzcyQQ?oc=5",
+      "source": "247Sports",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Buffs",
+      "text": "Roster: Florida State Hires Glenn Schumann as New Head Football Coach"
     },
     {
       "id": "838ad10a4b4a",
@@ -2095,36 +2125,6 @@
       "text": "NFL playoff picture, Week 11: 49ers look like class of NFC; can anyone catch Bills in AFC? - The Athletic"
     },
     {
-      "id": "fd0fe66d7862",
-      "category": "Sports",
-      "tag": "ROSTER",
-      "line": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
-      "digest": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
-      "title": "Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPN1FTSFpLUkE4UmRQRzhxcTh3VnloQ3VxdVUxTGFjVTVfRDl3QzhLOVZpY01XOUhqUDNpaDI2dkt6T3AwTjhCSWx3Tm4wOHExZklJRzYtWEd6ZGdSM0Fycm1CYmwyQ091QzJhV2NfV3ZGOVlxbXBHNERUYnJNR0RfN1NUdEp0a1l1MFN5eVNCdnprM0tNMmNSNUhIU2RXdEU4RFRlRHNHYWF1ci1hdFZZ?oc=5",
-      "source": "Fox News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Buffs",
-      "text": "Roster: Bengals Joe Burrow is chasing history, an MVP and a Super Bowl on Monday Night Football"
-    },
-    {
-      "id": "7ca94c3eff30",
-      "category": "Sports",
-      "tag": "PATCH",
-      "line": "Kansas City Broke Through The Noise",
-      "digest": "Kansas City Broke Through The Noise",
-      "title": "Kansas City Broke Through The Noise",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE51UTFrcm16T1dSYnVYQUpQOEpCdGI4aUxEd1pTOVFUaWJrVGdnNWM4T0U2S0VUSWxoNWlmRFlVLThMVWtRQzhUYVYzT1lmeF83cGJDVjZDLXNqdUNXci12M0V0QkpocHc?oc=5",
-      "source": "Defector",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Hotfixes",
-      "text": "Kansas City Broke Through The Noise"
-    },
-    {
       "id": "b4afeb63c594",
       "category": "Weather & Disasters",
       "tag": "EVENT",
@@ -2140,28 +2140,13 @@
       "text": "Server event: Major Thanksgiving storm set to slam Northeast with heavy rain and gusty winds, triggering travel disruptions"
     },
     {
-      "id": "2914521fdc06",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Server event: How wildfire litigation became big business in America",
-      "digest": "Server event: How wildfire litigation became big business in America",
-      "title": "How wildfire litigation became big business in America",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOX0ZVd1REem9xODJmci1ic21DUmxhZGV1b3h2VnZyblRZdjExUnlFNENMOVlnS1JCWmVwVXVtVzNVZzJocjRUZGZBTUZCR214ZHpRLXpQYUxRdVQ0T1UwRVFaX0RYN2ZIckJjbHViYzVWbC1SblVjQUNZVktIcVljRW1EdFd3dVE2bGVSUjdtSQ?oc=5",
-      "source": "PreventionWeb.net",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Server event: How wildfire litigation became big business in America"
-    },
-    {
       "id": "6e44aeb149f9",
       "category": "Weather & Disasters",
       "tag": "UPDATED",
       "line": "US states sue Musk companies over sexualised images made with AI chatbot Grok",
       "digest": "US states sue Musk companies over sexualised images made with AI chatbot Grok",
       "title": "US states sue Musk companies over sexualised images made with AI chatbot Grok",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOcGZaN0FROWJTRkJPUkVBcE0tVDltdnU1aTBPVmRwRjVrUUlfZ2E5LUlSelZGcFhKT3pzMzFoY0VpTEJKVFNieDNuUnRMY183Vjd0Q0ZKR0JWUmcwNk9KRHVZWC1GU1ZKbXJxVkRnUFpBVEhiY3NtYzBlWDVqeGdnN3c4UUhJVk1YcDBkNTA2dDd2ZDd6TkJnNkRlRjRHcDh2bEdMNGVGa2R2REJ4ZHVOSDZDbTNLV29tMlZQekxJRjVxUnlMaHVlZ3l4QWsydnZmV09kUy0wN1A1WmNwWHM3OdIB4AFBVV95cUxQc21pVEhsangyZGhrVDBZbjUxQjNpUkd1d0VaX1J1Y0k3OTNqSlFPeFdfMlRwNWF1cnhxYTlzRHZmWThPd3h5bi1RdUI4M1V6UjRXb0VfeGptSkZVSml4MXBwLU95MVRER2ZPbmJkM05DeHU0LXQ4ek16ZjNiamFJU09iS1p1cW5vNjE1dk1Ud0NpVV9qblFwOE1DTlRiUXY0R1QtZ1pQOFIyNGNaZXRwWWxhR2c4RVBiMUhNQVFJaURrRVFDc3NNN214Mng4cXFWVG5tT1pNemtSNko2MGNxaw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQc21pVEhsangyZGhrVDBZbjUxQjNpUkd1d0VaX1J1Y0k3OTNqSlFPeFdfMlRwNWF1cnhxYTlzRHZmWThPd3h5bi1RdUI4M1V6UjRXb0VfeGptSkZVSml4MXBwLU95MVRER2ZPbmJkM05DeHU0LXQ4ek16ZjNiamFJU09iS1p1cW5vNjE1dk1Ud0NpVV9qblFwOE1DTlRiUXY0R1QtZ1pQOFIyNGNaZXRwWWxhR2c4RVBiMUhNQVFJaURrRVFDc3NNN214Mng4cXFWVG5tT1pNemtSNko2MGNxa9IB4AFBVV95cUxQc21pVEhsangyZGhrVDBZbjUxQjNpUkd1d0VaX1J1Y0k3OTNqSlFPeFdfMlRwNWF1cnhxYTlzRHZmWThPd3h5bi1RdUI4M1V6UjRXb0VfeGptSkZVSml4MXBwLU95MVRER2ZPbmJkM05DeHU0LXQ4ek16ZjNiamFJU09iS1p1cW5vNjE1dk1Ud0NpVV9qblFwOE1DTlRiUXY0R1QtZ1pQOFIyNGNaZXRwWWxhR2c4RVBiMUhNQVFJaURrRVFDc3NNN214Mng4cXFWVG5tT1pNemtSNko2MGNxaw?oc=5",
       "source": "South China Morning Post",
       "kind": "headline",
       "weird": false,
@@ -2183,6 +2168,21 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Server event: Thanksgiving travel surge faces flight delays, storm threats across US"
+    },
+    {
+      "id": "882515956197",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "digest": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "title": "Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CNkpRRHlsSENSTHZia05oNGQtaGx5SlZ4cG03OHNHZDRtanZrY2xxT2IwOWpDVkVrbVh1bkhtVUYyYldWTzBGakFhdVdPci1HRmt1RXJqSkoxWmtFd3Bz?oc=5",
+      "source": "OnTheSnow.com",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Server event: Snow Before You Go: Whistler and Mt. Baker Stack Up Thanksgiving Snow, Sierra Storm Sunday"
     },
     {
       "id": "f43719b8110a",
@@ -2230,6 +2230,21 @@
       "text": "Thanksgiving travel forecast 2026: storms on both coasts"
     },
     {
+      "id": "e151dfe521ce",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "digest": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "title": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNjVhc1RSRXY1c2VnV2FHd1RpV1JvZktBczZKMV9uYlBhQ29NSWd4NmxHOGstUVRENU5Gczl0Q0s2dTgtSl9jbWlwMUlNWWtscTFXX0d5SzhNTE54dGNDUEZQOVJnY2Y3eGQ3MFc0YUViOWVEeTB1TmRGMGtEMFUxQ2hhNHdjNnB5ZUFtd3ROSWxkdmJSbzIxbXdfcnJZTzFHN0NpQlBVaGZDa0VDUEpqcTNzVWFrYld3SC00a3NCeWNvME5vRkE?oc=5",
+      "source": "Department of Transportation (.gov)",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Trump\u2019s Transportation Department Announces Record-Breaking Thanksgiving Air Travel for 2026"
+    },
+    {
       "id": "3b0618405414",
       "category": "Holidays & Events",
       "tag": "ADDED",
@@ -2260,34 +2275,19 @@
       "text": "News Wrap: Storms threaten Thanksgiving travel as airlines rebound from tech failures"
     },
     {
-      "id": "e24b6310dcc5",
+      "id": "c3ba2f9ecde8",
       "category": "Holidays & Events",
       "tag": "ADDED",
-      "line": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "digest": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "title": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZWEySGVFclMyYXBNX3NfckJNYXhlZlYxMGRlYWZhMU1GeWZFLUZaYUdDZlRXbUI2LXVvYjQzLThCTzFvUUZGM3NraW1aRnYtTWFMenhDeTI2dXp5dldJa3VfTXdmSjFpcXBtSTdCZjhucWhMT0Jyd1BiajJhclJDX2FoVWN3R3liUEtvd0ZmREMxVk84RE1SQlVR?oc=5",
-      "source": "KCRA",
+      "line": "High tide expectations lowered at SFO for Thanksgiving travel",
+      "digest": "High tide expectations lowered at SFO for Thanksgiving travel",
+      "title": "High tide expectations lowered at SFO for Thanksgiving travel",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1nN0ZXa3dPdzNVelVFNzJvU2pPZ0RYaFJVcXpWSmZpcEhFV2phSndvQ295dGNURzNaZkVTV3dQMm9sNjRzX20xRlZPYlFZQmZwbHc?oc=5",
+      "source": "ABC7 Bay Area",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Limited-Time Events",
-      "text": "Thanksgiving travel weather forecast: The best and worst days to drive in Northern California"
-    },
-    {
-      "id": "c97ef984fa3f",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Thanksgiving travel: Storms could affect flights and drives in Florida and on East Coast",
-      "digest": "Thanksgiving travel: Storms could affect flights and drives in Florida and on East Coast",
-      "title": "Thanksgiving travel: Storms could affect flights and drives in Florida and on East Coast",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYVlpYkZNcjY5SWNMMVdTcVpjWkt3OF9BUm95dl9WSlBQNUZwX21iOXhzUzdhZDlWSkE4dEVXekd1bUxrOEc2b3JnOHZpVjdGMHdrVGkxR1FCM3N5SFVoSlE0bUxOVjF6aXVyLXBwRkhITS16STh2dkhQRWo1TGREdUFwNVROQzZyV05uNlRySHFXamJZR0w4MHBRbTlwd1dyMDlaNWs5R0QtX3J1alBwSFRB0gHGAUFVX3lxTFBadGJfUXQ1d1F5dS12OUg3RlV0aTZPRHRfRmN1UWJ5WTZzSFY5c1VTZ3h4MS1Bbk9Ea1ZkV2Z0N3I0emxRSExpRjc5cGYzME9iQm56ZDAza3JwSllpY3RaUVQxd1ZYVmhsbkpZNnMzY3BKWnRiUFVncGgyOEN5RlpkdERIbEN1cmZPT2tDckJEWmNfUEh3N2JsR3VfU05kM2NIZjVHNUJILTF1VlQ3ZWtlM2RUQnRHU01lXzhoV282TnRwS1VDZw?oc=5",
-      "source": "ABC7 WWSB",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Thanksgiving travel: Storms could affect flights and drives in Florida and on East Coast"
+      "text": "High tide expectations lowered at SFO for Thanksgiving travel"
     },
     {
       "id": "bcda98deac74",
@@ -2455,6 +2455,86 @@
       "text": "US Has More Natural Gas Than It Can Use as War Chokes Global Supply"
     },
     {
+      "id": "30f70d3d163c",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "Players are now searching for: jonathan allen",
+      "digest": "Players are now searching for: jonathan allen",
+      "title": "jonathan allen",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=jonathan+allen",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.bengals.com/news/quick-hits-jonathan-allen-returns-with-an-old-move-and-a-new-team-that-could-be-his-best-yet-joe-burrow-ja-marr-chase-s-newest-number-is-nine",
+      "related_source": "Cincinnati Bengals",
+      "filter": "Life",
+      "section": "New Content",
+      "text": "Players are now searching for: jonathan allen"
+    },
+    {
+      "id": "274e12da9366",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "Players are now searching for: billie jean king",
+      "digest": "Players are now searching for: billie jean king",
+      "title": "billie jean king",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=billie+jean+king",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://www.billiejeankingcup.com/en/news/watch-highlights-as-gauff-and-townsend-clinch-play-off-tie-for-usa",
+      "related_source": "Billie Jean King Cup",
+      "filter": "Life",
+      "section": "New Content",
+      "text": "Players are now searching for: billie jean king"
+    },
+    {
+      "id": "0591d390a8a9",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "gesicki",
+      "digest": "gesicki",
+      "title": "gesicki",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=gesicki",
+      "source": "Google Trends (US) \u00b7 500+ searches",
+      "kind": "trend",
+      "related": "https://sports.yahoo.com/articles/bengals-urged-replace-aging-mike-114930134.html",
+      "related_source": "Yahoo Sports",
+      "filter": "Life",
+      "section": "Hotfixes",
+      "text": "gesicki"
+    },
+    {
+      "id": "7e69c2cc797b",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "Players are now searching for: who won dancing with the stars 2026",
+      "digest": "Players are now searching for: who won dancing with the stars 2026",
+      "title": "who won dancing with the stars 2026",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=who+won+dancing+with+the+stars+2026",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.yahoo.com/entertainment/tv/articles/robert-irwin-names-ezra-frech-224505488.html",
+      "related_source": "Yahoo",
+      "filter": "Life",
+      "section": "New Content",
+      "text": "Players are now searching for: who won dancing with the stars 2026"
+    },
+    {
+      "id": "fa35cd5bdf19",
+      "category": "Slang",
+      "tag": "BUFFED",
+      "line": "joan beringer",
+      "digest": "joan beringer",
+      "title": "joan beringer",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=joan+beringer",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://dunkingwithwolves.com/timberwolves-should-play-lamelo-ball-and-joan-beringer-together-more-despite-risks",
+      "related_source": "Dunking with Wolves",
+      "filter": "Life",
+      "section": "Buffs",
+      "text": "joan beringer"
+    },
+    {
       "id": "fc71f6448965",
       "category": "Slang",
       "tag": "ADDED",
@@ -2462,29 +2542,13 @@
       "digest": "Players are now searching for: amber alert",
       "title": "amber alert",
       "url": "https://trends.google.com/trends/explore?geo=US&q=amber+alert",
-      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "source": "Google Trends (US) \u00b7 2000+ searches",
       "kind": "trend",
       "related": "https://www.syracuse.com/crime/2026/11/amber-alert-issued-for-abduction-of-baby-in-cayuga-county.html",
       "related_source": "Syracuse.com",
       "filter": "Life",
       "section": "New Content",
       "text": "Players are now searching for: amber alert"
-    },
-    {
-      "id": "452348b181ae",
-      "category": "Slang",
-      "tag": "UPDATED",
-      "line": "raptors is climbing the search meta.",
-      "digest": "raptors is climbing the search meta.",
-      "title": "raptors",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=raptors",
-      "source": "Google Trends (US) \u00b7 1000+ searches",
-      "kind": "trend",
-      "related": "https://sports.yahoo.com/articles/5-big-questions-ahead-bucks-200003980.html",
-      "related_source": "Yahoo Sports",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "raptors is climbing the search meta."
     },
     {
       "id": "d32961c4c922",
@@ -2519,36 +2583,20 @@
       "text": "trevon diggs"
     },
     {
-      "id": "7419ea76767b",
+      "id": "3bf07d95ddb8",
       "category": "Slang",
-      "tag": "BUFFED",
-      "line": "vcu basketball",
-      "digest": "vcu basketball",
-      "title": "vcu basketball",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=vcu+basketball",
-      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "tag": "PATCH",
+      "line": "islanders",
+      "digest": "islanders",
+      "title": "islanders",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=islanders",
+      "source": "Google Trends (US) \u00b7 2000+ searches",
       "kind": "trend",
-      "related": "https://www.golocalprov.com/sports/preview-of-pcs-critical-trip-to-hawaii-kevin-stacom",
-      "related_source": "Go Local Prov",
-      "filter": "Life",
-      "section": "Buffs",
-      "text": "vcu basketball"
-    },
-    {
-      "id": "47da72b2080f",
-      "category": "Slang",
-      "tag": "UPDATED",
-      "line": "toronto maple leafs is climbing the search meta.",
-      "digest": "toronto maple leafs is climbing the search meta.",
-      "title": "toronto maple leafs",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=toronto+maple+leafs",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://www.blogto.com/sports_play/2026/11/auston-matthews-stares-anthem-singer/",
-      "related_source": "blogTO",
+      "related": "https://www.espn.com/nhl/recap?gameId=401892776",
+      "related_source": "ESPN",
       "filter": "Life",
       "section": "Hotfixes",
-      "text": "toronto maple leafs is climbing the search meta."
+      "text": "islanders"
     },
     {
       "id": "3a1ef2a70022",
@@ -2565,52 +2613,6 @@
       "filter": "Life",
       "section": "New Content",
       "text": "Players are now searching for: what happened to tom jackson"
-    },
-    {
-      "id": "5aab55d2eb8d",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "Players are now searching for: jaime munguia",
-      "digest": "Players are now searching for: jaime munguia",
-      "title": "jaime munguia",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jaime+munguia",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "filter": "Life",
-      "section": "New Content",
-      "text": "Players are now searching for: jaime munguia"
-    },
-    {
-      "id": "def2b960b661",
-      "category": "Slang",
-      "tag": "PATCH",
-      "line": "pat mcafee",
-      "digest": "pat mcafee",
-      "title": "pat mcafee",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=pat+mcafee",
-      "source": "Google Trends (US) \u00b7 1000+ searches",
-      "kind": "trend",
-      "related": "https://www.espn.com/video/clip/_/id/50549970/the-rock-ends-epic-gameday-entrance-slamming-mcafee-table",
-      "related_source": "ESPN",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "pat mcafee"
-    },
-    {
-      "id": "fdf07562ef35",
-      "category": "Slang",
-      "tag": "PATCH",
-      "line": "jason kelce",
-      "digest": "jason kelce",
-      "title": "jason kelce",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=jason+kelce",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://www.instyle.com/taylor-swift-niece-wyatt-cheer-on-travis-kelce-kansas-city-chiefs-game-12274200",
-      "related_source": "InStyle",
-      "filter": "Life",
-      "section": "Hotfixes",
-      "text": "jason kelce"
     },
     {
       "id": "03759a388cab",
@@ -2814,19 +2816,19 @@
       "id": "c39ad0c11669",
       "category": "Markets",
       "tag": "NERFED",
-      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
-      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92",
+      "line": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
+      "digest": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91",
       "title": "Costco Wholesale Corp (COST) -0.38%",
       "url": "https://www.cnbc.com/quotes/COST",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "COST",
-      "price": 1097.92,
+      "price": 1097.91,
       "previous_close": 1102.15,
-      "change_pct": -0.3837953091684451,
+      "change_pct": -0.3847026266842089,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.92"
+      "text": "Costco Wholesale Corp (COST) -0.38%  \u00b7  $1,102.15 \u2192 $1,097.91"
     },
     {
       "id": "aac71a943651",
@@ -2904,19 +2906,19 @@
       "id": "3e7d20d6a3be",
       "category": "Markets",
       "tag": "BUFFED",
-      "line": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03",
-      "digest": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03",
-      "title": "Invesco QQQ Trust (QQQ) +7.00%",
+      "line": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91",
+      "digest": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91",
+      "title": "Invesco QQQ Trust (QQQ) +6.98%",
       "url": "https://www.cnbc.com/quotes/QQQ",
       "source": "CNBC",
       "kind": "stock",
       "symbol": "QQQ",
-      "price": 651.03,
+      "price": 650.91,
       "previous_close": 608.45,
-      "change_pct": 6.998109951516135,
+      "change_pct": 6.97838770646724,
       "filter": "Markets",
       "section": "Markets",
-      "text": "Invesco QQQ Trust (QQQ) +7.00%  \u00b7  $608.45 \u2192 $651.03"
+      "text": "Invesco QQQ Trust (QQQ) +6.98%  \u00b7  $608.45 \u2192 $650.91"
     },
     {
       "id": "342be18c33a1",
@@ -3025,6 +3027,22 @@
       "filter": "Markets",
       "section": "Markets",
       "text": "Dow Jones Industrial Average (.DJI) +3.01%  \u00b7  $48,147.33 \u2192 $49,595.31"
+    },
+    {
+      "id": "e00ee85e0883",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "Server event: Coastal Flood Warning issued November 23 at 7:33PM PST until November 26 at 7:00PM PST by NWS Medford OR",
+      "digest": "Server event: Coastal Flood Warning issued November 23 at 7:33PM PST until November 26 at 7:00PM PST by NWS Medford OR",
+      "title": "Coastal Flood Warning issued November 23 at 7:33PM PST until November 26 at 7:00PM PST by NWS Medford OR",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.931c6a0070e676f8099d9291990afb2491746722.001.1",
+      "source": "NWS Medford OR",
+      "kind": "alert",
+      "weird": false,
+      "severity": "Severe",
+      "filter": "Life",
+      "section": "Limited-Time Events",
+      "text": "Server event: Coastal Flood Warning issued November 23 at 7:33PM PST until November 26 at 7:00PM PST by NWS Medford OR"
     },
     {
       "id": "4aefc0ec50e6",
@@ -3137,22 +3155,6 @@
       "filter": "Life",
       "section": "Limited-Time Events",
       "text": "Server event: Flood Warning issued November 23 at 8:55PM EST by NWS Melbourne FL"
-    },
-    {
-      "id": "a0acbd3fdbd1",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Server event: Flood Warning issued November 23 at 8:52PM EST by NWS Melbourne FL",
-      "digest": "Server event: Flood Warning issued November 23 at 8:52PM EST by NWS Melbourne FL",
-      "title": "Flood Warning issued November 23 at 8:52PM EST by NWS Melbourne FL",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.29365daa0462fd3fb00f3ded9d41fa2bcf4552d9.001.1",
-      "source": "NWS Melbourne FL",
-      "kind": "alert",
-      "weird": false,
-      "severity": "Severe",
-      "filter": "Life",
-      "section": "Limited-Time Events",
-      "text": "Server event: Flood Warning issued November 23 at 8:52PM EST by NWS Melbourne FL"
     },
     {
       "id": "ab10f2058391",
