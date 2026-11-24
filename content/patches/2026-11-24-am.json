@@ -1,0 +1,109 @@
+{
+  "items": [
+    {
+      "section": "Markets",
+      "tag": "Markets",
+      "text": "Markets: Monday's Huang sugar rush is wearing off. Before the bell, Nasdaq-100 futures are down about 2%, S&P 500 futures down 1.2%, and Dow futures down 0.6%. Nvidia is giving back about 5% after a 31% Monday.",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html",
+      "source": "Yahoo Finance"
+    },
+    {
+      "section": "Markets",
+      "tag": "Markets",
+      "text": "Markets: Bitcoin is back down hugging $60,000 after briefly topping $64K Monday. Spot bitcoin ETFs just set a record too, the wrong kind: $4.71 billion pulled out in November.",
+      "url": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
+      "source": "CoinDesk"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "Tech & Science",
+      "text": "Took a Hit: Anthropic slipped below its $83 IPO price in premarket trading, about a week after its blockbuster debut. Round trip complete.",
+      "url": "https://www.investing.com/news/economy-news/anthropic-breaks-below-83-ipo-price-as-debut-rally-unravels-5047654",
+      "source": "Reuters via Investing.com"
+    },
+    {
+      "section": "Still Broken",
+      "tag": "News & Politics",
+      "text": "Still Broken: Jensen Huang got his Nvidia job back, but the China chip mess didn't reset with him. Sen. Tom Cotton: \"Congress has much to investigate.\"",
+      "url": "https://thehill.com/homenews/senate/6239366-tom-cotton-donald-trump-jensen-huang-nvidia/",
+      "source": "The Hill"
+    },
+    {
+      "section": "What's New",
+      "tag": "News & Politics",
+      "text": "What's New: Tariffs are making a comeback. The U.S. is reportedly getting ready to raise tariffs on China, the EU and other countries, with China likely hit hardest.",
+      "url": "https://finance.yahoo.com/economy/policy/articles/trump-bringing-tariffs-back-china-134752441.html",
+      "source": "Yahoo Finance (WSJ report)"
+    },
+    {
+      "section": "Leveling Up",
+      "tag": "News & Politics",
+      "text": "Leveling Up: Rudy Giuliani is set to get the Presidential Medal of Freedom from Trump today. He says he's \"humbled and honored.\"",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/rudy-guiliani-medal-of-freedom-trump-b3090629.html",
+      "source": "The Independent"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "News & Politics",
+      "text": "Took a Hit: Trump's meme coin went from over $70 to under a dollar, which made the top-holder dinner a whole lot cheaper to get into. Gift box included a little golden Trump statue.",
+      "url": "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner",
+      "source": "NPR"
+    },
+    {
+      "section": "Happening Now",
+      "tag": "Life",
+      "text": "Happening Now: Today is the busiest flying day of Thanksgiving week. 52,000+ flights, and the FAA says the busiest holiday skies in 16 years. Pack patience.",
+      "url": "https://www.faa.gov/newsroom/trumps-transportation-department-announces-record-breaking-thanksgiving-air-travel-2026",
+      "source": "FAA"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "Life",
+      "text": "Took a Hit: Thanksgiving travel spawns a storm on both coasts. Rain and mountain snow out West, then a nor'easter with heavy rain and strong winds rolling up the East on Turkey Day itself.",
+      "url": "https://weather.com/2026/11/24/holiday/thanksgiving/thanksgiving-travel-weather-forecast-us-storms",
+      "source": "The Weather Channel"
+    },
+    {
+      "section": "Happening Now",
+      "tag": "Life",
+      "text": "Happening Now: The 100th Macy's parade has 100 balloons and one rule: no flying if gusts top 34 mph. Thursday's storm is about to test it.",
+      "url": "https://www.13abc.com/2026/11/24/will-storms-disrupt-macys-thanksgiving-day-parade-heres-what-we-know/",
+      "source": "Gray News / 13abc"
+    },
+    {
+      "section": "Leveling Up",
+      "tag": "Sports",
+      "text": "Leveling Up: Jayden Daniels does the clutch thing AGAIN. Two passes, 64 yards, walk-off field goal, Commanders over Bengals 22-20 on Monday Night Football.",
+      "url": "https://www.espn.com/nfl/story/_/id/50580514/jayden-daniels-delivers-another-late-game-drive-commanders-win-vs-bengals-mnf",
+      "source": "ESPN"
+    },
+    {
+      "section": "What's New",
+      "tag": "Tech & Science",
+      "text": "What's New: Kagi launches Kagi Mail, an ad-free Gmail alternative for $9 a month after a 60-day trial. Turns out \"free\" email always had a bill. It just had better marketing.",
+      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
+      "source": "The Verge"
+    },
+    {
+      "section": "What's New",
+      "tag": "Tech & Science",
+      "text": "What's New: Ladybird, a web browser running its own from-scratch engine (not a Chrome fork), is now in alpha for Mac and Linux. Crashes included, as advertised.",
+      "url": "https://ladybird.org/posts/alpha/",
+      "source": "Ladybird"
+    },
+    {
+      "section": "What's New",
+      "tag": "Tech & Science",
+      "text": "What's New: Euclid space telescope finds the oldest known quasar, formed just 630 million years after the Big Bang. It broke its own record from July.",
+      "url": "https://www.popsci.com/science/oldest-quasar-euclid-telescope/",
+      "source": "Popular Science"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "Entertainment",
+      "text": "Took a Hit: Blade Runner 2099 debuts at 72% on Rotten Tomatoes. Still fresh, but the lowest score in the franchise (2049 sits at 88%).",
+      "url": "https://comicbookmovie.com/sci_fi/blade-runner-2099s-rotten-tomatoes-score-revealed-and-it-sets-an-unfortunate-franchise-record-a231157",
+      "source": "ComicBookMovie"
+    }
+  ]
+}
