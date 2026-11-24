@@ -1431,12 +1431,84 @@ def _spark_values(asset: dict, prefer: str = "5d") -> list[float]:
     return asset.get("h1d") or []
 
 
-def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "", meta: dict | None = None) -> str:
-    assets = board.get("assets") or []
-    mkt_src = html.escape(f"{prefix}assets/sprites/mkt.webp", quote=True)
-    as_of = html.escape(board.get("as_of_label") or "Stocks as of last update · Crypto live")
-    buff = board.get("buff")
-    nerf = board.get("nerf")
+def top_movers(assets: list[dict], n: int = 5) -> list[dict]:
+    ranked = [a for a in assets if a.get("change_pct") is not None]
+    ranked.sort(key=lambda a: abs(float(a["change_pct"])), reverse=True)
+    return ranked[:n]
+
+
+def _ticker_html(assets: list[dict], ticker_id: str, label: str) -> str:
+    bits = []
+    for a in assets:
+        if a.get("price") is None:
+            continue
+        cls = "up" if _asset_up(a) else "down"
+        href = html.escape(a.get("url") or "#", quote=True)
+        bits.append(
+            f'<a class="mkt-tick {cls}" href="{href}" rel="noopener noreferrer" data-id="{html.escape(str(a["id"]), quote=True)}">'
+            f'<b>{html.escape(a["symbol"])}</b>'
+            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
+            f'<span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span>'
+            "</a>"
+        )
+    tick_set = "".join(bits) or '<span class="ticker-status">Quotes unavailable this run.</span>'
+    return (
+        f'<div class="mkt-ticker" id="{html.escape(ticker_id, quote=True)}" tabindex="0" aria-label="{html.escape(label, quote=True)}">'
+        '<div class="mkt-ticker-viewport">'
+        f'<div class="mkt-ticker-track" style="--tick-count:{max(len(bits), 1)}">'
+        f'<div class="mkt-ticker-set">{tick_set}</div>'
+        f'<div class="mkt-ticker-set" aria-hidden="true">{tick_set}</div>'
+        "</div></div></div>"
+    )
+
+
+def _mover_cards_html(movers: list[dict], buff: dict | None, nerf: dict | None) -> str:
+    cards = []
+    for a in movers:
+        up = _asset_up(a)
+        cls = "up" if up else "down"
+        extra = ""
+        ribbon = ""
+        if buff and a["id"] == buff["id"]:
+            extra = " is-buff"
+            ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>'
+        elif nerf and a["id"] == nerf["id"]:
+            extra = " is-nerf"
+            ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>'
+        flavor = f'<p class="mkt-flavor">{html.escape(a["flavor"])}</p>' if a.get("flavor") else ""
+        spark = spark_svg(_spark_values(a), width=180, height=56, asset_id=str(a["id"]), up=up)
+        href = html.escape(a.get("url") or "#", quote=True)
+        cards.append(
+            f'<a class="mkt-card {cls}{extra}" href="{href}" rel="noopener noreferrer" data-id="{html.escape(str(a["id"]), quote=True)}">'
+            f'<span class="mkt-card-top"><b>{html.escape(a["symbol"])}</b><span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span></span>'
+            f'<span class="mkt-card-name">{html.escape(a["name"])}</span>'
+            f"{ribbon}"
+            f'<span class="mkt-card-spark">{spark}</span>'
+            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
+            f"{flavor}"
+            "</a>"
+        )
+    return "".join(cards)
+
+
+def _index_line_html(indexes: list[dict]) -> str:
+    if not indexes:
+        return ""
+    bits = []
+    for a in indexes:
+        cls = "up" if _asset_up(a) else "down"
+        href = html.escape(a.get("url") or "#", quote=True)
+        bits.append(
+            f'<a class="mkt-index {cls}" href="{href}" rel="noopener noreferrer" data-id="{html.escape(str(a["id"]), quote=True)}">'
+            f'<b>{html.escape(a["name"])}</b>'
+            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], "index"))}</span>'
+            f'<span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span>'
+            "</a>"
+        )
+    return f'<div class="mkt-indexes" aria-label="Major US indexes">{"".join(bits)}</div>'
+
+
+def _block_badges(buff: dict | None, nerf: dict | None) -> str:
     badges = []
     if buff:
         badges.append(
@@ -1446,130 +1518,66 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
         badges.append(
             f'<span class="mkt-badge is-nerf">Nerf of the day · {html.escape(nerf["id"])} {html.escape(fmt_mkt_pct(nerf["pct"]))}</span>'
         )
-    badge_html = f'<div class="mkt-highlights">{"".join(badges)}</div>' if badges else ""
+    return f'<div class="mkt-highlights">{"".join(badges)}</div>' if badges else ""
 
-    tick_bits = []
-    for a in assets:
-        if a.get("price") is None:
+
+def _day_extremes(assets: list[dict]) -> tuple[dict | None, dict | None]:
+    ranked = [a for a in assets if a.get("change_pct") is not None]
+    if not ranked:
+        return None, None
+    buff = max(ranked, key=lambda a: a["change_pct"])
+    nerf = min(ranked, key=lambda a: a["change_pct"])
+    if buff["change_pct"] <= 0:
+        buff = None
+    if nerf["change_pct"] >= 0:
+        nerf = None
+    def pack(a):
+        if not a:
+            return None
+        return {"id": a["id"], "pct": a["change_pct"], "name": a.get("name") or a["id"]}
+    return pack(buff), pack(nerf)
+
+
+def for_homepage_cards(notes: list[dict]) -> list[dict]:
+    """Drop quote-line stock notes and avoid a second Markets heading on the homepage."""
+    out = []
+    for src in notes:
+        if src.get("kind") == "stock":
             continue
-        cls = "up" if _asset_up(a) else "down"
-        href = html.escape(a.get("url") or "#", quote=True)
-        tick_bits.append(
-            f'<a class="mkt-tick {cls}" href="{href}" rel="noopener noreferrer" data-id="{html.escape(str(a["id"]), quote=True)}">'
-            f'<b>{html.escape(a["symbol"])}</b>'
-            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
-            f'<span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span>'
-            "</a>"
-        )
-    tick_set = "".join(tick_bits) or '<span class="ticker-status">Quotes unavailable this run.</span>'
-    ticker = (
-        '<div class="mkt-ticker" id="mkt-ticker" tabindex="0" aria-label="Scrolling prices for top US stocks and crypto. Pauses when hovered or focused.">'
-        '<div class="mkt-ticker-viewport">'
-        f'<div class="mkt-ticker-track" style="--tick-count:{max(len(tick_bits), 1)}">'
-        f'<div class="mkt-ticker-set">{tick_set}</div>'
-        f'<div class="mkt-ticker-set" aria-hidden="true">{tick_set}</div>'
-        "</div></div></div>"
-    )
+        n = dict(src)
+        if n.get("section") == "Markets":
+            n["section"] = SECTION_FOR_TAG.get(n.get("tag") or "", "Hotfixes")
+        out.append(n)
+    return out
 
-    featured_id = board.get("featured")
-    feat = next((a for a in assets if a["id"] == featured_id), None) or next((a for a in assets if a["kind"] == "index"), None) or (assets[0] if assets else None)
-    feat_ranges = []
-    default_range = "5d"
-    if feat:
-        if len(feat.get("h1d") or []) >= 8:
-            feat_ranges.append("1d")
-        if len(feat.get("h5d") or []) >= 2:
-            feat_ranges.append("5d")
-        if len(feat.get("h1m") or []) >= 2:
-            feat_ranges.append("1m")
-        if "1d" in feat_ranges and "5d" not in feat_ranges:
-            default_range = "1d"
-        elif "5d" not in feat_ranges and "1m" in feat_ranges:
-            default_range = "1m"
-    range_btns = []
-    for key, label in (("1d", "1D"), ("5d", "5D"), ("1m", "1M")):
-        disabled = " disabled" if key not in feat_ranges else ""
-        on = " is-on" if key == default_range and key in feat_ranges else ""
-        range_btns.append(
-            f'<button type="button" class="mkt-range{on}" data-range="{key}"{disabled}>{label}</button>'
-        )
-    if feat:
-        series = {"1d": feat.get("h1d") or [], "5d": feat.get("h5d") or [], "1m": feat.get("h1m") or []}.get(default_range) or _spark_values(feat)
-        if default_range == "1m":
-            series = feat.get("h1m") or series
-        feat_up = _asset_up(feat)
-        feat_chart = spark_svg(series, width=640, height=220, asset_id=f"feat-{feat['id']}", up=feat_up, thick=2.2)
-        feat_cls = "up" if feat_up else "down"
-        feat_block = f"""
-        <div class="mkt-featured" id="mkt-featured" data-id="{html.escape(str(feat['id']), quote=True)}">
-          <div class="mkt-featured-top">
-            <div>
-              <p class="eyebrow">Featured</p>
-              <h3 id="feat-name">{html.escape(feat['name'])} <span class="feat-sym">{html.escape(feat['symbol'])}</span></h3>
-              <p class="feat-price {feat_cls}" id="feat-price">{html.escape(fmt_mkt_price(feat['price'], feat['kind']))} <span>{html.escape(fmt_mkt_pct(feat.get('change_pct')))}</span></p>
-            </div>
-            <div class="mkt-ranges" role="tablist" aria-label="Chart range">{''.join(range_btns)}</div>
-          </div>
-          <div class="feat-chart" id="feat-chart">{feat_chart}</div>
-        </div>"""
-    else:
-        feat_block = '<div class="mkt-featured"><p class="ticker-status">Chart data unavailable this run.</p></div>'
 
-    cards = []
-    for a in assets:
-        up = _asset_up(a)
-        cls = "up" if up else "down"
-        extra = ""
-        if buff and a["id"] == buff["id"]:
-            extra = " is-buff"
-        elif nerf and a["id"] == nerf["id"]:
-            extra = " is-nerf"
-        ribbon = ""
-        if extra == " is-buff":
-            ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>'
-        elif extra == " is-nerf":
-            ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>'
-        flavor = f'<p class="mkt-flavor">{html.escape(a["flavor"])}</p>' if a.get("flavor") else ""
-        spark = spark_svg(_spark_values(a), width=180, height=56, asset_id=str(a["id"]), up=up)
-        href = html.escape(a.get("url") or "#", quote=True)
-        on = " is-on" if feat and a["id"] == feat["id"] else ""
-        cards.append(
-            f'<button type="button" class="mkt-card {cls}{extra}{on}" data-id="{html.escape(str(a["id"]), quote=True)}" aria-pressed="{"true" if on else "false"}">'
-            f'<span class="mkt-card-top"><b>{html.escape(a["symbol"])}</b><span class="mkt-ch">{html.escape(fmt_mkt_pct(a.get("change_pct")))}</span></span>'
-            f'<span class="mkt-card-name">{html.escape(a["name"])}</span>'
-            f"{ribbon}"
-            f'<span class="mkt-card-spark">{spark}</span>'
-            f'<span class="mkt-px">{html.escape(fmt_mkt_price(a["price"], a["kind"]))}</span>'
-            f"{flavor}"
-            f'<a class="mkt-card-link" href="{href}" rel="noopener noreferrer">Source</a>'
-            "</button>"
-        )
-    grid = f'<div class="mkt-grid" id="mkt-grid">{"".join(cards)}</div>' if cards else ""
+def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "", meta: dict | None = None) -> str:
+    assets = board.get("assets") or []
+    stocks_list = [a for a in assets if a.get("kind") == "stock"]
+    indexes = [a for a in assets if a.get("kind") == "index"]
+    cryptos = [a for a in assets if a.get("kind") == "crypto"]
+    mkt_src = html.escape(f"{prefix}assets/sprites/mkt.webp", quote=True)
+
+    kind = (meta or {}).get("kind") or ""
+    if not kind:
+        kind = "Morning" if "8:00" in (board.get("as_of_label") or "") else "Evening"
+    stock_label = "as of 8:00 AM ET" if kind == "Morning" else "as of 6:00 PM ET"
+
+    buff = board.get("buff")
+    nerf = board.get("nerf")
+    crypto_buff, crypto_nerf = _day_extremes(cryptos)
+    stock_movers = top_movers(stocks_list, 5)
+    crypto_movers = top_movers(cryptos, 5)
+
+    # Ticker: 15 names plus the three indexes, as requested. Indexes also get a still line so they don't scroll away.
+    stock_ticker = _ticker_html(stocks_list, "mkt-stock-ticker", "Scrolling prices for the top 15 US stocks. Pauses when hovered or focused.")
+    crypto_ticker = _ticker_html(cryptos, "mkt-crypto-ticker", "Scrolling prices for top cryptocurrencies. Pauses when hovered or focused.")
+    stock_cards = _mover_cards_html(stock_movers, buff, nerf)
+    crypto_cards = _mover_cards_html(crypto_movers, crypto_buff, crypto_nerf)
 
     compact = json.dumps(board, separators=(",", ":"), ensure_ascii=False)
-    # Keep the payload out of a visible node; JS reads this for live updates and chart toggles.
     data_tag = f'<script type="application/json" id="markets-data">{compact}</script>'
 
-    # World-state counts prefer the configured board when present.
-    board_quotes = [a for a in assets if a["kind"] in {"stock", "index"} and a.get("change_pct") is not None]
-    use_for_ws = board_quotes or stocks
-    ups = downs = 0
-    for s in use_for_ws:
-        pct = s.get("change_pct")
-        if pct is None:
-            continue
-        if pct >= 0:
-            ups += 1
-        else:
-            downs += 1
-    if ups > downs:
-        mkt = f'<div class="ws-item"><b>Markets</b> <span class="up">▲ {ups} up</span> / {downs} down</div>'
-    elif downs > ups:
-        mkt = f'<div class="ws-item"><b>Markets</b> <span class="down">▼ {downs} down</span> / {ups} up</div>'
-    elif ups or downs:
-        mkt = f'<div class="ws-item"><b>Markets</b> mixed · {ups} up / {downs} down</div>'
-    else:
-        mkt = '<div class="ws-item"><b>Markets</b> quotes unavailable</div>'
     alerts = sum(1 for n in notes if n.get("kind") == "alert")
     weather = f'<div class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</div>' if alerts else '<div class="ws-item"><b>Weather</b> clear</div>'
     bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
@@ -1589,13 +1597,32 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
         <img class="sec-sprite" src="{mkt_src}" alt="" width="72" height="72">
         <div class="markets-titles">
           <h2>Markets</h2>
-          <p class="sec-count" id="markets-asof">{as_of}</p>
+          <p class="sec-count">Top US names and crypto</p>
         </div>
-        {badge_html}
       </div>
-      {ticker}
-      {feat_block}
-      {grid}
+      <div class="mkt-block" id="mkt-stocks">
+        <div class="mkt-block-head">
+          <div>
+            <h3>Stocks</h3>
+            <p class="sec-count" id="markets-asof">{html.escape(stock_label)}</p>
+          </div>
+          {_block_badges(buff, nerf)}
+        </div>
+        {_index_line_html(indexes)}
+        {stock_ticker}
+        <div class="mkt-grid" id="mkt-stock-grid">{stock_cards}</div>
+      </div>
+      <div class="mkt-block" id="mkt-crypto">
+        <div class="mkt-block-head">
+          <div>
+            <h3>Crypto</h3>
+            <p class="sec-count">live</p>
+          </div>
+          {_block_badges(crypto_buff, crypto_nerf)}
+        </div>
+        {crypto_ticker}
+        <div class="mkt-grid" id="mkt-crypto-grid">{crypto_cards}</div>
+      </div>
       {data_tag}
     </section>
     <section class="status-grid" id="status" aria-label="World state">
@@ -1606,10 +1633,11 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
             <p class="sec-count">Online</p>
           </div>
         </div>
-        <div class="world-stats">{mkt}{weather}{bug_bit}{gas}</div>
+        <div class="world-stats">{weather}{bug_bit}{gas}</div>
       </article>
     </section>
     """
+
 
 
 def collect_nws() -> list[dict]:
@@ -2541,7 +2569,7 @@ def extras_html(anilist, notes, series, trends, prefix=""):
 def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written=None, board=None) -> str:
     written = written or []
     stocks = [n for n in notes if n.get("kind") == "stock"]
-    featured, rest = split_featured(notes, written)
+    featured, rest = split_featured(for_homepage_cards(notes), for_homepage_cards(written))
     extras = extras_html(anilist, notes, series, trends)
     weekly = ""
     if handwritten:

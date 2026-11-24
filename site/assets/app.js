@@ -13,7 +13,7 @@
     return sign + n.toFixed(2) + "%";
   }
   function sparkSvg(values, width, height, id, up, thick) {
-    width = width || 640; height = height || 220; thick = thick || 2.2;
+    width = width || 180; height = height || 56; thick = thick || 1.7;
     if (!values || values.length < 2) {
       return '<svg class="spark" viewBox="0 0 ' + width + " " + height + '" aria-hidden="true"></svg>';
     }
@@ -41,95 +41,89 @@
   }
 
   var marketsData = null;
-  var featuredId = null;
-  var featuredRange = "5d";
   var dataNode = document.getElementById("markets-data");
   if (dataNode) {
     try { marketsData = JSON.parse(dataNode.textContent || "{}"); } catch (err) { marketsData = null; }
   }
-  if (marketsData && marketsData.featured) featuredId = marketsData.featured;
 
-  function assetById(id) {
-    if (!marketsData || !marketsData.assets) return null;
-    for (var i = 0; i < marketsData.assets.length; i++) {
-      if (marketsData.assets[i].id === id) return marketsData.assets[i];
-    }
-    return null;
-  }
-  function seriesFor(asset, range) {
+  function sparkValues(asset) {
     if (!asset) return [];
-    if (range === "1d" && asset.h1d && asset.h1d.length >= 2) return asset.h1d;
-    if (range === "5d" && asset.h5d && asset.h5d.length >= 2) return asset.h5d;
-    if (range === "1m" && asset.h1m && asset.h1m.length >= 2) return asset.h1m;
-    return asset.h5d && asset.h5d.length >= 2 ? asset.h5d : (asset.h1m || asset.h1d || []);
+    if (asset.h5d && asset.h5d.length >= 2) return asset.h5d;
+    if (asset.h1m && asset.h1m.length >= 2) return asset.h1m;
+    return asset.h1d || [];
   }
-  function hasRange(asset, range) {
-    var key = range === "1d" ? "h1d" : range === "1m" ? "h1m" : "h5d";
-    var min = range === "1d" ? 8 : 2;
-    return asset && asset[key] && asset[key].length >= min;
-  }
-  function isUp(asset, range) {
+  function isUp(asset) {
     if (!asset) return true;
     if (typeof asset.change_pct === "number") return asset.change_pct >= 0;
-    var s = seriesFor(asset, range || "5d");
+    var s = sparkValues(asset);
     return !s.length || s[s.length - 1] >= s[0];
+  }
+  function topMovers(list, n) {
+    return list.filter(function (a) { return typeof a.change_pct === "number"; })
+      .slice()
+      .sort(function (a, b) { return Math.abs(b.change_pct) - Math.abs(a.change_pct); })
+      .slice(0, n || 5);
+  }
+  function extremes(list) {
+    var ranked = list.filter(function (a) { return typeof a.change_pct === "number"; });
+    if (!ranked.length) return { buff: null, nerf: null };
+    var buff = ranked.reduce(function (a, b) { return b.change_pct > a.change_pct ? b : a; });
+    var nerf = ranked.reduce(function (a, b) { return b.change_pct < a.change_pct ? b : a; });
+    return {
+      buff: buff.change_pct > 0 ? buff : null,
+      nerf: nerf.change_pct < 0 ? nerf : null
+    };
   }
   function paintPrices(asset) {
     if (!asset) return;
     var up = isUp(asset);
-    var cls = up ? "up" : "down";
     document.querySelectorAll('[data-id="' + CSS.escape(String(asset.id)) + '"]').forEach(function (el) {
       el.classList.toggle("up", up);
       el.classList.toggle("down", !up);
       var px = el.querySelector(".mkt-px");
-      var ch = el.querySelector(".mkt-ch") || (el.classList.contains("feat-price") ? el.querySelector("span") : null);
+      var ch = el.querySelector(".mkt-ch");
       if (px) px.textContent = money(asset.price, asset.kind);
       if (ch) ch.textContent = pct(asset.change_pct);
     });
-    var feat = document.getElementById("mkt-featured");
-    if (feat && feat.getAttribute("data-id") === String(asset.id)) {
-      var priceEl = document.getElementById("feat-price");
-      if (priceEl) {
-        priceEl.className = "feat-price " + cls;
-        priceEl.innerHTML = money(asset.price, asset.kind) + " <span>" + pct(asset.change_pct) + "</span>";
-      }
-    }
   }
-  function renderFeatured(id, range) {
-    var asset = assetById(id);
-    var feat = document.getElementById("mkt-featured");
-    var chart = document.getElementById("feat-chart");
-    if (!asset || !feat || !chart) return;
-    featuredId = id;
-    var chosen = range;
-    if (!hasRange(asset, chosen)) {
-      chosen = hasRange(asset, "5d") ? "5d" : hasRange(asset, "1m") ? "1m" : hasRange(asset, "1d") ? "1d" : "5d";
+  function cardHtml(asset, buff, nerf) {
+    var up = isUp(asset);
+    var extra = "";
+    var ribbon = "";
+    if (buff && asset.id === buff.id) {
+      extra = " is-buff";
+      ribbon = '<span class="mkt-ribbon is-buff">Buff of the day</span>';
+    } else if (nerf && asset.id === nerf.id) {
+      extra = " is-nerf";
+      ribbon = '<span class="mkt-ribbon is-nerf">Nerf of the day</span>';
     }
-    featuredRange = chosen;
-    feat.setAttribute("data-id", asset.id);
-    var name = document.getElementById("feat-name");
-    if (name) name.innerHTML = asset.name + ' <span class="feat-sym">' + asset.symbol + "</span>";
-    var priceEl = document.getElementById("feat-price");
-    var up = isUp(asset, chosen);
-    if (priceEl) {
-      priceEl.className = "feat-price " + (up ? "up" : "down");
-      priceEl.innerHTML = money(asset.price, asset.kind) + " <span>" + pct(asset.change_pct) + "</span>";
+    var flavor = asset.flavor ? '<p class="mkt-flavor">' + asset.flavor.replace(/</g, "&lt;") + "</p>" : "";
+    var href = asset.url || "#";
+    return '<a class="mkt-card ' + (up ? "up" : "down") + extra + '" href="' + href + '" rel="noopener noreferrer" data-id="' + String(asset.id).replace(/"/g, "") + '">' +
+      '<span class="mkt-card-top"><b>' + asset.symbol + '</b><span class="mkt-ch">' + pct(asset.change_pct) + "</span></span>" +
+      '<span class="mkt-card-name">' + (asset.name || asset.symbol) + "</span>" +
+      ribbon +
+      '<span class="mkt-card-spark">' + sparkSvg(sparkValues(asset), 180, 56, String(asset.id), up, 1.7) + "</span>" +
+      '<span class="mkt-px">' + money(asset.price, asset.kind) + "</span>" +
+      flavor +
+      "</a>";
+  }
+  function renderCryptoMovers() {
+    if (!marketsData || !marketsData.assets) return;
+    var cryptos = marketsData.assets.filter(function (a) { return a.kind === "crypto"; });
+    var ex = extremes(cryptos);
+    var box = document.getElementById("mkt-crypto-grid");
+    if (box) box.innerHTML = topMovers(cryptos, 5).map(function (a) { return cardHtml(a, ex.buff, ex.nerf); }).join("");
+    var head = document.querySelector("#mkt-crypto .mkt-highlights");
+    if (head) {
+      var bits = [];
+      if (ex.buff) bits.push('<span class="mkt-badge is-buff">Buff of the day · ' + ex.buff.symbol + " " + pct(ex.buff.change_pct) + "</span>");
+      if (ex.nerf) bits.push('<span class="mkt-badge is-nerf">Nerf of the day · ' + ex.nerf.symbol + " " + pct(ex.nerf.change_pct) + "</span>");
+      head.innerHTML = bits.join("");
     }
-    chart.innerHTML = sparkSvg(seriesFor(asset, chosen), 640, 220, "feat-" + asset.id + "-" + chosen, up, 2.2);
-    feat.querySelectorAll(".mkt-range").forEach(function (btn) {
-      var r = btn.getAttribute("data-range");
-      btn.disabled = !hasRange(asset, r);
-      btn.classList.toggle("is-on", r === chosen);
-    });
-    document.querySelectorAll("#mkt-grid .mkt-card").forEach(function (card) {
-      var on = card.getAttribute("data-id") === String(asset.id);
-      card.classList.toggle("is-on", on);
-      card.setAttribute("aria-pressed", on ? "true" : "false");
-    });
   }
 
-  var ticker = document.getElementById("mkt-ticker");
-  if (ticker) {
+  document.querySelectorAll(".mkt-ticker").forEach(function (ticker) {
     function pause() { ticker.classList.add("is-paused"); }
     function resume() { ticker.classList.remove("is-paused"); }
     ticker.addEventListener("pointerdown", pause);
@@ -139,28 +133,8 @@
     ticker.addEventListener("touchstart", pause, { passive: true });
     ticker.addEventListener("touchend", resume);
     ticker.addEventListener("touchcancel", resume);
-  }
+  });
 
-  var rangeBox = document.querySelector("#mkt-featured .mkt-ranges");
-  if (rangeBox) {
-    rangeBox.addEventListener("click", function (e) {
-      var btn = e.target.closest(".mkt-range");
-      if (!btn || btn.disabled) return;
-      renderFeatured(featuredId, btn.getAttribute("data-range"));
-    });
-  }
-  var grid = document.getElementById("mkt-grid");
-  if (grid) {
-    grid.addEventListener("click", function (e) {
-      if (e.target.closest(".mkt-card-link")) return;
-      var card = e.target.closest(".mkt-card");
-      if (!card) return;
-      e.preventDefault();
-      renderFeatured(card.getAttribute("data-id"), featuredRange);
-    });
-  }
-
-  // Live crypto: reuse baked ids, refresh prices about once a minute.
   var cryptoIds = [];
   if (marketsData && marketsData.assets) {
     marketsData.assets.forEach(function (a) {
@@ -169,7 +143,6 @@
   }
   var cryptoBox = document.getElementById("crypto-ticker");
   if (!cryptoIds.length && cryptoBox && cryptoBox.getAttribute("data-endpoint")) {
-    // Archive / legacy card still uses the old six-coin ticker.
     cryptoIds = ["bitcoin", "ethereum", "solana", "ripple", "dogecoin", "cardano"];
   }
   function renderLegacyCrypto(data) {
@@ -203,6 +176,7 @@
           if (typeof row.usd_24h_change === "number") asset.change_pct = row.usd_24h_change;
           paintPrices(asset);
         });
+        renderCryptoMovers();
       } else {
         renderLegacyCrypto(data);
       }
