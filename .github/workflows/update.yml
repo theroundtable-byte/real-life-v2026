@@ -2,8 +2,9 @@ name: Update and deploy
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 8:00 AM Eastern (EST); 9:00 AM during EDT
-    - cron: "0 23 * * *"   # 6:00 PM Eastern (EST); 7:00 PM during EDT
+    - cron: "0 13 * * *"     # 8:00 AM Eastern (EST); 9:00 AM during EDT
+    - cron: "15 21 * * 1-5"  # ~4:15 PM ET weekdays, shortly after the regular-session close
+    - cron: "0 23 * * *"     # 6:00 PM Eastern (EST); 7:00 PM during EDT
   workflow_dispatch:
 
 permissions:

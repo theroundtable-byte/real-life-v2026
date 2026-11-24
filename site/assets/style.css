@@ -454,6 +454,7 @@ main { padding-bottom: 5rem; }
 .quote.up, .coin.up { color: var(--up); }
 .quote.down, .coin.down { color: var(--down); }
 .ticker-status { color: var(--muted); font-size: 0.9rem; }
+.mkt-unavailable { margin: 0.7rem 0 0; color: var(--muted); font-size: 0.9rem; }
 .world-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; margin-top: 0.9rem; }
 .ws-item { display: flex; flex-direction: column; gap: 0.15rem; }
 .ws-item b { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 650; }

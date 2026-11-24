@@ -1143,6 +1143,98 @@ def save_market_history(hist: dict) -> None:
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
+
+def _parse_quote_time(raw: str | None) -> datetime | None:
+    if not raw:
+        return None
+    s = str(raw).strip()
+    m = re.match(r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.\d+)?([+-]\d{2}):?(\d{2})$", s)
+    if m:
+        s = f"{m.group(1)}{m.group(2)}:{m.group(3)}"
+    try:
+        dt = datetime.fromisoformat(s)
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=TZ)
+    return dt.astimezone(TZ)
+
+
+def _is_live_session_quote(q: dict, now: datetime | None = None) -> bool:
+    """True when this quote already reflects today's regular session (open or closed)."""
+    now = now or now_et()
+    price = q.get("regularMarketPrice")
+    prev = q.get("regularMarketPreviousClose")
+    lt = _parse_quote_time(q.get("_last_time"))
+    if lt and lt.date() == now.date() and (lt.hour, lt.minute) >= (9, 25):
+        return True
+    status = str(q.get("_mktstatus") or "").upper()
+    if status in {"REG_MKT", "POST_MKT"} and lt and lt.date() == now.date():
+        return True
+    # If the vendor already shows a real move vs previous close, the session has printed.
+    if price and prev and prev > 0 and abs(float(price) - float(prev)) / float(prev) > 0.0008:
+        return True
+    return False
+
+
+def _prior_close_from_history(price: float, rows: list[dict]) -> float | None:
+    """Most recent daily close that is not the same print as `price`."""
+    if not price or price <= 0:
+        return None
+    for row in reversed(rows or []):
+        close = row.get("c")
+        try:
+            close = float(close)
+        except (TypeError, ValueError):
+            continue
+        if close > 0 and abs(close - price) / price > 0.0008:
+            return close
+    return None
+
+
+def _apply_session_change(price: float, prev: float | None, rows: list[dict], live: bool) -> tuple[float | None, float | None]:
+    """Daily change vs the prior session close. Before the next open, keep the last session's move instead of 0%."""
+    if price is None or price <= 0:
+        return prev, None
+    if live:
+        if prev and prev > 0:
+            return prev, (price - prev) / prev * 100
+        prior = _prior_close_from_history(price, rows)
+        if prior:
+            return prior, (price - prior) / prior * 100
+        return prev, None
+    prior = _prior_close_from_history(price, rows)
+    if prior:
+        return prior, (price - prior) / prior * 100
+    # Don't report a fake 0% when last and previous close are the same pre-open print.
+    if prev and prev > 0 and abs(price - prev) / prev > 0.0008:
+        return prev, (price - prev) / prev * 100
+    return prev, None
+
+
+def stock_as_of_label(quotes: list[dict], now: datetime | None = None) -> str:
+    now = now or now_et()
+    times = []
+    live = False
+    for q in quotes:
+        if _is_live_session_quote(q, now):
+            live = True
+        lt = _parse_quote_time(q.get("_last_time"))
+        if lt:
+            times.append(lt)
+    if live:
+        latest = max(times) if times else now
+        statuses = {str(q.get("_mktstatus") or "").upper() for q in quotes}
+        # We display the regular-session last, not post-market trades.
+        if latest.date() == now.date() and (latest.hour >= 16 or "POST_MKT" in statuses):
+            return "as of 4:00 PM ET"
+        return f"as of {latest.strftime('%-I:%M %p')} ET"
+    if times:
+        latest = max(times)
+        return f"as of last close · {latest.strftime('%a %-I:%M %p')} ET"
+    return "as of last close"
+
+
 def _cnbc_quotes(symbols: list[str]) -> list[dict]:
     if not symbols:
         return []
@@ -1186,6 +1278,8 @@ def _cnbc_quotes(symbols: list[str]) -> list[dict]:
             "regularMarketChangePercent": pct,
             "_source": "CNBC",
             "_url": f"https://www.cnbc.com/quotes/{urllib.parse.quote(symbol)}",
+            "_last_time": q.get("last_time") or q.get("last_timedate") or "",
+            "_mktstatus": q.get("curmktstatus") or "",
         })
     return parsed
 
@@ -1504,9 +1598,10 @@ def collect_market_board() -> dict:
         rows, src = _fetch_history_for(chart_sym, chart_cls, start, end, fb_sym, fb_cls)
         if is_index and price:
             rows = _scale_rows(rows, price)
-        rows = _append_today(rows, today_s, price)
         if (not rows or len(rows) < 2) and stored.get(cfg_row["symbol"]):
-            rows = _append_today(list(stored.get(cfg_row["symbol"]) or []), today_s, price)
+            rows = list(stored.get(cfg_row["symbol"]) or [])
+            if is_index and price:
+                rows = _scale_rows(rows, price)
             if rows:
                 src = src if src != "none" else "build-history"
         h1d: list[float] = []
@@ -1520,18 +1615,26 @@ def collect_market_board() -> dict:
             log(f"  stock quote failed: {sym}")
             continue
         price = q["regularMarketPrice"]
+        live = _is_live_session_quote(q, today)
         rows, _, src = history_for(row, price, False)
         if src == "none":
             log(f"  stock history failed: {sym}")
         history_notes[sym] = src
+        prev, pct = _apply_session_change(price, q.get("regularMarketPreviousClose"), rows, live)
+        if live:
+            stored.setdefault(sym, [])
+            stored[sym] = _append_today(stored[sym], today_s, price)
+            rows = _append_today(rows, today_s, price)
         assets.append({
             "id": sym,
             "kind": "stock",
             "symbol": sym,
             "name": row.get("name") or q.get("shortName") or sym,
             "price": price,
-            "prev": q.get("regularMarketPreviousClose"),
-            "change_pct": None if q.get("regularMarketChangePercent") is None else round(q["regularMarketChangePercent"], 2),
+            "prev": prev,
+            "change_pct": None if pct is None else round(pct, 2),
+            "session": "live" if live else "prior",
+            "last_time": q.get("_last_time") or "",
             "url": q.get("_url") or f"https://www.cnbc.com/quotes/{urllib.parse.quote(sym)}",
             "source": q.get("_source") or "CNBC",
             "history_source": src,
@@ -1539,8 +1642,6 @@ def collect_market_board() -> dict:
             "h5d": _last_n(rows, 5),
             "h1m": _closes(rows),
         })
-        stored.setdefault(sym, [])
-        stored[sym] = _append_today(stored[sym], today_s, price)
 
     featured_id = None
     for row in indexes_cfg:
@@ -1552,8 +1653,10 @@ def collect_market_board() -> dict:
             log(f"  index quote failed: {sym}")
             continue
         price = q["regularMarketPrice"]
+        live = _is_live_session_quote(q, today)
         rows, _, src = history_for(row, price, True)
         history_notes[sym] = src
+        prev, pct = _apply_session_change(price, q.get("regularMarketPreviousClose"), rows, live)
         time.sleep(0.2)
         h1d = _nasdaq_intraday(row.get("chart_symbol") or sym, row.get("chart_class") or "etf")
         if len(h1d) < 8 and row.get("fallback_symbol"):
@@ -1566,14 +1669,20 @@ def collect_market_board() -> dict:
                 h1d = _scale_values(h1d, price)
             else:
                 h1d = _scale_values(h1d, price) if last and abs(last - price) / price > 0.005 else h1d
+        if live:
+            stored.setdefault(sym, [])
+            stored[sym] = _append_today(stored[sym], today_s, price)
+            rows = _append_today(rows, today_s, price)
         assets.append({
             "id": sym,
             "kind": "index",
             "symbol": sym,
             "name": row.get("name") or q.get("shortName") or sym,
             "price": price,
-            "prev": q.get("regularMarketPreviousClose"),
-            "change_pct": None if q.get("regularMarketChangePercent") is None else round(q["regularMarketChangePercent"], 2),
+            "prev": prev,
+            "change_pct": None if pct is None else round(pct, 2),
+            "session": "live" if live else "prior",
+            "last_time": q.get("_last_time") or "",
             "url": q.get("_url") or f"https://www.cnbc.com/quotes/{urllib.parse.quote(sym)}",
             "source": q.get("_source") or "CNBC",
             "history_source": src,
@@ -1581,8 +1690,6 @@ def collect_market_board() -> dict:
             "h5d": _last_n(rows, 5),
             "h1m": _closes(rows),
         })
-        stored.setdefault(sym, [])
-        stored[sym] = _append_today(stored[sym], today_s, price)
 
     stock_assets = [a for a in assets if a["kind"] == "stock" and a.get("change_pct") is not None]
     buff = max(stock_assets, key=lambda a: a["change_pct"], default=None) if stock_assets else None
@@ -1614,9 +1721,8 @@ def collect_market_board() -> dict:
     cryptos, crypto_src = collect_crypto_board(cfg)
     assets.extend(cryptos)
 
-    kind = patch_kind(today)
-    as_of_clock = "8:00 AM ET" if kind == "Morning" else "6:00 PM ET"
-    as_of_label = f"Stocks as of {as_of_clock} · Crypto live"
+    stock_as_of = stock_as_of_label(list(quotes.values()), today)
+    as_of_label = f"Stocks {stock_as_of} · Crypto live"
 
     hist_store["updated"] = today_s
     hist_store["prices"] = stored
@@ -1638,6 +1744,7 @@ def collect_market_board() -> dict:
     board = {
         "as_of": today.isoformat(timespec="seconds"),
         "as_of_label": as_of_label,
+        "stock_as_of": stock_as_of,
         "stock_source": "CNBC" if any(a.get("source") == "CNBC" for a in assets if a["kind"] != "crypto") else "Yahoo",
         "history_source": "Nasdaq",
         "crypto_source": crypto_src,
@@ -1851,10 +1958,12 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
     cryptos = [a for a in assets if a.get("kind") == "crypto"]
     mkt_src = html.escape(f"{prefix}assets/sprites/mkt.webp", quote=True)
 
-    kind = (meta or {}).get("kind") or ""
-    if not kind:
-        kind = "Morning" if "8:00" in (board.get("as_of_label") or "") else "Evening"
-    stock_label = "as of 8:00 AM ET" if kind == "Morning" else "as of 6:00 PM ET"
+    stock_label = board.get("stock_as_of") or "as of last close"
+    failed = [s for s in (board.get("failed_stocks") or []) if s]
+    failed_note = ""
+    if failed:
+        names = ", ".join(failed)
+        failed_note = f'<p class="mkt-unavailable">{html.escape(names)} unavailable this run.</p>'
 
     buff = board.get("buff")
     nerf = board.get("nerf")
@@ -1904,6 +2013,7 @@ def markets_panel_html(board: dict, notes: list[dict], stocks: list[dict], eia: 
         {_index_line_html(indexes)}
         {stock_ticker}
         <div class="mkt-grid" id="mkt-stock-grid">{stock_cards}</div>
+        {failed_note}
       </div>
       <div class="mkt-block" id="mkt-crypto">
         <div class="mkt-block-head">

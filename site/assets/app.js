@@ -191,6 +191,185 @@
     setInterval(loadCrypto, 60000);
   }
 
+  function parseNum(value) {
+    if (value == null) return null;
+    var s = String(value).replace(/,/g, "").replace(/\$/g, "").replace(/%/g, "").replace(/^\+/, "").trim();
+    if (!s || s === "--" || s === "N/A" || s === "UNCH") return null;
+    var n = parseFloat(s);
+    return isFinite(n) ? n : null;
+  }
+  function nyParts(date) {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      weekday: "short", hour: "2-digit", minute: "2-digit",
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hourCycle: "h23"
+    }).formatToParts(date || new Date());
+    var out = {};
+    parts.forEach(function (p) { out[p.type] = p.value; });
+    out.hour = parseInt(out.hour, 10);
+    out.minute = parseInt(out.minute, 10);
+    out.ymd = out.year + "-" + out.month + "-" + out.day;
+    return out;
+  }
+  function parseQuoteTime(raw) {
+    if (!raw) return null;
+    var s = String(raw).trim();
+    var m = s.match(/^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.\d+)?([+-]\d{2}):?(\d{2})$/);
+    if (m) s = m[1] + m[2] + ":" + m[3];
+    var d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function priorCloseFromHist(asset, price) {
+    var series = (asset && (asset.h1m && asset.h1m.length >= 2 ? asset.h1m : asset.h5d)) || [];
+    for (var i = series.length - 1; i >= 0; i--) {
+      var c = series[i];
+      if (typeof c === "number" && c > 0 && price > 0 && Math.abs(c - price) / price > 0.0008) return c;
+    }
+    return null;
+  }
+  function isLiveSessionQuote(quote, nowP) {
+    nowP = nowP || nyParts();
+    var lt = parseQuoteTime(quote.last_time);
+    var ltP = lt ? nyParts(lt) : null;
+    if (ltP && ltP.ymd === nowP.ymd && (ltP.hour > 9 || (ltP.hour === 9 && ltP.minute >= 25))) return true;
+    if (quote.price && quote.prev && quote.prev > 0 && Math.abs(quote.price - quote.prev) / quote.prev > 0.0008) return true;
+    return false;
+  }
+  function formatStockAsOf(quotes) {
+    var nowP = nyParts();
+    var live = false, latest = null, post = false, regular = false;
+    quotes.forEach(function (q) {
+      if (isLiveSessionQuote(q, nowP)) live = true;
+      if ((q.status || "").toUpperCase() === "REG_MKT") regular = true;
+      if ((q.status || "").toUpperCase() === "POST_MKT") post = true;
+      var lt = parseQuoteTime(q.last_time);
+      if (lt && (!latest || lt > latest)) latest = lt;
+    });
+    if (live) {
+      if (latest) {
+        var p = nyParts(latest);
+        if (p.ymd === nowP.ymd && (p.hour >= 16 || post)) return "as of 4:00 PM ET";
+        var hour = p.hour % 12 || 12;
+        var ampm = p.hour >= 12 ? "PM" : "AM";
+        return "as of " + hour + ":" + String(p.minute).padStart(2, "0") + " " + ampm + " ET";
+      }
+      if (post) return "as of 4:00 PM ET";
+      return "as of now ET";
+    }
+    if (latest) {
+      var p3 = nyParts(latest);
+      var hour3 = p3.hour % 12 || 12;
+      var ampm3 = p3.hour >= 12 ? "PM" : "AM";
+      return "as of last close · " + p3.weekday + " " + hour3 + ":" + String(p3.minute).padStart(2, "0") + " " + ampm3 + " ET";
+    }
+    return "as of last close";
+  }
+  function renderStockMovers() {
+    if (!marketsData || !marketsData.assets) return;
+    var stocks = marketsData.assets.filter(function (a) { return a.kind === "stock"; });
+    var ex = extremes(stocks);
+    var box = document.getElementById("mkt-stock-grid");
+    if (box) box.innerHTML = topMovers(stocks, 5).map(function (a) { return cardHtml(a, ex.buff, ex.nerf); }).join("");
+    var head = document.querySelector("#mkt-stocks .mkt-highlights");
+    if (head) {
+      var bits = [];
+      if (ex.buff) bits.push('<span class="mkt-badge is-buff">Got better today · ' + ex.buff.symbol + " " + pct(ex.buff.change_pct) + "</span>");
+      if (ex.nerf) bits.push('<span class="mkt-badge is-nerf">Took a hit today · ' + ex.nerf.symbol + " " + pct(ex.nerf.change_pct) + "</span>");
+      head.innerHTML = bits.join("");
+    }
+  }
+  function applyStockQuote(asset, quote, nowP) {
+    if (!asset || !quote || typeof quote.price !== "number") return false;
+    var live = isLiveSessionQuote(quote, nowP);
+    var prev = quote.prev;
+    var change = null;
+    if (live) {
+      if (prev && prev > 0) change = (quote.price - prev) / prev * 100;
+      else {
+        var prior = priorCloseFromHist(asset, quote.price);
+        if (prior) { prev = prior; change = (quote.price - prior) / prior * 100; }
+      }
+    } else {
+      var prior2 = priorCloseFromHist(asset, quote.price);
+      if (prior2) { prev = prior2; change = (quote.price - prior2) / prior2 * 100; }
+      else if (prev && prev > 0 && Math.abs(quote.price - prev) / prev > 0.0008) {
+        change = (quote.price - prev) / prev * 100;
+      } else {
+        // Pre-open roll: don't replace a real last-session move with 0%.
+        return false;
+      }
+    }
+    asset.price = quote.price;
+    if (prev) asset.prev = prev;
+    asset.change_pct = change;
+    asset.session = live ? "live" : "prior";
+    if (quote.last_time) asset.last_time = quote.last_time;
+    return true;
+  }
+  var stockRefreshTimer = null;
+  async function loadStocks() {
+    if (!marketsData || !marketsData.assets) return;
+    var symbols = marketsData.assets.filter(function (a) { return a.kind === "stock" || a.kind === "index"; }).map(function (a) { return a.symbol; });
+    if (!symbols.length) return;
+    var url = "https://quote.cnbc.com/quote-html-webservice/restQuote/symbolType/symbol?symbols=" +
+      symbols.map(encodeURIComponent).join("%7C") +
+      "&requestMethod=quick&exthrs=1&noform=1&partnerId=2&fundamentals=0&output=json";
+    try {
+      var res = await fetch(url);
+      if (!res.ok) throw new Error("status " + res.status);
+      var payload = await res.json();
+      var rows = payload && payload.FormattedQuoteResult && payload.FormattedQuoteResult.FormattedQuote;
+      if (!rows) return;
+      if (!Array.isArray(rows)) rows = [rows];
+      var nowP = nyParts();
+      var parsed = [];
+      rows.forEach(function (q) {
+        var price = parseNum(q.last);
+        var prev = parseNum(q.previous_day_closing);
+        var changePct = parseNum(q.change_pct);
+        if ((q.changetype || "") === "DOWN" && changePct != null && changePct > 0) changePct = -changePct;
+        else if (String(q.change || "").charAt(0) === "-" && changePct != null && changePct > 0) changePct = -changePct;
+        if (price && prev && prev > 0) changePct = (price - prev) / prev * 100;
+        if (!q.symbol || price == null) return;
+        parsed.push({ symbol: q.symbol, price: price, prev: prev, pct: changePct, last_time: q.last_time || q.last_timedate || "", status: q.curmktstatus || "" });
+      });
+      var bySym = {};
+      parsed.forEach(function (q) { bySym[q.symbol] = q; });
+      var updated = 0;
+      marketsData.assets.forEach(function (asset) {
+        if (asset.kind !== "stock" && asset.kind !== "index") return;
+        var quote = bySym[asset.symbol];
+        if (applyStockQuote(asset, quote, nowP)) {
+          paintPrices(asset);
+          updated += 1;
+        }
+      });
+      if (updated) renderStockMovers();
+      var asof = document.getElementById("markets-asof");
+      if (asof && parsed.length) asof.textContent = formatStockAsOf(parsed);
+    } catch (err) {
+      // Keep the baked snapshot if the live quote fetch fails.
+    }
+  }
+  function stockPollMs() {
+    var p = nyParts();
+    var weekday = ["Mon", "Tue", "Wed", "Thu", "Fri"].indexOf(p.weekday) !== -1;
+    var minutes = p.hour * 60 + p.minute;
+    if (weekday && minutes >= (9 * 60 + 25) && minutes <= (16 * 60 + 10)) return 60000;
+    if (weekday && minutes > (16 * 60 + 10) && minutes <= (17 * 60)) return 120000;
+    return 0;
+  }
+  function scheduleStockRefresh() {
+    if (stockRefreshTimer) { clearInterval(stockRefreshTimer); stockRefreshTimer = null; }
+    var ms = stockPollMs();
+    if (ms) stockRefreshTimer = setInterval(loadStocks, ms);
+  }
+  if (marketsData && marketsData.assets) {
+    loadStocks();
+    scheduleStockRefresh();
+  }
+
   const DAY_COLOR = "#f4efe4";
   const NIGHT_COLOR = "#171814";
   const toggle = document.getElementById("theme-toggle");
