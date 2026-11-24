@@ -48,11 +48,11 @@
     setInterval(loadCrypto, 60000);
   }
 
-  const DAY_COLOR = "#f3c14a";
-  const NIGHT_COLOR = "#10051c";
+  const DAY_COLOR = "#f4efe4";
+  const NIGHT_COLOR = "#171814";
   const toggle = document.getElementById("theme-toggle");
   const themeMeta = document.querySelector('meta[name="theme-color"]');
-  const favicon = document.getElementById("favicon");
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function currentTheme() {
     return document.documentElement.getAttribute("data-theme") === "night" ? "night" : "day";
@@ -61,14 +61,9 @@
   function syncToggle(theme) {
     if (!toggle) return;
     const night = theme === "night";
-    toggle.setAttribute("aria-label", night ? "Switch to day mode" : "Switch to night mode");
+    toggle.setAttribute("aria-label", night ? "Switch to light mode" : "Switch to dark mode");
     toggle.setAttribute("aria-pressed", night ? "true" : "false");
     if (themeMeta) themeMeta.setAttribute("content", night ? NIGHT_COLOR : DAY_COLOR);
-    if (favicon) {
-      const href = favicon.getAttribute("href") || "";
-      const base = href.replace(/favicon(?:-night)?\.svg.*$/, "");
-      favicon.setAttribute("href", base + (night ? "favicon-night.svg" : "favicon.svg"));
-    }
   }
 
   function setTheme(theme, persist) {
@@ -101,11 +96,11 @@
     const forceFresh = params.get("fresh") === "1";
     if ((prev && prev !== patchId) || forceFresh) {
       article.classList.add("is-fresh");
-      const head = article.querySelector(".patch-head");
+      const head = article.querySelector(".patch-head") || article;
       if (head && !head.querySelector(".fresh-flag")) {
         const flag = document.createElement("p");
         flag.className = "fresh-flag";
-        flag.textContent = "New patch since your last visit";
+        flag.textContent = "New since your last visit";
         head.insertBefore(flag, head.firstChild);
       }
     }
@@ -119,7 +114,7 @@
   const input = document.getElementById("q");
   const chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
   const entries = Array.prototype.slice.call(document.querySelectorAll(".entry"));
-  const sections = Array.prototype.slice.call(document.querySelectorAll(".patch-section"));
+  const sections = Array.prototype.slice.call(document.querySelectorAll(".sec-card, .patch-section"));
   const empty = document.getElementById("empty");
   const moreBtn = document.getElementById("full-changelog");
   const fullLog = document.getElementById("full-log");
@@ -144,6 +139,17 @@
     });
   }
 
+  document.querySelectorAll(".expand").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const card = btn.closest(".sec-card");
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (card) card.classList.toggle("is-open", open);
+      const label = btn.getAttribute("data-more-label") || "Show more";
+      btn.textContent = open ? "Show less" : label;
+    });
+  });
+
   function apply() {
     const q = (input && input.value ? input.value : "").trim().toLowerCase();
     const filtering = active !== "all" || Boolean(q);
@@ -161,7 +167,12 @@
       if (show) visible += 1;
     });
     sections.forEach(function (section) {
-      section.hidden = !section.querySelector(".entry:not([hidden])");
+      const has = section.querySelector(".entry:not([hidden])");
+      section.hidden = !has;
+      if (filtering && has) section.classList.add("is-open");
+      else if (!filtering && !section.querySelector(".expand[aria-expanded='true']")) {
+        if (section.querySelector(".expand")) section.classList.remove("is-open");
+      }
     });
     if (empty) empty.hidden = visible !== 0;
   }
@@ -172,6 +183,9 @@
       if (active === "all" && input) input.value = "";
       chips.forEach(function (c) { c.classList.toggle("is-on", c === chip); });
       apply();
+      if (article && chip.getBoundingClientRect().bottom < (article.getBoundingClientRect().top)) {
+        article.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+      }
     });
   });
   if (input) input.addEventListener("input", apply);
@@ -210,4 +224,49 @@
       copyShare(text, url, btn);
     });
   });
+
+  const reveals = document.querySelectorAll(".reveal");
+  if (reduce) {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  } else if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (rows) {
+      rows.forEach(function (row) {
+        if (row.isIntersecting) {
+          row.target.classList.add("is-in");
+          io.unobserve(row.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  const mascot = document.querySelector(".mascot");
+  if (mascot && !reduce) {
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        const y = window.scrollY || 0;
+        mascot.style.setProperty("--py", Math.max(-28, Math.min(18, y * -0.08)) + "px");
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+
+  if (!reduce && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".sec-card").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = "translateY(-6px) rotateX(" + (-y * 4).toFixed(2) + "deg) rotateY(" + (x * 5).toFixed(2) + "deg)";
+      });
+      card.addEventListener("mouseleave", function () {
+        card.style.transform = "";
+      });
+    });
+  }
 })();

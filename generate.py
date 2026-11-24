@@ -126,6 +126,7 @@ TAG_LABELS = {
     "RECALL": "Recall", "WATCHLIST": "Watchlist",
 }
 FEATURED_LIMIT = 18
+PREVIEW_LIMIT = 4
 
 # (tag, line, digest). No redundant "Buffs:" / "New content:" prefix — the section header covers that.
 TEMPLATES = {
@@ -1252,9 +1253,13 @@ def load_archive() -> list[dict]:
     except json.JSONDecodeError:
         return []
 
-def render_page(*, title: str, description: str, canonical: str, prefix: str, body: str, updated: str | None = None) -> str:
+def render_page(*, title: str, description: str, canonical: str, prefix: str, body: str, updated: str | None = None, show_filters: bool = False, current: str = "") -> str:
     esc = html.escape
     updated_meta = f'\n  <meta property="og:updated_time" content="{esc(updated)}">' if updated else ""
+    latest_cur = ' aria-current="page"' if current == "latest" else ""
+    archive_cur = ' aria-current="page"' if current == "archive" else ""
+    weekly_cur = ' aria-current="page"' if current == "weekly" else ""
+    filters = filters_html() if show_filters else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1272,11 +1277,11 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{esc(title)}">
   <meta name="twitter:description" content="{esc(description)}">
-  <meta name="theme-color" content="#f3c14a">{updated_meta}
+  <meta name="theme-color" content="#f4efe4">{updated_meta}
   <link rel="icon" id="favicon" href="{esc(prefix)}assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{esc(prefix)}assets/style.css">
   <script>
     (function () {{
@@ -1293,22 +1298,23 @@ def render_page(*, title: str, description: str, canonical: str, prefix: str, bo
 </head>
 <body>
   <a class="skip" href="#main">Skip to patch notes</a>
-  <div class="px-rain" aria-hidden="true"></div>
-  <header class="top">
-    <div class="scanlines" aria-hidden="true"></div>
-    <div class="wrap top-row">
+  <header class="nav">
+    <div class="nav-inner">
       <a class="brand" href="{esc(prefix)}index.html">
-        <span class="logo" aria-hidden="true">
-          <img class="logo-day" src="{esc(prefix)}assets/pixel/logo-day.svg" alt="" width="36" height="36">
-          <img class="logo-night" src="{esc(prefix)}assets/pixel/logo-night.svg" alt="" width="36" height="36">
-        </span>
+        <img src="{esc(prefix)}assets/sprites/mascot-nav.webp" alt="" width="40" height="40">
         <span><strong>Real Life</strong><em>v2026</em></span>
       </a>
-      <p class="satire-flag">Satire. Real news, written as patch notes. Every item links to its source — we don’t invent events.</p>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to night mode" title="Day / night">
-        <span class="theme-day">Day</span><span class="theme-sep" aria-hidden="true">/</span><span class="theme-night">Night</span>
+      <nav class="nav-links">
+        <a href="{esc(prefix)}index.html"{latest_cur}>Latest</a>
+        <a href="{esc(prefix)}archive/index.html"{archive_cur}>Archive</a>
+        <a href="{esc(prefix)}weekly/index.html"{weekly_cur}>Weekly</a>
+      </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13.5A8 8 0 1 1 10.5 4 6.4 6.4 0 0 0 20 13.5z"/></svg>
       </button>
     </div>
+    {filters}
   </header>
   {body}
   <footer class="site-foot">
@@ -1333,24 +1339,21 @@ def filters_html() -> str:
     chips = ['<button type="button" class="chip is-on" data-filter="all">All</button>']
     for name, _cats in FILTERS:
         chips.append(f'<button type="button" class="chip" data-filter="{html.escape(name)}">{html.escape(name)}</button>')
-    return (
-        '<div class="tools">'
-        '<label class="search"><span class="sr">Search patch notes</span>'
-        '<input id="q" type="search" placeholder="Search this patch…" autocomplete="off"></label>'
-        f'<div class="chips" role="group" aria-label="Filter patch notes">{"".join(chips)}</div>'
-        "</div>"
-    )
+    return f'<div class="filters" role="group" aria-label="Filter patch notes">{"".join(chips)}</div>'
+
+
+def sprite_src(name: str, prefix: str = "") -> str:
+    hook = SECTION_UI.get(name, ("PATCH", "hotfix", "•"))[1]
+    return html.escape(f"{prefix}assets/sprites/{hook}.webp", quote=True)
+
 
 def section_badge(name: str, prefix: str = "") -> str:
-    tag, hook, _icon = SECTION_UI.get(name, ("PATCH", "patch", "•"))
-    src = html.escape(f"{prefix}assets/pixel/icon-{hook}.svg", quote=True)
     return (
-        f'<span class="sec-badge sec-{hook}" aria-hidden="true">'
-        f'<img class="sec-ico" src="{src}" alt="" width="16" height="16">'
-        f'[{html.escape(tag)}]</span>'
+        f'<img class="sec-sprite" src="{sprite_src(name, prefix)}" alt="" width="72" height="72">'
     )
 
-def entry_item(item: dict, tier: str = "featured") -> str:
+
+def entry_item(item: dict, tier: str = "featured", extra: bool = False) -> str:
     text_raw = item.get("text") or item.get("digest") or item.get("line") or item.get("title") or ""
     text = html.escape(text_raw)
     url = item.get("url") or ""
@@ -1358,7 +1361,6 @@ def entry_item(item: dict, tier: str = "featured") -> str:
     source = html.escape(item.get("source") or "Source")
     filt = html.escape(item.get("filter") or broad_filter(item.get("category") or ""))
     section = item.get("section") or note_section(item)
-    tag, hook, _icon = SECTION_UI.get(section, ("PATCH", "patch", "•"))
     nid = html.escape(str(item.get("id") or ""))
     data = html.escape(" ".join([
         text_raw, item.get("title") or "", item.get("source") or "",
@@ -1366,10 +1368,10 @@ def entry_item(item: dict, tier: str = "featured") -> str:
     ]).lower())
     tweet = urllib.parse.quote(f"{text_raw} — via Real Life v2026 {url}".strip())
     share_text = html.escape(text_raw, quote=True)
+    extra_cls = " is-extra" if extra else ""
     return (
-        f'<li class="entry" id="n-{nid}" data-id="{nid}" data-filter="{filt}" data-section="{html.escape(section)}" '
+        f'<li class="entry{extra_cls}" id="n-{nid}" data-id="{nid}" data-filter="{filt}" data-section="{html.escape(section)}" '
         f'data-tier="{html.escape(tier)}" data-text="{data}">'
-        f'<span class="line-tag sec-{hook}" aria-hidden="true">[{html.escape(tag)}]</span> '
         f'<a href="{url_esc}" rel="noopener noreferrer">{text}</a>'
         f'<span class="meta"><span class="pill">{filt}</span> · {source}'
         f'<span class="share-group">'
@@ -1379,20 +1381,40 @@ def entry_item(item: dict, tier: str = "featured") -> str:
         f"</li>"
     )
 
-def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured", prefix: str = "") -> str:
+
+def sections_html(groups: list[tuple[str, list[dict]]], tier: str = "featured", prefix: str = "", preview: int = 0) -> str:
     chunks = []
     for name, items in groups:
         if not items:
             continue
-        hook = SECTION_UI.get(name, ("PATCH", "patch", "•"))[1]
-        lis = "".join(entry_item(it, tier) for it in items)
+        hook = SECTION_UI.get(name, ("PATCH", "hotfix", "•"))[1]
+        shown = items if preview <= 0 else items[:preview]
+        hidden = [] if preview <= 0 else items[preview:]
+        lis = "".join(entry_item(it, tier, extra=False) for it in shown)
+        lis += "".join(entry_item(it, tier, extra=True) for it in hidden)
+        more = ""
+        if hidden:
+            label = f"Show {len(hidden)} more"
+            more = (
+                f'<button type="button" class="expand" aria-expanded="false" data-more-label="{html.escape(label)}">'
+                f"{html.escape(label)}</button>"
+            )
+        count = f"{len(items)} note{'s' if len(items) != 1 else ''}"
         chunks.append(
-            f'<section class="patch-section sec-{hook}" data-section="{html.escape(name)}">'
-            f"<h2>{section_badge(name, prefix)} {html.escape(name)}</h2><ul class=\"log\">{lis}</ul></section>"
+            f'<section class="sec-card patch-section sec-{hook} reveal" data-section="{html.escape(name)}">'
+            f'<div class="sec-top">{section_badge(name, prefix)}'
+            f"<div><h2>{html.escape(name)}</h2><p class=\"sec-count\">{count}</p></div></div>"
+            f'<ul class="log">{lis}</ul>{more}</section>'
         )
     return "".join(chunks)
 
+
 def ticker_html(stocks: list[dict], eia: dict | None) -> str:
+    # Kept for compatibility; the homepage uses status_row_html instead.
+    return status_row_html([], stocks, eia, prefix="")
+
+
+def quote_chips(stocks: list[dict], eia: dict | None) -> str:
     parts = []
     if eia and eia.get("regular"):
         r = eia["regular"]
@@ -1400,7 +1422,7 @@ def ticker_html(stocks: list[dict], eia: dict | None) -> str:
         prev = r.get("prev")
         cls = "up" if prev and price <= prev else "down" if prev and price > prev else ""
         delta = f" {price-prev:+.3f}" if prev else ""
-        parts.append(f'<span class="coin {cls}"><b>Gas</b> ${price:.2f}/gal{delta}</span>')
+        parts.append(f'<span class="quote {cls}"><b>Gas</b> ${price:.2f}/gal{delta}</span>')
     indexes = [s for s in stocks if s.get("symbol") in {".SPX", ".DJI", ".IXIC", "SPY", "QQQ", "DIA", "IWM"}]
     movers = [s for s in stocks if s.get("symbol") not in {".SPX", ".DJI", ".IXIC", "SPY", "QQQ", "DIA", "IWM"}]
     seen = set()
@@ -1412,24 +1434,15 @@ def ticker_html(stocks: list[dict], eia: dict | None) -> str:
         pct = s.get("change_pct") or 0
         cls = "up" if pct >= 0 else "down"
         sign = "+" if pct >= 0 else ""
-        parts.append(f'<span class="coin {cls}"><b>{html.escape(str(sym))}</b> {sign}{pct:.2f}%</span>')
-    stock_bits = "".join(parts)
-    return f"""
-    <div class="ticker-wrap hud">
-      <div class="wrap ticker">
-        <span class="hud-corner" aria-hidden="true">⌜</span>
-        <span class="ticker-label">Markets</span>
-        {stock_bits or '<span class="ticker-status">Market quotes unavailable this run.</span>'}
-        <span class="ticker-label">Crypto</span>
-        <span id="crypto-ticker" class="crypto" data-endpoint="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano&amp;vs_currencies=usd&amp;include_24hr_change=true">
-          <span class="ticker-status">Loading prices…</span>
-        </span>
-        <span class="hud-corner" aria-hidden="true">⌝</span>
-      </div>
-    </div>
-    """
+        parts.append(f'<span class="quote {cls}"><b>{html.escape(str(sym))}</b> {sign}{pct:.2f}%</span>')
+    return "".join(parts)
+
 
 def world_state_html(notes: list[dict], stocks: list[dict], eia: dict | None) -> str:
+    return status_row_html(notes, stocks, eia, prefix="")
+
+
+def status_row_html(notes: list[dict], stocks: list[dict], eia: dict | None, prefix: str = "") -> str:
     ups = downs = 0
     for s in stocks:
         pct = s.get("change_pct")
@@ -1440,20 +1453,20 @@ def world_state_html(notes: list[dict], stocks: list[dict], eia: dict | None) ->
         else:
             downs += 1
     if ups > downs:
-        mkt = f'<span class="ws-item"><b>Markets</b> <span class="up">▲ {ups} up</span> / {downs} down</span>'
+        mkt = f'<div class="ws-item"><b>Markets</b> <span class="up">▲ {ups} up</span> / {downs} down</div>'
     elif downs > ups:
-        mkt = f'<span class="ws-item"><b>Markets</b> <span class="down">▼ {downs} down</span> / {ups} up</span>'
+        mkt = f'<div class="ws-item"><b>Markets</b> <span class="down">▼ {downs} down</span> / {ups} up</div>'
     elif ups or downs:
-        mkt = f'<span class="ws-item"><b>Markets</b> mixed · {ups} up / {downs} down</span>'
+        mkt = f'<div class="ws-item"><b>Markets</b> mixed · {ups} up / {downs} down</div>'
     else:
-        mkt = '<span class="ws-item"><b>Markets</b> quotes unavailable</span>'
+        mkt = '<div class="ws-item"><b>Markets</b> quotes unavailable</div>'
     alerts = sum(1 for n in notes if n.get("kind") == "alert")
     if alerts:
-        weather = f'<span class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</span>'
+        weather = f'<div class="ws-item"><b>Weather</b> {alerts} alert{"s" if alerts != 1 else ""}</div>'
     else:
-        weather = '<span class="ws-item"><b>Weather</b> clear</span>'
+        weather = '<div class="ws-item"><b>Weather</b> clear</div>'
     bugs = sum(1 for n in notes if n.get("section") == "Known Bugs" or n.get("tag") == "RECALL")
-    bug_bit = f'<span class="ws-item"><b>Known bugs</b> {bugs}</span>'
+    bug_bit = f'<div class="ws-item"><b>Known bugs</b> {bugs}</div>'
     gas = ""
     if eia and eia.get("regular"):
         r = eia["regular"]
@@ -1461,14 +1474,33 @@ def world_state_html(notes: list[dict], stocks: list[dict], eia: dict | None) ->
         prev = r.get("prev")
         cls = "up" if prev and price <= prev else "down" if prev and price > prev else ""
         arrow = "▼" if cls == "up" else "▲" if cls == "down" else ""
-        gas = f'<span class="ws-item"><b>Gas</b> <span class="{cls}">${price:.2f}/gal {arrow}</span></span>'
-    return (
-        '<aside class="world-state" aria-label="World state">'
-        '<div class="wrap world-row">'
-        '<span class="ws-live"><span class="status-dot" aria-hidden="true"></span> World state · Online</span>'
-        f"{mkt}{weather}{bug_bit}{gas}"
-        "</div></aside>"
-    )
+        gas = f'<div class="ws-item"><b>Gas</b> <span class="{cls}">${price:.2f}/gal {arrow}</span></div>'
+    chips = quote_chips(stocks, eia) or '<span class="ticker-status">Market quotes unavailable this run.</span>'
+    mkt_src = html.escape(f"{prefix}assets/sprites/mkt.webp", quote=True)
+    return f"""
+    <section class="status-grid" id="status" aria-label="Markets and world state">
+      <article class="sec-card status-card reveal">
+        <div class="sec-top">
+          <img class="sec-sprite" src="{mkt_src}" alt="" width="72" height="72">
+          <div><h2>Markets</h2><p class="sec-count">US stocks, gas, and live crypto</p></div>
+        </div>
+        <div class="quotes">{chips}</div>
+        <div class="crypto" id="crypto-ticker" data-endpoint="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,ripple,dogecoin,cardano&amp;vs_currencies=usd&amp;include_24hr_change=true">
+          <span class="ticker-status">Loading prices…</span>
+        </div>
+      </article>
+      <article class="sec-card status-card reveal">
+        <div class="sec-top">
+          <div>
+            <h2><span class="status-dot" aria-hidden="true"></span>World state</h2>
+            <p class="sec-count">Online</p>
+          </div>
+        </div>
+        <div class="world-stats">{mkt}{weather}{bug_bit}{gas}</div>
+      </article>
+    </section>
+    """
+
 
 def anime_boards_html(anilist: dict, watch_notes: list[dict], series: list[str]) -> str:
     def col(heading: str, items: list[dict], score: bool) -> str:
@@ -1494,6 +1526,7 @@ def anime_boards_html(anilist: dict, watch_notes: list[dict], series: list[str])
         watch = f'<div class="watchlist"><h3>Watchlist</h3><p class="lede">Following: {follows}. No new pings in this patch.</p></div>'
     return '<div class="anime-extra">' + watch + '<div class="boards">' + col("Top airing", anilist.get("trending") or [], True) + col("New & upcoming", anilist.get("upcoming") or [], False) + "</div></div>"
 
+
 def market_blurb(mode: str) -> str:
     if mode == "movers":
         return "Top US day gainers and losers via Yahoo Finance. Percents are checked against the previous close."
@@ -1501,27 +1534,65 @@ def market_blurb(mode: str) -> str:
         return "Movers among major US stocks and indexes, via CNBC. Percents are checked against the previous close."
     if mode == "indexes":
         return "Major US indexes and ETFs are shown this run. A full movers list was not available."
-    return "Stock quotes were unavailable this run. Crypto still updates live in the ticker."
+    return "Stock quotes were unavailable this run. Crypto still updates live in the markets card."
 
-def patch_post_html(meta, featured, rest, prefix="", extras="", blurb=""):
-    feat_html = sections_html(organize_sections(featured), "featured", prefix)
-    rest_html = sections_html(organize_sections(rest), "more", prefix) if rest else ""
+
+def hero_html(meta: dict, prefix: str = "") -> str:
+    kind = html.escape(f"{meta.get('kind') or 'Evening'} Patch")
+    bits = [b for b in (meta.get("label") or "").split(" · ") if not b.lower().endswith("patch")]
+    edition = html.escape(" · ".join(bits) or (meta.get("label") or ""))
+    mascot = html.escape(f"{prefix}assets/sprites/mascot.webp", quote=True)
+    return f"""
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Today's patch</p>
+      <p class="hero-ed">{edition}</p>
+      <h1 class="hero-ver">{kind}</h1>
+      <p class="hero-tag">Real news, written as a game update. Every line links to its source — we don't invent events.</p>
+      <p class="hero-when">Published {html.escape(meta["display_date"])}</p>
+      <a class="cta" href="#latest">Read today's patch</a>
+    </div>
+    <div class="hero-art">
+      <img class="mascot" src="{mascot}" alt="A small cream-and-sage robot with a sprout on its head, the Real Life v2026 mascot." width="320" height="320">
+    </div>
+  </section>
+"""
+
+
+def patch_post_html(meta, featured, rest, prefix="", extras="", blurb="", heading=True, preview=PREVIEW_LIMIT):
+    feat_html = sections_html(organize_sections(featured), "featured", prefix, preview=preview)
+    rest_html = sections_html(organize_sections(rest), "more", prefix, preview=preview) if rest else ""
     more_btn = ""
     more_wrap = ""
     if rest:
-        more_btn = f'<button type="button" class="more" id="full-changelog" aria-expanded="false" aria-controls="full-log">Full changelog ({len(rest)} more)</button>'
+        more_btn = f'<div class="more-wrap"><button type="button" class="more" id="full-changelog" aria-expanded="false" aria-controls="full-log">Full changelog ({len(rest)} more)</button></div>'
         more_wrap = f'<div id="full-log" class="full-log" hidden><h2 class="full-h">Full changelog</h2>{rest_html}</div>'
     label = html.escape(meta["label"])
-    return f"""
-    <article class="patch-post" id="latest" data-patch-id="{html.escape(meta.get("id") or "")}">
+    head = ""
+    if heading:
+        head = f"""
       <header class="patch-head">
         <p class="kicker">Patch notes</p>
-        <h1 class="ver" data-text="{label}">{label}</h1>
+        <h2 class="ver">{label}</h2>
         <p class="when">Published {html.escape(meta["display_date"])}</p>
         <p class="intro">A satirical changelog for real life in the United States. Every line is based on a real, linked source. The joke is the framing, not the facts.</p>
         {f'<p class="lede market-note">{html.escape(blurb)}</p>' if blurb else ""}
       </header>
-      {filters_html()}
+        """
+    else:
+        head = """
+      <header class="patch-head">
+        <p class="kicker">Today's notes</p>
+        <h2>What's in this patch</h2>
+      </header>
+        """
+    return f"""
+    <article class="patch-post" id="latest" data-patch-id="{html.escape(meta.get("id") or "")}">
+      {head}
+      <div class="search-row">
+        <label class="search"><span class="sr">Search patch notes</span>
+        <input id="q" type="search" placeholder="Search this patch…" autocomplete="off"></label>
+      </div>
       <div id="notes" class="patch-body">
         {feat_html}
       </div>
@@ -1614,28 +1685,19 @@ def history_html(archive: list[dict], current_id: str, prefix: str) -> str:
         return ""
     items = []
     for p in others:
-        payload = {}
-        path = PATCHES / f"{p['id']}.json"
-        if path.exists():
-            try:
-                payload = json.loads(path.read_text(encoding="utf-8"))
-            except json.JSONDecodeError:
-                payload = {}
-        notes = [annotate(n) for n in (payload.get("notes") or [])]
-        written = payload.get("written") or []
-        feat, rest = split_featured(notes, [annotate(n) for n in written] if written else [])
-        if not feat and notes:
-            feat, rest = notes[:FEATURED_LIMIT], notes[FEATURED_LIMIT:]
-        body = sections_html(organize_sections(feat or notes[:FEATURED_LIMIT]), "featured", prefix)
         href = f"{html.escape(prefix)}archive/{html.escape(p['id'])}.html"
         items.append(
-            f'<details class="history-item">'
-            f'<summary><strong>{html.escape(p.get("label") or p["id"])}</strong>'
-            f'<span>{html.escape(p.get("display_date") or "")} · {p.get("count", len(notes))} entries</span></summary>'
-            f'<div class="history-body">{body}<p class="src"><a href="{href}">Open this patch</a></p></div>'
-            f"</details>"
+            f'<li><a href="{href}"><strong>{html.escape(p.get("label") or p["id"])}</strong>'
+            f'<span>{html.escape(p.get("display_date") or "")} · {p.get("count", 0)} entries</span></a></li>'
         )
-    return f'<section class="history" id="history"><h2>Update history</h2>{"".join(items)}<p class="src"><a href="{html.escape(prefix)}archive/index.html">Browse the full archive</a></p></section>'
+    return (
+        '<section class="history reveal" id="history">'
+        "<h2>Update history</h2>"
+        f'<ol class="archive-list">{"".join(items)}</ol>'
+        f'<p class="src"><a href="{html.escape(prefix)}archive/index.html">Browse the full archive</a></p>'
+        "</section>"
+    )
+
 
 def extras_html(anilist, notes, series, trends, prefix=""):
     watch_notes = [n for n in notes if n.get("watchlist")]
@@ -1649,7 +1711,8 @@ def extras_html(anilist, notes, series, trends, prefix=""):
             pills.append(f'<a class="trend" href="{href}" rel="noopener noreferrer">{html.escape(t["title"])}{traffic}</a>')
         trend_block = f'<div class="trends"><h3>Trending in the US</h3><div class="trend-row">{"".join(pills)}</div></div>'
     inner = trend_block + anime_boards_html(anilist, watch_notes, series)
-    return f'<details class="extras"><summary>Watchlist, top anime, and trends</summary>{inner}</details>'
+    return f'<details class="extras reveal"><summary>Watchlist, top anime, and trends</summary>{inner}</details>'
+
 
 def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_auto, handwritten, anilist, eia, series, written=None) -> str:
     written = written or []
@@ -1659,8 +1722,8 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
     weekly = ""
     if handwritten:
         weekly = (
-            '<section class="weekly handwritten" id="weekly">'
-            '<p class="kicker">Sunday recap</p>'
+            '<section class="weekly handwritten reveal" id="weekly">'
+            '<p class="eyebrow">Sunday recap</p>'
             f'<h2>{html.escape(handwritten["title"])}</h2>'
             f'<div class="prose">{handwritten["html"]}</div>'
             '<p class="src"><a href="weekly/index.html">Past weekly recaps</a></p>'
@@ -1668,31 +1731,25 @@ def render_index(meta, notes, trends, stock_mode, archive, highlights, weekly_au
         )
     elif weekly_auto:
         weekly = (
-            '<section class="weekly" id="weekly">'
-            '<p class="kicker">This week</p>'
+            '<section class="weekly-block reveal" id="weekly">'
+            '<p class="eyebrow">This week</p>'
             "<h2>Weekly Patch Notes</h2>"
             '<p class="lede">An automatic rollup of standout items from the last 7 days, until a hand-written Sunday recap is added.</p>'
-            + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured", "")
+            + sections_html(organize_sections([annotate(n) for n in weekly_auto]), "featured", "", preview=PREVIEW_LIMIT)
             + '<p class="src"><a href="weekly/index.html">Weekly recap archive</a></p></section>'
         )
     body = f"""
-  {ticker_html(stocks, eia)}
-  <div class="px-horizon" aria-hidden="true">
-    <span class="px-orb"></span>
-    <span class="px-bird"></span>
-    <span class="px-bee"></span>
-  </div>
-  {world_state_html(notes, stocks, eia)}
+  {hero_html(meta)}
   <main id="main">
-    <div class="wrap">
-      {patch_post_html(meta, featured, rest, prefix="", extras=extras, blurb=market_blurb(stock_mode))}
+      {patch_post_html(meta, featured, rest, prefix="", extras=extras, blurb=market_blurb(stock_mode), heading=False)}
+      {status_row_html(notes, stocks, eia, prefix="")}
       {weekly}
       {history_html(archive, meta["id"], "")}
-    </div>
   </main>
 """
     desc = f"Satirical US patch notes for {meta['label']}. Real headlines framed as a game update, with every line linked to its source."
-    return render_page(title=f"Real Life {meta['label']} — Patch Notes for America", description=desc, canonical=f"{SITE_URL}/", prefix="", body=body, updated=meta["iso"])
+    return render_page(title=f"Real Life {meta['label']} — Patch Notes for America", description=desc, canonical=f"{SITE_URL}/", prefix="", body=body, updated=meta["iso"], show_filters=True, current="latest")
+
 
 def render_archive_index(archive: list[dict]) -> str:
     if not archive:
@@ -1706,28 +1763,29 @@ def render_archive_index(archive: list[dict]) -> str:
             )
         lis = f'<ol class="archive-list">{"".join(items)}</ol>'
     body = f"""
-  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
-    <section class="hero">
-      <p class="kicker"><a href="../index.html">← Latest patch</a></p>
+  <main id="main">
+    <section class="page-hero">
+      <p class="crumb"><a href="../index.html">← Latest patch</a></p>
       <h1>Patch archive</h1>
       <p class="intro">The last {MAX_ARCHIVE} builds, newest first.</p>
     </section>
     {lis}
-  </div></main>
+  </main>
 """
-    return render_page(title="Archive — Real Life v2026", description="Browse past satirical US patch notes.", canonical=f"{SITE_URL}/archive/", prefix="../", body=body)
+    return render_page(title="Archive — Real Life v2026", description="Browse past satirical US patch notes.", canonical=f"{SITE_URL}/archive/", prefix="../", body=body, current="archive")
+
 
 def render_archive_patch(meta, notes, anilist, series, stock_mode, written=None, trends=None, eia=None) -> str:
     written = written or []
     featured, rest = split_featured(notes, written)
     extras = extras_html(anilist, notes, series, trends or [])
     body = f"""
-  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
+  <main id="main">
     <p class="crumb"><a href="../index.html">← Latest patch</a> · <a href="index.html">Archive</a></p>
-    {patch_post_html(meta, featured, rest, prefix="../", extras=extras, blurb=market_blurb(stock_mode))}
-  </div></main>
+    {patch_post_html(meta, featured, rest, prefix="../", extras=extras, blurb=market_blurb(stock_mode), heading=True)}
+  </main>
 """
-    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived satirical US patch notes for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta.get("iso"))
+    return render_page(title=f"Real Life {meta['label']} — Archive", description=f"Archived satirical US patch notes for {meta['label']}.", canonical=f"{SITE_URL}/archive/{meta['id']}.html", prefix="../", body=body, updated=meta.get("iso"), show_filters=True, current="archive")
 
 
 def render_weekly_index(recaps: list[dict]) -> str:
@@ -1737,29 +1795,32 @@ def render_weekly_index(recaps: list[dict]) -> str:
         items = [f'<li><a href="{html.escape(r["id"])}.html"><strong>{html.escape(r["title"])}</strong><span>{html.escape(r["date"])}</span></a></li>' for r in recaps]
         lis = f'<ol class="archive-list">{"".join(items)}</ol>'
     body = f"""
-  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
-    <section class="hero">
-      <p class="kicker"><a href="../index.html">← Latest patch</a></p>
+  <main id="main">
+    <section class="page-hero">
+      <p class="crumb"><a href="../index.html">← Latest patch</a></p>
       <h1>Weekly recaps</h1>
       <p class="intro">Hand-written Sunday patch notes, when they exist. The automatic weekly rollup lives on the homepage the rest of the time.</p>
     </section>
     {lis}
-  </div></main>
+  </main>
 """
-    return render_page(title="Weekly recaps — Real Life v2026", description="Hand-written weekly patch notes for Real Life v2026.", canonical=f"{SITE_URL}/weekly/", prefix="../", body=body)
+    return render_page(title="Weekly recaps — Real Life v2026", description="Hand-written weekly patch notes for Real Life v2026.", canonical=f"{SITE_URL}/weekly/", prefix="../", body=body, current="weekly")
+
 
 def render_weekly_page(recap: dict) -> str:
     body = f"""
-  <main id="main"><div class="px-horizon" aria-hidden="true"><span class="px-orb"></span></div><div class="wrap">
-    <section class="hero">
-      <p class="kicker"><a href="../index.html">Latest patch</a> · <a href="index.html">Weekly recaps</a></p>
+  <main id="main">
+    <section class="page-hero">
+      <p class="crumb"><a href="../index.html">Latest patch</a> · <a href="index.html">Weekly recaps</a></p>
       <h1>{html.escape(recap["title"])}</h1>
       <p class="when">{html.escape(recap["date"])}</p>
     </section>
     <section class="weekly handwritten"><div class="prose">{recap["html"]}</div></section>
-  </div></main>
+  </main>
 """
-    return render_page(title=f"{recap['title']} — Real Life v2026", description=f"Weekly patch notes recap for {recap['date']}.", canonical=f"{SITE_URL}/weekly/{recap['id']}.html", prefix="../", body=body)
+    return render_page(title=f"{recap['title']} — Real Life v2026", description=f"Weekly patch notes recap for {recap['date']}.", canonical=f"{SITE_URL}/weekly/{recap['id']}.html", prefix="../", body=body, current="weekly")
+
+
 
 def write_robots_and_sitemap(archive: list[dict], recaps: list[dict], now: datetime) -> None:
     (SITE / "robots.txt").write_text("User-agent: *\nAllow: /\n" f"Sitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
