@@ -7,24 +7,59 @@
     "month": 11,
     "week": 4,
     "day": 26,
-    "iso": "2026-11-26T09:12:38-05:00",
-    "display_date": "Thursday, November 26, 2026, 9:12 AM ET"
+    "iso": "2026-11-26T09:24:02-05:00",
+    "display_date": "Thursday, November 26, 2026, 9:24 AM ET"
   },
   "stock_mode": "majors",
   "trends": [
     {
-      "title": "mortgage rates today",
+      "title": "sarah hyland",
       "traffic": "500+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=sarah+hyland",
+      "news_url": "https://www.cleveland.com/entertainment/2026/11/todays-famous-birthdays-list-for-november-24-2026-includes-celebrities-colin-hanks-sarah-hyland.html",
+      "news_source": "Cleveland.com"
+    },
+    {
+      "title": "ken jeong",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=ken+jeong",
+      "news_url": "https://www.mediapost.com/publications/article/419669/checkoutcom-campaign-assures-retailers-the-holida.html?edition=144571",
+      "news_source": "MediaPost"
+    },
+    {
+      "title": "college football today",
+      "traffic": "1000+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=college+football+today",
+      "news_url": "https://www.cbssports.com/college-football/news/college-football-teams-thankful-this-2026-season/",
+      "news_source": "CBS Sports"
+    },
+    {
+      "title": "click on detroit.com",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=click+on+detroit.com",
+      "news_url": "https://www.freep.com/story/news/local/michigan/detroit/2026/11/26/i-75-fatal-crash-detroit/92969570007/",
+      "news_source": "Detroit Free Press"
+    },
+    {
+      "title": "wdiv",
+      "traffic": "500+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=wdiv",
+      "news_url": "https://www.clickondetroit.com/weather/2026/11/26/wet-and-windy-thanksgiving-across-metro-detroit-rain-may-mix-with-snow-tonight/",
+      "news_source": "ClickOnDetroit | WDIV Local 4"
+    },
+    {
+      "title": "george washington thanksgiving proclamation",
+      "traffic": "200+",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=george+washington+thanksgiving+proclamation",
+      "news_url": "https://www.bostonglobe.com/2026/11/26/opinion/thanksgiving-gratitude-lincoln-loss/",
+      "news_source": "The Boston Globe"
+    },
+    {
+      "title": "mortgage rates today",
+      "traffic": "2000+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=mortgage+rates+today",
       "news_url": "https://abcnews.com/Business/wireStory/average-us-30-year-mortgage-rate-eases-721-138446333",
       "news_source": "ABC News - Breaking News, Latest News and Videos"
-    },
-    {
-      "title": "lululemon black friday",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=lululemon+black+friday",
-      "news_url": "https://people.com/what-to-buy-on-thanksgiving-black-friday-deals-2026-12187567",
-      "news_source": "People.com"
     },
     {
       "title": "good morning america",
@@ -42,63 +77,13 @@
     },
     {
       "title": "when did savannah guthrie's mom disappear",
-      "traffic": "500+",
+      "traffic": "1000+",
       "url": "https://trends.google.com/trends/explore?geo=US&q=when+did+savannah+guthrie%27s+mom+disappear",
       "news_url": "https://www.imdb.com/de/news/ni66120795/",
       "news_source": "IMDb"
-    },
-    {
-      "title": "mortgages",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=mortgages",
-      "news_url": "https://www.cnbc.com/video/2026/11/25/october-new-home-sales-come-in-above-estimates.html",
-      "news_source": "CNBC"
-    },
-    {
-      "title": "the tonight show starring jimmy fallon justin timberlake",
-      "traffic": "500+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=the+tonight+show+starring+jimmy+fallon+justin+timberlake",
-      "news_url": "https://people.com/justin-timberlake-jimmy-fallon-cha-cha-slide-tonight-show-sneak-peek-12280001",
-      "news_source": "People.com"
-    },
-    {
-      "title": "autumn reeser",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=autumn+reeser",
-      "news_url": "https://www.yahoo.com/entertainment/tv/articles/hallmark-fans-rejoice-autumn-reeser-003800067.html",
-      "news_source": "Yahoo"
-    },
-    {
-      "title": "is cub foods open on thanksgiving",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=is+cub+foods+open+on+thanksgiving",
-      "news_url": "https://www.kare11.com/article/life/holidays/whats-open-closed-twin-cities-2026-thanksgiving/89-a6359f2b-2954-4ca5-b64e-0b153c450e11",
-      "news_source": "kare11.com"
-    },
-    {
-      "title": "playstation 5 black friday deals",
-      "traffic": "200+",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=playstation+5+black+friday+deals",
-      "news_url": "https://www.techradar.com/live/news/black-friday-ps5-deals-live-2026-nov-26",
-      "news_source": "TechRadar"
     }
   ],
   "notes": [
-    {
-      "id": "075ed79bcb52",
-      "category": "News",
-      "tag": "ADDED",
-      "line": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed",
-      "digest": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed",
-      "title": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObktQNUtMdjhfcFhmY3JySFIzNGxhWXhnRXh6TGp5OGhYUmhDNkgzNjdXdmpFU2RnaTVfc0wtdlY2bDh5RllRRUVkTW50MVlYVXVzQWdVdU1zRERVRE4yMFJCbzJ5ZE90R3hLSHNiWEZLV3g0UGZ2VVNlMFBsNHB2WVBiNHZ4QzNXbU5Fdm5ydXFSSEplU0pPYkI0TkczMThESE40TmFfOHBYb0hjX1dlaA?oc=5",
-      "source": "NPR",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "What's New",
-      "text": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed"
-    },
     {
       "id": "f1ac5be66de7",
       "category": "News",
@@ -115,19 +100,34 @@
       "text": "Thanksgiving Storm Threatens the East Coast: Live Weather Updates"
     },
     {
-      "id": "3b4c9110a49c",
+      "id": "d1ec745fc469",
       "category": "News",
-      "tag": "HOTFIX",
-      "line": "China and other U.S. trading partners hit back at Trump\u2019s new tariff plans",
-      "digest": "China and other U.S. trading partners hit back at Trump\u2019s new tariff plans",
-      "title": "China and other U.S. trading partners hit back at Trump\u2019s new tariff plans",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVWQ3MnMzTlQ5Y2lUTW9RTzloTmp3MmtycjBUbmZUOTExYWNsVmlXX1JmLVJGYUYyRjNHSGV1b2hzLWhWclNBRDRZb2hyQ2UxSE9tYktjUTBKR2VDU2w1YlZlU0xaZ0JSMlQ1ZzhwMEJpSVk5N05XbHhnNi1ESktvTVNGNlZpMkNjX0dUNHdvLWJ2YTVqeDFv?oc=5",
-      "source": "AP News",
+      "tag": "ADDED",
+      "line": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+      "digest": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+      "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNU9fSWwxVXF0VnltZ3FiOWlpTzJ2ZzR3aWV0UVMycm50dWpLOExIZGlHMjJvNk9hUkhkbEdKTGZKcHBhODVPMFFDZ2s4N3hmU3RhWU5YaGxZRHd6MGpSYWVtcXA2NjItREttZHQzWXlZdTZNRG5WVUhrWVlfSE9WLXA2blk0a1E?oc=5",
+      "source": "Axios",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "What's New",
+      "text": "Macy's Thanksgiving parade postponed for the first time in the event's history"
+    },
+    {
+      "id": "cb4920f0b33d",
+      "category": "News",
+      "tag": "UPDATED",
+      "line": "Trump's new tariffs would put rates right back where they were before the Supreme Court stepped in",
+      "digest": "Trump's new tariffs would put rates right back where they were before the Supreme Court stepped in",
+      "title": "Trump's new tariffs would put rates right back where they were before the Supreme Court stepped in",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPTVg5UHpONGNFdFNFMDVfQlFwT1p3dDItcHg2TWRmdDFkT1hCMTlXSGoxM2JLTXViNG1pbUwtZXY2WnB2U050QkViTVJQQkJsSnozaE1ISDMyRGJtSUJuTGNtdjhNWVNoVHVsV1ExYUhyWVM4QVdzNXlmbUg2LWE4b1hraGFCYXdkNEEzYW9LTExIZExfalhEOUtfTUh4MFFlU2dvT0hWUDRXLW1aUDZzNDJlWTNELVRSc09TVFA3SGpRR2FwcF82bXVHUnk0dHQ2TkhIbFJuUFNtNTJjelpfWURfMEFPakhHX2c?oc=5",
+      "source": "Yahoo Finance",
       "kind": "headline",
       "weird": false,
       "filter": "News & Politics",
       "section": "Fixed",
-      "text": "China and other U.S. trading partners hit back at Trump\u2019s new tariff plans"
+      "text": "Trump's new tariffs would put rates right back where they were before the Supreme Court stepped in"
     },
     {
       "id": "0d507d32096b",
@@ -190,21 +190,6 @@
       "text": "Hundreds of flights canceled on Thanksgiving Day as storms hit and question swirl over Iowa detonation: Morning Rundown"
     },
     {
-      "id": "d1ec745fc469",
-      "category": "News",
-      "tag": "ADDED",
-      "line": "Macy's Thanksgiving parade postponed for the first time in the event's history",
-      "digest": "Macy's Thanksgiving parade postponed for the first time in the event's history",
-      "title": "Macy's Thanksgiving parade postponed for the first time in the event's history",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNU9fSWwxVXF0VnltZ3FiOWlpTzJ2ZzR3aWV0UVMycm50dWpLOExIZGlHMjJvNk9hUkhkbEdKTGZKcHBhODVPMFFDZ2s4N3hmU3RhWU5YaGxZRHd6MGpSYWVtcXA2NjItREttZHQzWXlZdTZNRG5WVUhrWVlfSE9WLXA2blk0a1E?oc=5",
-      "source": "Axios",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "What's New",
-      "text": "Macy's Thanksgiving parade postponed for the first time in the event's history"
-    },
-    {
       "id": "6143b266869c",
       "category": "News",
       "tag": "PATCH",
@@ -233,6 +218,21 @@
       "filter": "News & Politics",
       "section": "Still Broken",
       "text": "Judge upholds NYC rent freeze, marking win for Mamdani and his affordability agenda"
+    },
+    {
+      "id": "dc712f8a5a08",
+      "category": "News",
+      "tag": "FIXED",
+      "line": "Watch: Part of Pacifica pier collapses during king tides",
+      "digest": "Watch: Part of Pacifica pier collapses during king tides",
+      "title": "Watch: Part of Pacifica pier collapses during king tides",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9fR3BTNWY2SVRiT2U3R3U2enFRT29yRGRMa2Z3MUotM0EzLVpGYXZmaWM2am9uQmliZEdQeFRDQ0lPaHZhTVhVR1kxV1htcUw2emJ4S08yVzZpQ2RQeURFLXVYRExqUVp5c0RwTFU3WnhCbERTR09jMkJzSQ?oc=5",
+      "source": "KCRA",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Fixed",
+      "text": "Watch: Part of Pacifica pier collapses during king tides"
     },
     {
       "id": "fff3e0c2dc2b",
@@ -355,6 +355,21 @@
       "text": "I tested TCL, Hisense and LG\u2019s budget-friendly TVs side by side to compare mini-LED with affordable OLED \u2014 here\u2019s the one I\u2019d buy this Black Friday"
     },
     {
+      "id": "a7dac6dc5a15",
+      "category": "Tech",
+      "tag": "HOTFIX",
+      "line": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+      "digest": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+      "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5RNm95ZEIzSWJPaVhFUkE1dVRVTDJoTFUxOGV2WUUzRjRYRkktMFoyU0N1Sk4tcnpoOHVvMEV0X2FRckVKV0pZdFd5SW42QWs2M0RlbV81am8yNW8?oc=5",
+      "source": "BBC",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "Fixed",
+      "text": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history"
+    },
+    {
       "id": "13b4b036a474",
       "category": "Tech",
       "tag": "UPDATED",
@@ -385,19 +400,19 @@
       "text": "WhatsApp now lets you schedule messages in group and individual chats"
     },
     {
-      "id": "a7dac6dc5a15",
-      "category": "Tech",
-      "tag": "HOTFIX",
-      "line": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-      "digest": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-      "title": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5RNm95ZEIzSWJPaVhFUkE1dVRVTDJoTFUxOGV2WUUzRjRYRkktMFoyU0N1Sk4tcnpoOHVvMEV0X2FRckVKV0pZdFd5SW42QWs2M0RlbV81am8yNW8?oc=5",
+      "id": "f557e8fa3b15",
+      "category": "Culture",
+      "tag": "PATCH",
+      "line": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65",
+      "digest": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65",
+      "title": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1WekJNZ1dkTGpVZUdoNmFOV1BKbFl0WVVKNkJhYnJFejJHbEQ1R2ZyYU9Mc1JFMnJDRmlQN1hobUFYVlhRS0xRQkljWDRYb09MRk94Ui1rdE1WZFU?oc=5",
       "source": "BBC",
       "kind": "headline",
       "weird": false,
-      "filter": "Tech & Science",
+      "filter": "Life",
       "section": "Fixed",
-      "text": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history"
+      "text": "Tributes for Duran Duran guitarist Andy Taylor after his death aged 65"
     },
     {
       "id": "2f728caf6cc0",
@@ -415,19 +430,19 @@
       "text": "'The Hunting Wives' is bringing steamy intrigue to Thanksgiving watchlists. Its creator explains the art of unapologetically trashy TV."
     },
     {
-      "id": "299ea88a3de4",
-      "category": "Culture",
-      "tag": "UPDATED",
-      "line": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
-      "digest": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
-      "title": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPWW4zMnVGcjJXaVlXVUhPSlNpSVpSdktEOV9aRm9wcmRxMXlZSE82N2VXT1hVSi1HWGNldEV3VF9sdGFCOHFXY1d3ZWwxMTFpN3hPM2NZV09TZ1djd1JqeDA0dDN0RFVuTmdZOC1fRGtoZ21NM3RqZHlqLTJYNkhHZTVYZHFkZDBDNXZtZ2QtUkc3WXJ5ZlppZHNiSTRVd3d1OWxXaE81NkhfUnZldHpJUFJER3V4RXVpeXlNaFZIZFdzakNiS1FpbXRUNTlFOXNyR01BTjltRm5DYnhIS3ZEWQ?oc=5",
-      "source": "Page Six",
+      "id": "ad7ef9d594d0",
+      "category": "Music",
+      "tag": "ADDED",
+      "line": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans",
+      "digest": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans",
+      "title": "After 3 decades, Essence Music Festival bidding farewell to New Orleans",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNM2Q2bGZlTUFpUDRPa01CMU82N0g4c0JEX1pHMDNXMUlZbjh5dDVNVnEwNHhIZE5tbjhubDhob1B2dWRtb1hzaFdicUNOYVhSSmxZMjhkSFlsZUZNb04xS216SnNDVXBQOFdDdjkxZ1B6NzN0dWdRUld1N192Y01ESGhSTXpKem1rTUJkb3d3NGliaGlQcTlwN3lpcEVCYVI4T3k3MQ?oc=5",
+      "source": "AP News",
       "kind": "headline",
       "weird": false,
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl"
+      "filter": "Entertainment",
+      "section": "What's New",
+      "text": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans"
     },
     {
       "id": "269a054d20d9",
@@ -445,34 +460,19 @@
       "text": "Horoscope for Thursday, November 26, 2026"
     },
     {
-      "id": "ad7ef9d594d0",
-      "category": "Music",
-      "tag": "ADDED",
-      "line": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans",
-      "digest": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans",
-      "title": "After 3 decades, Essence Music Festival bidding farewell to New Orleans",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNM2Q2bGZlTUFpUDRPa01CMU82N0g4c0JEX1pHMDNXMUlZbjh5dDVNVnEwNHhIZE5tbjhubDhob1B2dWRtb1hzaFdicUNOYVhSSmxZMjhkSFlsZUZNb04xS216SnNDVXBQOFdDdjkxZ1B6NzN0dWdRUld1N192Y01ESGhSTXpKem1rTUJkb3d3NGliaGlQcTlwN3lpcEVCYVI4T3k3MQ?oc=5",
-      "source": "AP News",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "What's New",
-      "text": "New music: After 3 decades, Essence Music Festival bidding farewell to New Orleans"
-    },
-    {
-      "id": "536e2eb0f4c1",
+      "id": "299ea88a3de4",
       "category": "Culture",
-      "tag": "ADDED",
-      "line": "Veruschka: Striking images of one of the world's first supermodels, who has died aged 87",
-      "digest": "Veruschka: Striking images of one of the world's first supermodels, who has died aged 87",
-      "title": "Veruschka: Striking images of one of the world's first supermodels, who has died aged 87",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNcFNvaXhDbTJZRGhwejZBbXlhQVk3U2tVbEFsSEVEYTI3ZE0tYlgwM2tKM1dFMTJkcUhuc1NmSkowSHZJU1ZwNFc2WDZfMDF6LXlNYmhRUXEtaTg?oc=5",
-      "source": "BBC",
+      "tag": "UPDATED",
+      "line": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
+      "digest": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
+      "title": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOekFMeTRwMmdHSE5nMm9fR19IcEVuS0dvZEtiY0hLS0JNZVBrNlBZLVZkQlQ5c0Y0MGxxOEVxaE9jXzN6SHVFNHhQSWhralktQU56V2tHNmFmNTVXMmkwc0dUTUhWZ3FKcWNzQzZKRjVDZDQ5S3hHVF9MNGRkT2pyU1EzSlJNY0JILTF1bWIxWHhDLUJHZjgxSEpyOGxlUUFER0QzdkR2YjNfUG03dTlQazFVVlh2c0FoWWRTMzQydUNtTlZ4UFE?oc=5",
+      "source": "Fox News",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
-      "section": "What's New",
-      "text": "Veruschka: Striking images of one of the world's first supermodels, who has died aged 87"
+      "section": "Fixed",
+      "text": "Charlie Sheen swung bat, threatened to \u2018break\u2019 Emilio Estevez\u2019s head open before cops swarmed teen brawl"
     },
     {
       "id": "03de86b940ae",
@@ -610,6 +610,21 @@
       "text": "European spacecraft finds chaotic scene after asteroid deflection experiment"
     },
     {
+      "id": "76e792f095f6",
+      "category": "Science & Nature",
+      "tag": "ADDED",
+      "line": "New find: Astronomers discover the most distant and ancient supermassive black hole-powered quasar in the universe",
+      "digest": "New find: Astronomers discover the most distant and ancient supermassive black hole-powered quasar in the universe",
+      "title": "Astronomers discover the most distant and ancient supermassive black hole-powered quasar in the universe",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNOWQxeXo2NWl5a196NUJHZmdzd1dJUXZGaWJTQUNISzJtZ293dkF3dkFpbHBmcEN5eEpxQkdMS3dELXlOTEZnT0lRblJmX1hPQ0owOHJqSXBHWVhnUlZZbk9qb3FsaFRqZzJVejd0eEVlNzMxSS1VT1NET2twcnRvX3p3d19vWWF5aDZxTXJrcHZWQmZHQ0ZvdW8wZzJIZl80Q0NfSGZ4NGd4Wk5Ma0cxQkFJNXpaeG8yNGVsdUd4LWtIQmtLeVVYTzg2dld4bWpTQTQ5dUtTSDhSS0M3T1F0bm1EZk9Udw?oc=5",
+      "source": "Space",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Tech & Science",
+      "section": "What's New",
+      "text": "New find: Astronomers discover the most distant and ancient supermassive black hole-powered quasar in the universe"
+    },
+    {
       "id": "779f75e9e4b7",
       "category": "Science & Nature",
       "tag": "UPDATED",
@@ -625,19 +640,19 @@
       "text": "Distant Spacecraft Near Mercury Hit by Outage Like All Those Banks the Other Week"
     },
     {
-      "id": "9d74db1b1dea",
+      "id": "c9c1ce5c9a2c",
       "category": "Science & Nature",
       "tag": "ADDED",
-      "line": "New find: November's full moon dazzles skywatchers with a stunning Beaver Moon supermoon (photos)",
-      "digest": "New find: November's full moon dazzles skywatchers with a stunning Beaver Moon supermoon (photos)",
-      "title": "November's full moon dazzles skywatchers with a stunning Beaver Moon supermoon (photos)",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdG83MWNSandCWEt0TjYzX08xY0lBTlctOXVMb1htdnZvQmhmbEdzUHFoeGFld1d2RHU2Qzk5RmFuQTZrQmQ4ZXBTSHAtT3BWSnlrd3RzZnhxcHZ5UkxzU2NxZnJBNWpWYktNdDdDdmoxWlZNSV85LXFldHJXNWxBMGgyTm9yYjBoM0ZYZjhKRmRaZTNSbnV3XzZ6MFhKcThkZ0FaSHUtY0pkZm9DZzJvV2dNeC1Fc2d1bGZSMTFIUFhmSXpGSVNDbA?oc=5",
-      "source": "Space",
+      "line": "New find: See photos of the Beaver Supermoon shining bright in the night sky",
+      "digest": "New find: See photos of the Beaver Supermoon shining bright in the night sky",
+      "title": "See photos of the Beaver Supermoon shining bright in the night sky",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBhdjFISTlEakhjdEdrYkFfbDlZN19ZWkV1V0JuTFhRdC1UZV8xOEtkTkFYYTBSdmVLRFZBcFZic09sa0JHUC04TWlNU0V5WHdwZGQ1UEdFY3B6Y0NxUGUteklCc1ViT05MZWYzdy1jMDhIRWhIeURsd1Byc1lLNlk?oc=5",
+      "source": "The Boston Globe",
       "kind": "headline",
       "weird": false,
       "filter": "Tech & Science",
       "section": "What's New",
-      "text": "New find: November's full moon dazzles skywatchers with a stunning Beaver Moon supermoon (photos)"
+      "text": "New find: See photos of the Beaver Supermoon shining bright in the night sky"
     },
     {
       "id": "592e209d86d0",
@@ -668,21 +683,6 @@
       "filter": "Tech & Science",
       "section": "Fixed",
       "text": "What was the flash of green light in the sky over Michigan?"
-    },
-    {
-      "id": "92318cab5c06",
-      "category": "Science & Nature",
-      "tag": "ADDED",
-      "line": "New find: Russia will launch a routine ISS supply mission tomorrow\u2014apparently, it\u2019s a big secret",
-      "digest": "New find: Russia will launch a routine ISS supply mission tomorrow\u2014apparently, it\u2019s a big secret",
-      "title": "Russia will launch a routine ISS supply mission tomorrow\u2014apparently, it\u2019s a big secret",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVGUyaDY2akpTRl9YSXl5c1c2cEV4aGotWUFTN0lZRERfYURLY2JWNHl4bTNjQkZ6aWVWdFdnaUtkR0xWNWV6T0NRNDdzazd4Zkp6XzZVZVF3Um5zeG85QjhTV1hhVXFvUlVPQnVfeklNaGd1MXBhR3lVZnRVZzE3M3RNOVFFN1dHZHdJRTVVcE1xUi1zY0s3REJvWWZ6UEZ4QWRrTTIyeWMxTGZxeE5zd0RRUDNiNFNIVDFtUTVrY2I?oc=5",
-      "source": "Ars Technica",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Tech & Science",
-      "section": "What's New",
-      "text": "New find: Russia will launch a routine ISS supply mission tomorrow\u2014apparently, it\u2019s a big secret"
     },
     {
       "id": "160a9e0f48a6",
@@ -820,21 +820,6 @@
       "text": "Scientists discover mysterious lakes more than a mile beneath the Red Sea"
     },
     {
-      "id": "2a4b28334872",
-      "category": "Science & Nature",
-      "tag": "ADDED",
-      "line": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
-      "digest": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
-      "title": "Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVliUGRxUWVnc211RnFXYWg5WU5FRnZ0M2dxb3ZPT3VBMzZWZl9DTE1WcmFuUXp1LVhkZXhrVlpiTzgyUm54dThWbUxPRVdubS1JYmR0TXZmQ0NOckYzbTl1Uk5pdVZtVDNEbnA3VlZtWHZ1LXpZbWo3STNlU2tpN1ZBTjJILWZ4VGd4M092bVh4OWd4WUVpMUZ5TTd6Unlv?oc=5",
-      "source": "SciTechDaily",
-      "kind": "headline",
-      "weird": true,
-      "filter": "Tech & Science",
-      "section": "What's New",
-      "text": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River"
-    },
-    {
       "id": "618e14927c77",
       "category": "Science & Nature",
       "tag": "EVENT",
@@ -848,6 +833,21 @@
       "filter": "Tech & Science",
       "section": "Happening Now",
       "text": "Scientists discover a massive space hurricane that rains electrons"
+    },
+    {
+      "id": "2a4b28334872",
+      "category": "Science & Nature",
+      "tag": "ADDED",
+      "line": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
+      "digest": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
+      "title": "Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVliUGRxUWVnc211RnFXYWg5WU5FRnZ0M2dxb3ZPT3VBMzZWZl9DTE1WcmFuUXp1LVhkZXhrVlpiTzgyUm54dThWbUxPRVdubS1JYmR0TXZmQ0NOckYzbTl1Uk5pdVZtVDNEbnA3VlZtWHZ1LXpZbWo3STNlU2tpN1ZBTjJILWZ4VGd4M092bVh4OWd4WUVpMUZ5TTd6Unlv?oc=5",
+      "source": "SciTechDaily",
+      "kind": "headline",
+      "weird": true,
+      "filter": "Tech & Science",
+      "section": "What's New",
+      "text": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River"
     },
     {
       "id": "cf7598ff9060",
@@ -880,21 +880,6 @@
       "text": "Is grandma asking rude questions at the dinner table again? This Instagram account can help"
     },
     {
-      "id": "6cc58d31ab9d",
-      "category": "News",
-      "tag": "KNOWN ISSUE",
-      "line": "US cops complete food delivery after arresting driver, video viral",
-      "digest": "US cops complete food delivery after arresting driver, video viral",
-      "title": "US cops complete food delivery after arresting driver, video viral",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ2Vnb1pES0ZUdzUxd0FSZ0RZQUl4U2pMdGx4QXBWbWktTTRLRXZKdnJlUzJ1Y0hwV193SEVPM1M3bmJjcG9oLVY2cUxPNUl5aGdkZmxTZHF0aFRQeXpGUVhXZ2dVYVRFaHJSdkltcEUzdmxZYzBsckxLQXlpdXl2bnA2Q3p6RjVqMGk2bkNuREtFZUFFSmw2RUFYVEVSTlc3Z3pEYS01S3ZRYkw3MkE?oc=5",
-      "source": "Inshorts",
-      "kind": "headline",
-      "weird": true,
-      "filter": "News & Politics",
-      "section": "Still Broken",
-      "text": "US cops complete food delivery after arresting driver, video viral"
-    },
-    {
       "id": "f7cb55bb30bf",
       "category": "News",
       "tag": "UPDATED",
@@ -923,6 +908,36 @@
       "filter": "News & Politics",
       "section": "Fixed",
       "text": "Death of Former MLB Star and Actor Lance Broadway Takes Bizarre Turn After Being Found in Stairwell"
+    },
+    {
+      "id": "af012f6ab428",
+      "category": "News",
+      "tag": "KNOWN ISSUE",
+      "line": "James Talarico's girlfriend turned heads with game day outfit. Here's why.",
+      "digest": "James Talarico's girlfriend turned heads with game day outfit. Here's why.",
+      "title": "James Talarico's girlfriend turned heads with game day outfit. Here's why.",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPd1lFWXdxR1RxLUNjWlNEandKdUpUOUk5aC00VElVUV9FRkFrbU5QMUJ3YU85SFBTX2RIdkNuMkxncHQ2bHRhQkUxbENnS2IyWF9pTmtkbHY2N2tQOEJVM2R6TkV0RXJ2dDhENnFPLUZGYnlaWVFNcFZheXFLVzBaZEtRTi0wcllIWUN3U0xibkhjdGJaQ0pyTVNxdnZtanRyT2c0?oc=5",
+      "source": "San Antonio Express-News",
+      "kind": "headline",
+      "weird": true,
+      "filter": "News & Politics",
+      "section": "Still Broken",
+      "text": "James Talarico's girlfriend turned heads with game day outfit. Here's why."
+    },
+    {
+      "id": "c37a6eec4966",
+      "category": "Politics",
+      "tag": "HOTFIX",
+      "line": "Hegseth considered using wartime law to force Nvidia to reinstate CEO Huang: report",
+      "digest": "Hegseth considered using wartime law to force Nvidia to reinstate CEO Huang: report",
+      "title": "Hegseth considered using wartime law to force Nvidia to reinstate CEO Huang: report",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNzhOMGxuYXdyMUozeGNoZmVnSEl6OEloekhXOWxidExEc1ZNNFdJbXowZXF6V0dVbG9KUGJJZmRvUTZ5MjA3LWo1Q1padXI1cnZjbG4zQnRLbksyMjRTdEFmR0dnZDc1Z1ktLVdOMGkwODl6Snc2RVN3SkF4THZqaDViNkstOGR3MHdCaVlZbHVxTW5YTmlxamtuR2VRNjU3SG9VZ1h4Zlc4a0xT?oc=5",
+      "source": "The Independent",
+      "kind": "headline",
+      "weird": false,
+      "filter": "News & Politics",
+      "section": "Fixed",
+      "text": "Hegseth considered using wartime law to force Nvidia to reinstate CEO Huang: report"
     },
     {
       "id": "1d6b2eb43fbe",
@@ -1000,21 +1015,6 @@
       "text": "South Africa court repeals \u2018farmgate\u2019 impeachment threat against Ramaphosa"
     },
     {
-      "id": "7673499baf3b",
-      "category": "Politics",
-      "tag": "ROSTER",
-      "line": "Lineup: Paris and Berlin seek to shield EU budget from Marine Le Pen",
-      "digest": "Lineup: Paris and Berlin seek to shield EU budget from Marine Le Pen",
-      "title": "Paris and Berlin seek to shield EU budget from Marine Le Pen",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeHB0ekRwaUVhRlpQTDk1WEVZSDU2Z19yLXktVF9KSEFBbDVXWUFKYkwxSUhpMmQ3aFJlWUVZMmhqX2JYZjF6WnNJaEVqSWFOOGVSY1dVUmVzVW1mbmV4ZkhUd2cxclBod2RZZDZYc2lyZVBGRWtjdVhncF9WanRBekM2X0I?oc=5",
-      "source": "Financial Times",
-      "kind": "headline",
-      "weird": false,
-      "filter": "News & Politics",
-      "section": "Leveling Up",
-      "text": "Lineup: Paris and Berlin seek to shield EU budget from Marine Le Pen"
-    },
-    {
       "id": "f918c6f5eb01",
       "category": "Markets",
       "tag": "ROSTER",
@@ -1075,19 +1075,19 @@
       "text": "Necessities join gifts in Black Friday shopping carts as AI and higher costs steer spending"
     },
     {
-      "id": "b9343838e18c",
+      "id": "4079247764a3",
       "category": "Markets",
-      "tag": "BUFFED",
-      "line": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
-      "digest": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
-      "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZG13czFudWQ3VkwwYUhKMlYyMXlETDZuay1ZcVVleUYtQXRRWWhDRTRNVHhVRGFEU1dNSFJQSXlqcnlKWTZNM2daM01zcEpCTXlyOXRsWFFOV0diaE9rbHhBYWo5SXJMN2hPY2x5TFdFc0ZLTjhpVVcwcElqaDh6ZC1kclVydDVCd1pBMURqSQ?oc=5",
-      "source": "NPR",
+      "tag": "PATCH",
+      "line": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+      "digest": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+      "title": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSHM3RHJjQzd5X25CS3B2YkpjVm9fa092SkJjUmlWLS1xRi1EaFZNam9wTi1lbUpmTXdPeVRaYXdjM2hnT2dLenQyQXVtOHZzcDJ5SkZSeGdlS0ZCZHMtMUNfclhqT3VJVUNmNy1yUmtNMnlnRkhvd1ZWV2FKdVQ1QmtB?oc=5",
+      "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "Markets",
       "section": "Markets",
-      "text": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical"
+      "text": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions"
     },
     {
       "id": "1d1988ceae20",
@@ -1424,21 +1424,6 @@
       "text": "Watch the Xenoblade Chronicles 3 \u2013 Nintendo Switch 2 Edition Overview trailer ahead of the game launch on Dec. 3!"
     },
     {
-      "id": "d8d9583dd8b1",
-      "category": "Gaming",
-      "tag": "ADDED",
-      "line": "Station To Station (Switch 2) Review",
-      "digest": "Station To Station (Switch 2) Review",
-      "title": "Station To Station (Switch 2) Review",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdlUwcDRQN2hmUklGVlJENnlTWHEzT3E0Z2VKQThyem5FU2RUX2dwVnpwaUh6NnR0X0tPUC1aQXppcFBheGk3c2p5NGd4Q01lTHVFSHJ0UjgzOVB2ckp6Z1VJZlF1Y0Fpck5Qc1ZFX0hWRjdaUzQtSk9UWGNBZE9aYS0wam9jMFFvcGpJ?oc=5",
-      "source": "Nintendo World Report",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "What's New",
-      "text": "Station To Station (Switch 2) Review"
-    },
-    {
       "id": "a49ca73b6e8b",
       "category": "Gaming",
       "tag": "ADDED",
@@ -1452,6 +1437,37 @@
       "filter": "Entertainment",
       "section": "What's New",
       "text": "Best Black Friday Nintendo Switch deals: Save on Switch 2 Mario Kart, Switch OLED, microSD, and more"
+    },
+    {
+      "id": "978322105266",
+      "category": "Gaming",
+      "tag": "BUFFED",
+      "line": "GTA 6 Guide: All Guides & Collectibles",
+      "digest": "GTA 6 Guide: All Guides & Collectibles",
+      "title": "GTA 6 Guide: All Guides & Collectibles",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ZQ0o0R1NyamtXaXVjSmFDTlQ3REpjWXRsanE1dmxjQlZPS2NpVkhCaVliSWl6aFp5Rm1nNS1yTmg2V0J6R2ZNVXlDbjY1OFB0MnhxTE9TTVY?oc=5",
+      "source": "Push Square",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "Leveling Up",
+      "text": "GTA 6 Guide: All Guides & Collectibles"
+    },
+    {
+      "id": "653c127ce3cd",
+      "category": "Movies & TV",
+      "tag": "BUFFED",
+      "line": "G\u00e9rard Depardieu to Stand Trial for Rape Charges After Failed Appeal",
+      "digest": "G\u00e9rard Depardieu to Stand Trial for Rape Charges After Failed Appeal",
+      "title": "G\u00e9rard Depardieu to Stand Trial for Rape Charges After Failed Appeal",
+      "url": "https://variety.com/2026/film/global/gerard-depardieu-trial-rape-charges-failed-appeal-1236958940/",
+      "source": "variety",
+      "kind": "headline",
+      "weird": false,
+      "image": "https://variety.com/wp-content/uploads/2024/10/gerard.jpg",
+      "filter": "Entertainment",
+      "section": "Leveling Up",
+      "text": "G\u00e9rard Depardieu to Stand Trial for Rape Charges After Failed Appeal"
     },
     {
       "id": "1a4c9d5a17ef",
@@ -1518,20 +1534,19 @@
       "text": "New season: \u2018Ramayana\u2019 Doubled Visitors at Kerala\u2019s Jatayu Rock, Official Says as India Pitches Itself to Global Productions at WAVES Film Bazaar"
     },
     {
-      "id": "0f286bcc6b5e",
+      "id": "a646b4dedf2a",
       "category": "Movies & TV",
-      "tag": "BUFFED",
-      "line": "Huw Edwards Speaks Publicly About Conviction and Downfall for First Time in Channel 4 Doc: \u2018I\u2019d Lost the Plot\u2019",
-      "digest": "Huw Edwards Speaks Publicly About Conviction and Downfall for First Time in Channel 4 Doc: \u2018I\u2019d Lost the Plot\u2019",
-      "title": "Huw Edwards Speaks Publicly About Conviction and Downfall for First Time in Channel 4 Doc: \u2018I\u2019d Lost the Plot\u2019",
-      "url": "https://variety.com/2026/tv/global/huw-edwards-speaks-publicly-about-crimes-channel-4-doc-1236958880/",
-      "source": "variety",
+      "tag": "DLC",
+      "line": "New season: Huw Edwards Lets Cameras Into His Home in Channel 4 Doc Confronting Child Sex Abuse Images Conviction",
+      "digest": "New season: Huw Edwards Lets Cameras Into His Home in Channel 4 Doc Confronting Child Sex Abuse Images Conviction",
+      "title": "Huw Edwards Lets Cameras Into His Home in Channel 4 Doc Confronting Child Sex Abuse Images Conviction",
+      "url": "https://www.hollywoodreporter.com/tv/tv-news/huw-edwards-guilty-channel-4-documentary-abuse-scandal-tv-1236763981/",
+      "source": "hollywood",
       "kind": "headline",
       "weird": false,
-      "image": "https://variety.com/wp-content/uploads/2026/11/GettyImages-2172375259.jpg",
       "filter": "Entertainment",
-      "section": "Leveling Up",
-      "text": "Huw Edwards Speaks Publicly About Conviction and Downfall for First Time in Channel 4 Doc: \u2018I\u2019d Lost the Plot\u2019"
+      "section": "What's New",
+      "text": "New season: Huw Edwards Lets Cameras Into His Home in Channel 4 Doc Confronting Child Sex Abuse Images Conviction"
     },
     {
       "id": "02ba6f26b216",
@@ -1579,19 +1594,20 @@
       "text": "NBC Uses Thanksgiving TV to Kickstart 2028 LA Olympics Marketing Push"
     },
     {
-      "id": "bf31dc195041",
+      "id": "d2c205f9df7e",
       "category": "Movies & TV",
       "tag": "PATCH",
-      "line": "Director C\u00e9dric Klapisch to Receive C\u00e9sar Lifetime Achievement Honor",
-      "digest": "Director C\u00e9dric Klapisch to Receive C\u00e9sar Lifetime Achievement Honor",
-      "title": "Director C\u00e9dric Klapisch to Receive C\u00e9sar Lifetime Achievement Honor",
-      "url": "https://www.hollywoodreporter.com/movies/movie-news/french-cesar-honor-for-director-cedric-klapisch-1236763946/",
-      "source": "hollywood",
+      "line": "Warwick Thornton, Teona Strugar Mitevska & Myroslav Slaboshpytskiy Set For Rotterdam\u2019s Cinemart",
+      "digest": "Warwick Thornton, Teona Strugar Mitevska & Myroslav Slaboshpytskiy Set For Rotterdam\u2019s Cinemart",
+      "title": "Warwick Thornton, Teona Strugar Mitevska & Myroslav Slaboshpytskiy Set For Rotterdam\u2019s Cinemart",
+      "url": "https://deadline.com/2026/11/rotterdams-iffr-2027-cinemart-1237234005/",
+      "source": "deadline",
       "kind": "headline",
       "weird": false,
+      "image": "https://deadline.com/wp-content/uploads/2026/11/cinemart.jpg",
       "filter": "Entertainment",
       "section": "Fixed",
-      "text": "Director C\u00e9dric Klapisch to Receive C\u00e9sar Lifetime Achievement Honor"
+      "text": "Warwick Thornton, Teona Strugar Mitevska & Myroslav Slaboshpytskiy Set For Rotterdam\u2019s Cinemart"
     },
     {
       "id": "25ae5c9db7b9",
@@ -1642,22 +1658,6 @@
       "text": "BBC Being Investigated Over Antisemitism By Government Adviser"
     },
     {
-      "id": "d5f3d356c541",
-      "category": "Movies & TV",
-      "tag": "BUFFED",
-      "line": "Huw Edwards To Speak On TV For First Time About Criminal Actions & Fall From Grace In Channel 4 Doc",
-      "digest": "Huw Edwards To Speak On TV For First Time About Criminal Actions & Fall From Grace In Channel 4 Doc",
-      "title": "Huw Edwards To Speak On TV For First Time About Criminal Actions & Fall From Grace In Channel 4 Doc",
-      "url": "https://deadline.com/2026/11/huw-edwards-speak-criminal-actions-channel-4-guilty-1237233972/",
-      "source": "deadline",
-      "kind": "headline",
-      "weird": false,
-      "image": "https://deadline.com/wp-content/uploads/2024/09/GettyImages-2171597229.jpg",
-      "filter": "Entertainment",
-      "section": "Leveling Up",
-      "text": "Huw Edwards To Speak On TV For First Time About Criminal Actions & Fall From Grace In Channel 4 Doc"
-    },
-    {
       "id": "4501a3896bf9",
       "category": "Movies & TV",
       "tag": "ADDED",
@@ -1688,6 +1688,36 @@
       "text": "Trailer: The Hunting Wives Season 2 Review: The Steamy Netflix Drama Hits The Mark Again"
     },
     {
+      "id": "fba554f25fd6",
+      "category": "Movies & TV",
+      "tag": "ADDED",
+      "line": "India asks Netflix not to air Pakistani show, local media report",
+      "digest": "India asks Netflix not to air Pakistani show, local media report",
+      "title": "India asks Netflix not to air Pakistani show, local media report",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQM0x4N1FHbVMzTk9UZ2tfR0FDeTdUT1N6UTc0cXNIWTIwckdUQ0swRXZTWUkzZFlJQ3hoejg4ZlNaci1zX0pUbWdmR3FQOFNUMHhxM1kwN1hHUjFtVFNGcmZDT2xnb1dHT3ZZRTNKbTJuZ3RZbjZYVkZYSW1FZ0RSbXhnRFhZbVhzV2V4V3hVNDVCWlJxSFAwNXhfV2t0NXBmVnE4d3k3V1B5ekFlTm5IbURGcUxoZmFxeG9j?oc=5",
+      "source": "Reuters",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "What's New",
+      "text": "India asks Netflix not to air Pakistani show, local media report"
+    },
+    {
+      "id": "31815c487357",
+      "category": "Movies & TV",
+      "tag": "ADDED",
+      "line": "Let THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH Take You Back to 1977",
+      "digest": "Let THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH Take You Back to 1977",
+      "title": "Let THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH Take You Back to 1977",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWE0xbjVrRm00WElQZXc3N2l5a0xvRXhReG1LcFh0TWh0OF81RHNmYWs3QlZlR3RPbTBIc1d4ZUtxYUhFQ2pkemZlUVBLTWtqWlpNcHphZGVjZjA5V3gtUk1SbGNHLThBaUNvd3ZVeTJPamNtTENub0dDcEl2RTNBcXpaa1ZXZzJpWFF5NE85X29lbkpCUFVJ?oc=5",
+      "source": "Netflix",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Entertainment",
+      "section": "What's New",
+      "text": "Let THE FURTHER MIS-ADVENTURES OF CLIFF BOOTH Take You Back to 1977"
+    },
+    {
       "id": "26487359ee31",
       "category": "Movies & TV",
       "tag": "UPDATED",
@@ -1701,36 +1731,6 @@
       "filter": "Entertainment",
       "section": "Fixed",
       "text": "China releases the first-ever AI-generated movie"
-    },
-    {
-      "id": "e4dabf24efda",
-      "category": "Movies & TV",
-      "tag": "PATCH",
-      "line": "'The Mosquito Bowl' \u2013 The true story behind Netflix's WWII movie",
-      "digest": "'The Mosquito Bowl' \u2013 The true story behind Netflix's WWII movie",
-      "title": "'The Mosquito Bowl' \u2013 The true story behind Netflix's WWII movie",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ1pXSGdnWjVXT1psbG9neER1NmV2NlRsNnJWcnRKbDhLREJpamU1aGhFTVFSQll3ZGR0eHBwUUxlcWNQUHotMnFEVExWNU9OSkVQcU5Ca3pfcWtCYVhtSF9uVWZMcnFKdVZfdGNOcVBKOFM0WWd0LTJObGhFanE1eGI4YmUtWlIyQ2tiei00QTlncXNWZXQza3oxZ09DSm9DWG5xOEdERV9tWldLNWRvTkZmSXAzUFhVMGd2cWdn?oc=5",
-      "source": "USA Today",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Fixed",
-      "text": "'The Mosquito Bowl' \u2013 The true story behind Netflix's WWII movie"
-    },
-    {
-      "id": "b9e31ba59e22",
-      "category": "Movies & TV",
-      "tag": "PATCH",
-      "line": "Films to be thankful for",
-      "digest": "Films to be thankful for",
-      "title": "Films to be thankful for",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvSE9NeXJrUUNRNEFoZkxmOEdBV1Q3V1FXekY3UUVueHNFMWdia2EtZVZOMDQycWpfZ3NreFYzOHNVOWF4WTNqUjV4WjRBOXd0OVZ5OXNnak9rNWVHRHdPRFlFX3ZDT3hUc0NsRg?oc=5",
-      "source": "Athens County Independent",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Entertainment",
-      "section": "Fixed",
-      "text": "Films to be thankful for"
     },
     {
       "id": "1094d8150ddf",
@@ -2001,7 +2001,7 @@
       "line": "20 Best Anime Ending Theme Songs",
       "digest": "20 Best Anime Ending Theme Songs",
       "title": "20 Best Anime Ending Theme Songs",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5jMVFiYnR6ZEt6VGV2NUpfU2JHWmhXYmtQTkhDLUJsSThmeG5yOEROYVdoU0RLQmNMVDdIeG1ZRTF1ZDRQcUNtRGN3bXZjQTRDdUprV2FkY0FueGNnX0xSRVhUZDl0bkpDMGVqWm9JMU12RTdKelZFUw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9qR01oYk9vbXFWUm9KU3MwUDN3MUlfZWJUblNEdWcyS3B3MFo4M0RPUGcyLXBpNlZ0azlSRnh2dzRHSW02aGl2aVNRN0YtREx6eFhBdEVWdXpoZVBhVjBfUGR5X2JJMW03cURfSnc0LTktUlZqdUNaMDFn?oc=5",
       "source": "Soul In Stereo",
       "kind": "headline",
       "weird": false,
@@ -2040,34 +2040,34 @@
       "text": "6 Best Food Anime Fans Can Binge In One Weekend"
     },
     {
-      "id": "ec01b4a8ee77",
+      "id": "b38921430f64",
       "category": "Sports",
-      "tag": "PATCH",
-      "line": "Scenes from the Steelers\u2019 surreal day before and after Aaron Rodgers\u2019 McAfee interview - The Athletic",
-      "digest": "Scenes from the Steelers\u2019 surreal day before and after Aaron Rodgers\u2019 McAfee interview - The Athletic",
-      "title": "Scenes from the Steelers\u2019 surreal day before and after Aaron Rodgers\u2019 McAfee interview - The Athletic",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZXR4SHY4dWlfanBzLUtKQllHb0lkQjRiTnA2Z0ZPMzJqSjRIcmdZbHRtenQ0QTRpdEJrd2ZfV2FONGw4dkNHOUFfN0lEQ3ZJci1QekNhTlZ1aGlDZjdfSmM0dTJURDZNa3dyU3hNQXN6Y0I1Qk80RTVYT0lkeW1pSS1NbUI0VHZzcEpDSk1TU0dnbFItZTdPY3F1SDhWVEE?oc=5",
+      "tag": "META",
+      "line": "Human flamethrower Aaron Rodgers lays bare the cultural rot at the once-great Steelers",
+      "digest": "Human flamethrower Aaron Rodgers lays bare the cultural rot at the once-great Steelers",
+      "title": "Human flamethrower Aaron Rodgers lays bare the cultural rot at the once-great Steelers",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdzFueVBzWENvTUhkLU1sV0IyczljaVg0TFJhOXpHNHprUTloYnZlUzlGZ1BJRUtVNEJTUU5VT2dKNThSYnFGa0pSZm1TSFl6djRRTkhGaDN2RG5CQ3Y3dktNaWNkcjlkVmF0eDNvYnp0SDN3bnlrSVFMZ2hvWlFNWjB5SExRZkI2dVJib21zM08xTW1hclJ3aVN4eHlEdw?oc=5",
+      "source": "The Guardian",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Leveling Up",
+      "text": "Human flamethrower Aaron Rodgers lays bare the cultural rot at the once-great Steelers"
+    },
+    {
+      "id": "96d7d78e6ab1",
+      "category": "Sports",
+      "tag": "BALANCE",
+      "line": "Blake Corum\u2019s career night powers Rams to fifth straight win as Packers lose ground in NFC",
+      "digest": "Blake Corum\u2019s career night powers Rams to fifth straight win as Packers lose ground in NFC",
+      "title": "Blake Corum\u2019s career night powers Rams to fifth straight win as Packers lose ground in NFC",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMDdPX2o5b18wUlFwNFZzdzJ5Y2hZWFVqNlZaVmx4RTJGcUZxQ2tDZ003MkRBNlJ3TGgtMHNha0NpQ0NBUlhySzRIZVlkeENyMk1mZFJZMUNzbExDa3I0YUNLUHZqOU85V1hpVzJBNG9Ubm9UWUhUNjVQZEtfVTRMQkxaVkNlWGthcDh5czJ6aVp2VEhBVVZTQjNVVGNxYXZzcmc?oc=5",
       "source": "The New York Times",
       "kind": "headline",
       "weird": false,
       "filter": "Sports",
-      "section": "Fixed",
-      "text": "Scenes from the Steelers\u2019 surreal day before and after Aaron Rodgers\u2019 McAfee interview - The Athletic"
-    },
-    {
-      "id": "f63ad56f33eb",
-      "category": "Sports",
-      "tag": "ADDED",
-      "line": "Rams ride Blake Corum to Thanksgiving Eve win over Packers; Jordan Love throws 2 INTs with Christian Watson out",
-      "digest": "Rams ride Blake Corum to Thanksgiving Eve win over Packers; Jordan Love throws 2 INTs with Christian Watson out",
-      "title": "Rams ride Blake Corum to Thanksgiving Eve win over Packers; Jordan Love throws 2 INTs with Christian Watson out",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeG9DeFUtSWNsdkVKbUFnSUlTTjN4WWkyV21wdGVKWWg3UGcyNTZoYTdCUTVEX1RwRFRicDMtTUEtTGEtSDN1Tmx4WVMxaUltS190WDJGSWNNaXVyX2FqNXNJZkxXZDJ4NXJtRkVnRy1DbFk4cDNWdVo2aXN4X2NvQzR5b0FoLUVvdUMybEZ1VktqZVhwSFdJZmNuYW1fcHdaU01GZWhVMzZtVFdRSVVfQ0UtNkJQLWw3QTN3X01nbTJoeUlkOTY5c0V0SXNtNUU2WEo1aWxTWQ?oc=5",
-      "source": "Yahoo Sports",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "What's New",
-      "text": "Rams ride Blake Corum to Thanksgiving Eve win over Packers; Jordan Love throws 2 INTs with Christian Watson out"
+      "section": "Leveling Up",
+      "text": "Blake Corum\u2019s career night powers Rams to fifth straight win as Packers lose ground in NFC"
     },
     {
       "id": "ae6ff82d91b8",
@@ -2115,6 +2115,21 @@
       "text": "Lineup: John Blackwell ends his cold streak, leads No. 16 Duke to statement win over Silas Demary Jr. and No. 10 UConn"
     },
     {
+      "id": "f599e0733655",
+      "category": "Sports",
+      "tag": "BALANCE",
+      "line": "USC marching band won\u2019t march in UCLA game after \u2018unacceptable\u2019 vandalism at Westwood campus",
+      "digest": "USC marching band won\u2019t march in UCLA game after \u2018unacceptable\u2019 vandalism at Westwood campus",
+      "title": "USC marching band won\u2019t march in UCLA game after \u2018unacceptable\u2019 vandalism at Westwood campus",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSXk0ejhneUd6dGQtSHJDZm9SQkdidXhFdVN0M2pjR2tBVHd2cVpQOHVxblVuS092YTRlWklTVldoODdDNENScDB0TTZ4dTVEMmREZzdCNG9wMzVGaHNhUmI3VHZDT0hoS05SMjhZdUJRZEJOcXdUTU80SGRDWGlmbXM1UGtRTjlHc3RvWEJVU3c1OVpiazJILVIyRF9DemRUdUhlSzVSYlVoQnVBWGxCcExiS1ZTSlpoVkFsSWhyb0VWRWFra3c?oc=5",
+      "source": "Los Angeles Daily News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Sports",
+      "section": "Leveling Up",
+      "text": "USC marching band won\u2019t march in UCLA game after \u2018unacceptable\u2019 vandalism at Westwood campus"
+    },
+    {
       "id": "cbe743df5e56",
       "category": "Sports",
       "tag": "PATCH",
@@ -2128,21 +2143,6 @@
       "filter": "Sports",
       "section": "Fixed",
       "text": "Murray Powers Nebraska to Title at Inaugural Big Ten Tournament"
-    },
-    {
-      "id": "fde8a7ed2a65",
-      "category": "Sports",
-      "tag": "NERFED",
-      "line": "49ers QB Brock Purdy hurt, could miss game vs Seahawks",
-      "digest": "49ers QB Brock Purdy hurt, could miss game vs Seahawks",
-      "title": "49ers QB Brock Purdy hurt, could miss game vs Seahawks",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQN1NUeExiTUx4azlseU9zcUF1YlFvUGY1X2V3aGdnazNueG5La3dqRU1ZUmk2d29HQW03b0pmNVQzOWoxMUlfdFJENTRYLU5fWTQxdURLUm11UWJ4ZnpPZkJ4RTlUNmFJSEJWRlg4Umx1ek01bGhMVFBWNjh2OEQwYkxvWi1HOWFXQjFhS25oREN1cjFyb0dudlVGOGlZVHNqVjM2blpXWVI?oc=5",
-      "source": "Seattle Sports",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Sports",
-      "section": "Took a Hit",
-      "text": "49ers QB Brock Purdy hurt, could miss game vs Seahawks"
     },
     {
       "id": "0f0f942788c6",
@@ -2220,19 +2220,34 @@
       "text": "Top official admits \u2018wrong decisions\u2019 and \u2018deaths\u2019 will result from wildfire shake-up"
     },
     {
-      "id": "8c7c61ee4ca3",
+      "id": "df850802df3a",
       "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "SenseNet secures $43m to expand its wildfire detection in US",
-      "digest": "SenseNet secures $43m to expand its wildfire detection in US",
-      "title": "SenseNet secures $43m to expand its wildfire detection in US",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10d2FmQzdydkxWUXAzY0xwZk43cExHMGZoT1R5NnRSVTN6Z1g2dW8xY21XQ3ZfLWZrZ1FiaG40SHlCQkxhQUlWMXJDNmh4UmRPLXhsWlFPM3NoUG0tbE43b3B0QU9YcTh1VXg5RmkxUkhES2JiQWdnSEsyalo?oc=5",
-      "source": "Fire & Safety Journal Americas",
+      "tag": "ADDED",
+      "line": "Thanksgiving travel forecast 2026: storms on both coasts",
+      "digest": "Thanksgiving travel forecast 2026: storms on both coasts",
+      "title": "Thanksgiving travel forecast 2026: storms on both coasts",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNFVEV21aeG9uZ1A1WXpmTEFSV2lBdHhyajBYa1B5VUZ6aXhkb0lsMzhnSmpQMUF6OUdjZ3RWSklUbEs2VkozUGN0eDBqZjkxVlJYWHItZDh2M25laEtvc1dnUERwTW1MYTZKREQtekRUblhNZXhqLU1DNGpQUUZac0FsT2lNREZXR3ZrS3lHUmRjdW9fbG8yT1BrTWo2WjQ?oc=5",
+      "source": "The Weather Channel",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Happening Now",
-      "text": "SenseNet secures $43m to expand its wildfire detection in US"
+      "text": "Thanksgiving travel forecast 2026: storms on both coasts"
+    },
+    {
+      "id": "e239b942aa9c",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Maps show where Thanksgiving storms could impact holiday festivities, disrupt travel plans",
+      "digest": "Maps show where Thanksgiving storms could impact holiday festivities, disrupt travel plans",
+      "title": "Maps show where Thanksgiving storms could impact holiday festivities, disrupt travel plans",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNajg3dFFyZUt3Vm55YUVVeG1mR3EyeDgySFNuSDh0dFBlTmRNZGJxMXZqcVRfS1pUdlBJUV9wRHV4eHYyX1MzTFc4eDJGcXVBQkFZRHROWEhsRU9zUVhMbHBqMXBCZWViekY1bW1iMXR3aS15a0JrbFpNdy1wYVZ4U1d5WjBVUVBZUG1nQTAySjFfZXc?oc=5",
+      "source": "CBS News",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Happening Now",
+      "text": "Maps show where Thanksgiving storms could impact holiday festivities, disrupt travel plans"
     },
     {
       "id": "ef633ffc3046",
@@ -2250,21 +2265,6 @@
       "text": "Severe weather wreaks havoc on Thanksgiving travel, festivities"
     },
     {
-      "id": "df850802df3a",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Thanksgiving travel forecast 2026: storms on both coasts",
-      "digest": "Thanksgiving travel forecast 2026: storms on both coasts",
-      "title": "Thanksgiving travel forecast 2026: storms on both coasts",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNFVEV21aeG9uZ1A1WXpmTEFSV2lBdHhyajBYa1B5VUZ6aXhkb0lsMzhnSmpQMUF6OUdjZ3RWSklUbEs2VkozUGN0eDBqZjkxVlJYWHItZDh2M25laEtvc1dnUERwTW1MYTZKREQtekRUblhNZXhqLU1DNGpQUUZac0FsT2lNREZXR3ZrS3lHUmRjdW9fbG8yT1BrTWo2WjQ?oc=5",
-      "source": "The Weather Channel",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Happening Now",
-      "text": "Thanksgiving travel forecast 2026: storms on both coasts"
-    },
-    {
       "id": "403d6a3db271",
       "category": "Holidays & Events",
       "tag": "ADDED",
@@ -2278,6 +2278,21 @@
       "filter": "Life",
       "section": "Happening Now",
       "text": "Power outages, steady rain and gusty winds complicate Thanksgiving travel"
+    },
+    {
+      "id": "075ed79bcb52",
+      "category": "Holidays & Events",
+      "tag": "ADDED",
+      "line": "Powerful storms disrupt holiday travel, as Macy\u2019s Thanksgiving Day Parade is postponed",
+      "digest": "Powerful storms disrupt holiday travel, as Macy\u2019s Thanksgiving Day Parade is postponed",
+      "title": "Powerful storms disrupt holiday travel, as Macy\u2019s Thanksgiving Day Parade is postponed",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSVk3U0g0TzBxOTJxQ2VBVUxPNWRGRDAxLXFPZDh1aGJYX184ZDJSRTg3YWNxREU3cEJHQjg1RHg0Skt6V0xZdktkaWdIaUl0U0VwWGdUa2Z6U1V4bVVPRHJRVDI4M3lqR05IZ25yMkZuWkJjeWpJaE5sMlhtYW1qTTAyWmQ1bXNWdVBvbmJkaWNWbEZ0T0daeWEyVGc0dkEwb1NjdUVDQ0RPQ003ejZKOXFPZVo5R0R6?oc=5",
+      "source": "WAMU",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Happening Now",
+      "text": "Powerful storms disrupt holiday travel, as Macy\u2019s Thanksgiving Day Parade is postponed"
     },
     {
       "id": "1478baed6549",
@@ -2295,34 +2310,19 @@
       "text": "Bad weather, flight cancellations disrupt last-minute Thanksgiving travel"
     },
     {
-      "id": "328383630931",
+      "id": "f554f501bf86",
       "category": "Holidays & Events",
       "tag": "ADDED",
-      "line": "Thanksgiving travel comes as flu season ramps up. Here\u2019s how to stay healthy",
-      "digest": "Thanksgiving travel comes as flu season ramps up. Here\u2019s how to stay healthy",
-      "title": "Thanksgiving travel comes as flu season ramps up. Here\u2019s how to stay healthy",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdGJ2QlRtbXRxcmdnV2ZZcFJzUjdCMWJBeUZSdkNvSmRMZXJ6c2ltT0lya2h3blRfQ3JJcW9ENFpZUVVsSHEycm84NGZYQlhFdWg4akpiSjAwUnNkWVctblhoaDN6Sk5IY3EyeTJUbW83dm1CV1luSldrYktRUUlLRVMxZjZrNDNkZDk4NXI2ejdIVGpiODhrY2hMWjNmX2xOME5GWUVNUWxwRC1Jd1I0?oc=5",
-      "source": "Scripps News",
+      "line": "A look at how the Trumps spend their Thanksgiving holiday through the years",
+      "digest": "A look at how the Trumps spend their Thanksgiving holiday through the years",
+      "title": "A look at how the Trumps spend their Thanksgiving holiday through the years",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbGZ5Sjg3MjdxeXFzQUdQcVBCZnR2d3VVS1M2c1JDMC1fMGRiMHRwYnRHWGp2enJVclBkQkVxOE80SHhURVgtMHliLVVCdnNydWI1eGIzNWZ4eFVoMEExaDAtcHFpTlVPay03d0JrVVpzTHUwcGxjeUpNaFZBT19nLTJUN09DNnJyVGJrX1Fn0gGTAUFVX3lxTFB6ZHV5MkxGMVZCM1ZQUDJKWF9HNU9XX0JGdmxSelVuV0NDMzlFS056TnNTQ0dVWUh2M0NNNllkRm1uc2VHQ0xPc1Q4QkJxSHdjQ3lxQ0dPNVVKNnBiajZ2NE1OX0w3WVhDM3JTVHJBS2M4dDNsazc4UXlTeDc2YnpKUUlLMmdxV1lyNnlhanQ4UkdfMA?oc=5",
+      "source": "Fox News",
       "kind": "headline",
       "weird": false,
       "filter": "Life",
       "section": "Happening Now",
-      "text": "Thanksgiving travel comes as flu season ramps up. Here\u2019s how to stay healthy"
-    },
-    {
-      "id": "b13de5cb5255",
-      "category": "Holidays & Events",
-      "tag": "ADDED",
-      "line": "Is Kroger open today? What to know about Thanksgiving hours",
-      "digest": "Is Kroger open today? What to know about Thanksgiving hours",
-      "title": "Is Kroger open today? What to know about Thanksgiving hours",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQVRMYUZIY3A5RkdHNFVrMTEtQmxJcC15d2h1Q1FmRndzUlFiRVlJQWZFbklDQTVKdGtWT3VWek1hS0kzdTg5S1dPUGZOUzBRa2l1OFNhNE1nTTNPNGZGMXl2NGxNYUxvSW9KR0JsZXlYalJrN1I3UHRpX1hmTnlNSVRkQTVqWkxnUUo0Ry1fbThZcVptYnlOZXNBS0tDNGs4WUVOYTRRdktiWURVb3Q2MmQ2VVBLUVQxNXlZc28tTWJzS0RxUGhMYWo1M0p2Zw?oc=5",
-      "source": "Online Athens",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Happening Now",
-      "text": "Is Kroger open today? What to know about Thanksgiving hours"
+      "text": "A look at how the Trumps spend their Thanksgiving holiday through the years"
     },
     {
       "id": "18417c36e507",
@@ -2445,36 +2445,6 @@
       "text": "US consumer confidence soars as election uncertainty ends, gas prices fall - ABC News - Breaking News, Latest News and Videos"
     },
     {
-      "id": "992461728154",
-      "category": "Gas & Grocery",
-      "tag": "UPDATED",
-      "line": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.70 Month Over Month",
-      "digest": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.70 Month Over Month",
-      "title": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.70 Month Over Month",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhdGhlckZ3RVZhZG4wNXBfNHNRRTdMUGVWcS1MUVJEb2pkODVnckRxVFR3QkZJWVRnVHFseW5jVDByLWRsUW9TWUU5akhxLWJ0YzBzMGpzZ2lGdmtZbkk3SnhZVlF3aXR2d3BhRlIzMFNhMEM3Z1Z3?oc=5",
-      "source": "Forbes",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "Today\u2019s Gas Prices By State: Average Price Of A Gallon Down $0.70 Month Over Month"
-    },
-    {
-      "id": "7e6a5472a737",
-      "category": "Gas & Grocery",
-      "tag": "ADDED",
-      "line": "Gas Prices Fall Ahead of Thanksgiving Travel",
-      "digest": "Gas Prices Fall Ahead of Thanksgiving Travel",
-      "title": "Gas Prices Fall Ahead of Thanksgiving Travel",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE83U0pfTUw0R3ZISFY2NGcwQ1RNaGZJVmxXc0ZRUFFvc1JacmpjZFkwdU5YNlNUS3U0bi1aaHpDbEhTVFhGcmo1bE51bkJzRV9pWi1pVGl1YkxLdE1CYkozdHBGMkNDUHFoSG5BTDhWWlhUeFM5?oc=5",
-      "source": "NerdWallet",
-      "kind": "headline",
-      "weird": false,
-      "filter": "Life",
-      "section": "What's New",
-      "text": "Gas Prices Fall Ahead of Thanksgiving Travel"
-    },
-    {
       "id": "00ff1791fd37",
       "category": "Gas & Grocery",
       "tag": "ADDED",
@@ -2490,6 +2460,132 @@
       "text": "Gas Prices Plunge Ahead of Thanksgiving \u2014 Just as President Trump Predicted"
     },
     {
+      "id": "468b1f74816c",
+      "category": "Gas & Grocery",
+      "tag": "UPDATED",
+      "line": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
+      "digest": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
+      "title": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaTJGaWFtVVRKdkwzZDJ2aXpBaHNsSnNhbzdWcEgwZWtUaG0xeFNBcE9aSi1BN3A5LUVudlZlb2h3QmQ5Si1XaHJxMk1JOXgzR1FjYU5zSmJNMnE2a3RvSlc2ZnpWZlVyZ3BJUFlqeER5cC1mNmhHemh1RzlMSjhVVnFmbWNuY18tT3libFdJbllEZTFIalNHbm9wVU5ISzdoWXphNWk0eWlmMkJjVFBzUFNGc3dHTGthcUhz?oc=5",
+      "source": "FactCheck.org",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Fixed",
+      "text": "Trump\u2019s Misguided Claim That \u2018They\u2019 Waited to Lower Gas Prices Until After the Midterms"
+    },
+    {
+      "id": "347b854dbd54",
+      "category": "Gas & Grocery",
+      "tag": "UPDATED",
+      "line": "Gas prices take biggest 3-week dive since 2008",
+      "digest": "Gas prices take biggest 3-week dive since 2008",
+      "title": "Gas prices take biggest 3-week dive since 2008",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FTmZXdXpvdTZ4bTF2d0Nhd0tFeGtaQzYtTGQwelB5eE1oTl9OcDFtNHR4cmdvZlJfdUtmdkVMWE5mSnR3LXhwd3M4Q0tPdHRzTDZFdDBQYXJHUTdpbVZWSXE3YlI?oc=5",
+      "source": "CNN",
+      "kind": "headline",
+      "weird": false,
+      "filter": "Life",
+      "section": "Fixed",
+      "text": "Gas prices take biggest 3-week dive since 2008"
+    },
+    {
+      "id": "c972967957dd",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "People are searching for: sarah hyland",
+      "digest": "People are searching for: sarah hyland",
+      "title": "sarah hyland",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=sarah+hyland",
+      "source": "Google Trends (US) \u00b7 500+ searches",
+      "kind": "trend",
+      "related": "https://www.cleveland.com/entertainment/2026/11/todays-famous-birthdays-list-for-november-24-2026-includes-celebrities-colin-hanks-sarah-hyland.html",
+      "related_source": "Cleveland.com",
+      "filter": "Life",
+      "section": "What's New",
+      "text": "People are searching for: sarah hyland"
+    },
+    {
+      "id": "5978058f6b4c",
+      "category": "Slang",
+      "tag": "UPDATED",
+      "line": "ken jeong is trending.",
+      "digest": "ken jeong is trending.",
+      "title": "ken jeong",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=ken+jeong",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.mediapost.com/publications/article/419669/checkoutcom-campaign-assures-retailers-the-holida.html?edition=144571",
+      "related_source": "MediaPost",
+      "filter": "Life",
+      "section": "Fixed",
+      "text": "ken jeong is trending."
+    },
+    {
+      "id": "26472928f5a9",
+      "category": "Slang",
+      "tag": "PATCH",
+      "line": "college football today",
+      "digest": "college football today",
+      "title": "college football today",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=college+football+today",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
+      "kind": "trend",
+      "related": "https://www.cbssports.com/college-football/news/college-football-teams-thankful-this-2026-season/",
+      "related_source": "CBS Sports",
+      "filter": "Life",
+      "section": "Fixed",
+      "text": "college football today"
+    },
+    {
+      "id": "4f00054b6def",
+      "category": "Slang",
+      "tag": "UPDATED",
+      "line": "click on detroit.com is trending.",
+      "digest": "click on detroit.com is trending.",
+      "title": "click on detroit.com",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=click+on+detroit.com",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.freep.com/story/news/local/michigan/detroit/2026/11/26/i-75-fatal-crash-detroit/92969570007/",
+      "related_source": "Detroit Free Press",
+      "filter": "Life",
+      "section": "Fixed",
+      "text": "click on detroit.com is trending."
+    },
+    {
+      "id": "bd8642483907",
+      "category": "Slang",
+      "tag": "BUFFED",
+      "line": "wdiv",
+      "digest": "wdiv",
+      "title": "wdiv",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=wdiv",
+      "source": "Google Trends (US) \u00b7 500+ searches",
+      "kind": "trend",
+      "related": "https://www.clickondetroit.com/weather/2026/11/26/wet-and-windy-thanksgiving-across-metro-detroit-rain-may-mix-with-snow-tonight/",
+      "related_source": "ClickOnDetroit | WDIV Local 4",
+      "filter": "Life",
+      "section": "Leveling Up",
+      "text": "wdiv"
+    },
+    {
+      "id": "da5c306234cc",
+      "category": "Slang",
+      "tag": "ADDED",
+      "line": "george washington thanksgiving proclamation",
+      "digest": "george washington thanksgiving proclamation",
+      "title": "george washington thanksgiving proclamation",
+      "url": "https://trends.google.com/trends/explore?geo=US&q=george+washington+thanksgiving+proclamation",
+      "source": "Google Trends (US) \u00b7 200+ searches",
+      "kind": "trend",
+      "related": "https://www.bostonglobe.com/2026/11/26/opinion/thanksgiving-gratitude-lincoln-loss/",
+      "related_source": "The Boston Globe",
+      "filter": "Life",
+      "section": "What's New",
+      "text": "george washington thanksgiving proclamation"
+    },
+    {
       "id": "e57c2816b8c0",
       "category": "Slang",
       "tag": "ADDED",
@@ -2497,29 +2593,13 @@
       "digest": "People are searching for: mortgage rates today",
       "title": "mortgage rates today",
       "url": "https://trends.google.com/trends/explore?geo=US&q=mortgage+rates+today",
-      "source": "Google Trends (US) \u00b7 500+ searches",
+      "source": "Google Trends (US) \u00b7 2000+ searches",
       "kind": "trend",
       "related": "https://abcnews.com/Business/wireStory/average-us-30-year-mortgage-rate-eases-721-138446333",
       "related_source": "ABC News - Breaking News, Latest News and Videos",
       "filter": "Life",
       "section": "What's New",
       "text": "People are searching for: mortgage rates today"
-    },
-    {
-      "id": "14002dcb2297",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "lululemon black friday",
-      "digest": "lululemon black friday",
-      "title": "lululemon black friday",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=lululemon+black+friday",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://people.com/what-to-buy-on-thanksgiving-black-friday-deals-2026-12187567",
-      "related_source": "People.com",
-      "filter": "Life",
-      "section": "What's New",
-      "text": "lululemon black friday"
     },
     {
       "id": "4c07a13cb7b5",
@@ -2561,93 +2641,13 @@
       "digest": "People are searching for: when did savannah guthrie's mom disappear",
       "title": "when did savannah guthrie's mom disappear",
       "url": "https://trends.google.com/trends/explore?geo=US&q=when+did+savannah+guthrie%27s+mom+disappear",
-      "source": "Google Trends (US) \u00b7 500+ searches",
+      "source": "Google Trends (US) \u00b7 1000+ searches",
       "kind": "trend",
       "related": "https://www.imdb.com/de/news/ni66120795/",
       "related_source": "IMDb",
       "filter": "Life",
       "section": "What's New",
       "text": "People are searching for: when did savannah guthrie's mom disappear"
-    },
-    {
-      "id": "0d7153b15426",
-      "category": "Slang",
-      "tag": "BUFFED",
-      "line": "mortgages",
-      "digest": "mortgages",
-      "title": "mortgages",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=mortgages",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.cnbc.com/video/2026/11/25/october-new-home-sales-come-in-above-estimates.html",
-      "related_source": "CNBC",
-      "filter": "Life",
-      "section": "Leveling Up",
-      "text": "mortgages"
-    },
-    {
-      "id": "24749d809e3f",
-      "category": "Slang",
-      "tag": "UPDATED",
-      "line": "the tonight show starring jimmy fallon justin timberlake is trending.",
-      "digest": "the tonight show starring jimmy fallon justin timberlake is trending.",
-      "title": "the tonight show starring jimmy fallon justin timberlake",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=the+tonight+show+starring+jimmy+fallon+justin+timberlake",
-      "source": "Google Trends (US) \u00b7 500+ searches",
-      "kind": "trend",
-      "related": "https://people.com/justin-timberlake-jimmy-fallon-cha-cha-slide-tonight-show-sneak-peek-12280001",
-      "related_source": "People.com",
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "the tonight show starring jimmy fallon justin timberlake is trending."
-    },
-    {
-      "id": "54c47c2b7757",
-      "category": "Slang",
-      "tag": "PATCH",
-      "line": "autumn reeser",
-      "digest": "autumn reeser",
-      "title": "autumn reeser",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=autumn+reeser",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.yahoo.com/entertainment/tv/articles/hallmark-fans-rejoice-autumn-reeser-003800067.html",
-      "related_source": "Yahoo",
-      "filter": "Life",
-      "section": "Fixed",
-      "text": "autumn reeser"
-    },
-    {
-      "id": "e918a0b33654",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "is cub foods open on thanksgiving",
-      "digest": "is cub foods open on thanksgiving",
-      "title": "is cub foods open on thanksgiving",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=is+cub+foods+open+on+thanksgiving",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.kare11.com/article/life/holidays/whats-open-closed-twin-cities-2026-thanksgiving/89-a6359f2b-2954-4ca5-b64e-0b153c450e11",
-      "related_source": "kare11.com",
-      "filter": "Life",
-      "section": "What's New",
-      "text": "is cub foods open on thanksgiving"
-    },
-    {
-      "id": "d2c1f5420b1f",
-      "category": "Slang",
-      "tag": "ADDED",
-      "line": "playstation 5 black friday deals",
-      "digest": "playstation 5 black friday deals",
-      "title": "playstation 5 black friday deals",
-      "url": "https://trends.google.com/trends/explore?geo=US&q=playstation+5+black+friday+deals",
-      "source": "Google Trends (US) \u00b7 200+ searches",
-      "kind": "trend",
-      "related": "https://www.techradar.com/live/news/black-friday-ps5-deals-live-2026-nov-26",
-      "related_source": "TechRadar",
-      "filter": "Life",
-      "section": "What's New",
-      "text": "playstation 5 black friday deals"
     },
     {
       "id": "931405bb29ef",
@@ -3112,6 +3112,22 @@
       "text": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 26 at 5:00PM EST by NWS Wakefield VA"
     },
     {
+      "id": "0b9861ac6f15",
+      "category": "Weather & Disasters",
+      "tag": "EVENT",
+      "line": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
+      "digest": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
+      "title": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
+      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9aedb091e7efbb4d3be511378cde76bad7da58b5.009.1",
+      "source": "NWS Wakefield VA",
+      "kind": "alert",
+      "weird": false,
+      "severity": "Severe",
+      "filter": "Life",
+      "section": "Happening Now",
+      "text": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA"
+    },
+    {
       "id": "5f92a474c6f2",
       "category": "Weather & Disasters",
       "tag": "EVENT",
@@ -3142,22 +3158,6 @@
       "filter": "Life",
       "section": "Happening Now",
       "text": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 26 at 3:00PM EST by NWS Wakefield VA"
-    },
-    {
-      "id": "0b9861ac6f15",
-      "category": "Weather & Disasters",
-      "tag": "EVENT",
-      "line": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
-      "digest": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
-      "title": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA",
-      "url": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.9aedb091e7efbb4d3be511378cde76bad7da58b5.009.1",
-      "source": "NWS Wakefield VA",
-      "kind": "alert",
-      "weird": false,
-      "severity": "Severe",
-      "filter": "Life",
-      "section": "Happening Now",
-      "text": "Coastal Flood Warning issued November 26 at 9:10AM EST until November 27 at 9:00PM EST by NWS Wakefield VA"
     },
     {
       "id": "f342267a8dc2",
@@ -3262,7 +3262,203 @@
       "text": "Cyber Monday \u2014 Monday, November 30"
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "49fc3e4a5cb7",
+      "category": "Markets",
+      "tag": "ADDED",
+      "line": "Markets: Wall Street is closed for Thanksgiving, so Wednesday is the last save point. The Nasdaq was down as much as 4.6% and clawed back to close down just 0.62%. The Dow even finished up 0.33% at 50,182. Half-day Friday, closing at 1 p.m. ET.",
+      "digest": "Markets: Wall Street is closed for Thanksgiving, so Wednesday is the last save point. The Nasdaq was down as much as 4.6% and clawed back to close down just 0.62%. The Dow even finished up 0.33% at 50,182. Half-day Friday, closing at 1 p.m. ET.",
+      "text": "Markets: Wall Street is closed for Thanksgiving, so Wednesday is the last save point. The Nasdaq was down as much as 4.6% and clawed back to close down just 0.62%. The Dow even finished up 0.33% at 50,182. Half-day Friday, closing at 1 p.m. ET.",
+      "title": "Markets: Wall Street is closed for Thanksgiving, so Wednesday is the last save point. The Nasdaq was down as much as 4.6% and clawed back to close down just 0.62%. The Dow even finished up 0.33% at 50,182. Half-day Friday, closing at 1 p.m. ET.",
+      "url": "https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html",
+      "source": "CNBC",
+      "kind": "written",
+      "section": "Markets",
+      "filter": "Markets",
+      "featured": true
+    },
+    {
+      "id": "c6547ed8eead",
+      "category": "Markets",
+      "tag": "ADDED",
+      "line": "Markets: Bitcoin respawned. It bottomed at $57,500 Wednesday and is holding around $60,800 with stocks closed. Spot bitcoin ETFs still bled $453 million, their seventh straight day of outflows.",
+      "digest": "Markets: Bitcoin respawned. It bottomed at $57,500 Wednesday and is holding around $60,800 with stocks closed. Spot bitcoin ETFs still bled $453 million, their seventh straight day of outflows.",
+      "text": "Markets: Bitcoin respawned. It bottomed at $57,500 Wednesday and is holding around $60,800 with stocks closed. Spot bitcoin ETFs still bled $453 million, their seventh straight day of outflows.",
+      "title": "Markets: Bitcoin respawned. It bottomed at $57,500 Wednesday and is holding around $60,800 with stocks closed. Spot bitcoin ETFs still bled $453 million, their seventh straight day of outflows.",
+      "url": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
+      "source": "CoinDesk",
+      "kind": "written",
+      "section": "Markets",
+      "filter": "Markets",
+      "featured": true
+    },
+    {
+      "id": "9983e11d7cd6",
+      "category": "Life",
+      "tag": "ADDED",
+      "line": "Took a Hit: Yesterday's parade-vs-wind matchup is over. Wind won. The 100th Macy's Thanksgiving Day Parade is postponed for the first time ever and moves to Saturday at 8:30 a.m.",
+      "digest": "Took a Hit: Yesterday's parade-vs-wind matchup is over. Wind won. The 100th Macy's Thanksgiving Day Parade is postponed for the first time ever and moves to Saturday at 8:30 a.m.",
+      "text": "Took a Hit: Yesterday's parade-vs-wind matchup is over. Wind won. The 100th Macy's Thanksgiving Day Parade is postponed for the first time ever and moves to Saturday at 8:30 a.m.",
+      "title": "Took a Hit: Yesterday's parade-vs-wind matchup is over. Wind won. The 100th Macy's Thanksgiving Day Parade is postponed for the first time ever and moves to Saturday at 8:30 a.m.",
+      "url": "https://apnews.com/article/macys-thanksgiving-parade-postponed-weather-cdc870899c8dc2d32a0ac3d86119b3ba",
+      "source": "AP News",
+      "kind": "written",
+      "section": "Took a Hit",
+      "filter": "Life",
+      "featured": true
+    },
+    {
+      "id": "95e7a00a2ce0",
+      "category": "Life",
+      "tag": "ADDED",
+      "line": "Happening Now: The nor'easter is playing gatekeeper for Thanksgiving dinner. 360+ U.S. flights canceled and 460+ delayed by late morning, with JFK and Baltimore getting hit hardest. Yesterday, more than 6,000 flights were delayed.",
+      "digest": "Happening Now: The nor'easter is playing gatekeeper for Thanksgiving dinner. 360+ U.S. flights canceled and 460+ delayed by late morning, with JFK and Baltimore getting hit hardest. Yesterday, more than 6,000 flights were delayed.",
+      "text": "Happening Now: The nor'easter is playing gatekeeper for Thanksgiving dinner. 360+ U.S. flights canceled and 460+ delayed by late morning, with JFK and Baltimore getting hit hardest. Yesterday, more than 6,000 flights were delayed.",
+      "title": "Happening Now: The nor'easter is playing gatekeeper for Thanksgiving dinner. 360+ U.S. flights canceled and 460+ delayed by late morning, with JFK and Baltimore getting hit hardest. Yesterday, more than 6,000 flights were delayed.",
+      "url": "https://www.nbcnews.com/weather/winter-weather/live-blog/live-updates-thanksgiving-travel-weather-storms-forecast-rcna611376",
+      "source": "NBC News",
+      "kind": "written",
+      "section": "Happening Now",
+      "filter": "Life",
+      "featured": true
+    },
+    {
+      "id": "315a97893733",
+      "category": "News & Politics",
+      "tag": "ADDED",
+      "line": "Fixed: Iowa's 5-ton lead azide problem. The Army calls the blast a \"huge success,\" and the EPA says air monitors detected zero airborne lead. Soil and water testing is still underway, so the final verdict is pending.",
+      "digest": "Fixed: Iowa's 5-ton lead azide problem. The Army calls the blast a \"huge success,\" and the EPA says air monitors detected zero airborne lead. Soil and water testing is still underway, so the final verdict is pending.",
+      "text": "Fixed: Iowa's 5-ton lead azide problem. The Army calls the blast a \"huge success,\" and the EPA says air monitors detected zero airborne lead. Soil and water testing is still underway, so the final verdict is pending.",
+      "title": "Fixed: Iowa's 5-ton lead azide problem. The Army calls the blast a \"huge success,\" and the EPA says air monitors detected zero airborne lead. Soil and water testing is still underway, so the final verdict is pending.",
+      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko",
+      "source": "BBC News",
+      "kind": "written",
+      "section": "Fixed",
+      "filter": "News & Politics",
+      "featured": true
+    },
+    {
+      "id": "2e251e419644",
+      "category": "News & Politics",
+      "tag": "ADDED",
+      "line": "Took a Hit: The FCC's early license review of ABC. A federal judge blocked it for now, saying the process risks chilling \"a broadcaster of ordinary firmness.\"",
+      "digest": "Took a Hit: The FCC's early license review of ABC. A federal judge blocked it for now, saying the process risks chilling \"a broadcaster of ordinary firmness.\"",
+      "text": "Took a Hit: The FCC's early license review of ABC. A federal judge blocked it for now, saying the process risks chilling \"a broadcaster of ordinary firmness.\"",
+      "title": "Took a Hit: The FCC's early license review of ABC. A federal judge blocked it for now, saying the process risks chilling \"a broadcaster of ordinary firmness.\"",
+      "url": "https://www.cnbc.com/2026/11/26/fcc-disney-abc-stations-judge-block.html",
+      "source": "CNBC",
+      "kind": "written",
+      "section": "Took a Hit",
+      "filter": "News & Politics",
+      "featured": true
+    },
+    {
+      "id": "5ee19de19126",
+      "category": "News & Politics",
+      "tag": "ADDED",
+      "line": "Leveling Up: NYC renters. A judge upheld the two-year rent freeze on about 1 million stabilized apartments, a win for Mayor Mamdani. Landlords are not having a happy Thanksgiving.",
+      "digest": "Leveling Up: NYC renters. A judge upheld the two-year rent freeze on about 1 million stabilized apartments, a win for Mayor Mamdani. Landlords are not having a happy Thanksgiving.",
+      "text": "Leveling Up: NYC renters. A judge upheld the two-year rent freeze on about 1 million stabilized apartments, a win for Mayor Mamdani. Landlords are not having a happy Thanksgiving.",
+      "title": "Leveling Up: NYC renters. A judge upheld the two-year rent freeze on about 1 million stabilized apartments, a win for Mayor Mamdani. Landlords are not having a happy Thanksgiving.",
+      "url": "https://gothamist.com/news/judge-upholds-nyc-rent-freeze-marking-win-for-mamdani-and-his-affordability-agenda",
+      "source": "Gothamist",
+      "kind": "written",
+      "section": "Leveling Up",
+      "filter": "News & Politics",
+      "featured": true
+    },
+    {
+      "id": "27aba4307388",
+      "category": "News & Politics",
+      "tag": "ADDED",
+      "line": "Leveling Up: North Korea's nuke stockpile, per Kim himself. He left Trump's overture on read and ordered a bigger arsenal, including wider deployment of tactical nukes.",
+      "digest": "Leveling Up: North Korea's nuke stockpile, per Kim himself. He left Trump's overture on read and ordered a bigger arsenal, including wider deployment of tactical nukes.",
+      "text": "Leveling Up: North Korea's nuke stockpile, per Kim himself. He left Trump's overture on read and ordered a bigger arsenal, including wider deployment of tactical nukes.",
+      "title": "Leveling Up: North Korea's nuke stockpile, per Kim himself. He left Trump's overture on read and ordered a bigger arsenal, including wider deployment of tactical nukes.",
+      "url": "https://www.cnbc.com/2026/11/26/north-korea-kim-nuclear-weapons-expansion.html",
+      "source": "CNBC",
+      "kind": "written",
+      "section": "Leveling Up",
+      "filter": "News & Politics",
+      "featured": true
+    },
+    {
+      "id": "84a199625ad4",
+      "category": "Life",
+      "tag": "ADDED",
+      "line": "Fixed (barely): Mortgage rates. The 30-year average dipped to 7.21% from 7.28%, which is still close to the 2026 high. Your starter home is still a side quest.",
+      "digest": "Fixed (barely): Mortgage rates. The 30-year average dipped to 7.21% from 7.28%, which is still close to the 2026 high. Your starter home is still a side quest.",
+      "text": "Fixed (barely): Mortgage rates. The 30-year average dipped to 7.21% from 7.28%, which is still close to the 2026 high. Your starter home is still a side quest.",
+      "title": "Fixed (barely): Mortgage rates. The 30-year average dipped to 7.21% from 7.28%, which is still close to the 2026 high. Your starter home is still a side quest.",
+      "url": "https://apnews.com/article/mortgages-housing-inflation-interest-rates-1e8162cf0344617b916427033f7aece7",
+      "source": "AP News",
+      "kind": "written",
+      "section": "Fixed",
+      "filter": "Life",
+      "featured": true
+    },
+    {
+      "id": "149c00ef6d8a",
+      "category": "Tech & Science",
+      "tag": "ADDED",
+      "line": "What's New: Yesterday a Treasury official got caught vibe-coding a Civ clone. Today Andrej Karpathy had Claude build a Civilization-style map of the real U.S. from 31 federal data sources. 7 hours, 45K lines of code. Civ is the national pastime now.",
+      "digest": "What's New: Yesterday a Treasury official got caught vibe-coding a Civ clone. Today Andrej Karpathy had Claude build a Civilization-style map of the real U.S. from 31 federal data sources. 7 hours, 45K lines of code. Civ is the national pastime now.",
+      "text": "What's New: Yesterday a Treasury official got caught vibe-coding a Civ clone. Today Andrej Karpathy had Claude build a Civilization-style map of the real U.S. from 31 federal data sources. 7 hours, 45K lines of code. Civ is the national pastime now.",
+      "title": "What's New: Yesterday a Treasury official got caught vibe-coding a Civ clone. Today Andrej Karpathy had Claude build a Civilization-style map of the real U.S. from 31 federal data sources. 7 hours, 45K lines of code. Civ is the national pastime now.",
+      "url": "https://x.com/karpathy/status/2125779541952246039",
+      "source": "X (@karpathy)",
+      "kind": "written",
+      "section": "What's New",
+      "filter": "Tech & Science",
+      "featured": true
+    },
+    {
+      "id": "7c0fd8638399",
+      "category": "Sports",
+      "tag": "ADDED",
+      "line": "Happening Now: The football triple-header is still on, rain or no rain. Bears at Lions at 1 p.m. ET, Eagles at Cowboys at 4:30, and Chiefs at Bills at 8:20 on NBC and Peacock.",
+      "digest": "Happening Now: The football triple-header is still on, rain or no rain. Bears at Lions at 1 p.m. ET, Eagles at Cowboys at 4:30, and Chiefs at Bills at 8:20 on NBC and Peacock.",
+      "text": "Happening Now: The football triple-header is still on, rain or no rain. Bears at Lions at 1 p.m. ET, Eagles at Cowboys at 4:30, and Chiefs at Bills at 8:20 on NBC and Peacock.",
+      "title": "Happening Now: The football triple-header is still on, rain or no rain. Bears at Lions at 1 p.m. ET, Eagles at Cowboys at 4:30, and Chiefs at Bills at 8:20 on NBC and Peacock.",
+      "url": "https://www.usatoday.com/story/sports/nfl/2026/11/26/nfl-games-today-thanksgiving-schedule-matchups-teams/92849248007/",
+      "source": "USA Today",
+      "kind": "written",
+      "section": "Happening Now",
+      "filter": "Sports",
+      "featured": true
+    },
+    {
+      "id": "d340d6bae61e",
+      "category": "Life",
+      "tag": "ADDED",
+      "line": "What's New: Thanksgiving is officially a shopping holiday with gravy on the side. Adobe forecasts $12.9 billion in online spending on Black Friday, up 9.2%, with Cyber Monday topping out at $15.1 billion.",
+      "digest": "What's New: Thanksgiving is officially a shopping holiday with gravy on the side. Adobe forecasts $12.9 billion in online spending on Black Friday, up 9.2%, with Cyber Monday topping out at $15.1 billion.",
+      "text": "What's New: Thanksgiving is officially a shopping holiday with gravy on the side. Adobe forecasts $12.9 billion in online spending on Black Friday, up 9.2%, with Cyber Monday topping out at $15.1 billion.",
+      "title": "What's New: Thanksgiving is officially a shopping holiday with gravy on the side. Adobe forecasts $12.9 billion in online spending on Black Friday, up 9.2%, with Cyber Monday topping out at $15.1 billion.",
+      "url": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record",
+      "source": "Adobe",
+      "kind": "written",
+      "section": "What's New",
+      "filter": "Life",
+      "featured": true
+    },
+    {
+      "id": "8c92f8153596",
+      "category": "Entertainment",
+      "tag": "ADDED",
+      "line": "Took a Hit: Andy Taylor, Duran Duran's original guitarist, died at 65 after a long battle with prostate cancer. Rest easy, legend.",
+      "digest": "Took a Hit: Andy Taylor, Duran Duran's original guitarist, died at 65 after a long battle with prostate cancer. Rest easy, legend.",
+      "text": "Took a Hit: Andy Taylor, Duran Duran's original guitarist, died at 65 after a long battle with prostate cancer. Rest easy, legend.",
+      "title": "Took a Hit: Andy Taylor, Duran Duran's original guitarist, died at 65 after a long battle with prostate cancer. Rest easy, legend.",
+      "url": "https://apnews.com/article/andy-taylor-dies-duran-duran-2334d13b2b0b0196488721611036d977",
+      "source": "AP News",
+      "kind": "written",
+      "section": "Took a Hit",
+      "filter": "Entertainment",
+      "featured": true
+    }
+  ],
   "highlights": [
     {
       "id": "adea43240978",
@@ -3295,16 +3491,16 @@
       "text": "Scientists discover mysterious lakes more than a mile beneath the Red Sea"
     },
     {
-      "id": "2a4b28334872",
-      "digest": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
-      "title": "Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
-      "text": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River"
-    },
-    {
       "id": "618e14927c77",
       "digest": "Scientists discover a massive space hurricane that rains electrons",
       "title": "Scientists discover a massive space hurricane that rains electrons",
       "text": "Scientists discover a massive space hurricane that rains electrons"
+    },
+    {
+      "id": "2a4b28334872",
+      "digest": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
+      "title": "Scientists Discover 130-Year-Old Fish Still Swimming in an American River",
+      "text": "New find: Scientists Discover 130-Year-Old Fish Still Swimming in an American River"
     },
     {
       "id": "cf7598ff9060",
@@ -3319,10 +3515,10 @@
       "text": "New find: New book explores Coastal Georgia's ancient past and conservation future"
     },
     {
-      "id": "6cc58d31ab9d",
-      "digest": "US cops complete food delivery after arresting driver, video viral",
-      "title": "US cops complete food delivery after arresting driver, video viral",
-      "text": "US cops complete food delivery after arresting driver, video viral"
+      "id": "f7cb55bb30bf",
+      "digest": "Transgender teacher who went wildly viral with ludicrous Z-cup fake boobs gets $20K payout",
+      "title": "Transgender teacher who went wildly viral with ludicrous Z-cup fake boobs gets $20K payout",
+      "text": "Transgender teacher who went wildly viral with ludicrous Z-cup fake boobs gets $20K payout"
     }
   ],
   "anilist": {
