@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "section": "Markets",
+      "tag": "Markets",
+      "text": "Markets: Wall Street is closed for Thanksgiving, so Wednesday is the last save point. The Nasdaq was down as much as 4.6% and clawed back to close down just 0.62%. The Dow even finished up 0.33% at 50,182. Half-day Friday, closing at 1 p.m. ET.",
+      "url": "https://www.cnbc.com/2026/11/24/stock-market-today-live-updates-.html",
+      "source": "CNBC"
+    },
+    {
+      "section": "Markets",
+      "tag": "Markets",
+      "text": "Markets: Bitcoin respawned. It bottomed at $57,500 Wednesday and is holding around $60,800 with stocks closed. Spot bitcoin ETFs still bled $453 million, their seventh straight day of outflows.",
+      "url": "https://www.coindesk.com/markets/2026/11/26/bitcoin-little-changed-defi-tokens-lead-the-bounce-as-u-s-marks-thanksgiving",
+      "source": "CoinDesk"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "Life",
+      "text": "Took a Hit: Yesterday's parade-vs-wind matchup is over. Wind won. The 100th Macy's Thanksgiving Day Parade is postponed for the first time ever and moves to Saturday at 8:30 a.m.",
+      "url": "https://apnews.com/article/macys-thanksgiving-parade-postponed-weather-cdc870899c8dc2d32a0ac3d86119b3ba",
+      "source": "AP News"
+    },
+    {
+      "section": "Happening Now",
+      "tag": "Life",
+      "text": "Happening Now: The nor'easter is playing gatekeeper for Thanksgiving dinner. 360+ U.S. flights canceled and 460+ delayed by late morning, with JFK and Baltimore getting hit hardest. Yesterday, more than 6,000 flights were delayed.",
+      "url": "https://www.nbcnews.com/weather/winter-weather/live-blog/live-updates-thanksgiving-travel-weather-storms-forecast-rcna611376",
+      "source": "NBC News"
+    },
+    {
+      "section": "Fixed",
+      "tag": "News & Politics",
+      "text": "Fixed: Iowa's 5-ton lead azide problem. The Army calls the blast a \"huge success,\" and the EPA says air monitors detected zero airborne lead. Soil and water testing is still underway, so the final verdict is pending.",
+      "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko",
+      "source": "BBC News"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "News & Politics",
+      "text": "Took a Hit: The FCC's early license review of ABC. A federal judge blocked it for now, saying the process risks chilling \"a broadcaster of ordinary firmness.\"",
+      "url": "https://www.cnbc.com/2026/11/26/fcc-disney-abc-stations-judge-block.html",
+      "source": "CNBC"
+    },
+    {
+      "section": "Leveling Up",
+      "tag": "News & Politics",
+      "text": "Leveling Up: NYC renters. A judge upheld the two-year rent freeze on about 1 million stabilized apartments, a win for Mayor Mamdani. Landlords are not having a happy Thanksgiving.",
+      "url": "https://gothamist.com/news/judge-upholds-nyc-rent-freeze-marking-win-for-mamdani-and-his-affordability-agenda",
+      "source": "Gothamist"
+    },
+    {
+      "section": "Leveling Up",
+      "tag": "News & Politics",
+      "text": "Leveling Up: North Korea's nuke stockpile, per Kim himself. He left Trump's overture on read and ordered a bigger arsenal, including wider deployment of tactical nukes.",
+      "url": "https://www.cnbc.com/2026/11/26/north-korea-kim-nuclear-weapons-expansion.html",
+      "source": "CNBC"
+    },
+    {
+      "section": "Fixed",
+      "tag": "Life",
+      "text": "Fixed (barely): Mortgage rates. The 30-year average dipped to 7.21% from 7.28%, which is still close to the 2026 high. Your starter home is still a side quest.",
+      "url": "https://apnews.com/article/mortgages-housing-inflation-interest-rates-1e8162cf0344617b916427033f7aece7",
+      "source": "AP News"
+    },
+    {
+      "section": "What's New",
+      "tag": "Tech & Science",
+      "text": "What's New: Yesterday a Treasury official got caught vibe-coding a Civ clone. Today Andrej Karpathy had Claude build a Civilization-style map of the real U.S. from 31 federal data sources. 7 hours, 45K lines of code. Civ is the national pastime now.",
+      "url": "https://x.com/karpathy/status/2125779541952246039",
+      "source": "X (@karpathy)"
+    },
+    {
+      "section": "Happening Now",
+      "tag": "Sports",
+      "text": "Happening Now: The football triple-header is still on, rain or no rain. Bears at Lions at 1 p.m. ET, Eagles at Cowboys at 4:30, and Chiefs at Bills at 8:20 on NBC and Peacock.",
+      "url": "https://www.usatoday.com/story/sports/nfl/2026/11/26/nfl-games-today-thanksgiving-schedule-matchups-teams/92849248007/",
+      "source": "USA Today"
+    },
+    {
+      "section": "What's New",
+      "tag": "Life",
+      "text": "What's New: Thanksgiving is officially a shopping holiday with gravy on the side. Adobe forecasts $12.9 billion in online spending on Black Friday, up 9.2%, with Cyber Monday topping out at $15.1 billion.",
+      "url": "https://news.adobe.com/news/2026/09/adobe-us-holiday-shopping-season-to-hit-record",
+      "source": "Adobe"
+    },
+    {
+      "section": "Took a Hit",
+      "tag": "Entertainment",
+      "text": "Took a Hit: Andy Taylor, Duran Duran's original guitarist, died at 65 after a long battle with prostate cancer. Rest easy, legend.",
+      "url": "https://apnews.com/article/andy-taylor-dies-duran-duran-2334d13b2b0b0196488721611036d977",
+      "source": "AP News"
+    }
+  ]
+}
