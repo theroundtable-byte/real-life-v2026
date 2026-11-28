@@ -1,5 +1,15 @@
 [
   {
+    "id": "2026-11-28-morning",
+    "label": "v2026.11 \u00b7 Week 4 \u00b7 Nov 28 \u00b7 Morning Patch",
+    "kind": "Morning",
+    "iso": "2026-11-28T08:56:11-05:00",
+    "display_date": "Saturday, November 28, 2026, 8:56 AM ET",
+    "count": 203,
+    "stock_mode": "majors",
+    "written": false
+  },
+  {
     "id": "2026-11-27-evening",
     "label": "v2026.11 \u00b7 Week 4 \u00b7 Nov 27 \u00b7 Evening Patch",
     "kind": "Evening",
